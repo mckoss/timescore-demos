@@ -67,7 +67,9 @@ Only the Python standard library is needed.
 - Information courtesy of IMDb (https://www.imdb.com). Used with permission.
   IMDb's datasets are for personal and non-commercial use only, so this site
   is non-commercial.
-- This product uses the TMDB API but is not endorsed or certified by TMDB.
+- This product uses the TMDB API but is not endorsed or certified by TMDB. The site
+  shows TMDB's logo (`site/tmdb-logo.svg`, from TMDB's
+  [logos page](https://www.themoviedb.org/about/logos-attribution)) next to this notice.
 
 ## License
 
