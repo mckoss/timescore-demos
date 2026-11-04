@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TimeScore Movie Charts</title>
+<meta name="description" content="Movies ranked by TimeScore: new IMDb ratings and TMDB popularity, faded with a half-life of a day, a week, a month or a year. Updated daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <h1>TimeScore Movie Charts</h1>
+    <p class="lede">What people are rating and looking up now, ranked with
+      <a href="https://mckoss.com/posts/timescore/">TimeScore</a>: every day's
+      activity counts in full when it happens, then fades with a half-life of a
+      day, a week, a month or a year.</p>
+  </div>
+  <p class="freshness" data-freshness role="status">Loading…</p>
+</header>
+
+<main data-sources>
+  <noscript><p>These charts need JavaScript.</p></noscript>
+</main>
+
+<template id="source-template">
+  <section class="source">
+    <div class="source-head">
+      <h2 data-name></h2>
+      <p class="source-about" data-about></p>
+      <p class="source-range" data-range></p>
+    </div>
+    <div class="lists" data-lists></div>
+    <figure class="race" data-race>
+      <div class="race-toolbar">
+        <h3>The race, day by day</h3>
+        <label>Half-life <select data-half-life></select></label>
+        <span class="race-date" data-date></span>
+        <button type="button" data-play aria-pressed="false">Play</button>
+      </div>
+      <input type="range" min="0" max="0" value="0" data-scrubber aria-label="Day">
+      <div class="race-bars" data-bars></div>
+    </figure>
+  </section>
+</template>
+
+<footer class="site-footer">
+  <p>Information courtesy of IMDb (<a href="https://www.imdb.com">https://www.imdb.com</a>).
+    Used with permission. IMDb data is for personal and non-commercial use.</p>
+  <p class="tmdb-credit">
+    <a href="https://www.themoviedb.org"><img src="tmdb-logo.svg" alt="TMDB" width="92" height="12"></a>
+    Movie data and posters from TMDB. This product uses the TMDB API but is not
+    endorsed or certified by TMDB.</p>
+  <p>TimeScore algorithm courtesy <a href="https://mckoss.com">Mike Koss</a>.
+    Code on <a href="https://github.com/mckoss/timescore-demos">GitHub</a> (MIT license).</p>
+</footer>
+</body>
+</html>

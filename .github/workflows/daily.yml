@@ -1,0 +1,89 @@
+# Every day: collect new IMDb ratings and TMDB popularity, rebuild the
+# charts, commit the new data and publish the site to GitHub Pages.
+name: Daily update
+
+on:
+  schedule:
+    # IMDb's files appear around 01:00 UTC and TMDB's around 07:20 UTC.
+    - cron: '41 9 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['site/**', 'build/**', 'collect/**', '.github/workflows/daily.yml']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests
+
+      # IMDb's vote counts are compared with yesterday's snapshot, which is
+      # kept in the Actions cache, not in the repository (IMDb's terms don't
+      # allow republishing its data). If the cache is lost, today becomes the
+      # new baseline and one day is missed.
+      - name: Restore the IMDb snapshot
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/imdb-state.tsv.gz
+          key: imdb-state-${{ github.run_id }}
+          restore-keys: imdb-state-
+
+      - name: Collect new IMDb ratings
+        run: python collect/imdb.py
+
+      - name: Save the IMDb snapshot
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/imdb-state.tsv.gz
+          key: imdb-state-${{ github.run_id }}
+
+      - name: Collect TMDB popularity
+        run: python collect/tmdb.py
+
+      - name: Build the charts
+        env:
+          TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
+        run: python build/build.py
+
+      - name: Commit the new data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site/data
+          if git diff --cached --quiet; then
+            echo "No new data."
+          else
+            git commit -m "Data for $(date -u +%Y-%m-%d)"
+            git pull --rebase
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
