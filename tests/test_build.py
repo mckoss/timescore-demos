@@ -63,5 +63,25 @@ class ListsTest(unittest.TestCase):
         self.assertEqual(lists['Week'][0]['previous'], 1)
 
 
+class TrendingTest(unittest.TestCase):
+    def test_steady_activity_is_one(self):
+        days = [(day(n), {'imdb:steady': (10.0, 'Steady')}) for n in range(120)]
+        _, _, lists, _ = build.build_source('imdb', days)
+        self.assertAlmostEqual(lists[build.TRENDING][0]['score'], 1.0, places=2)
+
+    def test_a_surge_trends_above_steady_activity(self):
+        days = []
+        for n in range(120):
+            events = {'imdb:steady': (10.0, 'Steady'), 'imdb:surge': (2.0, 'Surge')}
+            if n >= 114:   # the last week, ten times its usual pace
+                events['imdb:surge'] = (20.0, 'Surge')
+            days.append((day(n), events))
+        _, _, lists, _ = build.build_source('imdb', days)
+        trending = lists[build.TRENDING]
+        self.assertEqual(trending[0]['key'], 'imdb:surge')
+        self.assertGreater(trending[0]['score'], 2)
+        self.assertAlmostEqual(trending[1]['score'], 1.0, places=2)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -5,7 +5,8 @@ TimeScore at four half-lives (a day, a week, a month and a year), and writes
 site/data/movies.json with:
 
 - the top movies at each half-life as of the latest day, with how far each
-  moved since the day before;
+  moved since the day before, and the weekly trending list (each movie's
+  Week score divided by its Month score);
 - race data: the daily values of every movie that made a top 10 at any
   half-life on any day, for the page to animate;
 - when it was built and the latest day of each source, so the page can show
@@ -29,6 +30,20 @@ import posters  # noqa: E402
 HALF_LIVES = [('Day', 1), ('Week', 7), ('Month', 30.44), ('Year', 365.25)]
 LIST_SIZE = 20
 RACE_SIZE = 10
+
+# Weekly trending: a movie's Week score divided by its Month score, divided
+# again by what that ratio would be for a movie with the same activity every
+# day, so 1.0 is a movie's usual pace and 2.0 twice its usual pace. Only the
+# TRENDING_POOL movies with the highest Week scores qualify, so a movie with
+# one recent like can't top the list.
+TRENDING = 'Weekly trending'
+TRENDING_POOL = 100
+
+
+def steady(half_life, days):
+    """The score of one event a day for this many days, on the last day."""
+    fade = 2 ** (-1 / half_life)
+    return (1 - fade ** days) / (1 - fade)
 
 SOURCES = {
     'imdb': {
@@ -79,8 +94,10 @@ def build_source(source, days):
     start = days[0][0]
     titles = {}
     lists, racers = {}, set()
+    final, previous = {}, {}   # each half-life's stored scores on the last two days
     for label, half_life in HALF_LIVES:
         scores, before = {}, []
+        previous[label] = {}
         for i, (date, events) in enumerate(days):
             day = (date - start).days
             for key, (value, title) in events.items():
@@ -90,19 +107,41 @@ def build_source(source, days):
             racers.update(top(scores, RACE_SIZE))
             if i == len(days) - 2:
                 before = top(scores, LIST_SIZE * 2)
+                previous[label] = dict(scores)
+        final[label] = scores
         last = (days[-1][0] - start).days
         lists[label] = [{
             'key': key,
             'score': round(score_at(scores[key], last, half_life), 2),
             'previous': before.index(key) + 1 if key in before else None,
         } for key in top(scores, LIST_SIZE)]
+
+    last = (days[-1][0] - start).days
+    now = trending(final['Week'], final['Month'], last)
+    before = [key for key, _ in trending(previous['Week'], previous['Month'], last - 1)]
+    lists[TRENDING] = [{
+        'key': key,
+        'score': round(ratio, 2),
+        'previous': before.index(key) + 1 if key in before else None,
+    } for key, ratio in now[:LIST_SIZE]]
     return start, titles, lists, racers
+
+
+def trending(week, month, day):
+    """The pool of top movies by Week score, ordered by Week score divided by
+    Month score (1.0 being a steady pace): [(key, ratio)], highest first."""
+    pool = top(week, TRENDING_POOL)
+    usual = steady(7, day + 1) / steady(30.44, day + 1)
+    ratios = [(key, score_at(week[key], day, 7) / score_at(month[key], day, 30.44) / usual)
+              for key in pool]
+    return sorted(ratios, key=lambda item: -item[1])
 
 
 def main():
     out = {
         'generated': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
         'halfLives': [{'label': label, 'days': days} for label, days in HALF_LIVES],
+        'trending': TRENDING,
         'sources': {},
     }
     built = {}
