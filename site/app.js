@@ -15,6 +15,7 @@ const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where an item not in the lis
 const EASE = 0.2;
 const DAY_MS = 86400e3;
 const HISTORY_MAX = 8;      // lines on the history chart: one per color in the palette
+const API_USER_AGENT = 'TimeScoreDemos (https://github.com/mckoss/timescore-demos)';   // for Wikimedia's APIs
 const DEFAULT_SOURCE = 'tmdb';   // the source with the most history
 
 const data = await fetch(`data/movies.json?v=${Date.now()}`).then((r) => r.json());
@@ -99,8 +100,9 @@ function renderSource(id, source) {
   range.textContent = `${source.collected} day${source.collected === 1 ? '' : 's'} of data, `
     + `${formatDate(source.start)} to ${formatDate(source.last)}.`;
 
-  const history = renderHistory(section.querySelector('[data-history]'), source);
+  const history = renderHistory(section.querySelector('[data-history]'), source, id);
   const lists = section.querySelector('[data-lists]');
+  if (id === 'wikipedia') lists.before(renderSearch(history));
   lists.append(renderRanking(source, history));
   if (source.collected < data.trendingMinDays) {
     lists.append(renderNotYet(data.trending,
@@ -366,10 +368,38 @@ function dailyScores(points, days, halfLife) {
 // at the half-life chosen for the top list. Items are chosen with the chart
 // toggle beside each one (at most HISTORY_MAX); each keeps its color until
 // it is removed.
-function renderHistory(figure, source) {
+function renderHistory(figure, source, id) {
   const days = daysBetween(source.start, source.last) + 1;
   const chosen = new Map();   // key → color slot (0–7), in the order chosen
   const toggles = new Map();  // key → [buttons]
+  const found = new Map();    // key → {title} for articles picked with the search box
+  // Wikipedia's lines use every day's views from Wikimedia (key → series, or
+  // a promise while loading), not just the days an article was in the top
+  // 500, so any article can be charted and every line is measured the same way.
+  const full = id === 'wikipedia' ? new Map() : null;
+  const localOnly = new Set();   // keys whose line is from this site's data (Wikimedia didn't answer)
+  const titleOf = (key) => source.items[key]?.title || found.get(key)?.title || key.split(':')[1].replaceAll('_', ' ');
+  function seriesOf(key) {
+    if (!full) return source.series[key] || [];
+    if (!full.has(key)) {
+      full.set(key, fetchViews(key, source.start, source.last)
+        .then(({ series, local }) => {
+          full.set(key, series);
+          if (local) localOnly.add(key);
+        })
+        .catch(() => { full.set(key, 'error'); })
+        .then(() => update()));
+    }
+    const series = full.get(key);
+    return Array.isArray(series) ? series : null;
+  }
+  function choose(key) {
+    if (chosen.has(key) || chosen.size >= HISTORY_MAX) return false;
+    const used = new Set(chosen.values());
+    chosen.set(key, [...Array(HISTORY_MAX).keys()].find((slot) => !used.has(slot)));
+    update();
+    return true;
+  }
   let halfLife = 'Week';
   const legend = figure.querySelector('[data-history-legend]');
   const plot = figure.querySelector('[data-history-plot]');
@@ -388,12 +418,10 @@ function renderHistory(figure, source) {
     if (tabIndex !== undefined) button.tabIndex = tabIndex;
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      if (chosen.has(key)) chosen.delete(key);
-      else if (chosen.size < HISTORY_MAX) {
-        const used = new Set(chosen.values());
-        chosen.set(key, [...Array(HISTORY_MAX).keys()].find((slot) => !used.has(slot)));
-      }
-      update();
+      if (chosen.has(key)) {
+        chosen.delete(key);
+        update();
+      } else choose(key);
     });
     if (!toggles.has(key)) toggles.set(key, []);
     toggles.get(key).push(button);
@@ -403,7 +431,7 @@ function renderHistory(figure, source) {
 
   function paint(key, button) {
     const on = chosen.has(key);
-    const title = source.items[key]?.title || '';
+    const title = titleOf(key);
     button.setAttribute('aria-pressed', String(on));
     button.style.setProperty('--pick', on ? `var(--series-${chosen.get(key) + 1})` : '');
     button.dataset.slot = on ? chosen.get(key) + 1 : '';
@@ -420,12 +448,15 @@ function renderHistory(figure, source) {
     figure.hidden = chosen.size === 0;
     if (!chosen.size) return;
     const halfLifeDays = data.halfLives.find((h) => h.label === halfLife).days;
+    const all = [...chosen].map(([key, slot]) => ({ key, slot, title: titleOf(key), series: seriesOf(key) }));
+    const complete = full && all.some(({ key, series }) => series && !localOnly.has(key));
     note.textContent = `Each day's TimeScore with a half-life of a ${halfLife.toLowerCase()}, `
-      + `${formatDate(source.start)} to ${formatDate(source.last)}.`;
-    const lines = [...chosen].map(([key, slot]) => ({
-      key, slot, title: source.items[key].title, daily: dailyScores(source.series[key] || [], days, halfLifeDays),
-    }));
-    legend.replaceChildren(...lines.map(({ key, slot, title }) => {
+      + `${formatDate(source.start)} to ${formatDate(source.last)}.`
+      + (complete ? ' Counts every day\'s views, from Wikimedia, so it can differ a little from the lists,'
+        + ' which count the days an article was among the 500 most read.' : '');
+    const lines = all.filter((line) => line.series)
+      .map((line) => ({ ...line, daily: dailyScores(line.series, days, halfLifeDays) }));
+    legend.replaceChildren(...all.map(({ key, slot, title, series }) => {
       const item = document.createElement('span');
       item.className = 'legend-item';
       const swatch = document.createElement('span');
@@ -437,7 +468,19 @@ function renderHistory(figure, source) {
       remove.textContent = '×';
       remove.setAttribute('aria-label', `Remove ${title}`);
       remove.addEventListener('click', () => { chosen.delete(key); update(); });
-      item.append(swatch, title, remove);
+      item.append(swatch, title);
+      if (!series || localOnly.has(key)) {
+        const state = document.createElement('span');
+        state.className = 'legend-state';
+        state.textContent = localOnly.has(key) ? '(top-500 days only)'
+          : full.get(key) === 'error' ? '(couldn\'t load)' : '(loading…)';
+        if (localOnly.has(key)) {
+          state.title = 'Wikimedia didn\'t answer, so this line counts only the days the article was among'
+            + ' the 500 most read, from this site\'s data.';
+        }
+        item.append(state);
+      }
+      item.append(remove);
       return item;
     }));
     drawHistory(plot, lines, source.start, days);
@@ -456,6 +499,12 @@ function renderHistory(figure, source) {
 
   return {
     toggle,
+    // Charts an article found with the search box; false if it can't be added.
+    add(key, title) {
+      if (!chosen.has(key)) found.set(key, { title });
+      return choose(key);
+    },
+    full: () => chosen.size >= HISTORY_MAX,
     setHalfLife(label) {
       if (label === halfLife) return;
       halfLife = label;
@@ -467,6 +516,7 @@ function renderHistory(figure, source) {
 // The history chart: one line per item, a date axis, a score axis from zero,
 // and a crosshair that reads out every line's score on the day under it.
 function drawHistory(plot, lines, start, days) {
+  if (!lines.length) { plot.replaceChildren(); return; }
   // Drawn at the panel's own width, so the text stays readable on a phone.
   const width = Math.max(280, Math.round(plot.clientWidth || 1000));
   const height = width < 600 ? 220 : 300;
@@ -570,6 +620,196 @@ function niceStep(value) {
 
 function formatCompact(value) {
   return value === 0 ? '0' : value.toLocaleString('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+}
+
+// An article's views on each day from start to last (ISO dates), from
+// Wikimedia's Pageviews API: [[day, views], …], day 0 being start.
+// If Wikimedia doesn't answer, falls back to this site's own data: the days
+// the article was among the 500 most read (marked local).
+async function fetchViews(key, start, last) {
+  const name = key.slice(key.indexOf(':') + 1);
+  const ymd = (iso) => iso.replaceAll('-', '');
+  try {
+    const response = await fetch('https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/'
+      + `all-access/user/${encodeURIComponent(name)}/daily/${ymd(start)}/${ymd(last)}`,
+    { headers: { 'Api-User-Agent': API_USER_AGENT } });
+    if (response.status === 404) return { series: [] };   // no views recorded in these days
+    if (!response.ok) throw new Error(`Pageviews API: ${response.status}`);
+    const { items } = await response.json();
+    return {
+      series: items.map((item) => {
+        const t = item.timestamp;
+        return [daysBetween(start, `${t.slice(0, 4)}-${t.slice(4, 6)}-${t.slice(6, 8)}`), item.views];
+      }),
+    };
+  } catch (error) {
+    const shard = await localShard(shardOf(key));
+    const points = shard.series[name];
+    if (!points) throw error;
+    const offset = daysBetween(start, shard.start);
+    return { series: points.map(([day, views]) => [day + offset, views]), local: true };
+  }
+}
+
+// This site's own daily values for every Wikipedia article in its data,
+// split into SERIES_SHARDS files (build/build.py write_series).
+const SERIES_SHARDS = 128;
+const shards = new Map();
+function localShard(n) {
+  if (!shards.has(n)) {
+    shards.set(n, fetch(`data/wikipedia/series-${String(n).padStart(3, '0')}.json?v=${data.generated}`)
+      .then((r) => { if (!r.ok) throw new Error(`series ${n}: ${r.status}`); return r.json(); }));
+  }
+  return shards.get(n);
+}
+
+// FNV-1a of a key's UTF-8 bytes, the same as build.py's shard_of.
+function shardOf(key) {
+  let h = 0x811c9dc5;
+  for (const byte of new TextEncoder().encode(key)) h = Math.imul(h ^ byte, 0x01000193) >>> 0;
+  return h % SERIES_SHARDS;
+}
+
+// Every Wikipedia article in this site's data, most-read first: the search
+// box's fallback when Wikipedia's own search doesn't answer.
+let localIndex = null;
+function searchLocally(query) {
+  localIndex ||= fetch(`data/wikipedia/index.json?v=${data.generated}`).then((r) => r.json());
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  return localIndex.then((names) => names
+    .filter((name) => { const text = name.replaceAll('_', ' ').toLowerCase(); return words.every((w) => text.includes(w)); })
+    .slice(0, 8)
+    .map((name) => ({ key: name, title: name.replaceAll('_', ' '), description: 'In this site\'s data' })));
+}
+
+// — Search: chart any English Wikipedia article —————————————————————————
+
+// A search box with suggestions from Wikipedia's title search; picking one
+// adds the article to the history chart.
+function renderSearch(history) {
+  const box = document.createElement('div');
+  box.className = 'search';
+  const label = document.createElement('label');
+  label.className = 'search-label';
+  label.htmlFor = 'wikipedia-search';
+  label.textContent = 'Chart any article\'s history';
+  const input = document.createElement('input');
+  input.type = 'search';
+  input.id = 'wikipedia-search';
+  input.placeholder = 'Search Wikipedia…';
+  input.autocomplete = 'off';
+  input.setAttribute('role', 'combobox');
+  input.setAttribute('aria-autocomplete', 'list');
+  input.setAttribute('aria-expanded', 'false');
+  input.setAttribute('aria-controls', 'wikipedia-search-list');
+  const list = document.createElement('ul');
+  list.id = 'wikipedia-search-list';
+  list.className = 'search-list';
+  list.setAttribute('role', 'listbox');
+  list.hidden = true;
+  const status = document.createElement('p');
+  status.className = 'search-status';
+  status.setAttribute('role', 'status');
+  const field = document.createElement('div');
+  field.className = 'search-field';
+  field.append(input, list);
+  box.append(label, field, status);
+
+  let results = [];
+  let active = -1;
+  let timer = 0;
+  let controller = null;
+
+  function show(pages) {
+    results = pages;
+    active = -1;
+    list.replaceChildren(...pages.map((page, i) => {
+      const li = document.createElement('li');
+      li.id = `wikipedia-search-${i}`;
+      li.setAttribute('role', 'option');
+      const title = document.createElement('span');
+      title.className = 'search-title';
+      title.textContent = page.title;
+      li.append(title);
+      if (page.description) {
+        const description = document.createElement('span');
+        description.className = 'search-description';
+        description.textContent = page.description;
+        li.append(description);
+      }
+      li.addEventListener('pointerdown', (event) => { event.preventDefault(); pick(i); });
+      return li;
+    }));
+    list.hidden = !pages.length;
+    input.setAttribute('aria-expanded', String(pages.length > 0));
+    input.removeAttribute('aria-activedescendant');
+  }
+
+  function highlight(i) {
+    active = i;
+    [...list.children].forEach((li, j) => li.setAttribute('aria-selected', String(j === i)));
+    if (i >= 0) {
+      input.setAttribute('aria-activedescendant', `wikipedia-search-${i}`);
+      list.children[i].scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function pick(i) {
+    const page = results[i];
+    if (!page) return;
+    if (history.full()) {
+      status.textContent = `The chart shows at most ${HISTORY_MAX}. Remove one to add ${page.title}.`;
+      return;
+    }
+    history.add(`wikipedia:${page.key}`, page.title);
+    status.textContent = `Added ${page.title} to the history chart.`;
+    input.value = '';
+    show([]);
+  }
+
+  async function search(query) {
+    controller?.abort();
+    controller = new AbortController();
+    try {
+      const url = `https://en.wikipedia.org/w/rest.php/v1/search/title?q=${encodeURIComponent(query)}&limit=8`;
+      let pages;
+      try {
+        const response = await fetch(url, { signal: controller.signal, headers: { 'Api-User-Agent': API_USER_AGENT } });
+        if (!response.ok) throw new Error(`search: ${response.status}`);
+        ({ pages } = await response.json());
+      } catch (error) {
+        if (error.name === 'AbortError') throw error;
+        pages = await searchLocally(query);   // Wikipedia didn't answer: search this site's own articles
+      }
+      if (input.value.trim() === query) show(pages || []);
+    } catch (error) {
+      if (error.name !== 'AbortError') status.textContent = 'The search didn\'t answer. Try again.';
+    }
+  }
+
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    status.textContent = '';
+    const query = input.value.trim();
+    if (!query) { show([]); return; }
+    timer = setTimeout(() => search(query), 200);
+  });
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown' && results.length) {
+      event.preventDefault();
+      highlight((active + 1) % results.length);
+    } else if (event.key === 'ArrowUp' && results.length) {
+      event.preventDefault();
+      highlight((active - 1 + results.length) % results.length);
+    } else if (event.key === 'Enter') {
+      event.preventDefault();
+      pick(active >= 0 ? active : 0);
+    } else if (event.key === 'Escape') {
+      show([]);
+    }
+  });
+  input.addEventListener('blur', () => setTimeout(() => show([]), 100));
+  return box;
 }
 
 // — The race ————————————————————————————————————————————————————————————

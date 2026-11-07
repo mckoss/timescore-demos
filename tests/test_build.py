@@ -2,6 +2,7 @@
 
 import datetime
 import gzip
+import json
 import os
 import sys
 import tempfile
@@ -209,6 +210,22 @@ class WikipediaTest(unittest.TestCase):
         now, before = pools['Day']
         self.assertEqual([key for key, _ in now], ['wikipedia:A', 'wikipedia:B'])
         self.assertEqual(set(before), {'wikipedia:A', 'wikipedia:B'})
+
+    def test_series_files(self):
+        days = [(day(n), {'wikipedia:A': (10.0 + n, 'A'), **({'wikipedia:Café': (5.0, 'Café')} if n else {})})
+                for n in range(3)]
+        with tempfile.TemporaryDirectory() as tmp:
+            build.write_series(days, day(0), tmp)
+            files = sorted(os.listdir(tmp))
+            self.assertEqual(len(files), build.SERIES_SHARDS + 1)
+            with open(os.path.join(tmp, f'series-{build.shard_of("wikipedia:Café"):03d}.json'), encoding='utf-8') as f:
+                shard = json.load(f)
+            self.assertEqual(shard['start'], '2026-01-01')
+            self.assertEqual(shard['series']['Café'], [[1, 5.0], [2, 5.0]])
+            with open(os.path.join(tmp, 'index.json'), encoding='utf-8') as f:
+                self.assertEqual(json.load(f), ['A', 'Café'])
+        # The same hash as app.js shardOf (checked there against these values).
+        self.assertEqual([build.shard_of(k) for k in ('wikipedia:Black_hole', 'wikipedia:Café')], [104, 44])
 
     def test_credit_is_plain_text(self):
         self.assertEqual(wikipages.plain('<a href="//commons.wikimedia.org/wiki/User:X">X &amp; Y</a>\n'), 'X & Y')

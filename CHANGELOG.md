@@ -7,6 +7,24 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.10.0] - 2026-11-07
+### Added
+- A search box on the Wikipedia tab: chart the history of any English
+  Wikipedia article, not just those in the lists. Suggestions come from
+  Wikipedia's title search, and the chart gets the article's views for
+  every day from Wikimedia's Pageviews API, in the reader's browser.
+- If Wikimedia doesn't answer, the page falls back to this site's own data:
+  the search looks through every article the site has collected, and the
+  chart uses the days an article was among the 500 most read, marked
+  "top-500 days only". The build writes that data for every article in
+  `site/data/wikipedia/` (128 small files loaded as needed, and an index);
+  it's rebuilt on each deploy and not committed.
+
+### Changed
+- Wikipedia's lines on the history chart use every day's views from
+  Wikimedia (when it answers), for listed articles too, so all lines are
+  measured the same way.
+
 ## [1.9.0] - 2026-11-07
 ### Changed
 - Lists show the top 20 (they showed 10), with 3 more fading out below.

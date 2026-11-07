@@ -61,6 +61,10 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    people" category and biographies' short descriptions instead, since the
    model tags what an article is about rather than whether it is about a
    person.
+   For the page's search box it also writes every Wikipedia article's daily
+   values to `site/data/wikipedia/` (sharded, plus an index). The page uses
+   them only when Wikimedia's own APIs don't answer; they're rebuilt on each
+   deploy and not committed.
 5. The workflow commits the new data and publishes `site/` to GitHub Pages.
 
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):
