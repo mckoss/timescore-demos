@@ -1,4 +1,4 @@
-// TimeScore Movie Charts: renders site/data/movies.json (built daily by
+// TimeScore Demos: renders site/data/movies.json (built daily by
 // build/build.py) as top lists at four half-lives and a bar chart race per
 // source, and shows how fresh the data is.
 

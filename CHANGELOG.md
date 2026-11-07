@@ -5,7 +5,12 @@ Each code change gets a new version number, following
 number, a fix or a change behind the scenes raises the last one, and a
 change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
-[VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.0`).
+[VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
+
+## [1.6.1] - 2026-11-07
+### Changed
+- The site is called TimeScore Demos (it was TimeScore Movie Charts), in
+  both pages' titles and headings.
 
 ## [1.6.0] - 2026-11-07
 ### Changed
