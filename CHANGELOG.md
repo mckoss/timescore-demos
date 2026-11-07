@@ -7,6 +7,12 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.7.1] - 2026-11-07
+### Fixed
+- The Wikipedia collector tries a day again when Wikimedia says it has no
+  list for it, which sometimes happens for days it has published, and says
+  in the log when it skips a day. The first run missed 8 of 98 days this way.
+
 ## [1.7.0] - 2026-11-07
 ### Added
 - A Wikipedia pageviews tab: English Wikipedia's most-read articles from the
