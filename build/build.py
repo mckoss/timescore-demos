@@ -17,6 +17,12 @@ month and a year), and writes site/data/movies.json with:
   half-life on any day) and for the history chart of any item in a list;
 - when it was built and the latest day of each source, so the page can show
   whether the daily update is running.
+
+For Wikipedia it also writes every article's daily values, in SERIES_SHARDS
+files under site/data/wikipedia/ (series-NN.json, the shard picked by
+shard_of), and index.json, every article from most-read down. The page
+falls back to these when Wikimedia's own API doesn't answer. They're
+rebuilt on each deploy and not committed (.gitignore).
 """
 
 import datetime
@@ -202,6 +208,37 @@ def topic_lists(pools, groups):
     return out
 
 
+SERIES_SHARDS = 128
+
+
+def shard_of(key):
+    """Which series file holds a key: FNV-1a of its UTF-8 bytes (app.js has the same)."""
+    h = 0x811c9dc5
+    for byte in key.encode('utf-8'):
+        h = ((h ^ byte) * 0x01000193) & 0xffffffff
+    return h % SERIES_SHARDS
+
+
+def write_series(days, start, folder='site/data/wikipedia'):
+    """Every article's daily values, sharded, and an index of all of them."""
+    series, total = {}, {}
+    for date, events in days:
+        day = (date - start).days
+        for key, (value, _) in events.items():
+            series.setdefault(key, []).append([day, value])
+            total[key] = total.get(key, 0) + value
+    shards = [{} for _ in range(SERIES_SHARDS)]
+    for key, points in series.items():
+        shards[shard_of(key)][key.split(':', 1)[1]] = points
+    os.makedirs(folder, exist_ok=True)
+    for n, shard in enumerate(shards):
+        with open(os.path.join(folder, f'series-{n:03d}.json'), 'w', encoding='utf-8') as f:
+            json.dump({'start': start.isoformat(), 'series': shard}, f, ensure_ascii=False, separators=(',', ':'))
+    with open(os.path.join(folder, 'index.json'), 'w', encoding='utf-8') as f:
+        json.dump([key.split(':', 1)[1] for key in sorted(total, key=lambda k: -total[k])], f,
+                  ensure_ascii=False, separators=(',', ':'))
+
+
 def main():
     with open('VERSION', encoding='utf-8') as f:
         version = f.read().strip()
@@ -265,6 +302,9 @@ def main():
             })
         out['sources'][source] = entry
 
+    if 'wikipedia' in built:
+        days, start = built['wikipedia'][:2]
+        write_series(days, start)
     os.makedirs('site/data', exist_ok=True)
     with open('site/data/movies.json', 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))

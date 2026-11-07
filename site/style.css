@@ -330,3 +330,26 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
 .history-tip-row { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 6px; align-items: center; }
 .history-tip-row > :nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .history-tip-value { font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* Search: chart any Wikipedia article (app.js renderSearch). */
+.search { margin: 0 0 16px; max-width: 520px; }
+.search-label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.search-field { position: relative; }
+.search input {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 15px; padding: 9px 12px;
+  border: 1px solid var(--muted); border-radius: 8px; background: var(--surface); color: var(--text);
+}
+.search input:focus { outline: 2px solid var(--text); outline-offset: 1px; }
+.search-list {
+  position: absolute; z-index: 5; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px 0;
+  list-style: none; max-height: 340px; overflow-y: auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.16);
+}
+.search-list[hidden] { display: none; }
+.search-list li { display: grid; padding: 7px 12px; cursor: pointer; }
+.search-list li[aria-selected="true"], .search-list li:hover { background: var(--line); }
+.search-title { font-weight: 600; font-size: 14px; }
+.search-description { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.search-status { margin: 6px 0 0; font-size: 12px; color: var(--muted); min-height: 1em; }
+.legend-state { color: var(--muted); font-size: 12px; }
