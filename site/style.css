@@ -108,3 +108,24 @@ h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0; }
   :root { --race-row: 42px; }
   .race-bar { grid-template-columns: 27px minmax(0, 120px) 1fr; font-size: 12px; }
 }
+
+/* The update log page (status.html). */
+.crumb { margin: 0 0 6px; font-size: 14px; }
+.status-totals {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+  margin-top: 24px;
+}
+.total { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+.total h3 { font-size: 14px; color: var(--muted); font-weight: 600; }
+.total-value { margin: 4px 0 2px; font-size: 26px; font-weight: 800; }
+.total-detail { margin: 0; font-size: 13px; color: var(--muted); }
+.status-log { margin-top: 28px; padding-top: 20px; border-top: 2px solid var(--text); }
+.status-log h2 { font-size: 24px; margin-bottom: 12px; }
+.table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.status-log table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.status-log th, .status-log td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.status-log th { font-size: 13px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+.status-log td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.status-log tbody tr:last-child td { border-bottom: 0; }
+.status-log tr.nothing-new td { color: var(--muted); }
+.note { margin: 10px 0 0; font-size: 13px; color: var(--muted); max-width: 80ch; }

@@ -32,6 +32,9 @@ jobs:
           for name, source in data['sources'].items():
               print(name, source['collected'], 'days, through', source['last'])
               if source['collected']:
-                  for label in [h['label'] for h in data['halfLives']] + [data['trending']]:
+                  labels = [h['label'] for h in data['halfLives']]
+                  if source['collected'] >= data['trendingMinDays']:
+                      labels.append(data['trending'])
+                  for label in labels:
                       assert source['lists'][label], f'{name}: empty {label} list'
           PY

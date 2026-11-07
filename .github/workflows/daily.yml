@@ -61,6 +61,11 @@ jobs:
           TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
         run: python build/build.py
 
+      # Adds this run to data/log.jsonl and writes site/data/status.json for
+      # the update log page.
+      - name: Log the update
+        run: python build/log.py
+
       - name: Commit the new data
         run: |
           git config user.name "github-actions[bot]"
