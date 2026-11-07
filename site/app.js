@@ -13,13 +13,73 @@ const BELOW_SHOWN = 3;      // ranks shown fading out below the top list
 const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where a movie not in the list sits, out of sight
 const EASE = 0.2;
 const DAY_MS = 86400e3;
+const DEFAULT_SOURCE = 'tmdb';   // the source with the most history
 
 const data = await fetch(`data/movies.json?v=${Date.now()}`).then((r) => r.json());
 showFreshness(data);
 showVersion(data.version);
 addLogLink();
 const main = document.querySelector('[data-sources]');
-for (const [id, source] of Object.entries(data.sources)) main.append(renderSource(id, source));
+showSources(data.sources);
+
+// — Tabs: one source at a time ————————————————————————————————————————————
+
+// A tab for each source, with how many days of data it has, and its section
+// below; the chosen source is in the URL (#tmdb), TMDB by default since it
+// has the most history.
+function showSources(sources) {
+  const tabs = document.querySelector('[data-tabs]');
+  const order = Object.keys(sources).sort((a, b) => (a === DEFAULT_SOURCE ? -1 : b === DEFAULT_SOURCE ? 1 : 0));
+  const panels = new Map();
+  const buttons = new Map();
+  for (const id of order) {
+    const source = sources[id];
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.id = `tab-${id}`;
+    button.setAttribute('role', 'tab');
+    button.setAttribute('aria-controls', `source-${id}`);
+    const name = document.createElement('span');
+    name.className = 'tab-name';
+    name.textContent = source.name;
+    const days = document.createElement('span');
+    days.className = 'tab-days';
+    days.textContent = source.collected
+      ? `${source.collected} day${source.collected === 1 ? '' : 's'} of data` : 'Collecting';
+    button.append(name, days);
+    button.addEventListener('click', () => {
+      history.replaceState(null, '', `#${id}`);
+      select(id);
+    });
+    tabs.append(button);
+    buttons.set(id, button);
+    const panel = renderSource(id, source);
+    panel.id = `source-${id}`;
+    panel.setAttribute('role', 'tabpanel');
+    panel.setAttribute('aria-labelledby', `tab-${id}`);
+    main.append(panel);
+    panels.set(id, panel);
+  }
+  // Arrow keys move between tabs.
+  tabs.addEventListener('keydown', (event) => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+    if (!step) return;
+    const i = order.indexOf(document.activeElement.id.replace('tab-', ''));
+    const next = order[(i + step + order.length) % order.length];
+    buttons.get(next).focus();
+    buttons.get(next).click();
+  });
+  function select(id) {
+    if (!panels.has(id)) id = DEFAULT_SOURCE;
+    for (const [key, button] of buttons) {
+      button.setAttribute('aria-selected', String(key === id));
+      button.tabIndex = key === id ? 0 : -1;
+      panels.get(key).hidden = key !== id;
+    }
+  }
+  select(location.hash.slice(1));
+  window.addEventListener('hashchange', () => select(location.hash.slice(1)));
+}
 
 // — A source: four lists and a race ———————————————————————————————————
 

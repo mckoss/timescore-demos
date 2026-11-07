@@ -5,7 +5,14 @@ Each code change gets a new version number, following
 number, a fix or a change behind the scenes raises the last one, and a
 change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
-[VERSION](VERSION), shown in the site's footer and tagged in git (`v1.5.1`).
+[VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.0`).
+
+## [1.6.0] - 2026-11-07
+### Changed
+- The charts page shows one source at a time, picked with a tab for each
+  source at the top that says how many days of data it has. TMDB comes first
+  and is shown by default, since it has the most history; the choice is in
+  the page's address (#tmdb, #imdb), so it can be linked to.
 
 ## [1.5.1] - 2026-11-07
 ### Changed
