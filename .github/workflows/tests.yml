@@ -1,0 +1,37 @@
+# Checks a pull request before it's merged: the unit tests, and a build of the
+# site from the data already in the repository (no downloads, no posters).
+name: Tests
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests
+
+      - name: Build the charts
+        run: python build/build.py
+
+      - name: Check the built data
+        run: |
+          python - <<'PY'
+          import json
+          data = json.load(open('site/data/movies.json'))
+          for name, source in data['sources'].items():
+              print(name, source['collected'], 'days, through', source['last'])
+              if source['collected']:
+                  for label in [h['label'] for h in data['halfLives']] + [data['trending']]:
+                      assert source['lists'][label], f'{name}: empty {label} list'
+          PY
