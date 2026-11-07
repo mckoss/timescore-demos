@@ -69,8 +69,17 @@ def entry(time, trigger, run, added_files, posters_added, all_files):
             'rows': sum(data_rows(text) for _, text in mine.values()),
             'bytes': sum(size for size, _ in mine.values()),
         }
-    return {'time': time, 'trigger': trigger, 'run': run, 'added': added,
-            'posters': posters_added, 'totals': totals(all_files)}
+    return {'time': time, 'trigger': trigger, 'run': run, 'version': current_version(),
+            'added': added, 'posters': posters_added, 'totals': totals(all_files)}
+
+
+def current_version():
+    """The code's version (VERSION), or None before there was one."""
+    try:
+        with open('VERSION', encoding='utf-8') as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        return None
 
 
 def current_entry():
@@ -125,7 +134,9 @@ def history_entries():
             files[path] = (size, git('show', f'{commit}:{path}') if path == POSTERS else None)
         posters_now = totals(files)['posters']
         time = datetime.datetime.fromisoformat(time).astimezone(datetime.timezone.utc).isoformat(timespec='seconds')
-        entries.append(entry(time, 'history', None, added, max(0, posters_now - previous_posters), files))
+        item = entry(time, 'history', None, added, max(0, posters_now - previous_posters), files)
+        item['version'] = None   # before versions
+        entries.append(item)
         previous_posters = posters_now
     return entries
 
@@ -144,6 +155,7 @@ def write_status(entries):
         'generated': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
         'totals': entries[-1]['totals'] if entries else None,
         'runs': len(entries),
+        'version': current_version(),
         'dates': data_dates(),
         'log': list(reversed(entries))[:SHOWN],
     }

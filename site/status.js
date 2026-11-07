@@ -7,7 +7,7 @@
 // time, so it notices a missed update even when the workflow has stopped
 // and this page itself hasn't changed.
 
-import { formatDate } from './freshness.js?v=__VERSION__';
+import { formatDate, showVersion } from './freshness.js?v=__VERSION__';
 
 const NAMES = { imdb: 'New IMDb ratings', tmdb: 'TMDB popularity' };
 const SHORT = { imdb: 'IMDb data', tmdb: 'TMDB data' };
@@ -33,6 +33,7 @@ showCoverage(status);
 showGrowth(status.log);
 showTotals(status);
 showLog(status.log);
+showVersion(status.version);
 
 // — Health ——————————————————————————————————————————————————————————————
 
@@ -314,6 +315,7 @@ function showLog(log) {
     row.append(
       cell(ran),
       cell(text(TRIGGERS[item.trigger] || item.trigger)),
+      cell(text(item.version ? `v${item.version}` : '—')),
       cell(added(item.added.imdb)),
       cell(added(item.added.tmdb)),
       cell(text(item.posters ? `+${item.posters}` : '—')),

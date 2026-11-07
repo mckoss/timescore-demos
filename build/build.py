@@ -141,7 +141,10 @@ def trending(week, month, day):
 
 
 def main():
+    with open('VERSION', encoding='utf-8') as f:
+        version = f.read().strip()
     out = {
+        'version': version,
         'generated': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
         'halfLives': [{'label': label, 'days': days} for label, days in HALF_LIVES],
         'trending': TRENDING,

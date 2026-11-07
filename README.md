@@ -46,6 +46,18 @@ run to `data/log.jsonl` and writes `site/data/status.json` for that page.
 The page shows when the data was last updated. If the daily update fails,
 or a source stops getting new data, it says so in an amber box at the top.
 
+## Versions
+
+Each code change raises the version in [`VERSION`](VERSION), following
+[Semantic Versioning](https://semver.org), and adds an entry to
+[`CHANGELOG.md`](CHANGELOG.md): a new feature raises the middle number, a
+fix or a change behind the scenes the last one, and a change that breaks how
+the site or its data files work the first. The check on pull requests
+(`build/check_version.py`) fails a code change that doesn't. The daily
+workflow tags each version in git (`v1.5.0`) when it first reaches `main`,
+the site's footer shows it, and the update log records the version each
+update ran.
+
 ## Setup
 
 1. **Pages:** Settings → Pages → Build and deployment → Source: **GitHub Actions**.

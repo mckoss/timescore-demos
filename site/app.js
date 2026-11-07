@@ -3,7 +3,7 @@
 // source, and shows how fresh the data is.
 
 import { EMPTY, addEvent, scoreAt } from './timescore.js?v=__VERSION__';
-import { showFreshness, formatDate, daysBetween } from './freshness.js?v=__VERSION__';
+import { showFreshness, showVersion, formatDate, daysBetween } from './freshness.js?v=__VERSION__';
 
 const DAYS_PER_SECOND = 4;
 const RACE_SIZE = 10;
@@ -16,6 +16,7 @@ const DAY_MS = 86400e3;
 
 const data = await fetch(`data/movies.json?v=${Date.now()}`).then((r) => r.json());
 showFreshness(data);
+showVersion(data.version);
 addLogLink();
 const main = document.querySelector('[data-sources]');
 for (const [id, source] of Object.entries(data.sources)) main.append(renderSource(id, source));
