@@ -1,5 +1,5 @@
-# Every day: collect new IMDb ratings and TMDB popularity, rebuild the
-# charts, commit the new data and publish the site to GitHub Pages.
+# Every day: collect new IMDb ratings, TMDB popularity and Wikipedia
+# pageviews, rebuild the charts, commit the new data and publish the site to GitHub Pages.
 name: Daily update
 
 on:
@@ -55,6 +55,12 @@ jobs:
 
       - name: Collect TMDB popularity
         run: python collect/tmdb.py
+
+      # The newest days, then up to 90 older ones a run until three years
+      # are collected. Wikimedia asks clients to pace their requests; the
+      # collector waits when told to.
+      - name: Collect Wikipedia pageviews
+        run: python collect/wikipedia.py
 
       - name: Build the charts
         env:

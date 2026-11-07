@@ -7,6 +7,23 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.7.0] - 2026-11-07
+### Added
+- A Wikipedia pageviews tab: English Wikipedia's most-read articles from the
+  Wikimedia Pageviews API (CC0), ranked with TimeScore like the movies, with
+  each article's short description and free image (with its author and
+  license, linked to its page on Wikimedia Commons). Pages that aren't
+  articles (the Main Page, searches, portals) and pages whose views look
+  automated (nearly all or nearly none from desktop computers) are left out.
+- The daily update collects Wikipedia's newest days, then fills in the
+  history up to 90 days a run, back to November 2023.
+- Wikipedia on the update log: its coverage, totals and what each update added.
+
+### Changed
+- A long race plays faster, so it takes about a minute at most.
+- `site/data/movies.json` lists each source's `items` (it was `movies`), each
+  with an `image` (it was `poster`).
+
 ## [1.6.1] - 2026-11-07
 ### Changed
 - The site is called TimeScore Demos (it was TimeScore Movie Charts), in

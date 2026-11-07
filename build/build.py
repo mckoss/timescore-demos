@@ -1,13 +1,15 @@
 """Build the site's data: TimeScore lists and races for each source.
 
-Reads the daily files in data/imdb and data/tmdb, scores every movie with
-TimeScore at four half-lives (a day, a week, a month and a year), and writes
-site/data/movies.json with:
+Reads the daily files in data/imdb, data/tmdb and data/wikipedia, scores
+every movie or article with TimeScore at four half-lives (a day, a week, a
+month and a year), and writes site/data/movies.json with:
 
-- the top movies at each half-life as of the latest day, with how far each
-  moved since the day before, and the weekly trending list (each movie's
+- the top items at each half-life as of the latest day, with how far each
+  moved since the day before, and the weekly trending list (each item's
   Week score divided by its Month score);
-- race data: the daily values of every movie that made a top 10 at any
+- for each item shown: its title, image, link and (for Wikipedia) its short
+  description and the image's author and license;
+- race data: the daily values of every item that made a top 10 at any
   half-life on any day, for the page to animate;
 - when it was built and the latest day of each source, so the page can show
   whether the daily update is running.
@@ -26,6 +28,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from timescore import EMPTY, add_event, score_at  # noqa: E402
 import posters  # noqa: E402
+import wikipages  # noqa: E402
 
 HALF_LIVES = [('Day', 1), ('Week', 7), ('Month', 30.44), ('Year', 365.25)]
 LIST_SIZE = 20
@@ -52,6 +55,7 @@ SOURCES = {
         'about': 'Movies ranked by the ratings people gave them on IMDb, each day\'s new '
                  'ratings counting as one event worth that many ratings.',
         'unit': 'ratings',
+        'noun': 'movies',
         'link': 'https://www.imdb.com/title/{id}/',
         'credit': 'Information courtesy of IMDb (https://www.imdb.com). Used with permission.',
     },
@@ -60,8 +64,20 @@ SOURCES = {
         'about': 'Movies ranked by The Movie Database\'s daily popularity score, each day\'s '
                  'score counting as one event.',
         'unit': 'popularity',
+        'noun': 'movies',
         'link': 'https://www.themoviedb.org/movie/{id}',
         'credit': 'This product uses the TMDB API but is not endorsed or certified by TMDB.',
+    },
+    'wikipedia': {
+        'name': 'Wikipedia pageviews',
+        'about': 'English Wikipedia articles ranked by how many times they were read, each '
+                 'day\'s views counting as one event. Pages that aren\'t articles, and pages '
+                 'whose views look automated, are left out.',
+        'unit': 'views',
+        'noun': 'articles',
+        'link': 'https://en.wikipedia.org/wiki/{id}',
+        'credit': 'Pageview data from the Wikimedia Foundation (CC0). Images from Wikimedia '
+                  'Commons and Wikipedia, under the licenses shown with each.',
     },
 }
 
@@ -80,8 +96,8 @@ def read_days(source):
                 tconst, value, title, year = parts
                 events[f'imdb:{tconst}'] = (float(value), f'{title} ({year})' if year else title)
             else:
-                tmdb_id, value, title = parts
-                events[f'tmdb:{tmdb_id}'] = (float(value), title)
+                ident, value, title = parts
+                events[f'{source}:{ident}'] = (float(value), title)
         days.append((date, events))
     return days
 
@@ -140,6 +156,19 @@ def trending(week, month, day):
     return sorted(ratios, key=lambda item: -item[1])
 
 
+def article(key, title, row):
+    """A Wikipedia article's entry: its free image (if any) and that image's credit."""
+    row = row or {}
+    out = {'title': row.get('title') or title, 'image': row.get('thumbnail') or None,
+           'link': wikipages.link(key)}
+    if row.get('description'):
+        out['description'] = row['description']
+    if out['image']:
+        out['imageCredit'] = ', '.join(part for part in (row.get('artist'), row.get('license')) if part)
+        out['imagePage'] = row.get('file_page') or None
+    return out
+
+
 def main():
     with open('VERSION', encoding='utf-8') as f:
         version = f.read().strip()
@@ -160,17 +189,19 @@ def main():
     keys = set()
     for days, start, titles, lists, racers in built.values():
         keys |= racers | {item['key'] for items in lists.values() for item in items}
-    found = posters.ensure(sorted(keys))
+    found = posters.ensure(sorted(k for k in keys if not k.startswith('wikipedia:')))
+    pages = wikipages.ensure(sorted(k for k in keys if k.startswith('wikipedia:')))
 
-    def movie(key, titles):
+    def describe(key, titles):
+        source, ident = key.split(':', 1)
+        if source == 'wikipedia':
+            return article(key, titles[key], pages.get(key))
         row = found.get(key)
-        ident = key.split(':', 1)[1]
-        source = key.split(':', 1)[0]
         # TMDB's export titles are original-language; prefer TMDB's English title.
         title = titles[key]
         if source == 'tmdb' and row and row.get('title'):
             title = row['title'] + (f' ({row["year"]})' if row.get('year') else '')
-        return {'title': title, 'poster': posters.url(row), 'link': SOURCES[source]['link'].format(id=ident)}
+        return {'title': title, 'image': posters.url(row), 'link': SOURCES[source]['link'].format(id=ident)}
 
     for source, info in SOURCES.items():
         entry = {**info, 'collected': 0, 'start': None, 'last': None}
@@ -180,7 +211,7 @@ def main():
                 'collected': len(days),
                 'start': start.isoformat(),
                 'last': days[-1][0].isoformat(),
-                'movies': {key: movie(key, titles) for key in
+                'items': {key: describe(key, titles) for key in
                            racers | {item['key'] for items in lists.values() for item in items}},
                 'lists': lists,
                 'race': {key: [[(date - start).days, events[key][0]] for date, events in days if key in events]
