@@ -7,6 +7,25 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.8.0] - 2026-11-07
+### Added
+- Topics on the Wikipedia tab: People, Politics, Sports, Entertainment,
+  Science & tech, Business, History and Places, each with its own top
+  articles at every half-life, picked from each half-life's top 300.
+  Topics come from Wikimedia's article topic model; People comes from
+  Wikipedia's "Living people" category and biographies' short
+  descriptions ("English actor (1940–2026)"). A topic shows once it has at
+  least 10 articles in every half-life's list.
+- A history chart for any movie or article: the chart button beside each
+  one in the top and trending lists adds its line (up to 8), showing its
+  TimeScore on every day of the data at the half-life chosen for the top
+  list, with a readout of every line on the day under the pointer.
+
+### Changed
+- `site/data/movies.json` gives each source's daily values as `series`
+  for every item it shows, and the race's items as `racers` (they were
+  `race`).
+
 ## [1.7.1] - 2026-11-07
 ### Fixed
 - The Wikipedia collector tries a day again when Wikimedia says it has no

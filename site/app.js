@@ -14,6 +14,7 @@ const BELOW_SHOWN = 3;      // ranks shown fading out below the top list
 const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where an item not in the list sits, out of sight
 const EASE = 0.2;
 const DAY_MS = 86400e3;
+const HISTORY_MAX = 8;      // lines on the history chart: one per color in the palette
 const DEFAULT_SOURCE = 'tmdb';   // the source with the most history
 
 const data = await fetch(`data/movies.json?v=${Date.now()}`).then((r) => r.json());
@@ -92,26 +93,28 @@ function renderSource(id, source) {
   if (!source.collected) {
     range.textContent = 'Collecting started. The first lists appear after the second daily update.';
     section.querySelector('[data-race]').remove();
+    section.querySelector('[data-history]').remove();
     return section;
   }
   range.textContent = `${source.collected} day${source.collected === 1 ? '' : 's'} of data, `
     + `${formatDate(source.start)} to ${formatDate(source.last)}.`;
 
+  const history = renderHistory(section.querySelector('[data-history]'), source);
   const lists = section.querySelector('[data-lists]');
-  lists.append(renderRanking(source));
+  lists.append(renderRanking(source, history));
   if (source.collected < data.trendingMinDays) {
     lists.append(renderNotYet(data.trending,
       `Needs ${data.trendingMinDays} days of data, for this week and this month to differ. `
       + `${source.collected} so far.`));
   } else if (source.lists[data.trending]) {
     lists.append(renderList(data.trending, 'This week\'s pace compared with the month\'s (1.0× is steady)',
-      source.lists[data.trending], source, (ratio) => `${ratio.toFixed(1)}×`));
+      source.lists[data.trending], source, (ratio) => `${ratio.toFixed(1)}×`, history));
   }
   renderRace(section.querySelector('[data-race]'), source);
   return section;
 }
 
-function renderList(title, note, items, source, format) {
+function renderList(title, note, items, source, format, history) {
   const list = document.createElement('section');
   list.className = 'list';
   const heading = document.createElement('h3');
@@ -133,7 +136,7 @@ function renderList(title, note, items, source, format) {
     const rank = document.createElement('span');
     rank.className = 'list-rank';
     rank.textContent = i + 1;
-    li.append(rank, image(entry, 'list-poster'), itemBody(entry, meta));
+    li.append(rank, image(entry, 'list-poster'), itemBody(entry, meta), history.toggle(item.key));
     ol.append(li);
   });
   list.append(ol);
@@ -145,11 +148,29 @@ function renderList(title, note, items, source, format) {
 // SWITCH_SECONDS, so the eye can follow it: an item dropping out of the top
 // slides down past #10 into a fading zone that shows #11 to #13, and one
 // climbing in rises up out of it.
-function renderRanking(source) {
+function renderRanking(source, history) {
   const section = document.createElement('section');
   section.className = 'list ranking';
   const heading = document.createElement('h3');
   heading.textContent = `Top ${source.noun}`;
+  // Wikipedia's topics: All, People, Politics… each with its own lists.
+  const topics = source.topics ? [{ id: 'all', label: 'All' }, ...source.topics] : [];
+  const listsFor = (topic) => (topic === 'all' ? source.lists : source.topicLists[topic]);
+  const topicBar = document.createElement('div');
+  topicBar.className = 'topics';
+  topicBar.setAttribute('role', 'group');
+  topicBar.setAttribute('aria-label', 'Topic');
+  let topic = 'all';
+  let halfLife = 'Week';
+  const topicButtons = topics.map(({ id, label }) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = label;
+    button.dataset.topic = id;
+    button.addEventListener('click', () => { topic = id; show(halfLife, true); });
+    topicBar.append(button);
+    return button;
+  });
   const selector = document.createElement('div');
   selector.className = 'half-lives';
   selector.setAttribute('role', 'group');
@@ -163,7 +184,7 @@ function renderRanking(source) {
   const spoken = document.createElement('ol');
   spoken.className = 'visually-hidden';
   spoken.setAttribute('aria-live', 'polite');
-  section.append(heading, selector, note, board, spoken);
+  section.append(heading, ...(topics.length ? [topicBar] : []), selector, note, board, spoken);
 
   for (let i = 1; i <= LIST_SHOWN; i++) {
     const rank = document.createElement('span');
@@ -173,9 +194,14 @@ function renderRanking(source) {
     board.append(rank);
   }
 
-  // One card for every item in any of the half-lives' top lists.
-  const keys = new Set(data.halfLives.flatMap(({ label }) =>
+  // One card for every item in any of the half-lives' top lists (of any topic).
+  const keys = new Set(topics.length ? [] : data.halfLives.flatMap(({ label }) =>
     source.lists[label].slice(0, LIST_SHOWN + BELOW_SHOWN).map((item) => item.key)));
+  for (const { id } of topics) {
+    for (const { label } of data.halfLives) {
+      for (const item of listsFor(id)[label].slice(0, LIST_SHOWN + BELOW_SHOWN)) keys.add(item.key);
+    }
+  }
   const cards = new Map([...keys].map((key) => {
     const entry = source.items[key];
     const card = document.createElement('div');
@@ -185,7 +211,7 @@ function renderRanking(source) {
     meta.className = 'list-meta';
     const body = itemBody(entry, meta);
     body.querySelectorAll('a').forEach((a) => { a.tabIndex = -1; });
-    card.append(image(entry, 'list-poster', -1), body);
+    card.append(image(entry, 'list-poster', -1), body, history.toggle(key, -1));
     board.append(card);
     return [key, { card, meta, shown: false, value: 0, target: 0, previous: null, rank: OFF_LIST }];
   }));
@@ -194,7 +220,7 @@ function renderRanking(source) {
     const button = document.createElement('button');
     button.type = 'button';
     button.textContent = label;
-    button.addEventListener('click', () => show(label, true));
+    button.addEventListener('click', () => { halfLife = label; show(label, true); });
     selector.append(button);
     return button;
   });
@@ -205,8 +231,10 @@ function renderRanking(source) {
     const moving = animate && !reduced;
     board.classList.toggle('moving', moving);
     buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.textContent === label)));
+    topicButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.topic === topic)));
+    history.setHalfLife(label);
     note.textContent = `Each day's activity counts in full, then fades by half every ${label.toLowerCase()}.`;
-    const all = source.lists[label];
+    const all = listsFor(topic)[label];
     const items = all.slice(0, LIST_SHOWN);
     const ranks = new Map(all.map((item, i) => [item.key, i]));
 
@@ -244,7 +272,7 @@ function renderRanking(source) {
 
     spoken.replaceChildren(...items.map((item) => {
       const li = document.createElement('li');
-      li.textContent = `${source.items[item.key].title}, ${formatScore(item.score)}`;
+      li.append(`${source.items[item.key].title}, ${formatScore(item.score)} `, history.toggle(item.key));
       return li;
     }));
   }
@@ -318,11 +346,235 @@ function image(entry, className, tabIndex) {
   return link;
 }
 
+// An item's TimeScore at the end of each day, from its daily values
+// ([[day, value], …]), for a half-life in days.
+function dailyScores(points, days, halfLife) {
+  const events = new Map(points);
+  let logScore = EMPTY;
+  const daily = new Float64Array(days);
+  for (let d = 0; d < days; d++) {
+    if (events.get(d) > 0) logScore = addEvent(logScore, events.get(d), d, halfLife);
+    daily[d] = logScore === EMPTY ? 0 : scoreAt(logScore, d, halfLife);
+  }
+  return daily;
+}
+
+// — History: chosen items' scores over the whole history ————————————————————
+
+// The race's data drawn as lines: each chosen item's TimeScore on every day,
+// at the half-life chosen for the top list. Items are chosen with the chart
+// toggle beside each one (at most HISTORY_MAX); each keeps its color until
+// it is removed.
+function renderHistory(figure, source) {
+  const days = daysBetween(source.start, source.last) + 1;
+  const chosen = new Map();   // key → color slot (0–7), in the order chosen
+  const toggles = new Map();  // key → [buttons]
+  let halfLife = 'Week';
+  const legend = figure.querySelector('[data-history-legend]');
+  const plot = figure.querySelector('[data-history-plot]');
+  const note = figure.querySelector('[data-history-note]');
+  figure.querySelector('[data-history-clear]').addEventListener('click', () => {
+    chosen.clear();
+    update();
+  });
+
+  function toggle(key, tabIndex) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'history-toggle';
+    button.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 12.5 6 8l3 3 5.5-6.5"/></svg>';
+    if (tabIndex !== undefined) button.tabIndex = tabIndex;
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (chosen.has(key)) chosen.delete(key);
+      else if (chosen.size < HISTORY_MAX) {
+        const used = new Set(chosen.values());
+        chosen.set(key, [...Array(HISTORY_MAX).keys()].find((slot) => !used.has(slot)));
+      }
+      update();
+    });
+    if (!toggles.has(key)) toggles.set(key, []);
+    toggles.get(key).push(button);
+    paint(key, button);
+    return button;
+  }
+
+  function paint(key, button) {
+    const on = chosen.has(key);
+    const title = source.items[key]?.title || '';
+    button.setAttribute('aria-pressed', String(on));
+    button.style.setProperty('--pick', on ? `var(--series-${chosen.get(key) + 1})` : '');
+    button.dataset.slot = on ? chosen.get(key) + 1 : '';
+    button.disabled = !on && chosen.size >= HISTORY_MAX;
+    button.title = on ? `Remove ${title} from the history chart`
+      : button.disabled ? `The history chart shows at most ${HISTORY_MAX}` : `Show ${title}'s history`;
+    button.setAttribute('aria-label', button.title);
+  }
+
+  function update() {
+    // The screen-reader list is rebuilt on every switch: forget its old buttons.
+    for (const [key, buttons] of toggles) toggles.set(key, buttons.filter((b) => b.isConnected));
+    for (const [key, buttons] of toggles) for (const button of buttons) paint(key, button);
+    figure.hidden = chosen.size === 0;
+    if (!chosen.size) return;
+    const halfLifeDays = data.halfLives.find((h) => h.label === halfLife).days;
+    note.textContent = `Each day's TimeScore with a half-life of a ${halfLife.toLowerCase()}, `
+      + `${formatDate(source.start)} to ${formatDate(source.last)}.`;
+    const lines = [...chosen].map(([key, slot]) => ({
+      key, slot, title: source.items[key].title, daily: dailyScores(source.series[key] || [], days, halfLifeDays),
+    }));
+    legend.replaceChildren(...lines.map(({ key, slot, title }) => {
+      const item = document.createElement('span');
+      item.className = 'legend-item';
+      const swatch = document.createElement('span');
+      swatch.className = 'swatch';
+      swatch.style.background = `var(--series-${slot + 1})`;
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'legend-remove';
+      remove.textContent = '×';
+      remove.setAttribute('aria-label', `Remove ${title}`);
+      remove.addEventListener('click', () => { chosen.delete(key); update(); });
+      item.append(swatch, title, remove);
+      return item;
+    }));
+    drawHistory(plot, lines, source.start, days);
+    drawn = lines;
+  }
+  // Redraw at the new width when the window is resized.
+  let drawn = null;
+  let lastWidth = 0;
+  new ResizeObserver(() => {
+    const width = plot.clientWidth;
+    if (drawn && !figure.hidden && width && Math.abs(width - lastWidth) > 4) {
+      lastWidth = width;
+      drawHistory(plot, drawn, source.start, days);
+    }
+  }).observe(plot);
+
+  return {
+    toggle,
+    setHalfLife(label) {
+      if (label === halfLife) return;
+      halfLife = label;
+      if (chosen.size) update();
+    },
+  };
+}
+
+// The history chart: one line per item, a date axis, a score axis from zero,
+// and a crosshair that reads out every line's score on the day under it.
+function drawHistory(plot, lines, start, days) {
+  // Drawn at the panel's own width, so the text stays readable on a phone.
+  const width = Math.max(280, Math.round(plot.clientWidth || 1000));
+  const height = width < 600 ? 220 : 300;
+  const pad = { left: width < 600 ? 44 : 64, right: 12, top: 12, bottom: 28 };
+  const max = Math.max(...lines.map((l) => Math.max(...l.daily)), 1e-9);
+  const step = niceStep(max / 4);
+  const top = Math.ceil(max / step) * step;
+  const x = (d) => pad.left + (days > 1 ? d / (days - 1) : 0.5) * (width - pad.left - pad.right);
+  const y = (v) => height - pad.bottom - (v / top) * (height - pad.top - pad.bottom);
+  const chart = svgElement('svg', { viewBox: `0 0 ${width} ${height}`, class: 'history-chart', role: 'img',
+    'aria-label': `TimeScore by day for ${lines.map((l) => l.title).join(', ')}` });
+  for (let v = 0; v <= top + step / 2; v += step) {
+    chart.append(svgElement('line', { x1: pad.left, x2: width - pad.right, y1: y(v), y2: y(v),
+      class: v === 0 ? 'history-axis' : 'history-grid' }));
+    const label = svgElement('text', { x: pad.left - 8, y: y(v), class: 'history-tick', 'text-anchor': 'end',
+      'dominant-baseline': 'central' });
+    label.textContent = formatCompact(v);
+    chart.append(label);
+  }
+  // A date under the first day of each month (every few months for a long history).
+  const months = [];
+  for (let d = 0; d < days; d++) if (addDays(start, d).endsWith('-01')) months.push(d);
+  const every = Math.max(1, Math.ceil(months.length / Math.max(2, Math.floor(width / 110))));
+  months.filter((_, i) => i % every === 0).forEach((d) => {
+    const label = svgElement('text', { x: x(d), y: height - 8, class: 'history-tick', 'text-anchor': 'middle' });
+    const date = new Date(`${addDays(start, d)}T00:00:00Z`);
+    label.textContent = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
+      + (date.getUTCMonth() === 0 || d === months[0] ? ` ${date.getUTCFullYear()}` : '');
+    chart.append(label);
+  });
+  for (const line of lines) {
+    let path = '';
+    line.daily.forEach((v, d) => { path += `${d ? 'L' : 'M'}${x(d).toFixed(1)} ${y(v).toFixed(1)}`; });
+    chart.append(svgElement('path', { d: path, class: 'history-line', style: `stroke: var(--series-${line.slot + 1})` }));
+  }
+  const cross = svgElement('line', { y1: pad.top, y2: height - pad.bottom, class: 'history-cross', visibility: 'hidden' });
+  const dots = lines.map((line) => svgElement('circle', { r: 4.5, class: 'history-dot',
+    style: `fill: var(--series-${line.slot + 1})`, visibility: 'hidden' }));
+  chart.append(cross, ...dots);
+  const hit = svgElement('rect', { x: pad.left, y: 0, width: width - pad.left - pad.right, height, class: 'history-hit' });
+  chart.append(hit);
+
+  const tip = document.createElement('div');
+  tip.className = 'history-tip';
+  tip.hidden = true;
+  function point(event) {
+    const box = chart.getBoundingClientRect();
+    const px = ((event.clientX - box.left) / box.width) * width;
+    const d = Math.max(0, Math.min(days - 1, Math.round(((px - pad.left) / (width - pad.left - pad.right)) * (days - 1))));
+    cross.setAttribute('x1', x(d));
+    cross.setAttribute('x2', x(d));
+    cross.setAttribute('visibility', 'visible');
+    lines.forEach((line, i) => {
+      dots[i].setAttribute('cx', x(d));
+      dots[i].setAttribute('cy', y(line.daily[d]));
+      dots[i].setAttribute('visibility', 'visible');
+    });
+    tip.replaceChildren();
+    const date = document.createElement('strong');
+    date.textContent = formatDate(addDays(start, d));
+    tip.append(date);
+    for (const line of [...lines].sort((a, b) => b.daily[d] - a.daily[d])) {
+      const row = document.createElement('span');
+      row.className = 'history-tip-row';
+      const swatch = document.createElement('span');
+      swatch.className = 'swatch';
+      swatch.style.background = `var(--series-${line.slot + 1})`;
+      const value = document.createElement('span');
+      value.className = 'history-tip-value';
+      value.textContent = formatScore(line.daily[d]);
+      row.append(swatch, line.title, value);
+      tip.append(row);
+    }
+    tip.hidden = false;
+    const left = (x(d) / width) * box.width;
+    tip.style.left = `${Math.min(left + 12, box.width - tip.offsetWidth - 4)}px`;
+    if (left + 12 + tip.offsetWidth > box.width) tip.style.left = `${Math.max(0, left - tip.offsetWidth - 12)}px`;
+  }
+  function hide() {
+    cross.setAttribute('visibility', 'hidden');
+    dots.forEach((dot) => dot.setAttribute('visibility', 'hidden'));
+    tip.hidden = true;
+  }
+  hit.addEventListener('pointermove', point);
+  hit.addEventListener('pointerdown', point);
+  hit.addEventListener('pointerleave', hide);
+  plot.replaceChildren(chart, tip);
+}
+
+function svgElement(tag, attrs) {
+  const element = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [key, value] of Object.entries(attrs)) element.setAttribute(key, value);
+  return element;
+}
+
+function niceStep(value) {
+  const power = 10 ** Math.floor(Math.log10(value || 1));
+  for (const step of [1, 2, 2.5, 5, 10]) if (value <= step * power) return step * power;
+  return 10 * power;
+}
+
+function formatCompact(value) {
+  return value === 0 ? '0' : value.toLocaleString('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+}
+
 // — The race ————————————————————————————————————————————————————————————
 
 function renderRace(figure, source) {
   const days = daysBetween(source.start, source.last) + 1;
-  const keys = Object.keys(source.race);
+  const keys = source.racers;
   const select = figure.querySelector('[data-half-life]');
   for (const { label, days: halfLife } of data.halfLives) {
     select.append(new Option(`${label}`, halfLife, false, label === 'Week'));
@@ -347,16 +599,7 @@ function renderRace(figure, source) {
   // Each racer's TimeScore at the end of each day, for a half-life in days.
   let values;
   function score(halfLife) {
-    values = new Map(keys.map((key) => {
-      const events = new Map(source.race[key]);
-      let logScore = EMPTY;
-      const daily = new Float64Array(days);
-      for (let d = 0; d < days; d++) {
-        if (events.get(d) > 0) logScore = addEvent(logScore, events.get(d), d, halfLife);
-        daily[d] = logScore === EMPTY ? 0 : scoreAt(logScore, d, halfLife);
-      }
-      return [key, daily];
-    }));
+    values = new Map(keys.map((key) => [key, dailyScores(source.series[key], days, halfLife)]));
   }
   score(Number(select.value));
 
