@@ -41,12 +41,13 @@ export function formatDate(iso) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
 
-// The code's version in the footer, linked to the changelog.
+// The code's version under the page's title ("v1.5.1"), linked to the changelog.
 export function showVersion(version) {
   const element = document.querySelector('[data-version]');
   if (!element || !version) return;
   const link = document.createElement('a');
   link.href = 'https://github.com/mckoss/timescore-demos/blob/main/CHANGELOG.md';
-  link.textContent = 'changelog';
-  element.append(`Version ${version} (`, link, ').');
+  link.title = 'What changed in each version';
+  link.textContent = `v${version}`;
+  element.append(link);
 }

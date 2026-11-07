@@ -5,7 +5,12 @@ Each code change gets a new version number, following
 number, a fix or a change behind the scenes raises the last one, and a
 change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
-[VERSION](VERSION), shown in the site's footer and tagged in git (`v1.5.0`).
+[VERSION](VERSION), shown in the site's footer and tagged in git (`v1.5.1`).
+
+## [1.5.1] - 2026-11-07
+### Changed
+- The version shows as a small "v1.5.1" under each page's title, linked to
+  this changelog, in place of the line in the footer.
 
 ## [1.5.0] - 2026-11-07
 ### Added

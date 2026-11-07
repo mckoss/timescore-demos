@@ -55,7 +55,7 @@ fix or a change behind the scenes the last one, and a change that breaks how
 the site or its data files work the first. The check on pull requests
 (`build/check_version.py`) fails a code change that doesn't. The daily
 workflow tags each version in git (`v1.5.0`) when it first reaches `main`,
-the site's footer shows it, and the update log records the version each
+each page shows it under its title, and the update log records the version each
 update ran.
 
 ## Setup

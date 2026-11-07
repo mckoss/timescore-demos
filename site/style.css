@@ -230,3 +230,8 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
   position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
+
+/* The version under each page's title. */
+.site-header .version { margin: 4px 0 0; font-size: 12px; font-variant-numeric: tabular-nums; }
+.site-header .version a { color: var(--muted); text-decoration: none; }
+.site-header .version a:hover { text-decoration: underline; }
