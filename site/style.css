@@ -213,7 +213,7 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
 .half-lives button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
 .ranking-board {
   --row: 62px; position: relative; overflow: hidden;
-  /* The top list, plus a zone below it where #11 to #13 fade out, so movies
+  /* The top list, plus a zone below it where #21 to #23 fade out, so movies
      can be seen sliding out of the list and up into it. */
   height: calc((var(--rows) + 2.6) * var(--row));
   -webkit-mask-image: linear-gradient(to bottom, #000 calc(var(--rows) * var(--row) - 6px), transparent 100%);
@@ -280,11 +280,16 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
   }
 }
 .history-toggle {
-  width: 30px; height: 30px; padding: 6px; border-radius: 6px; cursor: pointer;
-  border: 1px solid var(--line); background: var(--bg); color: var(--muted);
+  display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 9px; border-radius: 6px;
+  cursor: pointer; font: inherit; font-size: 12px; font-weight: 600; white-space: nowrap;
+  border: 1px solid var(--muted); background: var(--surface); color: var(--text);
 }
-.history-toggle svg { width: 100%; height: 100%; display: block; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.history-toggle:hover { color: var(--text); border-color: var(--muted); }
+.history-toggle svg { width: 15px; height: 15px; flex: none; display: block; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 560px) {
+  .history-toggle { padding: 0 7px; }
+  .history-toggle-label { display: none; }
+}
+.history-toggle:hover { border-color: var(--text); }
 /* Chosen: filled with its line's color (--pick), so the button, legend and line match. */
 .history-toggle[aria-pressed="true"] { background: var(--pick); border-color: var(--pick); color: #fff; }
 .history-toggle[aria-pressed="true"][data-slot="4"] { color: #0b0b0b; }   /* dark ink on yellow */
