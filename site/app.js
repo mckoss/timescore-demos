@@ -62,19 +62,29 @@ function renderSource(id, source) {
     + `${formatDate(source.start)} to ${formatDate(source.last)}.`;
 
   const lists = section.querySelector('[data-lists]');
-  for (const { label, days } of data.halfLives) {
-    lists.append(renderList(label, days, source.lists[label], source));
+  for (const { label } of data.halfLives) {
+    lists.append(renderList(`${label} half-life`, null, source.lists[label], source, formatScore));
+  }
+  if (source.lists[data.trending]) {
+    lists.append(renderList(data.trending, 'This week\'s pace compared with the month\'s (1.0× is steady)',
+      source.lists[data.trending], source, (ratio) => `${ratio.toFixed(1)}×`));
   }
   renderRace(section.querySelector('[data-race]'), source);
   return section;
 }
 
-function renderList(label, days, items, source) {
+function renderList(title, note, items, source, format) {
   const list = document.createElement('section');
   list.className = 'list';
   const heading = document.createElement('h3');
-  heading.textContent = `${label} half-life`;
+  heading.textContent = title;
   list.append(heading);
+  if (note) {
+    const p = document.createElement('p');
+    p.className = 'list-note';
+    p.textContent = note;
+    list.append(p);
+  }
   const ol = document.createElement('ol');
   items.slice(0, LIST_SHOWN).forEach((item, i) => {
     const movie = source.movies[item.key];
@@ -86,7 +96,7 @@ function renderList(label, days, items, source) {
     text.textContent = movie.title;
     const meta = document.createElement('span');
     meta.className = 'list-meta';
-    meta.textContent = `${formatScore(item.score)} · ${movement(item.previous, i + 1)}`;
+    meta.textContent = `${format(item.score)} · ${movement(item.previous, i + 1)}`;
     const rank = document.createElement('span');
     rank.className = 'list-rank';
     rank.textContent = i + 1;
