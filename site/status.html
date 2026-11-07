@@ -21,11 +21,26 @@
       the data to the <a href="https://github.com/mckoss/timescore-demos">repository</a>.
       This page shows each one.</p>
   </div>
-  <p class="freshness" data-freshness role="status">Loading…</p>
 </header>
 
 <main>
+  <div class="health" data-health role="status"></div>
+
   <section class="status-totals" data-totals aria-label="Data in the repository"></section>
+
+  <section class="status-charts">
+    <figure class="chart">
+      <figcaption>
+        <h2>Daily coverage, last 60 days</h2>
+        <p class="legend" data-coverage-legend></p>
+      </figcaption>
+      <div class="chart-scroll" data-coverage></div>
+    </figure>
+    <figure class="chart">
+      <figcaption><h2>Data in the repository</h2></figcaption>
+      <div class="chart-scroll" data-growth></div>
+    </figure>
+  </section>
 
   <section class="status-log">
     <h2>Updates</h2>

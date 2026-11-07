@@ -130,12 +130,21 @@ def history_entries():
     return entries
 
 
+def data_dates():
+    """Every date each source has data for, from the files in data/."""
+    return {source: sorted(name[:-4] for name in os.listdir(os.path.join('data', source))
+                           if name.endswith('.tsv'))
+            if os.path.isdir(os.path.join('data', source)) else []
+            for source in SOURCES}
+
+
 def write_status(entries):
     os.makedirs('site/data', exist_ok=True)
     status = {
         'generated': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
         'totals': entries[-1]['totals'] if entries else None,
         'runs': len(entries),
+        'dates': data_dates(),
         'log': list(reversed(entries))[:SHOWN],
     }
     with open('site/data/status.json', 'w', encoding='utf-8') as f:
