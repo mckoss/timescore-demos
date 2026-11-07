@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.join(ROOT, 'collect'))
 sys.path.insert(0, os.path.join(ROOT, 'build'))
 
 import build  # noqa: E402
+import check_version  # noqa: E402
 import imdb  # noqa: E402
 
 
@@ -86,6 +87,28 @@ class TrendingTest(unittest.TestCase):
         self.assertEqual(trending[0]['key'], 'imdb:surge')
         self.assertGreater(trending[0]['score'], 2)
         self.assertAlmostEqual(trending[1]['score'], 1.0, places=2)
+
+
+class VersionTest(unittest.TestCase):
+    LOG = '## [1.2.0] - 2026-11-07'
+
+    def test_data_only_changes_need_no_new_version(self):
+        self.assertEqual(check_version.problems(['data/tmdb/2026-11-07.tsv', 'site/data/movies.json'],
+                                                '1.1.0', '1.1.0', ''), [])
+
+    def test_code_changes_need_a_higher_version(self):
+        self.assertTrue(check_version.problems(['site/app.js'], '1.2.0', '1.2.0', self.LOG))
+        self.assertTrue(check_version.problems(['site/app.js'], '1.2.0', '1.1.9', self.LOG))
+        self.assertEqual(check_version.problems(['site/app.js'], '1.1.0', '1.2.0', self.LOG), [])
+
+    def test_versions_compare_as_numbers(self):
+        self.assertEqual(check_version.problems(['build/build.py'], '1.9.0', '1.10.0', '## [1.10.0]'), [])
+
+    def test_the_changelog_needs_an_entry(self):
+        self.assertTrue(check_version.problems(['site/app.js'], '1.1.0', '1.2.0', '## [1.1.0]'))
+
+    def test_the_version_must_be_semver(self):
+        self.assertTrue(check_version.problems(['site/app.js'], '1.1.0', 'v1.2', '## [v1.2]'))
 
 
 if __name__ == '__main__':

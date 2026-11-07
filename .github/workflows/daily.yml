@@ -79,6 +79,15 @@ jobs:
             git push
           fi
 
+      # Tag each version the first time it reaches main.
+      - name: Tag the version
+        run: |
+          version="v$(cat VERSION)"
+          if [ -z "$(git ls-remote --tags origin "refs/tags/$version")" ]; then
+            git tag "$version"
+            git push origin "$version"
+          fi
+
       # Stamp this commit on the scripts' and stylesheet's URLs, so a browser
       # never pairs a new page with old scripts from its cache.
       - name: Version the site's files

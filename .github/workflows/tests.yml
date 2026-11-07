@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # to compare with the base branch
+
+      # A change to code must raise VERSION and add it to CHANGELOG.md.
+      - name: Check the version
+        run: python build/check_version.py origin/${{ github.base_ref }}
 
       - uses: actions/setup-python@v5
         with:
