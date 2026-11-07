@@ -59,7 +59,7 @@ h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0; }
 .list h3 { font-size: 15px; margin-bottom: 8px; }
 .list-note { margin: -4px 0 8px; font-size: 12px; color: var(--muted); line-height: 1.35; }
 .list ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.list li { display: grid; grid-template-columns: 1.6em 36px 1fr; gap: 8px; align-items: center; }
+.list li { display: grid; grid-template-columns: 1.6em 36px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
 .list-rank { font-weight: 800; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
 .list-poster { width: 36px; height: 54px; object-fit: cover; border-radius: 3px; background: var(--line); display: block; }
 .list-body { min-width: 0; display: grid; }
@@ -229,7 +229,7 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
 }
 .ranking-card {
   position: absolute; left: 2.4em; right: 0; top: 0; height: 54px;
-  display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 10px; align-items: center;
+  display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 10px; align-items: center;
   transform: translateY(calc(var(--rank) * var(--row)));
   background: var(--surface); border-radius: 4px; pointer-events: none;
 }
@@ -258,3 +258,70 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
 .tab-name { font-weight: 800; font-size: 16px; }
 .tab-days { font-size: 13px; opacity: 0.8; font-variant-numeric: tabular-nums; }
 .source[hidden] { display: none; }
+
+/* Wikipedia's topics (app.js renderRanking): All, People, Politics… */
+.topics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.topics button {
+  font: inherit; font-size: 13px; font-weight: 600; padding: 4px 11px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--bg); color: var(--text);
+}
+.topics button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+/* The history chart (app.js renderHistory): the palette's eight series
+   colors, in their fixed order, stepped for each mode. */
+:root {
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
+  --series-5: #e87ba4; --series-6: #008300; --series-7: #6250d6; --series-8: #e34948;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
+    --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
+  }
+}
+.history-toggle {
+  width: 30px; height: 30px; padding: 6px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--bg); color: var(--muted);
+}
+.history-toggle svg { width: 100%; height: 100%; display: block; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.history-toggle:hover { color: var(--text); border-color: var(--muted); }
+/* Chosen: filled with its line's color (--pick), so the button, legend and line match. */
+.history-toggle[aria-pressed="true"] { background: var(--pick); border-color: var(--pick); color: #fff; }
+.history-toggle[aria-pressed="true"][data-slot="4"] { color: #0b0b0b; }   /* dark ink on yellow */
+.history-toggle:disabled { opacity: 0.35; cursor: not-allowed; }
+.visually-hidden .history-toggle { width: auto; height: auto; }
+.history { margin: 20px 0 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.history[hidden] { display: none; }
+.history-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 8px; }
+.history-head h3 { font-size: 17px; margin: 0; }
+.history-head .list-note { margin: 0; }
+.history-clear {
+  margin-left: auto; font: inherit; font-size: 13px; padding: 3px 10px; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text);
+}
+.history-legend { margin-bottom: 6px; }
+.history-legend .legend-item { color: var(--text); }
+.legend-remove {
+  font: inherit; font-size: 15px; line-height: 1; padding: 0 4px; cursor: pointer;
+  border: 0; background: none; color: var(--muted);
+}
+.legend-remove:hover { color: var(--text); }
+.history-plot { position: relative; }
+.history-chart { width: 100%; height: auto; display: block; touch-action: pan-y; }
+.history-grid { stroke: var(--line); stroke-width: 1; }
+.history-axis { stroke: var(--muted); stroke-width: 1; }
+.history-tick { font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.history-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.history-cross { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.history-dot { stroke: var(--surface); stroke-width: 2; }
+.history-hit { fill: transparent; cursor: crosshair; }
+.history-tip {
+  position: absolute; top: 8px; z-index: 2; min-width: 160px; max-width: 280px; pointer-events: none;
+  display: grid; gap: 3px; padding: 8px 10px; font-size: 12px;
+  background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 6px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.14);
+}
+.history-tip[hidden] { display: none; }
+.history-tip-row { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 6px; align-items: center; }
+.history-tip-row > :nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.history-tip-value { font-variant-numeric: tabular-nums; font-weight: 600; }

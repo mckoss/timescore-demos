@@ -65,12 +65,17 @@ def user_agent():
 USER_AGENT = user_agent()
 
 
-def get_json(url, tries=6, missing_tries=3):
-    """The JSON at url, or None for a 404 (a day not published yet). Waits
-    and tries again when Wikimedia says to slow down (429) or is busy (503),
-    and on a 404 too, since Wikimedia sometimes says a published day is
-    missing."""
-    request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT, 'Accept': 'application/json'})
+def get_json(url, tries=6, missing_tries=3, body=None):
+    """The JSON at url (POSTing body as JSON, if given), or None for a 404 (a
+    day not published yet). Waits and tries again when Wikimedia says to slow
+    down (429) or is busy (503), and on a 404 too, since Wikimedia sometimes
+    says a published day is missing."""
+    headers = {'User-Agent': USER_AGENT, 'Accept': 'application/json'}
+    data = None
+    if body is not None:
+        headers['Content-Type'] = 'application/json'
+        data = json.dumps(body).encode('utf-8')
+    request = urllib.request.Request(url, data=data, headers=headers)
     for attempt in range(tries):
         try:
             with urllib.request.urlopen(request, timeout=60) as response:

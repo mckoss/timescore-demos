@@ -3,8 +3,9 @@
 Live rankings built with [TimeScore](https://mckoss.com/posts/timescore/):
 every day's activity counts in full when it happens, then fades with a
 half-life. The site shows each source's top movies or articles with a half-life of a day,
-a week, a month and a year, and a bar chart race of how the ranking changed
-day by day.
+a week, a month and a year (Wikipedia's also by topic), a bar chart race of
+how the ranking changed day by day, and a history chart of any movies or
+articles you pick.
 
 The site: **https://mckoss.com/timescore-demos/** (GitHub Pages; mckoss.github.io uses the
 mckoss.com domain, so mckoss.github.io/timescore-demos redirects there).
@@ -49,6 +50,14 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    shows (cached in `data/posters.tsv`), and the descriptions and free images
    of the articles (cached in `data/wikipedia-pages.tsv`), using only freely
    licensed images, never English Wikipedia's fair-use posters and logos.
+   It also sorts the articles that could rank (each half-life's top 300)
+   into topics: People, Politics, Sports, Entertainment, Science & tech,
+   Business, History and Places. The topics come from Wikimedia's
+   [article topic model](https://api.wikimedia.org/wiki/Lift_Wing_API/Reference/Get_articletopic_outlink_prediction),
+   one request per article, cached with the article. People comes from
+   Wikipedia's "Living people" category and biographies' short descriptions
+   instead, since the model tags what an article is about rather than
+   whether it is about a person.
 5. The workflow commits the new data and publishes `site/` to GitHub Pages.
 
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):

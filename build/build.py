@@ -7,10 +7,14 @@ month and a year), and writes site/data/movies.json with:
 - the top items at each half-life as of the latest day, with how far each
   moved since the day before, and the weekly trending list (each item's
   Week score divided by its Month score);
+- for Wikipedia, the same top lists for each topic (People, Politics,
+  Sports and so on: wikipages.GROUPS), picked from each half-life's top
+  TOPIC_POOL articles;
 - for each item shown: its title, image, link and (for Wikipedia) its short
   description and the image's author and license;
-- race data: the daily values of every item that made a top 10 at any
-  half-life on any day, for the page to animate;
+- each shown item's daily values (series), for the page to score at any
+  half-life: for the race (racers: every item that made a top 10 at any
+  half-life on any day) and for the history chart of any item in a list;
 - when it was built and the latest day of each source, so the page can show
   whether the daily update is running.
 """
@@ -33,6 +37,9 @@ import wikipages  # noqa: E402
 HALF_LIVES = [('Day', 1), ('Week', 7), ('Month', 30.44), ('Year', 365.25)]
 LIST_SIZE = 20
 RACE_SIZE = 10
+TOPIC_POOL = 300   # each half-life's top articles that the topic lists are picked from
+TOPIC_MIN = 10     # a topic needs this many articles in every half-life's list to be shown
+SHOWN = 13         # how many of each list the page shows (10, and 3 fading out below)
 
 # Weekly trending: a movie's Week score divided by its Month score, divided
 # again by what that ratio would be for a movie with the same activity every
@@ -107,7 +114,10 @@ def top(scores, n):
     return heapq.nlargest(n, scores, key=scores.get)
 
 
-def build_source(source, days):
+def build_source(source, days, pools=None):
+    """Each half-life's top list (and the trending list) as of the last day.
+    If pools is a dict, it gets each half-life's top TOPIC_POOL keys and
+    scores on the last day, and keys on the day before: {label: (now, before)}."""
     start = days[0][0]
     titles = {}
     lists, racers = {}, set()
@@ -123,10 +133,14 @@ def build_source(source, days):
                     scores[key] = add_event(scores.get(key, EMPTY), value, day, half_life)
             racers.update(top(scores, RACE_SIZE))
             if i == len(days) - 2:
-                before = top(scores, LIST_SIZE * 2)
+                before = top(scores, max(LIST_SIZE * 2, TOPIC_POOL if pools is not None else 0))
                 previous[label] = dict(scores)
         final[label] = scores
         last = (days[-1][0] - start).days
+        if pools is not None:
+            pools[label] = ([(key, round(score_at(scores[key], last, half_life), 2))
+                             for key in top(scores, TOPIC_POOL)], before)
+        before = before[:LIST_SIZE * 2]
         lists[label] = [{
             'key': key,
             'score': round(score_at(scores[key], last, half_life), 2),
@@ -169,6 +183,23 @@ def article(key, title, row):
     return out
 
 
+def topic_lists(pools, groups):
+    """{group: {half-life: list}} for each topic group with enough articles,
+    from the pools build_source filled and each key's set of groups."""
+    out = {}
+    for group, _ in wikipages.GROUPS:
+        lists = {}
+        for label, (now, before) in pools.items():
+            mine = [(key, score) for key, score in now if group in groups.get(key, ())][:LIST_SIZE]
+            earlier = [key for key in before if group in groups.get(key, ())][:LIST_SIZE * 2]
+            lists[label] = [{'key': key, 'score': score,
+                             'previous': earlier.index(key) + 1 if key in earlier else None}
+                            for key, score in mine]
+        if lists and all(len(items) >= TOPIC_MIN for items in lists.values()):
+            out[group] = lists
+    return out
+
+
 def main():
     with open('VERSION', encoding='utf-8') as f:
         version = f.read().strip()
@@ -181,16 +212,19 @@ def main():
         'sources': {},
     }
     built = {}
+    pools = {}
     for source in SOURCES:
         days = read_days(source)
         if days:
-            built[source] = (days, *build_source(source, days))
+            built[source] = (days, *build_source(source, days, pools if source == 'wikipedia' else None))
 
     keys = set()
     for days, start, titles, lists, racers in built.values():
         keys |= racers | {item['key'] for items in lists.values() for item in items}
     found = posters.ensure(sorted(k for k in keys if not k.startswith('wikipedia:')))
-    pages = wikipages.ensure(sorted(k for k in keys if k.startswith('wikipedia:')))
+    candidates = sorted({key for now, before in pools.values() for key in [k for k, _ in now] + before})
+    pages = wikipages.ensure(sorted(k for k in keys if k.startswith('wikipedia:')), candidates)
+    topics = topic_lists(pools, {key: wikipages.groups_of(pages.get(key)) for key in candidates})
 
     def describe(key, titles):
         source, ident = key.split(':', 1)
@@ -207,15 +241,22 @@ def main():
         entry = {**info, 'collected': 0, 'start': None, 'last': None}
         if source in built:
             days, start, titles, lists, racers = built[source]
+            shown = racers | {item['key'] for items in lists.values() for item in items[:SHOWN]}
+            if source == 'wikipedia' and topics:
+                entry['topics'] = [{'id': group, 'label': label}
+                                   for group, label in wikipages.GROUPS if group in topics]
+                entry['topicLists'] = topics
+                shown |= {item['key'] for group in topics.values() for items in group.values()
+                          for item in items[:SHOWN]}
             entry.update({
                 'collected': len(days),
                 'start': start.isoformat(),
                 'last': days[-1][0].isoformat(),
-                'items': {key: describe(key, titles) for key in
-                           racers | {item['key'] for items in lists.values() for item in items}},
+                'items': {key: describe(key, titles) for key in shown},
                 'lists': lists,
-                'race': {key: [[(date - start).days, events[key][0]] for date, events in days if key in events]
-                         for key in sorted(racers)},
+                'racers': sorted(racers),
+                'series': {key: [[(date - start).days, events[key][0]] for date, events in days if key in events]
+                           for key in sorted(shown)},
             })
         out['sources'][source] = entry
 

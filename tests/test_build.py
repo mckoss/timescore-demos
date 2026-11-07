@@ -141,6 +141,50 @@ class WikipediaTest(unittest.TestCase):
             self.assertEqual(wikipages.load(path)['wikipedia:A']['description'], 'Tab here')
             self.assertEqual(wikipages.load(path)['wikipedia:A']['thumbnail'], '')
 
+    def test_people(self):
+        self.assertTrue(wikipages.is_person({'description': 'English actor (1940–2026)'}))
+        self.assertTrue(wikipages.is_person({'description': 'American singer-songwriter (born 1989)'}))
+        self.assertTrue(wikipages.is_person({'description': 'Persian poet (c. 1207–1273)'}))
+        self.assertTrue(wikipages.is_person({'description': 'Queen of Egypt', 'living': '1'}))
+        self.assertFalse(wikipages.is_person({'description': '2026 Indian film by Nitesh Tiwari', 'living': '0'}))
+
+    def test_groups(self):
+        groups = wikipages.groups_of
+        self.assertEqual(groups({'topics': 'Culture.Media.Media*:0.89;Culture.Media.Music:0.74',
+                                 'description': 'American singer-songwriter (born 1989)'}), {'people', 'entertainment'})
+        self.assertEqual(groups({'topics': 'STEM.STEM*:0.94;Culture.Media.Media*:0.86;Culture.Media.Software:0.82'}),
+                         {'science'})
+        self.assertEqual(groups({'topics': 'Culture.Media.Media*:0.83;Culture.Biography.Biography*:0.58'}),
+                         {'people', 'entertainment'})
+        self.assertEqual(groups({'topics': 'Geography.Regions.Americas.North_America:0.99'}), {'places'})
+        # Only somewhat about a place, or about a person from one: not a place.
+        self.assertEqual(groups({'topics': 'Geography.Regions.Europe.Northern_Europe:0.64'}), set())
+        self.assertEqual(groups({'topics': 'Geography.Regions.Asia.South_Asia:0.9', 'living': '1'}), {'people'})
+        self.assertEqual(groups(None), set())
+
+    def test_topic_lists(self):
+        now = [(f'wikipedia:A{n}', 100.0 - n) for n in range(40)]
+        before = [key for key, _ in reversed(now)]
+        pools = {'Week': (now, before)}
+        sporty = {key: {'sports'} for key, _ in now[::2]}
+        lists = build.topic_lists(pools, sporty)
+        self.assertEqual(list(lists), ['sports'])
+        week = lists['sports']['Week']
+        self.assertEqual([item['key'] for item in week[:3]], ['wikipedia:A0', 'wikipedia:A2', 'wikipedia:A4'])
+        self.assertEqual(week[0]['previous'], 20)    # the order was reversed the day before
+        self.assertEqual(week[-1]['previous'], 1)
+        # A topic with fewer than TOPIC_MIN articles isn't shown.
+        self.assertEqual(build.topic_lists(pools, {now[0][0]: {'sports'}}), {})
+
+    def test_pools(self):
+        pools = {}
+        days = [(day(n), {'wikipedia:A': (10.0, 'A'), 'wikipedia:B': (float(n), 'B')}) for n in range(5)]
+        build.build_source('wikipedia', days, pools)
+        self.assertEqual(sorted(pools), ['Day', 'Month', 'Week', 'Year'])
+        now, before = pools['Day']
+        self.assertEqual([key for key, _ in now], ['wikipedia:A', 'wikipedia:B'])
+        self.assertEqual(set(before), {'wikipedia:A', 'wikipedia:B'})
+
     def test_credit_is_plain_text(self):
         self.assertEqual(wikipages.plain('<a href="//commons.wikimedia.org/wiki/User:X">X &amp; Y</a>\n'), 'X & Y')
 
