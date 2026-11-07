@@ -50,14 +50,17 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    shows (cached in `data/posters.tsv`), and the descriptions and free images
    of the articles (cached in `data/wikipedia-pages.tsv`), using only freely
    licensed images, never English Wikipedia's fair-use posters and logos.
-   It also sorts the articles that could rank (each half-life's top 300)
-   into topics: People, Politics, Sports, Entertainment, Science & tech,
-   Business, History and Places. The topics come from Wikimedia's
+   It also sorts the articles into topics: People, Politics, Sports,
+   Entertainment, Science & tech, Business, History & military and Places
+   (`build/wikitopics.py`, cached in `data/wikipedia-topics.tsv`). The
+   topics come from Wikimedia's
    [article topic model](https://api.wikimedia.org/wiki/Lift_Wing_API/Reference/Get_articletopic_outlink_prediction),
-   one request per article, cached with the article. People comes from
-   Wikipedia's "Living people" category and biographies' short descriptions
-   instead, since the model tags what an article is about rather than
-   whether it is about a person.
+   one request per article. Only articles that could make a topic's top 20
+   get tagged: the build walks each half-life's ranking from the top until
+   every topic's list is settled. People comes from Wikipedia's "Living
+   people" category and biographies' short descriptions instead, since the
+   model tags what an article is about rather than whether it is about a
+   person.
 5. The workflow commits the new data and publishes `site/` to GitHub Pages.
 
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):

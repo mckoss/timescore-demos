@@ -16,6 +16,7 @@ import build  # noqa: E402
 import check_version  # noqa: E402
 import imdb  # noqa: E402
 import wikipages  # noqa: E402
+import wikitopics  # noqa: E402
 import wikipedia  # noqa: E402
 
 
@@ -142,37 +143,61 @@ class WikipediaTest(unittest.TestCase):
             self.assertEqual(wikipages.load(path)['wikipedia:A']['thumbnail'], '')
 
     def test_people(self):
-        self.assertTrue(wikipages.is_person({'description': 'English actor (1940–2026)'}))
-        self.assertTrue(wikipages.is_person({'description': 'American singer-songwriter (born 1989)'}))
-        self.assertTrue(wikipages.is_person({'description': 'Persian poet (c. 1207–1273)'}))
-        self.assertTrue(wikipages.is_person({'description': 'Queen of Egypt', 'living': '1'}))
-        self.assertFalse(wikipages.is_person({'description': '2026 Indian film by Nitesh Tiwari', 'living': '0'}))
+        life = wikitopics.LIFE_YEARS.search
+        self.assertTrue(life('English actor (1940–2026)'))
+        self.assertTrue(life('American singer-songwriter (born 1989)'))
+        self.assertTrue(life('Persian poet (c. 1207–1273)'))
+        self.assertFalse(life('2026 Indian film by Nitesh Tiwari'))
+        self.assertFalse(life('Election held in 2026'))
 
     def test_groups(self):
-        groups = wikipages.groups_of
-        self.assertEqual(groups({'topics': 'Culture.Media.Media*:0.89;Culture.Media.Music:0.74',
-                                 'description': 'American singer-songwriter (born 1989)'}), {'people', 'entertainment'})
-        self.assertEqual(groups({'topics': 'STEM.STEM*:0.94;Culture.Media.Media*:0.86;Culture.Media.Software:0.82'}),
-                         {'science'})
+        groups = wikitopics.groups_of
+        self.assertEqual(groups({'topics': 'Culture.Media.Media*:0.89;Culture.Media.Music:0.74', 'person': '1'}),
+                         {'people', 'entertainment'})
         self.assertEqual(groups({'topics': 'Culture.Media.Media*:0.83;Culture.Biography.Biography*:0.58'}),
                          {'people', 'entertainment'})
+        self.assertEqual(groups({'topics': 'STEM.STEM*:0.94;Culture.Media.Media*:0.86;Culture.Media.Software:0.82'}),
+                         {'science'})
         self.assertEqual(groups({'topics': 'Geography.Regions.Americas.North_America:0.99'}), {'places'})
         # Only somewhat about a place, or about a person from one: not a place.
         self.assertEqual(groups({'topics': 'Geography.Regions.Europe.Northern_Europe:0.64'}), set())
-        self.assertEqual(groups({'topics': 'Geography.Regions.Asia.South_Asia:0.9', 'living': '1'}), {'people'})
+        self.assertEqual(groups({'topics': 'Geography.Regions.Asia.South_Asia:0.9', 'person': '1'}), {'people'})
         self.assertEqual(groups(None), set())
 
+    def test_only_what_can_make_a_list_is_tagged(self):
+        ranking = [f'wikipedia:A{n}' for n in range(100)]
+        # Nothing tagged: everything down to the depth is needed, top first.
+        self.assertEqual(wikitopics.needed([ranking], {}, 2)[:3], ranking[:3])
+        # Once the top 4 cover every topic twice, nothing further down is needed.
+        row = {'person': '1', 'topics': ';'.join(f'{t}:0.9' for t in (
+            'History_and_Society.Politics_and_government', 'Culture.Sports', 'Culture.Media.Films', 'STEM.Physics',
+            'History_and_Society.Business_and_economics', 'History_and_Society.History'))}
+        place = {'person': '0', 'topics': 'Geography.Regions.Oceania:0.95'}
+        rows = {ranking[0]: row, ranking[1]: row, ranking[2]: place, ranking[3]: place}
+        self.assertEqual(wikitopics.needed([ranking], rows, 2), [])
+        # An untagged article above that point is still needed.
+        del rows[ranking[1]]
+        self.assertEqual(wikitopics.needed([ranking], rows, 2)[0], ranking[1])
+
+    def test_topic_cache_round_trip(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, 'topics.tsv')
+            wikitopics.save({'wikipedia:A': {'key': 'wikipedia:A', 'person': '1', 'topics': 'Culture.Sports:1.00',
+                                             'checked': '2026-11-07'}}, path)
+            self.assertEqual(wikitopics.groups_of(wikitopics.load(path)['wikipedia:A']), {'people', 'sports'})
+
     def test_topic_lists(self):
-        now = [(f'wikipedia:A{n}', 100.0 - n) for n in range(40)]
+        now = [(f'wikipedia:A{n}', 100.0 - n) for n in range(60)]
         before = [key for key, _ in reversed(now)]
         pools = {'Week': (now, before)}
         sporty = {key: {'sports'} for key, _ in now[::2]}
         lists = build.topic_lists(pools, sporty)
         self.assertEqual(list(lists), ['sports'])
         week = lists['sports']['Week']
+        self.assertEqual(len(week), build.SHOWN)
         self.assertEqual([item['key'] for item in week[:3]], ['wikipedia:A0', 'wikipedia:A2', 'wikipedia:A4'])
-        self.assertEqual(week[0]['previous'], 20)    # the order was reversed the day before
-        self.assertEqual(week[-1]['previous'], 1)
+        self.assertEqual(week[0]['previous'], 30)    # the order was reversed the day before
+        self.assertEqual(week[-1]['previous'], 8)
         # A topic with fewer than TOPIC_MIN articles isn't shown.
         self.assertEqual(build.topic_lists(pools, {now[0][0]: {'sports'}}), {})
 

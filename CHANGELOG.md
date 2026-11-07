@@ -7,6 +7,21 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.9.0] - 2026-11-07
+### Changed
+- Lists show the top 20 (they showed 10), with 3 more fading out below.
+- Wikipedia topics rank every article in the data, not just each
+  half-life's top 300, so rarer topics fill up: History & military and
+  Places now show too. Only the articles that could make a topic's list get
+  tagged: the build walks each half-life's ranking from the top and stops
+  once every topic's list is settled (at most 5,000 deep), 3 requests at a
+  time, up to 10 minutes a run. A topic shows once it has 5 articles in
+  every half-life's list (it was 10).
+- Topics are kept in their own cache, `data/wikipedia-topics.tsv`, apart
+  from the descriptions and images of the articles shown.
+- The history button says "History" (on wider screens), and the note under
+  each top list says what it does.
+
 ## [1.8.0] - 2026-11-07
 ### Added
 - Topics on the Wikipedia tab: People, Politics, Sports, Entertainment,

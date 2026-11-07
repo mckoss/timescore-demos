@@ -8,8 +8,8 @@ month and a year), and writes site/data/movies.json with:
   moved since the day before, and the weekly trending list (each item's
   Week score divided by its Month score);
 - for Wikipedia, the same top lists for each topic (People, Politics,
-  Sports and so on: wikipages.GROUPS), picked from each half-life's top
-  TOPIC_POOL articles;
+  Sports and so on: wikitopics.GROUPS), ranked among every article in the
+  data that has been tagged with its topics;
 - for each item shown: its title, image, link and (for Wikipedia) its short
   description and the image's author and license;
 - each shown item's daily values (series), for the page to score at any
@@ -33,13 +33,13 @@ sys.path.insert(0, os.path.dirname(__file__))
 from timescore import EMPTY, add_event, score_at  # noqa: E402
 import posters  # noqa: E402
 import wikipages  # noqa: E402
+import wikitopics  # noqa: E402
 
 HALF_LIVES = [('Day', 1), ('Week', 7), ('Month', 30.44), ('Year', 365.25)]
-LIST_SIZE = 20
+LIST_SIZE = 23     # each list: the 20 the page shows, and 3 fading out below
 RACE_SIZE = 10
-TOPIC_POOL = 300   # each half-life's top articles that the topic lists are picked from
-TOPIC_MIN = 10     # a topic needs this many articles in every half-life's list to be shown
-SHOWN = 13         # how many of each list the page shows (10, and 3 fading out below)
+TOPIC_MIN = 5      # a topic needs this many articles in every half-life's list to be shown
+SHOWN = LIST_SIZE  # how many of each list the page shows
 
 # Weekly trending: a movie's Week score divided by its Month score, divided
 # again by what that ratio would be for a movie with the same activity every
@@ -116,8 +116,9 @@ def top(scores, n):
 
 def build_source(source, days, pools=None):
     """Each half-life's top list (and the trending list) as of the last day.
-    If pools is a dict, it gets each half-life's top TOPIC_POOL keys and
-    scores on the last day, and keys on the day before: {label: (now, before)}."""
+    If pools is a dict, it gets each half-life's ranking of every key, with
+    scores, on the last day, and of every key on the day before:
+    {label: (now, before)}."""
     start = days[0][0]
     titles = {}
     lists, racers = {}, set()
@@ -133,13 +134,14 @@ def build_source(source, days, pools=None):
                     scores[key] = add_event(scores.get(key, EMPTY), value, day, half_life)
             racers.update(top(scores, RACE_SIZE))
             if i == len(days) - 2:
-                before = top(scores, max(LIST_SIZE * 2, TOPIC_POOL if pools is not None else 0))
+                before = (sorted(scores, key=scores.get, reverse=True) if pools is not None
+                          else top(scores, LIST_SIZE * 2))
                 previous[label] = dict(scores)
         final[label] = scores
         last = (days[-1][0] - start).days
         if pools is not None:
             pools[label] = ([(key, round(score_at(scores[key], last, half_life), 2))
-                             for key in top(scores, TOPIC_POOL)], before)
+                             for key in sorted(scores, key=scores.get, reverse=True)], before)
         before = before[:LIST_SIZE * 2]
         lists[label] = [{
             'key': key,
@@ -187,10 +189,10 @@ def topic_lists(pools, groups):
     """{group: {half-life: list}} for each topic group with enough articles,
     from the pools build_source filled and each key's set of groups."""
     out = {}
-    for group, _ in wikipages.GROUPS:
+    for group, _ in wikitopics.GROUPS:
         lists = {}
         for label, (now, before) in pools.items():
-            mine = [(key, score) for key, score in now if group in groups.get(key, ())][:LIST_SIZE]
+            mine = [(key, score) for key, score in now if group in groups.get(key, ())][:SHOWN]
             earlier = [key for key in before if group in groups.get(key, ())][:LIST_SIZE * 2]
             lists[label] = [{'key': key, 'score': score,
                              'previous': earlier.index(key) + 1 if key in earlier else None}
@@ -222,9 +224,12 @@ def main():
     for days, start, titles, lists, racers in built.values():
         keys |= racers | {item['key'] for items in lists.values() for item in items}
     found = posters.ensure(sorted(k for k in keys if not k.startswith('wikipedia:')))
-    candidates = sorted({key for now, before in pools.values() for key in [k for k, _ in now] + before})
-    pages = wikipages.ensure(sorted(k for k in keys if k.startswith('wikipedia:')), candidates)
-    topics = topic_lists(pools, {key: wikipages.groups_of(pages.get(key)) for key in candidates})
+    # Tag the articles that could make a topic's list, most-read first.
+    rankings = [[key for key, _ in now] for now, _ in pools.values()]
+    tagged = wikitopics.ensure(rankings, SHOWN) if rankings else {}
+    topics = topic_lists(pools, {key: wikitopics.groups_of(row) for key, row in tagged.items()})
+    keys |= {item['key'] for group in topics.values() for items in group.values() for item in items[:SHOWN]}
+    pages = wikipages.ensure(sorted(k for k in keys if k.startswith('wikipedia:')))
 
     def describe(key, titles):
         source, ident = key.split(':', 1)
@@ -244,7 +249,7 @@ def main():
             shown = racers | {item['key'] for items in lists.values() for item in items[:SHOWN]}
             if source == 'wikipedia' and topics:
                 entry['topics'] = [{'id': group, 'label': label}
-                                   for group, label in wikipages.GROUPS if group in topics]
+                                   for group, label in wikitopics.GROUPS if group in topics]
                 entry['topicLists'] = topics
                 shown |= {item['key'] for group in topics.values() for items in group.values()
                           for item in items[:SHOWN]}

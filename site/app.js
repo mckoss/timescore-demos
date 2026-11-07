@@ -8,7 +8,7 @@ import { showFreshness, showVersion, formatDate, daysBetween } from './freshness
 const DAYS_PER_SECOND = 4;
 const RACE_SECONDS = 60;    // a long history plays faster, so a race takes at most about this long
 const RACE_SIZE = 10;
-const LIST_SHOWN = 10;
+const LIST_SHOWN = 20;
 const SWITCH_SECONDS = 1;   // how long an item takes to slide to its new rank (like the race)
 const BELOW_SHOWN = 3;      // ranks shown fading out below the top list
 const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where an item not in the list sits, out of sight
@@ -146,7 +146,7 @@ function renderList(title, note, items, source, format, history) {
 // The top items at one half-life, picked with a selector. Switching
 // half-lives slides every item to its rank in the new list over
 // SWITCH_SECONDS, so the eye can follow it: an item dropping out of the top
-// slides down past #10 into a fading zone that shows #11 to #13, and one
+// slides down past #20 into a fading zone that shows #21 to #23, and one
 // climbing in rises up out of it.
 function renderRanking(source, history) {
   const section = document.createElement('section');
@@ -233,7 +233,8 @@ function renderRanking(source, history) {
     buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.textContent === label)));
     topicButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.topic === topic)));
     history.setHalfLife(label);
-    note.textContent = `Each day's activity counts in full, then fades by half every ${label.toLowerCase()}.`;
+    note.textContent = `Each day's activity counts in full, then fades by half every ${label.toLowerCase()}. `
+      + 'Press History beside any of them to chart it day by day.';
     const all = listsFor(topic)[label];
     const items = all.slice(0, LIST_SHOWN);
     const ranks = new Map(all.map((item, i) => [item.key, i]));
@@ -382,7 +383,8 @@ function renderHistory(figure, source) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'history-toggle';
-    button.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 12.5 6 8l3 3 5.5-6.5"/></svg>';
+    button.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 12.5 6 8l3 3 5.5-6.5"/></svg>'
+      + '<span class="history-toggle-label">History</span>';
     if (tabIndex !== undefined) button.tabIndex = tabIndex;
     button.addEventListener('click', (event) => {
       event.preventDefault();
