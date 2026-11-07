@@ -1,4 +1,4 @@
-"""Tests for the collectors' state files and the TimeScore lists."""
+"""Tests for the collectors, the TimeScore lists and the version check."""
 
 import datetime
 import gzip
@@ -15,6 +15,8 @@ sys.path.insert(0, os.path.join(ROOT, 'build'))
 import build  # noqa: E402
 import check_version  # noqa: E402
 import imdb  # noqa: E402
+import wikipages  # noqa: E402
+import wikipedia  # noqa: E402
 
 
 
@@ -87,6 +89,60 @@ class TrendingTest(unittest.TestCase):
         self.assertEqual(trending[0]['key'], 'imdb:surge')
         self.assertGreater(trending[0]['score'], 2)
         self.assertAlmostEqual(trending[1]['score'], 1.0, places=2)
+
+
+class WikipediaTest(unittest.TestCase):
+    def test_only_articles(self):
+        for name in ('Main_Page', 'Special:Search', 'Wikipedia:Featured_pictures', 'Portal:Current_events',
+                     'File:Example.jpg', 'User_talk:Someone', 'Template:Infobox', '-'):
+            self.assertFalse(wikipedia.is_article(name), name)
+        for name in ('Taylor_Swift', 'Ramayana:_Part_1', 'Star_Wars:_Episode_IV_–_A_New_Hope', '.xyz'):
+            self.assertTrue(wikipedia.is_article(name), name)
+
+    def test_automated_views_are_left_out(self):
+        desktop = {'Real': 30_000, 'Desktop_bot': 99_000, 'Other': 2_500}
+        all_access = {
+            'Main_Page': 4_000_000,
+            'Real': 100_000,          # 30% from desktop, like most articles
+            'Desktop_bot': 100_000,   # 99% from desktop
+            'Phone_bot': 150_000,     # not in the desktop list: at most 2,500 / 150,000 from desktop
+            'Small': 10_000,          # not in the desktop list either, but could be 25% from desktop
+        }
+        kept, dropped = wikipedia.select(all_access, desktop)
+        self.assertEqual(kept, [('Real', 100_000), ('Small', 10_000)])
+        self.assertEqual(sorted(dropped), ['Desktop_bot', 'Phone_bot'])
+
+    def test_keeps_the_top(self):
+        all_access = {f'A{n}': 10_000 + n for n in range(wikipedia.TOP + 50)}
+        desktop = {name: views // 3 for name, views in all_access.items()}
+        kept, _ = wikipedia.select(all_access, desktop)
+        self.assertEqual(len(kept), wikipedia.TOP)
+        self.assertEqual(kept[0][0], f'A{wikipedia.TOP + 49}')
+
+    def test_user_agent_names_the_project(self):
+        self.assertRegex(wikipedia.USER_AGENT, r'^TimeScoreDemosBot/\S+ \(https://github.com/mckoss/timescore-demos\) ')
+
+    def test_article_entry(self):
+        row = {'title': 'Ada Lovelace', 'description': 'English mathematician', 'thumbnail': 'https://x/a.jpg',
+               'artist': 'Alfred Chalon', 'license': 'Public domain', 'file_page': 'https://commons/File:A.jpg'}
+        self.assertEqual(build.article('wikipedia:Ada_Lovelace', 'Ada Lovelace', row), {
+            'title': 'Ada Lovelace', 'image': 'https://x/a.jpg', 'link': 'https://en.wikipedia.org/wiki/Ada_Lovelace',
+            'description': 'English mathematician', 'imageCredit': 'Alfred Chalon, Public domain',
+            'imagePage': 'https://commons/File:A.jpg'})
+        self.assertEqual(build.article('wikipedia:AC/DC', 'AC/DC', None),
+                         {'title': 'AC/DC', 'image': None, 'link': 'https://en.wikipedia.org/wiki/AC/DC'})
+
+    def test_page_cache_round_trip(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, 'pages.tsv')
+            pages = {'wikipedia:A': {'key': 'wikipedia:A', 'title': 'A', 'description': 'Tab\there',
+                                     'checked': '2026-11-07'}}
+            wikipages.save(pages, path)
+            self.assertEqual(wikipages.load(path)['wikipedia:A']['description'], 'Tab here')
+            self.assertEqual(wikipages.load(path)['wikipedia:A']['thumbnail'], '')
+
+    def test_credit_is_plain_text(self):
+        self.assertEqual(wikipages.plain('<a href="//commons.wikimedia.org/wiki/User:X">X &amp; Y</a>\n'), 'X & Y')
 
 
 class VersionTest(unittest.TestCase):

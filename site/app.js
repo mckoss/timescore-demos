@@ -1,16 +1,17 @@
 // TimeScore Demos: renders site/data/movies.json (built daily by
 // build/build.py) as top lists at four half-lives and a bar chart race per
-// source, and shows how fresh the data is.
+// source (movies, or Wikipedia articles), and shows how fresh the data is.
 
 import { EMPTY, addEvent, scoreAt } from './timescore.js?v=__VERSION__';
 import { showFreshness, showVersion, formatDate, daysBetween } from './freshness.js?v=__VERSION__';
 
 const DAYS_PER_SECOND = 4;
+const RACE_SECONDS = 60;    // a long history plays faster, so a race takes at most about this long
 const RACE_SIZE = 10;
 const LIST_SHOWN = 10;
-const SWITCH_SECONDS = 1;   // how long a movie takes to slide to its new rank (like the race)
+const SWITCH_SECONDS = 1;   // how long an item takes to slide to its new rank (like the race)
 const BELOW_SHOWN = 3;      // ranks shown fading out below the top list
-const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where a movie not in the list sits, out of sight
+const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where an item not in the list sits, out of sight
 const EASE = 0.2;
 const DAY_MS = 86400e3;
 const DEFAULT_SOURCE = 'tmdb';   // the source with the most history
@@ -124,40 +125,31 @@ function renderList(title, note, items, source, format) {
   }
   const ol = document.createElement('ol');
   items.slice(0, LIST_SHOWN).forEach((item, i) => {
-    const movie = source.movies[item.key];
+    const entry = source.items[item.key];
     const li = document.createElement('li');
-    li.append(poster(movie, 'list-poster'));
-    const text = document.createElement('a');
-    text.className = 'list-title';
-    text.href = movie.link;
-    text.textContent = movie.title;
     const meta = document.createElement('span');
     meta.className = 'list-meta';
     meta.textContent = `${format(item.score)} · ${movement(item.previous, i + 1)}`;
     const rank = document.createElement('span');
     rank.className = 'list-rank';
     rank.textContent = i + 1;
-    const body = document.createElement('span');
-    body.className = 'list-body';
-    body.append(text, meta);
-    li.append(rank, body);
-    li.prepend(rank);
+    li.append(rank, image(entry, 'list-poster'), itemBody(entry, meta));
     ol.append(li);
   });
   list.append(ol);
   return list;
 }
 
-// The top movies at one half-life, picked with a selector. Switching
-// half-lives slides every movie to its rank in the new list over
-// SWITCH_SECONDS, so the eye can follow it: a movie dropping out of the top
+// The top items at one half-life, picked with a selector. Switching
+// half-lives slides every item to its rank in the new list over
+// SWITCH_SECONDS, so the eye can follow it: an item dropping out of the top
 // slides down past #10 into a fading zone that shows #11 to #13, and one
 // climbing in rises up out of it.
 function renderRanking(source) {
   const section = document.createElement('section');
   section.className = 'list ranking';
   const heading = document.createElement('h3');
-  heading.textContent = 'Top movies';
+  heading.textContent = `Top ${source.noun}`;
   const selector = document.createElement('div');
   selector.className = 'half-lives';
   selector.setAttribute('role', 'group');
@@ -181,25 +173,19 @@ function renderRanking(source) {
     board.append(rank);
   }
 
-  // One card for every movie in any of the half-lives' top lists.
+  // One card for every item in any of the half-lives' top lists.
   const keys = new Set(data.halfLives.flatMap(({ label }) =>
     source.lists[label].slice(0, LIST_SHOWN + BELOW_SHOWN).map((item) => item.key)));
   const cards = new Map([...keys].map((key) => {
-    const movie = source.movies[key];
+    const entry = source.items[key];
     const card = document.createElement('div');
     card.className = 'ranking-card';
     card.style.setProperty('--rank', OFF_LIST);
-    const title = document.createElement('a');
-    title.className = 'list-title';
-    title.href = movie.link;
-    title.tabIndex = -1;
-    title.textContent = movie.title;
     const meta = document.createElement('span');
     meta.className = 'list-meta';
-    const body = document.createElement('span');
-    body.className = 'list-body';
-    body.append(title, meta);
-    card.append(poster(movie, 'list-poster'), body);
+    const body = itemBody(entry, meta);
+    body.querySelectorAll('a').forEach((a) => { a.tabIndex = -1; });
+    card.append(image(entry, 'list-poster', -1), body);
     board.append(card);
     return [key, { card, meta, shown: false, value: 0, target: 0, previous: null, rank: OFF_LIST }];
   }));
@@ -224,7 +210,7 @@ function renderRanking(source) {
     const items = all.slice(0, LIST_SHOWN);
     const ranks = new Map(all.map((item, i) => [item.key, i]));
 
-    // Every card moves to its rank in the new list; a movie that isn't in
+    // Every card moves to its rank in the new list; an item that isn't in
     // it at all goes below the visible zone.
     const from = new Map();
     for (const [key, c] of cards) {
@@ -258,7 +244,7 @@ function renderRanking(source) {
 
     spoken.replaceChildren(...items.map((item) => {
       const li = document.createElement('li');
-      li.textContent = `${source.movies[item.key].title}, ${formatScore(item.score)}`;
+      li.textContent = `${source.items[item.key].title}, ${formatScore(item.score)}`;
       return li;
     }));
   }
@@ -284,8 +270,33 @@ function movement(previous, rank) {
   return previous > rank ? `▲ ${previous - rank}` : `▼ ${rank - previous}`;
 }
 
-function poster(movie, className) {
-  if (!movie.poster) {
+// An item's title (a link), its short description when it has one (Wikipedia
+// articles), and its meta line.
+function itemBody(entry, meta) {
+  const body = document.createElement('span');
+  body.className = 'list-body';
+  const title = document.createElement('a');
+  title.className = 'list-title';
+  title.href = entry.link;
+  title.textContent = entry.title;
+  body.append(title);
+  if (entry.description) {
+    body.classList.add('has-description');
+    title.title = `${entry.title}: ${entry.description}`;
+    const description = document.createElement('span');
+    description.className = 'list-description';
+    description.textContent = entry.description;
+    body.append(description);
+  }
+  body.append(meta);
+  return body;
+}
+
+// An item's poster or picture, or a gray box when it has none. A Wikipedia
+// image links to its page on Wikimedia Commons and names its author and
+// license, as its license asks.
+function image(entry, className, tabIndex) {
+  if (!entry.image) {
     const blank = document.createElement('span');
     blank.className = `${className} no-poster`;
     blank.setAttribute('aria-hidden', 'true');
@@ -293,10 +304,18 @@ function poster(movie, className) {
   }
   const img = document.createElement('img');
   img.className = className;
-  img.src = movie.poster;
+  img.src = entry.image;
   img.alt = '';
   img.loading = 'lazy';
-  return img;
+  if (!entry.imagePage) return img;
+  const link = document.createElement('a');
+  link.className = 'image-credit';
+  link.href = entry.imagePage;
+  link.title = `Image: ${entry.imageCredit || 'see its page for author and license'}`;
+  link.setAttribute('aria-label', link.title);
+  if (tabIndex !== undefined) link.tabIndex = tabIndex;
+  link.append(img);
+  return link;
 }
 
 // — The race ————————————————————————————————————————————————————————————
@@ -315,12 +334,12 @@ function renderRace(figure, source) {
   const barsElement = figure.querySelector('[data-bars]');
 
   const bars = new Map(keys.map((key) => {
-    const movie = source.movies[key];
+    const entry = source.items[key];
     const bar = document.createElement('div');
     bar.className = 'race-bar';
     bar.innerHTML = '<span class="race-label"></span><span class="race-track"><span class="race-fill"></span><span class="race-value"></span></span>';
-    bar.prepend(poster(movie, 'race-poster'));
-    bar.querySelector('.race-label').textContent = movie.title;
+    bar.prepend(image(entry, 'race-poster', -1));
+    bar.querySelector('.race-label').textContent = entry.title;
     barsElement.append(bar);
     return [key, { bar, fill: bar.querySelector('.race-fill'), value: bar.querySelector('.race-value'), y: RACE_SIZE }];
   }));
@@ -385,7 +404,7 @@ function renderRace(figure, source) {
   function frame(timestamp) {
     if (running && lastFrame !== null) {
       const seconds = (timestamp - lastFrame) / 1000;
-      if (seconds < 0.25) position += seconds * DAYS_PER_SECOND;
+      if (seconds < 0.25) position += seconds * Math.max(DAYS_PER_SECOND, days / RACE_SECONDS);
       if (position >= days - 1) { position = days - 1; running = false; }
     }
     lastFrame = timestamp;
