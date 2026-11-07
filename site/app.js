@@ -9,6 +9,8 @@ const DAYS_PER_SECOND = 4;
 const RACE_SIZE = 10;
 const LIST_SHOWN = 10;
 const SWITCH_SECONDS = 5;   // how long a movie takes to slide to its new rank
+const BELOW_SHOWN = 3;      // ranks shown fading out below the top list
+const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where a movie not in the list sits, out of sight
 const EASE = 0.2;
 const DAY_MS = 86400e3;
 
@@ -86,9 +88,10 @@ function renderList(title, note, items, source, format) {
 }
 
 // The top movies at one half-life, picked with a selector. Switching
-// half-lives slides each movie to its new rank over SWITCH_SECONDS, so the
-// eye can follow it; movies leaving the top fade out downward, and newcomers
-// rise in from the bottom.
+// half-lives slides every movie to its rank in the new list over
+// SWITCH_SECONDS, so the eye can follow it: a movie dropping out of the top
+// slides down past #10 into a fading zone that shows #11 to #13, and one
+// climbing in rises up out of it.
 function renderRanking(source) {
   const section = document.createElement('section');
   section.className = 'list ranking';
@@ -119,12 +122,12 @@ function renderRanking(source) {
 
   // One card for every movie in any of the half-lives' top lists.
   const keys = new Set(data.halfLives.flatMap(({ label }) =>
-    source.lists[label].slice(0, LIST_SHOWN).map((item) => item.key)));
+    source.lists[label].slice(0, LIST_SHOWN + BELOW_SHOWN).map((item) => item.key)));
   const cards = new Map([...keys].map((key) => {
     const movie = source.movies[key];
     const card = document.createElement('div');
     card.className = 'ranking-card';
-    card.style.setProperty('--rank', LIST_SHOWN);
+    card.style.setProperty('--rank', OFF_LIST);
     const title = document.createElement('a');
     title.className = 'list-title';
     title.href = movie.link;
@@ -137,7 +140,7 @@ function renderRanking(source) {
     body.append(title, meta);
     card.append(poster(movie, 'list-poster'), body);
     board.append(card);
-    return [key, { card, meta, shown: false, value: 0, previous: null, rank: LIST_SHOWN }];
+    return [key, { card, meta, shown: false, value: 0, target: 0, previous: null, rank: OFF_LIST }];
   }));
 
   const buttons = data.halfLives.map(({ label }) => {
@@ -156,33 +159,24 @@ function renderRanking(source) {
     board.classList.toggle('moving', moving);
     buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.textContent === label)));
     note.textContent = `Each day's activity counts in full, then fades by half every ${label.toLowerCase()}.`;
-    const items = source.lists[label].slice(0, LIST_SHOWN);
-    const ranks = new Map(items.map((item, i) => [item.key, i]));
+    const all = source.lists[label];
+    const items = all.slice(0, LIST_SHOWN);
+    const ranks = new Map(all.map((item, i) => [item.key, i]));
 
+    // Every card moves to its rank in the new list; a movie that isn't in
+    // it at all goes below the visible zone.
     const from = new Map();
     for (const [key, c] of cards) {
-      const rank = ranks.get(key);
-      const item = items[rank];
+      const rank = ranks.has(key) ? ranks.get(key) : OFF_LIST;
       from.set(key, c.value);
-      if (rank === undefined) {
-        c.card.style.setProperty('--rank', LIST_SHOWN);   // slide down and out
-        c.card.classList.remove('shown');
-        c.shown = false;
-        continue;
-      }
-      if (!c.shown && moving) {
-        // Start a newcomer just below the list, then let it rise.
-        c.card.classList.add('instant');
-        c.card.style.setProperty('--rank', LIST_SHOWN);
-        void c.card.offsetHeight;
-        c.card.classList.remove('instant');
-      }
       c.card.style.setProperty('--rank', rank);
-      c.card.classList.add('shown');
-      c.shown = true;
-      c.target = item.score;
-      c.previous = item.previous;
+      c.shown = rank < LIST_SHOWN;
+      c.card.classList.toggle('shown', c.shown);
       c.rank = rank;
+      if (ranks.has(key)) {
+        c.target = all[rank].score;
+        c.previous = all[rank].previous;
+      }
     }
 
     // Count each score to its new value over the same time as the slide.
@@ -192,11 +186,12 @@ function renderRanking(source) {
       const t = moving ? Math.min(1, (now - start) / (SWITCH_SECONDS * 1000)) : 1;
       const eased = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
       for (const [key, c] of cards) {
-        if (!c.shown) continue;
+        if (c.rank === OFF_LIST) continue;
         c.value = from.get(key) + (c.target - from.get(key)) * eased;
         c.meta.textContent = `${formatScore(c.value)} · ${movement(c.previous, c.rank + 1)}`;
       }
       if (t < 1) tween = requestAnimationFrame(step);
+      else board.classList.remove('moving');
     };
     tween = requestAnimationFrame(step);
 
