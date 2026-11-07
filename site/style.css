@@ -235,3 +235,16 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
 .site-header .version { margin: 4px 0 0; font-size: 12px; font-variant-numeric: tabular-nums; }
 .site-header .version a { color: var(--muted); text-decoration: none; }
 .site-header .version a:hover { text-decoration: underline; }
+
+/* A tab for each source (app.js showSources). */
+.source-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.source-tabs button {
+  display: grid; text-align: left; gap: 1px; cursor: pointer;
+  padding: 8px 16px; border: 2px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--text); font: inherit;
+}
+.source-tabs button:hover { border-color: var(--muted); }
+.source-tabs button[aria-selected="true"] { border-color: var(--text); background: var(--text); color: var(--bg); }
+.tab-name { font-weight: 800; font-size: 16px; }
+.tab-days { font-size: 13px; opacity: 0.8; font-variant-numeric: tabular-nums; }
+.source[hidden] { display: none; }
