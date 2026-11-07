@@ -79,6 +79,11 @@ jobs:
             git push
           fi
 
+      # Stamp this commit on the scripts' and stylesheet's URLs, so a browser
+      # never pairs a new page with old scripts from its cache.
+      - name: Version the site's files
+        run: sed -i "s/__VERSION__/${GITHUB_SHA::7}/g" site/*.html site/*.js
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

@@ -2,8 +2,8 @@
 // build/build.py) as top lists at four half-lives and a bar chart race per
 // source, and shows how fresh the data is.
 
-import { EMPTY, addEvent, scoreAt } from './timescore.js';
-import { showFreshness, formatDate, daysBetween } from './freshness.js';
+import { EMPTY, addEvent, scoreAt } from './timescore.js?v=__VERSION__';
+import { showFreshness, formatDate, daysBetween } from './freshness.js?v=__VERSION__';
 
 const DAYS_PER_SECOND = 4;
 const RACE_SIZE = 10;

@@ -7,7 +7,7 @@
 // time, so it notices a missed update even when the workflow has stopped
 // and this page itself hasn't changed.
 
-import { formatDate } from './freshness.js';
+import { formatDate } from './freshness.js?v=__VERSION__';
 
 const NAMES = { imdb: 'New IMDb ratings', tmdb: 'TMDB popularity' };
 const SHORT = { imdb: 'IMDb data', tmdb: 'TMDB data' };
