@@ -8,6 +8,7 @@ import { showFreshness, formatDate, daysBetween } from './freshness.js?v=__VERSI
 const DAYS_PER_SECOND = 4;
 const RACE_SIZE = 10;
 const LIST_SHOWN = 10;
+const SWITCH_SECONDS = 5;   // how long a movie takes to slide to its new rank
 const EASE = 0.2;
 const DAY_MS = 86400e3;
 
@@ -33,9 +34,7 @@ function renderSource(id, source) {
     + `${formatDate(source.start)} to ${formatDate(source.last)}.`;
 
   const lists = section.querySelector('[data-lists]');
-  for (const { label } of data.halfLives) {
-    lists.append(renderList(`${label} half-life`, null, source.lists[label], source, formatScore));
-  }
+  lists.append(renderRanking(source));
   if (source.collected < data.trendingMinDays) {
     lists.append(renderNotYet(data.trending,
       `Needs ${data.trendingMinDays} days of data, for this week and this month to differ. `
@@ -84,6 +83,131 @@ function renderList(title, note, items, source, format) {
   });
   list.append(ol);
   return list;
+}
+
+// The top movies at one half-life, picked with a selector. Switching
+// half-lives slides each movie to its new rank over SWITCH_SECONDS, so the
+// eye can follow it; movies leaving the top fade out downward, and newcomers
+// rise in from the bottom.
+function renderRanking(source) {
+  const section = document.createElement('section');
+  section.className = 'list ranking';
+  const heading = document.createElement('h3');
+  heading.textContent = 'Top movies';
+  const selector = document.createElement('div');
+  selector.className = 'half-lives';
+  selector.setAttribute('role', 'group');
+  selector.setAttribute('aria-label', 'Half-life');
+  const note = document.createElement('p');
+  note.className = 'list-note';
+  const board = document.createElement('div');
+  board.className = 'ranking-board';
+  board.setAttribute('aria-hidden', 'true');
+  board.style.setProperty('--rows', LIST_SHOWN);
+  const spoken = document.createElement('ol');
+  spoken.className = 'visually-hidden';
+  spoken.setAttribute('aria-live', 'polite');
+  section.append(heading, selector, note, board, spoken);
+
+  for (let i = 1; i <= LIST_SHOWN; i++) {
+    const rank = document.createElement('span');
+    rank.className = 'list-rank';
+    rank.style.setProperty('--rank', i - 1);
+    rank.textContent = i;
+    board.append(rank);
+  }
+
+  // One card for every movie in any of the half-lives' top lists.
+  const keys = new Set(data.halfLives.flatMap(({ label }) =>
+    source.lists[label].slice(0, LIST_SHOWN).map((item) => item.key)));
+  const cards = new Map([...keys].map((key) => {
+    const movie = source.movies[key];
+    const card = document.createElement('div');
+    card.className = 'ranking-card';
+    card.style.setProperty('--rank', LIST_SHOWN);
+    const title = document.createElement('a');
+    title.className = 'list-title';
+    title.href = movie.link;
+    title.tabIndex = -1;
+    title.textContent = movie.title;
+    const meta = document.createElement('span');
+    meta.className = 'list-meta';
+    const body = document.createElement('span');
+    body.className = 'list-body';
+    body.append(title, meta);
+    card.append(poster(movie, 'list-poster'), body);
+    board.append(card);
+    return [key, { card, meta, shown: false, value: 0, previous: null, rank: LIST_SHOWN }];
+  }));
+
+  const buttons = data.halfLives.map(({ label }) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = label;
+    button.addEventListener('click', () => show(label, true));
+    selector.append(button);
+    return button;
+  });
+
+  let tween = 0;
+  function show(label, animate) {
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const moving = animate && !reduced;
+    board.classList.toggle('moving', moving);
+    buttons.forEach((button) => button.setAttribute('aria-pressed', String(button.textContent === label)));
+    note.textContent = `Each day's activity counts in full, then fades by half every ${label.toLowerCase()}.`;
+    const items = source.lists[label].slice(0, LIST_SHOWN);
+    const ranks = new Map(items.map((item, i) => [item.key, i]));
+
+    const from = new Map();
+    for (const [key, c] of cards) {
+      const rank = ranks.get(key);
+      const item = items[rank];
+      from.set(key, c.value);
+      if (rank === undefined) {
+        c.card.style.setProperty('--rank', LIST_SHOWN);   // slide down and out
+        c.card.classList.remove('shown');
+        c.shown = false;
+        continue;
+      }
+      if (!c.shown && moving) {
+        // Start a newcomer just below the list, then let it rise.
+        c.card.classList.add('instant');
+        c.card.style.setProperty('--rank', LIST_SHOWN);
+        void c.card.offsetHeight;
+        c.card.classList.remove('instant');
+      }
+      c.card.style.setProperty('--rank', rank);
+      c.card.classList.add('shown');
+      c.shown = true;
+      c.target = item.score;
+      c.previous = item.previous;
+      c.rank = rank;
+    }
+
+    // Count each score to its new value over the same time as the slide.
+    cancelAnimationFrame(tween);
+    const start = performance.now();
+    const step = (now) => {
+      const t = moving ? Math.min(1, (now - start) / (SWITCH_SECONDS * 1000)) : 1;
+      const eased = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
+      for (const [key, c] of cards) {
+        if (!c.shown) continue;
+        c.value = from.get(key) + (c.target - from.get(key)) * eased;
+        c.meta.textContent = `${formatScore(c.value)} · ${movement(c.previous, c.rank + 1)}`;
+      }
+      if (t < 1) tween = requestAnimationFrame(step);
+    };
+    tween = requestAnimationFrame(step);
+
+    spoken.replaceChildren(...items.map((item) => {
+      const li = document.createElement('li');
+      li.textContent = `${source.movies[item.key].title}, ${formatScore(item.score)}`;
+      return li;
+    }));
+  }
+  show('Week', false);
+  return section;
 }
 
 function renderNotYet(title, message) {
