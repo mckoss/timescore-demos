@@ -38,6 +38,7 @@ RACE_SIZE = 10
 # one recent like can't top the list.
 TRENDING = 'Weekly trending'
 TRENDING_POOL = 100
+TRENDING_MIN_DAYS = 14   # a source needs this much data for weeks and months to differ
 
 
 def steady(half_life, days):
@@ -117,6 +118,8 @@ def build_source(source, days):
         } for key in top(scores, LIST_SIZE)]
 
     last = (days[-1][0] - start).days
+    if len(days) < TRENDING_MIN_DAYS:
+        return start, titles, lists, racers
     now = trending(final['Week'], final['Month'], last)
     before = [key for key, _ in trending(previous['Week'], previous['Month'], last - 1)]
     lists[TRENDING] = [{
@@ -142,6 +145,7 @@ def main():
         'generated': datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),
         'halfLives': [{'label': label, 'days': days} for label, days in HALF_LIVES],
         'trending': TRENDING,
+        'trendingMinDays': TRENDING_MIN_DAYS,
         'sources': {},
     }
     built = {}

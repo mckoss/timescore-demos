@@ -39,6 +39,10 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):
 the unit tests and a build of the site from the data already in the repository.
 
+The [update log](https://mckoss.com/timescore-demos/status.html) shows each run: when it
+ran, what started it, and the data each source added. `build/log.py` adds each
+run to `data/log.jsonl` and writes `site/data/status.json` for that page.
+
 The page shows when the data was last updated. If the daily update fails,
 or a source stops getting new data, it says so in an amber box at the top.
 

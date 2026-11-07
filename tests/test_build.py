@@ -64,6 +64,11 @@ class ListsTest(unittest.TestCase):
 
 
 class TrendingTest(unittest.TestCase):
+    def test_needs_two_weeks_of_data(self):
+        days = [(day(n), {'imdb:steady': (10.0, 'Steady')}) for n in range(build.TRENDING_MIN_DAYS - 1)]
+        _, _, lists, _ = build.build_source('imdb', days)
+        self.assertNotIn(build.TRENDING, lists)
+
     def test_steady_activity_is_one(self):
         days = [(day(n), {'imdb:steady': (10.0, 'Steady')}) for n in range(120)]
         _, _, lists, _ = build.build_source('imdb', days)
