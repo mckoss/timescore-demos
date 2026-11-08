@@ -7,6 +7,13 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.10.2] - 2026-11-08
+### Changed
+- Page views are counted with the self-hosted analytics shared by all of
+  mckoss.com (stats.mckoss.com, via `https://mckoss.com/js/mk.js`). No
+  cookies; visits appear under the mckoss.com website, path
+  `/timescore-demos/`.
+
 ## [1.10.1] - 2026-11-08
 ### Fixed
 - The history chart's Wikipedia lines loaded nothing on the live site: the
