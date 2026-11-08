@@ -7,6 +7,13 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.10.1] - 2026-11-08
+### Fixed
+- The history chart's Wikipedia lines loaded nothing on the live site: the
+  page sent Wikimedia an `Api-User-Agent` header, which makes the browser
+  check with the Pageviews API first (a CORS preflight), and that API
+  refuses the check. The page now makes plain requests, which it allows.
+
 ## [1.10.0] - 2026-11-07
 ### Added
 - A search box on the Wikipedia tab: chart the history of any English
