@@ -7,6 +7,14 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.10.4] - 2026-11-08
+### Fixed
+- Two pushes to main a few minutes apart made the second daily-update run
+  fail: it started from the commit that triggered it, so its data commit
+  conflicted with the one the first run had just made. Each run now starts
+  from the latest main, and the site's files are stamped with the commit
+  actually published.
+
 ## [1.10.3] - 2026-11-08
 ### Fixed
 - The status page marked yesterday's Wikipedia data as missing every day.

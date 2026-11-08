@@ -24,7 +24,12 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      # Start from the latest main, not the commit that triggered the run: a
+      # run queued behind another must build on the data that run committed,
+      # or its own data commit conflicts with it.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -94,10 +99,12 @@ jobs:
             git push origin "$version"
           fi
 
-      # Stamp this commit on the scripts' and stylesheet's URLs, so a browser
-      # never pairs a new page with old scripts from its cache.
+      # Stamp the commit being published on the scripts' and stylesheet's
+      # URLs, so a browser never pairs a new page with old scripts from its
+      # cache. (Not GITHUB_SHA: the run may publish a newer commit than the
+      # one that triggered it.)
       - name: Version the site's files
-        run: sed -i "s/__VERSION__/${GITHUB_SHA::7}/g" site/*.html site/*.js
+        run: sed -i "s/__VERSION__/$(git rev-parse --short=7 HEAD)/g" site/*.html site/*.js
 
       - uses: actions/upload-pages-artifact@v3
         with:
