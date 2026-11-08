@@ -11,6 +11,9 @@ import { formatDate, showVersion } from './freshness.js?v=__VERSION__';
 
 const NAMES = { imdb: 'New IMDb ratings', tmdb: 'TMDB popularity', wikipedia: 'Wikipedia pageviews' };
 const SHORT = { imdb: 'IMDb data', tmdb: 'TMDB data', wikipedia: 'Wikipedia data' };
+// Days a source's newest data trails today. Wikimedia publishes a day's
+// pageviews after the next day's update has run, so yesterday is normal there.
+const LAG_DAYS = { imdb: 0, tmdb: 0, wikipedia: 1 };
 const NOUNS = { imdb: 'movies', tmdb: 'movies', wikipedia: 'articles' };
 const NOTHING = { days: [], rows: 0, bytes: 0 };   // a source an older log entry predates
 const TRIGGERS = {
@@ -162,7 +165,7 @@ function showCoverage({ log, dates }) {
       return { label: SHORT[source], className: `cell-${source}`, state: (day) => {
         if (have.has(day)) return ['done', `${NAMES[source]} for this day`];
         if (!first || day < first) return ['none', 'Before collecting began'];
-        if (day >= today) return ['pending', 'Not out yet'];
+        if (day >= addDays(today, -LAG_DAYS[source])) return ['pending', 'Not out yet'];
         return ['missing', 'No data for this day'];
       } };
     }),
