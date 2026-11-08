@@ -15,7 +15,6 @@ const OFF_LIST = LIST_SHOWN + BELOW_SHOWN + 2;   // where an item not in the lis
 const EASE = 0.2;
 const DAY_MS = 86400e3;
 const HISTORY_MAX = 8;      // lines on the history chart: one per color in the palette
-const API_USER_AGENT = 'TimeScoreDemos (https://github.com/mckoss/timescore-demos)';   // for Wikimedia's APIs
 const DEFAULT_SOURCE = 'tmdb';   // the source with the most history
 
 const data = await fetch(`data/movies.json?v=${Date.now()}`).then((r) => r.json());
@@ -630,9 +629,10 @@ async function fetchViews(key, start, last) {
   const name = key.slice(key.indexOf(':') + 1);
   const ymd = (iso) => iso.replaceAll('-', '');
   try {
+    // A plain request, with no custom headers: anything more makes the browser
+    // ask the API first (a CORS preflight), which the Pageviews API refuses.
     const response = await fetch('https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/'
-      + `all-access/user/${encodeURIComponent(name)}/daily/${ymd(start)}/${ymd(last)}`,
-    { headers: { 'Api-User-Agent': API_USER_AGENT } });
+      + `all-access/user/${encodeURIComponent(name)}/daily/${ymd(start)}/${ymd(last)}`);
     if (response.status === 404) return { series: [] };   // no views recorded in these days
     if (!response.ok) throw new Error(`Pageviews API: ${response.status}`);
     const { items } = await response.json();
@@ -774,7 +774,7 @@ function renderSearch(history) {
       const url = `https://en.wikipedia.org/w/rest.php/v1/search/title?q=${encodeURIComponent(query)}&limit=8`;
       let pages;
       try {
-        const response = await fetch(url, { signal: controller.signal, headers: { 'Api-User-Agent': API_USER_AGENT } });
+        const response = await fetch(url, { signal: controller.signal });   // plain, as in fetchViews
         if (!response.ok) throw new Error(`search: ${response.status}`);
         ({ pages } = await response.json());
       } catch (error) {
