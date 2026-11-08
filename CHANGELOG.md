@@ -7,6 +7,12 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.10.3] - 2026-11-08
+### Fixed
+- The status page marked yesterday's Wikipedia data as missing every day.
+  Wikimedia publishes a day's pageviews after the daily update has run, so
+  that data arrives a day later; yesterday now shows as "Not out yet".
+
 ## [1.10.2] - 2026-11-08
 ### Changed
 - Page views are counted with the self-hosted analytics shared by all of
