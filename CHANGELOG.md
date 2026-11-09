@@ -7,6 +7,15 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.11.0] - 2026-11-09
+### Added
+- The build writes `site/data/race.json` for the bar chart race in the
+  [TimeScore post](https://mckoss.com/posts/timescore/): each full week's
+  Wikipedia views of eight articles picked from the latest data, the four
+  with the most views so far and the four with the highest TimeScore now
+  (three-month half-life). The post ranks them both ways, so its race
+  updates with every daily run.
+
 ## [1.10.4] - 2026-11-08
 ### Fixed
 - Two pushes to main a few minutes apart made the second daily-update run

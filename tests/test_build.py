@@ -227,6 +227,27 @@ class WikipediaTest(unittest.TestCase):
         # The same hash as app.js shardOf (checked there against these values).
         self.assertEqual([build.shard_of(k) for k in ('wikipedia:Black_hole', 'wikipedia:Café')], [104, 44])
 
+    def test_post_race(self):
+        # 2026-01-05 is a Monday: days 4 to 17 are two full weeks; days 0-3
+        # and 18 are partial weeks, left out.
+        events = lambda n: {'wikipedia:Old': (100.0 if n < 11 else 0.0, 'Old'),
+                            'wikipedia:New': (30.0 if n >= 11 else 0.0, 'New'),
+                            'wikipedia:Small': (1.0, 'Small')}
+        days = [(day(n), events(n)) for n in range(19)]
+        old = (build.RACE_SERIES, build.RACE_BY_TOTAL)
+        build.RACE_SERIES, build.RACE_BY_TOTAL = 2, 1
+        try:
+            out = build.race(days)
+        finally:
+            build.RACE_SERIES, build.RACE_BY_TOTAL = old
+        self.assertEqual((out['start'], out['last']), ('2026-01-05', '2026-01-18'))
+        # Old has the most views; New the highest TimeScore now; Small neither.
+        self.assertEqual([s['label'] for s in out['series']], ['Old', 'New'])
+        self.assertEqual(out['series'][0]['counts'], [700, 0])
+        self.assertEqual(out['series'][1]['counts'], [0, 210])
+        self.assertEqual(out['series'][0]['link'], 'https://en.wikipedia.org/wiki/Old')
+        self.assertIsNone(build.race(days[:5]))
+
     def test_credit_is_plain_text(self):
         self.assertEqual(wikipages.plain('<a href="//commons.wikimedia.org/wiki/User:X">X &amp; Y</a>\n'), 'X & Y')
 

@@ -65,6 +65,10 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    values to `site/data/wikipedia/` (sharded, plus an index). The page uses
    them only when Wikimedia's own APIs don't answer; they're rebuilt on each
    deploy and not committed.
+   It also writes `site/data/race.json` for the bar chart race in the
+   [TimeScore post](https://mckoss.com/posts/timescore/): each full week's
+   views of the four articles with the most views so far and the four with
+   the highest TimeScore now (three-month half-life).
 5. The workflow commits the new data and publishes `site/` to GitHub Pages.
 
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):
