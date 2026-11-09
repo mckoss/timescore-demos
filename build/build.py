@@ -23,6 +23,10 @@ files under site/data/wikipedia/ (series-NN.json, the shard picked by
 shard_of), and index.json, every article from most-read down. The page
 falls back to these when Wikimedia's own API doesn't answer. They're
 rebuilt on each deploy and not committed (.gitignore).
+
+It also writes site/data/race.json, a small file for the bar chart race in
+the TimeScore post on mckoss.com: each week's Wikipedia views of a few
+articles picked from the latest data (write_race).
 """
 
 import datetime
@@ -208,6 +212,58 @@ def topic_lists(pools, groups):
     return out
 
 
+# The race in the TimeScore post (mckoss.com/posts/timescore/): weekly views
+# of the RACE_BY_TOTAL articles with the most views so far, and of the
+# articles with the highest TimeScore now, at a half-life of RACE_HALF_LIFE
+# weeks (the post's default), up to RACE_SERIES in all. The post ranks them
+# both ways, so the two picks show what each ranking favors.
+RACE_SERIES = 8
+RACE_BY_TOTAL = 4
+RACE_HALF_LIFE = 13
+RACE_COLORS = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300', '#6250d6', '#e34948']
+
+
+def race(days):
+    """The post's race: {"start": the first full week's Monday, "last": the
+    last day counted, "series": [{"label", "link", "color", "counts": one
+    total per full week}]}, the articles with the most views first; or None
+    without a full week of data. A day an article missed the top 500 counts
+    as no views."""
+    first, last = days[0][0], days[-1][0]
+    start = first + datetime.timedelta(days=-first.weekday() % 7)
+    weeks = ((last - start).days + 1) // 7
+    if weeks < 1:
+        return None
+    counts, titles = {}, {}
+    for date, events in days:
+        week = (date - start).days // 7
+        if not 0 <= week < weeks:
+            continue
+        for key, (value, title) in events.items():
+            counts.setdefault(key, [0] * weeks)[week] += value
+            titles[key] = title
+
+    def now(key):
+        score = EMPTY
+        for week, count in enumerate(counts[key]):
+            if count > 0:
+                score = add_event(score, count, week + 0.5, RACE_HALF_LIFE)
+        return score_at(score, weeks, RACE_HALF_LIFE) if score != EMPTY else 0
+
+    by_total = sorted(counts, key=lambda key: (-sum(counts[key]), key))
+    picked = by_total[:RACE_BY_TOTAL]
+    picked += [key for key in sorted(counts, key=lambda key: (-now(key), key))
+               if key not in picked][:RACE_SERIES - len(picked)]
+    picked.sort(key=by_total.index)
+    return {
+        'start': start.isoformat(),
+        'last': (start + datetime.timedelta(weeks=weeks, days=-1)).isoformat(),
+        'series': [{'label': titles[key], 'link': wikipages.link(key), 'color': RACE_COLORS[i],
+                    'counts': [round(count) for count in counts[key]]}
+                   for i, key in enumerate(picked)],
+    }
+
+
 SERIES_SHARDS = 128
 
 
@@ -305,6 +361,11 @@ def main():
     if 'wikipedia' in built:
         days, start = built['wikipedia'][:2]
         write_series(days, start)
+        post_race = race(days)
+        if post_race:
+            os.makedirs('site/data', exist_ok=True)
+            with open('site/data/race.json', 'w', encoding='utf-8') as f:
+                json.dump(post_race, f, ensure_ascii=False, separators=(',', ':'))
     os.makedirs('site/data', exist_ok=True)
     with open('site/data/movies.json', 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
