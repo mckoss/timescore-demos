@@ -17,6 +17,7 @@ mckoss.com domain, so mckoss.github.io/timescore-demos redirects there).
 | **New IMDb ratings** | A movie's new ratings on IMDb in a day | Daily from IMDb's [non-commercial datasets](https://developer.imdb.com/non-commercial-datasets), from the first run on |
 | **TMDB popularity** | A movie's popularity score on [The Movie Database](https://www.themoviedb.org) that day | Daily from TMDB's [daily exports](https://developer.themoviedb.org/docs/daily-id-exports), which go back about three months |
 | **Wikipedia pageviews** | An English Wikipedia article's views that day | Daily from Wikimedia's [Pageviews API](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html), back to November 2023 |
+| **Polymarket volume** | The dollars traded on a [Polymarket](https://polymarket.com) event (all its markets) that day | Daily from Polymarket's public market API, from the first run on (Polymarket doesn't publish daily history) |
 
 Posters and English titles come from the TMDB API. Wikipedia articles' short
 descriptions and free images come from Wikipedia's API.
@@ -69,7 +70,13 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    [TimeScore post](https://mckoss.com/posts/timescore/): each full week's
    views of the four articles with the most views so far and the four with
    the highest TimeScore now (three-month half-life).
-5. The workflow commits the new data and publishes `site/` to GitHub Pages.
+5. `collect/polymarket.py` reads the busiest open and recently closed
+   markets from Polymarket's public API, sorted by their last 24 hours of
+   trading, and commits the top 300 events by their own 24-hour dollar
+   volume to `data/polymarket/YYYY-MM-DD.tsv`, dated by the middle of the
+   24 hours it covers (the 09:41 UTC run collects yesterday). A day missed
+   is gone, since Polymarket doesn't publish daily history.
+6. The workflow commits the new data and publishes `site/` to GitHub Pages.
 
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):
 the unit tests and a build of the site from the data already in the repository.
@@ -125,6 +132,9 @@ Only the Python standard library is needed.
 - This product uses the TMDB API but is not endorsed or certified by TMDB. The site
   shows TMDB's logo (`site/tmdb-logo.svg`, from TMDB's
   [logos page](https://www.themoviedb.org/about/logos-attribution)) next to this notice.
+- Market data from Polymarket, collected from its public API for this
+  personal, non-commercial site. This site isn't affiliated with Polymarket,
+  doesn't show Polymarket's images, and isn't a recommendation to trade.
 - Wikipedia pageview data is from the Wikimedia Foundation, released under
   [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Article images
   come from Wikimedia Commons and Wikipedia under their free licenses; each

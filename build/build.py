@@ -96,7 +96,20 @@ SOURCES = {
         'credit': 'Pageview data from the Wikimedia Foundation (CC0). Images from Wikimedia '
                   'Commons and Wikipedia, under the licenses shown with each.',
     },
+    'polymarket': {
+        'name': 'Polymarket volume',
+        'about': 'Polymarket events (an election, a game, a question) ranked by the dollars '
+                 'traded on them, each day\'s trading counting as one event.',
+        'unit': 'dollars',
+        'prefix': '$',
+        'noun': 'events',
+        'images': False,   # Polymarket's images aren't ours to show
+        'link': 'https://polymarket.com/event/{id}',
+        'credit': 'Market data from Polymarket. This site isn\'t affiliated with Polymarket.',
+    },
 }
+
+SLUGS = {}   # Polymarket event key → its slug, for the link (read_days)
 
 
 def read_days(source):
@@ -112,6 +125,10 @@ def read_days(source):
             if source == 'imdb':
                 tconst, value, title, year = parts
                 events[f'imdb:{tconst}'] = (float(value), f'{title} ({year})' if year else title)
+            elif source == 'polymarket':
+                ident, value, slug, title = parts
+                events[f'polymarket:{ident}'] = (float(value), title)
+                SLUGS[f'polymarket:{ident}'] = slug
             else:
                 ident, value, title = parts
                 events[f'{source}:{ident}'] = (float(value), title)
@@ -316,7 +333,7 @@ def main():
     keys = set()
     for days, start, titles, lists, racers in built.values():
         keys |= racers | {item['key'] for items in lists.values() for item in items}
-    found = posters.ensure(sorted(k for k in keys if not k.startswith('wikipedia:')))
+    found = posters.ensure(sorted(k for k in keys if k.split(':', 1)[0] in ('imdb', 'tmdb')))
     # Tag the articles that could make a topic's list, most-read first.
     rankings = [[key for key, _ in now] for now, _ in pools.values()]
     tagged = wikitopics.ensure(rankings, SHOWN) if rankings else {}
@@ -328,6 +345,9 @@ def main():
         source, ident = key.split(':', 1)
         if source == 'wikipedia':
             return article(key, titles[key], pages.get(key))
+        if source == 'polymarket':
+            return {'title': titles[key], 'image': None,
+                    'link': SOURCES[source]['link'].format(id=SLUGS.get(key, ident))}
         row = found.get(key)
         # TMDB's export titles are original-language; prefer TMDB's English title.
         title = titles[key]

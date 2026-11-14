@@ -7,6 +7,26 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.12.0] - 2026-11-14
+### Added
+- A Polymarket volume tab: Polymarket events (an election, a game, a
+  question) ranked by the dollars traded on them, each day's trading
+  counting as one event, with the usual half-lives, race and history chart.
+  `collect/polymarket.py` reads the 1,000 busiest open markets and the 500
+  busiest closed ones from Polymarket's public API (a game that ended
+  overnight still had its biggest day), takes each market's event's own
+  24-hour total, and keeps the top 300 events a day in
+  `data/polymarket/YYYY-MM-DD.tsv`. History starts with the first daily
+  run: Polymarket doesn't publish daily volume history, and a missed day is
+  gone (a backfill from Dune may come later).
+- Polymarket on the update log, and its credit in the footer.
+
+### Changed
+- Amounts on the Polymarket tab show as dollars ($1,234,567). The tab has no
+  images: Polymarket's aren't ours to show.
+- The history chart shows a dot for each item when there's only one day of
+  data.
+
 ## [1.11.0] - 2026-11-09
 ### Added
 - The build writes `site/data/race.json` for the bar chart race in the

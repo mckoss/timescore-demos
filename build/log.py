@@ -22,7 +22,7 @@ import json
 import os
 import subprocess
 
-SOURCES = ('imdb', 'tmdb', 'wikipedia')
+SOURCES = ('imdb', 'tmdb', 'wikipedia', 'polymarket')
 LOG = 'data/log.jsonl'
 POSTERS = 'data/posters.tsv'
 SHOWN = 120   # log entries on the page
