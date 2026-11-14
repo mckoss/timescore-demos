@@ -7,6 +7,16 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.14.0] - 2026-11-14
+### Added
+- Three years of Polymarket history, from Nov 1, 2023: the top 300 events of
+  each day, from Polymarket's trades on the Polygon blockchain as indexed by
+  Dune, with each event's topic tags. `collect/polymarket_backfill.py` ran
+  the one-time backfill (it needs a Dune API key, so the daily workflow
+  doesn't run it). Summing every fill matches Polymarket's own volume
+  figures within a few percent. Backfilled days are UTC days; collected days
+  are the 24 hours before each daily run.
+
 ## [1.13.0] - 2026-11-14
 ### Added
 - Topics on the Polymarket tab: Sports, Esports, Crypto, Politics, World,
