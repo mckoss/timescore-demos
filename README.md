@@ -76,6 +76,9 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    volume to `data/polymarket/YYYY-MM-DD.tsv`, dated by the middle of the
    24 hours it covers (the 09:41 UTC run collects yesterday). A day missed
    is gone, since Polymarket doesn't publish daily history.
+   It also looks up each new event's tags once and keeps those that map to
+   the tab's topics (Sports, Esports, Crypto, Politics, World, Economy, Tech
+   & science, Culture) in `data/polymarket-tags.tsv`.
 6. The workflow commits the new data and publishes `site/` to GitHub Pages.
 
 Pull requests run [`.github/workflows/tests.yml`](.github/workflows/tests.yml):

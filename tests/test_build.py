@@ -285,6 +285,32 @@ class PolymarketTest(unittest.TestCase):
             with open(os.path.join(tmp, '2026-11-14.tsv'), encoding='utf-8') as f:
                 self.assertEqual(f.read().splitlines()[1:], ['event_id\tdollars\tslug\ttitle', '7\t99\tx-y\tX vs. Y'])
 
+    def test_topics_from_tags(self):
+        self.assertEqual(polymarket.groups_of(['esports', 'sports', 'games']), {'esports'})
+        self.assertEqual(polymarket.groups_of(['sports', 'nba']), {'sports'})
+        self.assertEqual(polymarket.groups_of(['politics', 'geopolitics', 'iran']), {'politics', 'world'})
+        self.assertEqual(polymarket.groups_of([]), set())
+
+    def test_tags_are_looked_up_once(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            days, cache = os.path.join(tmp, 'polymarket'), os.path.join(tmp, 'tags.tsv')
+            os.makedirs(days)
+            with open(os.path.join(days, '2026-11-14.tsv'), 'w', encoding='utf-8') as f:
+                f.write('# c\nevent_id\tdollars\tslug\ttitle\n7\t99\tx\tX\n8\t50\ty\tY\n')
+            replies = {'7': [{'slug': 'sports'}, {'slug': 'nba'}], '8': [{'slug': 'crypto'}, {'slug': 'bitcoin'}]}
+            asked = []
+
+            def fake(url):
+                ident = url.split('/events/')[1].split('/')[0]
+                asked.append(ident)
+                return replies[ident]
+            with unittest.mock.patch.object(polymarket, 'get_json', side_effect=fake), \
+                    unittest.mock.patch.object(polymarket.time, 'sleep'):
+                polymarket.tag_events(days, cache)
+                polymarket.tag_events(days, cache)
+            self.assertEqual(sorted(asked), ['7', '8'])   # the second run asks again for nothing
+            self.assertEqual(polymarket.load_tags(cache), {'7': ['sports'], '8': ['bitcoin', 'crypto']})
+
     def test_build_reads_the_files(self):
         with tempfile.TemporaryDirectory() as tmp:
             os.makedirs(os.path.join(tmp, 'data', 'polymarket'))
