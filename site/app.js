@@ -540,11 +540,13 @@ function drawHistory(plot, lines, start, days, prefix = '') {
   const months = [];
   for (let d = 0; d < days; d++) if (addDays(start, d).endsWith('-01')) months.push(d);
   const every = Math.max(1, Math.ceil(months.length / Math.max(2, Math.floor(width / 110))));
+  let year = null;   // the year shows on the first tick and wherever it changes
   months.filter((_, i) => i % every === 0).forEach((d) => {
     const label = svgElement('text', { x: x(d), y: height - 8, class: 'history-tick', 'text-anchor': 'middle' });
     const date = new Date(`${addDays(start, d)}T00:00:00Z`);
     label.textContent = date.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' })
-      + (date.getUTCMonth() === 0 || d === months[0] ? ` ${date.getUTCFullYear()}` : '');
+      + (date.getUTCFullYear() !== year ? ` ${date.getUTCFullYear()}` : '');
+    year = date.getUTCFullYear();
     chart.append(label);
   });
   for (const line of lines) {

@@ -1,0 +1,302 @@
+# Dollars traded on Polymarket events on 2026-08-13 (UTC), from its trades on Polygon as indexed by Dune. Market data from Polymarket.
+event_id	dollars	slug	title
+826528	4673186	dota2-ts8-xtreme-2026-08-13	Dota 2: Team Spirit vs Xtreme Gaming (BO3) - The International Group Stage
+842851	3941299	dota2-vsn2-flc-2026-08-13	Dota 2: TEAM VISION vs Team Falcons (BO3) - The International Group Stage
+817353	3713329	lol-gen-hle1-2026-08-13	LoL: Gen.G vs Hanwha Life Esports (BO3) - LCK Round 3-4 Legend Group
+794654	3568162	lol-wb-nip-2026-08-13	LoL: Weibo Gaming vs Ninjas in Pyjamas (BO3) - LPL Group Nirvana
+826523	3439264	dota2-flc-lgd-2026-08-12	Dota 2: Team Falcons vs LGD Gaming (BO3) - The International Group Stage
+826529	3064423	dota2-liquid-vg-2026-08-13	Dota 2: Team Liquid vs Vici Gaming (BO3) - The International Group Stage
+838528	3013640	cs2-big5-g2-2026-08-13	Counter-Strike: BIG vs G2 (BO3) - Esports World Cup Group A
+842853	2662551	dota2-lgd-tr7-2026-08-13	Dota 2: LGD Gaming vs Team Resilience (BO3) - The International Group Stage
+817352	2646382	lol-drx-fox1-2026-08-13	LoL: Kiwoom DRX vs BNK FEARX (BO3) - LCK Round 3-4 Rise Group
+794655	2622904	lol-tes-lgd-2026-08-13	LoL: Top Esports vs LGD Gaming (BO3) - LPL Group Ascend
+794656	2535312	lol-tt-blg-2026-08-13	LoL: ThunderTalk Gaming vs Bilibili Gaming (BO3) - LPL Group Ascend
+839279	2530206	cs2-lgc-faze-2026-08-13	Counter-Strike: Legacy vs FaZe (BO3) - Esports World Cup Group B
+842852	1985868	dota2-boombo-ironwi-2026-08-13	Dota 2: BoomBoys vs Iron Wing (BO3) - The International Group Stage
+838529	1877753	cs2-aur1-m80-2026-08-13	Counter-Strike: Aurora Gaming vs M80 (BO3) - Esports World Cup Group A
+826525	1807802	dota2-boombo-og-2026-08-12	Dota 2: BoomBoys vs OG (BO3) - The International Group Stage
+481717	1552072	fed-decision-in-september-762	Fed Decision in September?
+842854	1534836	dota2-ngx-og-2026-08-13	Dota 2: Nigma Galaxy vs OG (BO3) - The International Group Stage
+839724	1489142	cs2-fal2-ast10-2026-08-13	Counter-Strike: Team Falcons vs Astralis (BO3) - Esports World Cup Group B
+826530	1479387	dota2-aur1-gl-2026-08-13	Dota 2: Aurora vs GamerLegion (BO3) - The International Group Stage
+810753	1435625	mlb-bos-tor-2026-08-13	Boston Red Sox vs. Toronto Blue Jays
+836865	1356404	atp-tien-shelton-2026-08-12	National Bank Open: Learner Tien vs Ben Shelton
+810752	1342849	mlb-cin-cws-2026-08-13	Cincinnati Reds vs. Chicago White Sox
+810755	1305858	mlb-chc-wsh-2026-08-13	Chicago Cubs vs. Washington Nationals
+810751	1267753	mlb-sea-nyy-2026-08-13	Seattle Mariners vs. New York Yankees
+843137	1163016	wta-swiatek-rybakin-2026-08-13	National Bank Open: Iga Swiatek vs Elena Rybakina
+805968	1158557	mlb-bos-tor-2026-08-12	Boston Red Sox vs. Toronto Blue Jays
+411239	1155784	next-prime-minister-of-ethiopia	Next Prime Minister of Ethiopia?
+838349	1077365	cs2-lg6-ts7-2026-08-13	Counter-Strike: Luminosity vs Spirit (BO3) - Esports World Cup Group A
+680764	1071946	clacton-by-election-nigel-farage-vote-20260708151424120	Clacton by-election: Nigel Farage Vote %
+810748	1063382	mlb-cle-det-2026-08-13	Cleveland Guardians vs. Detroit Tigers
+831449	1056691	wta-svitoli-swiatek-2026-08-12	National Bank Open: Elina Svitolina vs Iga Swiatek
+805971	1021493	mlb-tex-laa-2026-08-12	Texas Rangers vs. Los Angeles Angels
+842196	1018766	atp-shelton-nakashi-2026-08-13	National Bank Open: Ben Shelton vs Brandon Nakashima
+836947	1000863	wta-gauff-rybakin-2026-08-12	National Bank Open: Coco Gauff vs Elena Rybakina
+826526	905298	dota2-vsn2-tr7-2026-08-12	Dota 2: TEAM VISION vs Team Resilience (BO3) - The International Group Stage
+836906	900835	atp-burruch-struff-2026-08-13	Cincinnati Open: Roman Andres Burruchaga vs Jan-Lennard Struff
+836917	880632	atp-landalu-draper-2026-08-13	Cincinnati Open: Martin Landaluce vs Jack Draper
+836894	859488	atp-norrie-prizmic-2026-08-13	Cincinnati Open: Cameron Norrie vs Dino Prizmic
+826524	794150	dota2-ironwi-ngx-2026-08-12	Dota 2: Iron Wing vs Nigma Galaxy (BO3) - The International Group Stage
+805964	775154	mlb-cle-det-2026-08-12	Cleveland Guardians vs. Detroit Tigers
+835714	746508	atp-jodar-nakashi-2026-08-12	National Bank Open: Rafael Jodar vs Brandon Nakashima
+810756	740193	mlb-phi-min-2026-08-13	Philadelphia Phillies vs. Minnesota Twins
+660108	734263	strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320	Strait of Hormuz traffic returns to normal by...?
+699735	730470	us-announces-end-of-iranian-blockade-byptptpt-20260713152715080	US announces end of Iranian blockade by...?
+806480	706093	bitcoin-above-on-august-13-2026	Bitcoin above ___ on August 13?
+805967	692782	mlb-sea-nyy-2026-08-12	Seattle Mariners vs. New York Yankees
+836914	681682	atp-tirante-choinsk-2026-08-13	Cincinnati Open: Thiago Agustin Tirante vs Jan Choinski
+811258	658342	bitcoin-above-on-august-14-2026	Bitcoin above ___ on August 14?
+824255	648580	lol-dcg-gam-2026-08-13	LoL: Deep Cross Gaming vs GAM Esports (BO5) - LCP Group Stage
+805972	645529	mlb-kc-lad-2026-08-12	Kansas City Royals vs. Los Angeles Dodgers
+677008	627928	clacton-by-election-winner-20260707143521303	Clacton by-election Winner
+758951	598016	lec-mon-nas-2026-08-12	CF Monterrey vs. Nashville SC
+819037	590336	atp-schwaer-andrade-2026-08-10	Brownsburg: Joel Schwaerzler vs Andres Andrade
+794210	589485	elon-musk-of-tweets-august-7-august-14	Elon Musk # tweets August 7 - August 14, 2026?
+787038	544508	sud-san-mac-2026-08-13	Santos FC vs. CSyD Macará
+780132	500058	what-price-will-bitcoin-hit-in-august-2026	What price will Bitcoin hit in August?
+770961	464889	wnba-min-por-2026-08-12	Minnesota Lynx vs. PortlandFire
+758958	464839	lec-ame-aus-2026-08-13	CF América vs. Austin FC
+772681	439934	lib-cru-fla-2026-08-12	Cruzeiro EC vs. CR Flamengo
+796415	431151	sud-san-mac-2026-08-13-more-markets	Santos FC vs. CSyD Macará - More Markets
+819574	426667	val-jl-pcfic-2026-08-13	Valorant: Joblife vs Pcific Esports (BO3) - VCT EMEA Play-Ins
+810750	425901	mlb-pit-mia-2026-08-13	Pittsburgh Pirates vs. Miami Marlins
+838348	415015	cs2-gl1-jjh-2026-08-13	Counter-Strike: GamerLegion vs JiJieHao (BO3) - Esports World Cup Group A
+836929	401649	wta-parry-dolehid-2026-08-13	Cincinnati Open: Diane Parry vs Caroline Dolehide
+806449	395459	ethereum-above-on-august-13-2026	Ethereum above ___ on August 13?
+826547	394163	dota2-ty-huliga-2026-08-13	Dota 2: Team Yandex vs HULIGANI (BO3) - The International Group Stage
+836924	393633	wta-waltert-marcink-2026-08-13	Cincinnati Open: Simona Waltert vs Petra Marcinko
+826190	391193	lol-tos-nort-2026-08-13	LoL: The Otter Side vs NORTHERNGRADE ESPORTS (BO3) - LPLOL Group Stage
+758955	387149	lec-sea-gua-2026-08-12	Seattle Sounders FC vs. CD Guadalajara
+836932	385725	wta-krueger-boisson-2026-08-13	Cincinnati Open: Ashlyn Krueger vs Lois Boisson
+836903	383141	atp-shapova-mannari-2026-08-13	Cincinnati Open: Denis Shapovalov vs Adrian Mannarino
+833763	376794	atp-nedic-taberne-2026-08-13	Hamburg: Andrej Nedic vs Carlos Taberner
+758952	360551	lec-tol-dal-2026-08-12	Deportivo Toluca FC vs. FC Dallas
+829581	352951	val-kru1-bst1-2026-08-13	Valorant: KRÜ Esports vs BESTIA (BO3) - VCT Americas Stage 2 Play-In
+836909	349755	atp-navone-collign-2026-08-13	Cincinnati Open: Mariano Navone vs Raphael Collignon
+778263	347035	col-qar-dyn-2026-08-13-more-markets	Qarabağ Ağdam FK vs. FK Dynamo Kyiv - More Markets
+833785	345512	bitcoin-up-or-down-on-august-13-2026	Bitcoin Up or Down on August 13?
+782587	344771	uel-hmi-ben-2026-08-13-more-markets	Heart of Midlothian FC vs. Sport Lisboa e Benfica - More Markets
+759063	341865	lec-orl-asl-2026-08-12-more-markets	Orlando City SC vs. Atlético San Luis - More Markets
+810757	335753	mlb-tex-laa-2026-08-13	Texas Rangers vs. Los Angeles Angels
+684058	334629	nfl-lac-hou-2026-08-14	Chargers vs. Texans
+805970	331280	mlb-cin-cws-2026-08-12	Cincinnati Reds vs. Chicago White Sox
+840199	325903	cs2-bw-rustec-2026-08-13	Counter-Strike: Bushido Wildcats vs ex-RUSTEC (BO3) - CCT Europe Closed Qualifier: Series #7 Group A
+782463	323894	uel-hmi-ben-2026-08-13	Heart of Midlothian FC vs. Sport Lisboa e Benfica
+770959	321215	wnba-chi-gsv-2026-08-12	Chicago Sky vs. Golden State Valkyries
+831244	316977	cs2-yaw-keyd-2026-08-13	Counter-Strike: Yawara Esports vs Keyd (BO3) - BetBoom Storm Playoffs
+758950	316654	lec-orl-asl-2026-08-12	Orlando City SC vs. Atlético San Luis
+836938	314334	wta-bucsa-udvardy-2026-08-13	Cincinnati Open: Cristina Bucsa vs Panna Udvardy
+815431	313602	lol-hrts-koia-2026-08-13	LoL: Team Heretics Academy vs ⁠Movistar KOI Fénix (BO3) - LES Regular Season
+833755	313011	atp-rehberg-purtsel-2026-08-13	Hamburg: Max Hans Rehberg vs Saba Purtseladze
+778297	311395	col-tob-par-2026-08-13-more-markets	Tobyl FK vs. FK Partizan Beograd - More Markets
+841058	308035	atp-kozlov-wendelk-2026-08-13	Brownsburg: Stefan Kozlov vs Harry Wendelken
+836875	307414	atp-faria-wu-2026-08-12	Cincinnati Open, Qualification: Jaime Faria vs Yibing Wu
+796023	305773	lib-mir-lqu-2026-08-13-more-markets	Mirassol FC vs. LDU de Quito - More Markets
+826044	301180	lol-mvu-wu-2026-08-13	LoL: Maryville University vs Winthrop University (BO3) - North American Challengers League Group Stage
+836897	292034	atp-fucsovi-atmane-2026-08-13	Cincinnati Open: Marton Fucsovics vs Terence Atmane
+796416	289833	sud-vas-clo-2026-08-13-more-markets	CR Vasco da Gama vs. Club Olimpia - More Markets
+842194	287373	atp-vukic-lajal-2026-08-13	Cincinnati Open, Qualification: Aleksandar Vukic vs Mark Lajal
+746379	286601	what-price-will-wti-hit-in-august-2026	What will WTI Crude Oil (WTI) hit in August 2026?
+826494	281713	lol-sly-vitb-2026-08-12	LoL: Solary vs Vitality.Bee (BO3) - LFL Playoffs
+500753	276370	will-anthropics-valuation-hit-by-december-31	Will Anthropic’s valuation hit __ by December 31?
+805966	269144	mlb-chc-wsh-2026-08-12	Chicago Cubs vs. Washington Nationals
+819029	269025	atp-schoolk-cina-2026-08-10	Brownsburg: Tristan Schoolkate vs Federico Cina
+811226	267038	ethereum-above-on-august-14-2026	Ethereum above ___ on August 14?
+758953	265308	lec-sdg-pue-2026-08-12	San Diego FC vs. Club Puebla
+836921	257672	wta-vidmano-kalinin-2026-08-13	Cincinnati Open: Darja Vidmanova vs Anhelina Kalinina
+782594	257603	uel-ucr-kps-2026-08-13-more-markets	Universitatea Craiova CS vs. Kuopion PS - More Markets
+782462	257396	uel-and-pao1-2026-08-13	RSC Anderlecht vs. PAOK
+842042	253076	lol-ewi-ross-2026-08-13	LoL: E WIE EINFACH E-SPORTS vs ROSSMANN Centaurs (BO3) - Prime League 1st Division Group A
+782595	251012	uel-bes-hra-2026-08-13-more-markets	Beşiktaş JK vs. FC Hradec Králové - More Markets
+836943	248283	wta-townsen-osorio-2026-08-13	Cincinnati Open: Taylor Townsend vs Camila Osorio
+775356	246304	wnba-atl-conn-2026-08-13	Atlanta Dream vs. Connecticut Sun
+842193	245357	atp-rocha-mejia-2026-08-13	Cincinnati Open, Qualification: Henrique Rocha vs Nicolas Mejia
+777550	243865	uel-paf-rbs-2026-08-13-more-markets	Páfos FC vs. FC Red Bull Salzburg - More Markets
+835715	243362	atp-kumstat-houkes-2026-08-13	Hamburg: Jan Kumstat vs Max Houkes
+831448	243301	atp-lajal-svrcina-2026-08-11	Cincinnati Open, Qualification: Mark Lajal vs Dalibor Svrcina
+775364	242742	wnba-wsh-las-2026-08-13	Washington Mystics vs. Las Vegas Aces
+782457	240802	uel-gor1-ftc-2026-08-13	Górnik Zabrze vs. Ferencvárosi TC
+825548	239941	what-price-will-bitcoin-hit-august-10-16-2026	What price will Bitcoin hit August 10-16?
+836915	231235	wta-kasatki-sonmez-2026-08-13	Cincinnati Open: Daria Kasatkina vs Zeynep Sonmez
+819576	230628	val-gx-fnc1-2026-08-13	Valorant: GIANTX vs Fnatic (BO3) - VCT EMEA Play-Ins
+777625	228278	col-qar-dyn-2026-08-13	Qarabağ Ağdam FK vs. FK Dynamo Kyiv
+836886	226034	atp-kjaer-jacquet-2026-08-12	Cincinnati Open, Qualification: Nicolai Budkov Kjaer vs Kyrian Jacquet
+770954	224322	wnba-tor-dal-2026-08-12	Toronto Tempo vs. Dallas Wings
+782589	218542	uel-ran1-jag-2026-08-13-more-markets	Rangers FC vs. Jagiellonia Białystok - More Markets
+836867	218394	wta-selekhm-stoiana-2026-08-12	Cincinnati Open, Qualification: Oksana Selekhmeteva vs Mary Stoiana
+826496	217038	lol-sc-kcb-2026-08-13	LoL: Skillcamp Esport vs Karmine Corp Blue (BO3) - LFL Playoffs
+781230	213626	lib-cru-fla-2026-08-12-more-markets	Cruzeiro EC vs. CR Flamengo - More Markets
+782588	213464	uel-and-pao1-2026-08-13-more-markets	RSC Anderlecht vs. PAOK - More Markets
+781581	205241	lib-mir-lqu-2026-08-13	Mirassol FC vs. LDU de Quito
+836888	204500	atp-trungel-nishiko-2026-08-12	Cincinnati Open, Qualification: Marco Trungelliti vs Kei Nishikori
+548796	194866	which-countries-will-recognize-israel-by-december-31	Which countries will recognize Israel by December 31?
+759061	192816	lec-tol-dal-2026-08-12-more-markets	Deportivo Toluca FC vs. FC Dallas - More Markets
+684056	189893	nfl-gb-pit-2026-08-13	Packers vs. Steelers
+759064	189160	lec-mia-leo-2026-08-12-more-markets	Inter Miami CF vs. Club León FC - More Markets
+842000	188486	wta-arango-podoros-2026-08-13	Cincinnati Open, Qualification: Emiliana Arango vs Nadia Podoroska
+835611	185873	cs2-justpl-mouzn-2026-08-13	Counter-Strike: Just Players vs MOUZ NXT (BO3) - NODWIN Clutch Series Play-In Group A
+829582	181297	val-nv2-m80-2026-08-13	Valorant: Team Envy vs M80 (BO3) - VCT Americas Stage 2 Play-In
+758949	180506	lec-mia-leo-2026-08-12	Inter Miami CF vs. Club León FC
+31552	178544	presidential-election-winner-2028	Presidential Election Winner 2028
+782593	178376	uel-gor1-ftc-2026-08-13-more-markets	Górnik Zabrze vs. Ferencvárosi TC - More Markets
+836940	177521	wta-ruzic-frech-2026-08-13	Cincinnati Open: Antonia Ruzic vs Magdalena Frech
+836935	176423	wta-maria-yastrem-2026-08-13	Cincinnati Open: Tatjana Maria vs Dayana Yastremska
+783582	175206	ufc-isl-ian1-2026-08-15	UFC 330: Islam Makhachev vs. Ian Machado Garry (Welterweight, Main Card)
+777511	173032	uel-paf-rbs-2026-08-13	Páfos FC vs. FC Red Bull Salzburg
+833752	169298	atp-butvila-milavsk-2026-08-12	Brownsburg: Edas Butvilas vs Daniel Milavsky
+777624	167163	col-ilv-rij-2026-08-13	Ilves Tampere vs. HNK Rijeka
+89502	164171	what-price-will-bitcoin-hit-before-2027	What price will Bitcoin hit in 2026?
+775361	161686	wnba-la-nyl-2026-08-13	Los Angeles Sparks vs. New York Liberty
+810758	160222	mlb-mil-lad-2026-08-13	Milwaukee Brewers vs. Los Angeles Dodgers
+835695	160111	wta-yuan-day-2026-08-12	Cincinnati Open, Qualification: Yue Yuan vs Kayla Day
+805969	159954	mlb-nym-atl-2026-08-12	New York Mets vs. Atlanta Braves
+812497	159486	lol-ktc-nsea-2026-08-13	LoL: KT Rolster Challengers vs Nongshim Esports Academy (BO3) - LCK Challengers League Rounds 3-4 Challenge Group
+833786	158176	ethereum-up-or-down-on-august-13-2026	Ethereum Up or Down on August 13?
+831435	157431	wta-lee-kuderme-2026-08-11	Cincinnati Open, Qualification: Carol Young Suh Lee vs Polina Kudermetova
+787034	157379	sud-vas-clo-2026-08-13	CR Vasco da Gama vs. Club Olimpia
+840900	156332	atp-doubles-reymsan-barrkic-2026-08-13	Todi (Doubles): Reymond/Sanchez vs Barrena/Kicker
+841904	155851	what-price-will-bitcoin-hit-on-august-13	What price will Bitcoin hit on August 13?
+711714	155222	israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963	Israel x Iran ceasefire continues through...?
+836910	150576	wta-boulter-volynet-2026-08-13	Cincinnati Open: Katie Boulter vs Katie Volynets
+758959	150484	lec-caz-chi-2026-08-13	CF Cruz Azul vs. Chicago Fire FC
+842043	149049	lol-dp-bgt-2026-08-13	LoL: Dark Passage vs BoostGate Esports (BO3) - TCL Play-Ins
+831658	146646	highest-temperature-in-london-on-august-13-2026	Highest temperature in London on August 13?
+836880	146199	atp-svajd-zheng-2026-08-12	Cincinnati Open, Qualification: Trevor Svajda vs Michael Zheng
+777623	144669	col-tob-par-2026-08-13	Tobyl FK vs. FK Partizan Beograd
+777633	143450	col-hif-rak-2026-08-13	Hammarby Fotboll vs. RKS Raków Częstochowa
+684057	142143	nfl-det-cin-2026-08-13	Lions vs. Bengals
+836854	142047	wta-kraus-liu-2026-08-12	Cincinnati Open, Qualification: Sinja Kraus vs Claire Liu
+782590	141780	uel-csk1-mta-2026-08-13-more-markets	PFK CSKA Sofia vs. MH Maccabi Tel Aviv - More Markets
+30829	139496	democratic-presidential-nominee-2028	Democratic Presidential Nominee 2028
+832479	138290	atp-tomic-winter-2026-08-11	Brownsburg: Bernard Tomic vs Edward Winter
+778277	138181	col-she1-aja-2026-08-13-more-markets	Shelbourne FC vs. AFC Ajax - More Markets
+840335	137546	cs2-prv-100t-2026-08-14	Counter-Strike: PARIVISION vs 100 Thieves (BO3) - Esports World Cup Group C
+832730	132012	bitcoin-up-or-down-august-13-2026-7am-et	Bitcoin Up or Down - August 13, 7AM ET
+778285	131086	col-nor-val-2026-08-13-more-markets	FC Nordsjælland vs. KF Valur - More Markets
+827335	131061	val-rrq1-spe-2026-08-13	Valorant: Rex Regum Qeon vs Sharper Esport (BO3) - VCT Pacific Play-In
+819039	130435	atp-smith-gill-2026-08-10	Brownsburg: Colton Smith vs Felix Gill
+796946	129290	who-will-attend-cristiano-ronaldos-wedding-20260803185630253	Who will attend Cristiano Ronaldo's wedding?
+196914	128162	largest-ipo-by-market-cap-in-2026-287	Largest IPO by market cap in 2026?
+831446	127585	atp-vukic-blanc-2026-08-11	Cincinnati Open, Qualification: Aleksandar Vukic vs Darwin Blanch
+831414	127240	atp-mejia-fearnle-2026-08-11	Cincinnati Open, Qualification: Nicolas Mejia vs Jacob Fearnley
+782455	126008	uel-bes-hra-2026-08-13	Beşiktaş JK vs. FC Hradec Králové
+778291	125930	col-ilv-rij-2026-08-13-more-markets	Ilves Tampere vs. HNK Rijeka - More Markets
+836862	123113	wta-stefani-jeanjea-2026-08-12	Cincinnati Open, Qualification: Lucrezia Stefanini vs Leolia Jeanjean
+778239	122830	col-din3-aud-2026-08-13-more-markets	FC Dinamo City vs. FK Auda - More Markets
+836870	122608	atp-halys-bu-2026-08-12	Cincinnati Open, Qualification: Quentin Halys vs Yunchaokete Bu
+783611	122029	ufc-jal-kau-2026-08-15	UFC 330: Jalin Turner vs. Kauê Fernandes (Lightweight, Prelims)
+835696	121534	atp-wong-virtane-2026-08-12	Cincinnati Open, Qualification: Coleman Wong vs Otto Virtanen
+758954	121275	lec-laf-que-2026-08-12	Los Angeles FC vs. Querétaro FC
+839188	119294	btc-updown-5m-1786637100	Bitcoin Up or Down - August 13, 12:05PM-12:10PM ET
+758956	119225	lec-phi-san-2026-08-13	Philadelphia Union vs. Club Santos Laguna
+149589	119086	which-party-will-gain-most-seats-in-russian-parliamentary-election	Which party will gain most seats in Russian Parliamentary Election?
+835709	119082	wta-tagger-montgom-2026-08-12	Cincinnati Open, Qualification: Lilli Tagger vs Robin Montgomery
+715500	118747	spider-man-brand-new-day-total-domestic-gross-by-august-31-20260716181307512	"Spider-Man: Brand New Day" total domestic gross by August 31?
+833761	118397	atp-fomin-samrej-2026-08-13	Astana: Sergey Fomin vs Kasidit Samrej
+684080	117603	nfl-ari-lv-2026-08-14	Cardinals vs. Raiders
+455875	115022	strait-of-hormuz-traffic-returns-to-normal-by-december-31	Strait of Hormuz traffic returns to normal by December 31?
+840476	113973	btc-updown-5m-1786650600	Bitcoin Up or Down - August 13, 3:50PM-3:55PM ET
+777644	112315	col-she1-aja-2026-08-13	Shelbourne FC vs. AFC Ajax
+843579	111917	dota2-ts8-aur1-2026-08-13	Dota 2: Team Spirit vs Aurora (BO3) - The International Group Stage
+842264	111739	cs2-red7-quin-2026-08-13	Counter-Strike: Red Feet vs QUINTESSÊNCIA (BO3) - CCT South America Challengers #2 Playoffs
+844386	111515	atp-vandeca-schoolk-2026-08-13	Brownsburg: Quinn Vandecasteele vs Tristan Schoolkate
+758957	111402	lec-nyc-nec-2026-08-13	New York City FC vs. Club Necaxa
+836855	111339	atp-assche-lajovic-2026-08-12	Cincinnati Open, Qualification: Luca Van Assche vs Dusan Lajovic
+833757	111018	atp-dodig-molleke-2026-08-13	Hamburg: Matej Dodig vs Rudolf Molleker
+836980	109850	highest-temperature-in-hong-kong-on-august-14-2026	Highest temperature in Hong Kong on August 14?
+660109	108970	strait-of-hormuz-traffic-returns-to-normal-by-september-30-20260702154339440	Strait of Hormuz traffic returns to normal by September 30?
+782585	108744	uel-egn-shr-2026-08-13-more-markets	KF Egnatia Rrogozhinë vs. Shamrock Rovers FC - More Markets
+780133	107512	what-price-will-ethereum-hit-in-august-2026	What price will Ethereum hit in August?
+842041	106327	lol-sha-phx2-2026-08-13	LoL: Shark Attack vs Team Phoenix (BO3) - TCL Play-Ins
+680749	105918	clacton-by-election-count-binface-vote-20260708142507718	Clacton by-election: Count Binface Vote %
+782458	105897	uel-omo-lin-2026-08-13	AS Omónoia Leukosías vs. Lincoln Red Imps FC
+777631	105583	col-tro-clu-2026-08-13	Tromsø IL vs. FC CFR 1907 Cluj
+31875	104899	republican-presidential-nominee-2028	Republican Presidential Nominee 2028
+841999	104736	wta-vandewi-sramkov-2026-08-13	Cincinnati Open, Qualification: Hanne Vandewinkel vs Rebecca Sramkova
+782461	104173	uel-ran1-jag-2026-08-13	Rangers FC vs. Jagiellonia Białystok
+827334	103839	val-drx1-osg-2026-08-13	Valorant: DRX vs ONSIDE GAMING (BO3) - VCT Pacific Play-In
+759062	103824	lec-mon-nas-2026-08-12-more-markets	CF Monterrey vs. Nashville SC - More Markets
+837940	102873	atp-shimabu-wolf-2026-08-12	Cincinnati Open, Qualification: Sho Shimabukuro vs J.J. Wolf
+827648	102548	lol-flk-gxp-2026-08-13	LoL: FALKE Esports vs GIANTX iTero (BO3) - LES Regular Season
+267102	102154	kharg-island-no-longer-under-iranian-control-by-march-31	Kharg Island no longer under Iranian control by...?
+839164	101542	btc-updown-5m-1786636800	Bitcoin Up or Down - August 13, 12:00PM-12:05PM ET
+620025	101447	us-iran-final-nuclear-deal-by-20260621201254412	US-Iran Final Nuclear Deal by…?
+833760	100709	atp-dougaz-manas-2026-08-13	Astana: Aziz Dougaz vs Manoj Dhamne Manas
+759059	100482	lec-laf-que-2026-08-12-more-markets	Los Angeles FC vs. Querétaro FC - More Markets
+836877	100255	wta-ito-dart-2026-08-12	Cincinnati Open, Qualification: Aoi Ito vs Harriet Dart
+782592	99955	uel-omo-lin-2026-08-13-more-markets	AS Omónoia Leukosías vs. Lincoln Red Imps FC - More Markets
+836926	99453	wta-rakhimo-birrell-2026-08-13	Cincinnati Open: Kamilla Rakhimova vs Kimberly Birrell
+782459	96568	uel-vik-thu-2026-08-13	KF Víkingur vs. FC Thun
+837722	96538	btc-updown-5m-1786609200	Bitcoin Up or Down - August 13, 4:20AM-4:25AM ET
+837860	94649	btc-updown-5m-1786612500	Bitcoin Up or Down - August 13, 5:15AM-5:20AM ET
+759057	94498	lec-phi-san-2026-08-13-more-markets	Philadelphia Union vs. Club Santos Laguna - More Markets
+838763	94239	btc-updown-5m-1786630800	Bitcoin Up or Down - August 13, 10:20AM-10:25AM ET
+101936	94044	fed-rate-hike-in-2026	Fed rate hike in 2026?
+778265	92402	col-stg-she-2026-08-13-more-markets	FC St. Gallen vs. FC Sheriff Tiraspol - More Markets
+838801	92239	btc-updown-5m-1786632000	Bitcoin Up or Down - August 13, 10:40AM-10:45AM ET
+838968	91919	btc-updown-5m-1786633800	Bitcoin Up or Down - August 13, 11:10AM-11:15AM ET
+838590	90497	btc-updown-5m-1786627500	Bitcoin Up or Down - August 13, 9:25AM-9:30AM ET
+816110	90345	bitcoin-above-on-august-15-2026	Bitcoin above ___ on August 15?
+778271	89692	col-hif-rak-2026-08-13-more-markets	Hammarby Fotboll vs. RKS Raków Częstochowa - More Markets
+838433	89107	btc-updown-5m-1786624500	Bitcoin Up or Down - August 13, 8:35AM-8:40AM ET
+794666	89002	lol-al-jdg-2026-08-14	LoL: Anyone's Legend vs JD Gaming (BO3) - LPL Group Ascend
+782591	88689	uel-vik-thu-2026-08-13-more-markets	KF Víkingur vs. FC Thun - More Markets
+839283	88672	btc-updown-5m-1786639200	Bitcoin Up or Down - August 13, 12:40PM-12:45PM ET
+838704	87968	btc-updown-5m-1786629900	Bitcoin Up or Down - August 13, 10:05AM-10:10AM ET
+45915	87871	brazil-presidential-election	Brazil Presidential Election
+839983	87203	btc-updown-5m-1786646700	Bitcoin Up or Down - August 13, 2:45PM-2:50PM ET
+778257	87048	col-haj-zal-2026-08-13-more-markets	HNK Hajduk Split vs. FK Žalgiris Vilnius - More Markets
+838796	86934	btc-updown-5m-1786631700	Bitcoin Up or Down - August 13, 10:35AM-10:40AM ET
+777641	86887	col-aus-bei-2026-08-13	FK Austria Wien vs. MH Beitar Jerusalem
+838992	86836	btc-updown-5m-1786634400	Bitcoin Up or Down - August 13, 11:20AM-11:25AM ET
+839153	86739	bitcoin-up-or-down-on-august-14-2026	Bitcoin Up or Down on August 14?
+831463	86489	highest-temperature-in-hong-kong-on-august-13-2026	Highest temperature in Hong Kong on August 13?
+48361	86377	ballon-dor-winner-2026	Ballon d'Or Winner 2026
+838408	86279	btc-updown-5m-1786624200	Bitcoin Up or Down - August 13, 8:30AM-8:35AM ET
+838641	86255	btc-updown-5m-1786628700	Bitcoin Up or Down - August 13, 9:45AM-9:50AM ET
+816139	85065	2026-fedex-st-jude-championship-first-round-leader	PGA Tour: FedEx St. Jude Championship First Round Leader
+836871	84858	wta-korneev-charaev-2026-08-12	Cincinnati Open, Qualification: Alina Korneeva vs Alina Charaeva
+806448	84761	bitcoin-price-on-august-13-2026	Bitcoin price on August 13?
+478277	84617	nba-2027-champion	NBA: 2027 Champion
+759201	84365	will-trump-publicly-insult-someone-onptptpt-20260724221849631	Will Trump publicly insult someone on...?
+31195	84217	putin-out-before-2027	Putin out as President of Russia by...?
+835615	83846	cs2-ence-enjoy-2026-08-13	Counter-Strike: ENCE vs ENJOY (BO3) - NODWIN Clutch Series Play-In Group A
+783650	83739	ufc-vic-tre3-2026-08-15	UFC 330: Vicente Luque vs. Tresean Gore (Middleweight, Early Prelims)
+840544	83446	btc-updown-5m-1786651200	Bitcoin Up or Down - August 13, 4:00PM-4:05PM ET
+842426	83377	itf-rober-bower-2026-08-13	ITF M25 East Lansing Men: Justin Roberts vs Tyler Bowers
+838692	83353	btc-updown-5m-1786629600	Bitcoin Up or Down - August 13, 10:00AM-10:05AM ET
+839215	82400	btc-updown-5m-1786637400	Bitcoin Up or Down - August 13, 12:10PM-12:15PM ET
+684084	82129	nfl-ten-sf-2026-08-14	Titans vs. 49ers
+624218	81961	next-round-of-us-iran-peace-talks-byptptpt-20260623022722982	Next round of US-Iran peace talks by...?
+778261	81383	col-flo-int-2026-08-13-more-markets	FC Flora vs. Inter Club d'Escaldes - More Markets
+832491	81271	atp-biryuko-cui-2026-08-12	Astana: Petr Bar Biryukov vs Jie Cui
+759042	81217	lec-nyc-nec-2026-08-13-more-markets	New York City FC vs. Club Necaxa - More Markets
+825562	81104	what-price-will-ethereum-hit-august-10-16-2026	What price will Ethereum hit August 10-16?
+833753	80713	atp-arutiun-imamura-2026-08-13	Astana: Erik Arutiunian vs Masamichi Imamura
+34044	80682	will-china-invade-taiwan-before-2027	Will China invade Taiwan by end of 2026?
+831245	80519	cs2-imp11-isg-2026-08-13	Counter-Strike: Imperial vs Isurus (BO3) - BetBoom Storm Playoffs
+840464	79802	btc-updown-5m-1786650300	Bitcoin Up or Down - August 13, 3:45PM-3:50PM ET
+782465	79792	uel-egn-shr-2026-08-13	KF Egnatia Rrogozhinë vs. Shamrock Rovers FC
+837695	79763	btc-updown-5m-1786608600	Bitcoin Up or Down - August 13, 4:10AM-4:15AM ET
+782456	79225	uel-ucr-kps-2026-08-13	Universitatea Craiova CS vs. Kuopion PS
+838918	78808	btc-updown-5m-1786632900	Bitcoin Up or Down - August 13, 10:55AM-11:00AM ET
+839146	78582	btc-updown-5m-1786636500	Bitcoin Up or Down - August 13, 11:55AM-12:00PM ET
+840340	78279	btc-updown-5m-1786648200	Bitcoin Up or Down - August 13, 3:10PM-3:15PM ET
+840930	78087	btc-updown-5m-1786659300	Bitcoin Up or Down - August 13, 6:15PM-6:20PM ET
+778273	77837	col-aus-bei-2026-08-13-more-markets	FK Austria Wien vs. MH Beitar Jerusalem - More Markets
+686525	77827	clacton-by-election-margin-of-victory-20260709153837820	Clacton by-election: Margin of Victory
+759041	77616	lec-ame-aus-2026-08-13-more-markets	CF América vs. Austin FC - More Markets
+835717	77481	atp-michals-neumaye-2026-08-13	Todi: Daniel Michalski vs Lukas Neumayer
+839486	77304	btc-updown-5m-1786642200	Bitcoin Up or Down - August 13, 1:30PM-1:35PM ET
+837705	77218	btc-updown-5m-1786608900	Bitcoin Up or Down - August 13, 4:15AM-4:20AM ET
+839351	77037	btc-updown-5m-1786640400	Bitcoin Up or Down - August 13, 1:00PM-1:05PM ET
+804408	76614	crint-aus3-bgd2-2026-08-12	Test Series Australia vs Bangladesh: Australia vs Bangladesh
+838978	76517	btc-updown-5m-1786634100	Bitcoin Up or Down - August 13, 11:15AM-11:20AM ET
+812498	76455	lol-genga-drxc-2026-08-13	LoL: Gen.G Global Academy vs Kiwoom DRX Challengers (BO3) - LCK Challengers League Rounds 3-4 Trial Group
+839318	75901	btc-updown-5m-1786639800	Bitcoin Up or Down - August 13, 12:50PM-12:55PM ET
+835712	75898	atp-shevche-oconnel-2026-08-12	Cincinnati Open, Qualification: Alexander Shevchenko vs Christopher O'Connell
+835718	75600	atp-kicker-faurel-2026-08-13	Todi: Nicolas Kicker vs Thomas Faurel
+839053	75278	btc-updown-5m-1786635900	Bitcoin Up or Down - August 13, 11:45AM-11:50AM ET
+839378	74733	btc-updown-5m-1786641000	Bitcoin Up or Down - August 13, 1:10PM-1:15PM ET

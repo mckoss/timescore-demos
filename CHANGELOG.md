@@ -17,6 +17,10 @@ Data the daily workflow commits isn't versioned. The current version is in
   figures within a few percent. Backfilled days are UTC days; collected days
   are the 24 hours before each daily run.
 
+### Fixed
+- The history chart's date axis shows the year wherever it changes, not only
+  in January (which a long history's ticks can skip).
+
 ## [1.13.0] - 2026-11-14
 ### Added
 - Topics on the Polymarket tab: Sports, Esports, Crypto, Politics, World,
