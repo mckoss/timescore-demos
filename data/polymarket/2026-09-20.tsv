@@ -1,0 +1,302 @@
+# Dollars traded on Polymarket events on 2026-09-20 (UTC), from its trades on Polygon as indexed by Dune. Market data from Polymarket.
+event_id	dollars	slug	title
+149589	7824083	which-party-will-gain-most-seats-in-russian-parliamentary-election	Which party will gain most seats in Russian Parliamentary Election?
+827194	5912497	nfl-gb-nyj-2026-09-20	Packers vs. Jets
+827202	5794687	nfl-phi-ten-2026-09-20	Eagles vs. Titans
+827216	5629365	nfl-was-dal-2026-09-20	Commanders vs. Cowboys
+827173	5480449	nfl-car-atl-2026-09-20	Panthers vs. Falcons
+827181	5467482	nfl-min-chi-2026-09-20	Vikings vs. Bears
+827208	5430514	nfl-lv-lac-2026-09-20	Raiders vs. Chargers
+827188	5219728	nfl-pit-ne-2026-09-20	Steelers vs. Patriots
+827206	5198284	nfl-jax-den-2026-09-20	Jaguars vs. Broncos
+980496	4650509	epl-mac-sun-2026-09-20	Manchester City FC vs. Sunderland AFC
+827176	4302690	nfl-no-bal-2026-09-20	Saints vs. Ravens
+1048814	4127847	lol-g2-mkoi-2026-09-20	LoL: G2 Esports vs Movistar KOI (BO5) - LEC Playoffs
+827222	4101290	nfl-ind-kc-2026-09-21	Colts vs. Chiefs
+827198	3985462	nfl-cle-tb-2026-09-20	Browns vs. Buccaneers
+981053	3701747	lal-mad-rea-2026-09-20	Club Atlético de Madrid vs. Real Madrid CF
+827218	3602360	nfl-mia-sf-2026-09-20	Dolphins vs. 49ers
+827184	3459227	nfl-cin-hou-2026-09-20	Bengals vs. Texans
+1053479	3329387	cs2-aur1-vit-2026-09-20	Counter-Strike: Aurora Gaming vs Vitality (BO5) - StarLadder StarSeries Playoffs
+1050510	2439287	dota2-cs-xtreme-2026-09-20	Dota 2: Conventus Stellarum vs Xtreme Gaming (BO3) - PGL Wallachia Group Stage
+827212	2408894	nfl-sea-ari-2026-09-20	Seahawks vs. Cardinals
+1050513	2361202	dota2-pi-yb1-2026-09-20	Dota 2: Pipsqueak+4 vs Yakult Brothers (BO3) - PGL Wallachia Group Stage
+972399	2166305	ufc-ale8-jos49-2026-09-19	UFC 331: Alexandre Pantoja vs. Joshua Van (Flyweight, Main Card)
+980508	2132610	epl-bou-liv-2026-09-20	AFC Bournemouth vs. Liverpool FC
+985390	2125498	cfb-lsu-miss-2026-09-19	LSU vs. Ole Miss
+1020353	2124687	lol-tl2-fly-2026-09-20	LoL: Team Liquid vs FlyQuest (BO5) - LCS Playoffs
+980884	1897880	epl-ful-mun-2026-09-20-more-markets	Fulham FC vs. Manchester United FC - More Markets
+1049948	1797604	cs2-vit-furia-2026-09-20	Counter-Strike: Vitality vs FURIA (BO3) - StarLadder StarSeries Playoffs
+1050514	1715988	dota2-aur1-navi-2026-09-20	Dota 2: Aurora vs Natus Vincere (BO3) - PGL Wallachia Group Stage
+981274	1576920	lal-mad-rea-2026-09-20-more-markets	Club Atlético de Madrid vs. Real Madrid CF - More Markets
+1049938	1570296	lol-png1-red-2026-09-20	LoL: paiN Gaming vs RED Canids (BO5) - CBLOL Playoffs
+980512	1446577	epl-ful-mun-2026-09-20	Fulham FC vs. Manchester United FC
+980506	1393535	fl1-olm-psg-2026-09-20	Olympique de Marseille vs. Paris Saint-Germain FC
+980895	1316788	epl-mac-sun-2026-09-20-more-markets	Manchester City FC vs. Sunderland AFC - More Markets
+980889	1287126	epl-bou-liv-2026-09-20-more-markets	AFC Bournemouth vs. Liverpool FC - More Markets
+980881	1280871	fl1-olm-psg-2026-09-20-more-markets	Olympique de Marseille vs. Paris Saint-Germain FC - More Markets
+1050512	1177264	dota2-gl-lgd-2026-09-20	Dota 2: GamerLegion vs LGD Gaming (BO3) - PGL Wallachia Group Stage
+1050509	1153979	dota2-playti-tc4-2026-09-20	Dota 2: PlayTime vs Team Cobra (BO3) - PGL Wallachia Group Stage
+1048649	1066176	atp-mayot-gueymar-2026-09-20	Rennes: Harold Mayot vs Sascha Gueymard-Wayenburg
+972401	1044376	ufc-arm-mau4-2026-09-19	UFC 331: Arman Tsarukyan vs. Mauricio Ruffy (Lightweight, Main Card)
+985414	942670	cfb-frest-sjst-2026-09-19	Fresno State vs. San Jose State
+979265	908868	sea-fio-nap-2026-09-20	ACF Fiorentina vs. SSC Napoli
+979272	902764	sea-mil-lec-2026-09-20	AC Milan vs. US Lecce
+1016819	897828	mlb-mia-sd-2026-09-19	Miami Marlins vs. San Diego Padres
+985410	883767	cfb-jmad-sdst-2026-09-19	James Madison vs. San Diego State
+1016816	868040	mlb-wsh-stl-2026-09-19	Washington Nationals vs. St. Louis Cardinals
+981061	863254	lal-val-rso-2026-09-20	Valencia CF vs. Real Sociedad de Fútbol
+979270	839670	sea-juv-ata-2026-09-20	Juventus FC vs. Atalanta BC
+985365	795947	cfb-fl-aubrn-2026-09-19	Florida vs. Auburn
+981050	781673	lal-get-mala-2026-09-20	Getafe CF vs. Málaga CF
+980897	780296	sea-fio-nap-2026-09-20-more-markets	ACF Fiorentina vs. SSC Napoli - More Markets
+985326	695287	cfb-flst-ala-2026-09-19	Florida State vs. Alabama
+1017447	673031	bitcoin-above-on-september-20-2026	Bitcoin above ___ on September 20?
+1022690	654695	mlb-oak-cle-2026-09-20	Athletics vs. Cleveland Guardians
+1038648	652612	us-iran-ceasefire-continues-throughptptpt	US-Iran ceasefire continues through...?
+987442	640695	por-por-ben-2026-09-20-more-markets	FC Porto vs. Sport Lisboa e Benfica - More Markets
+1050511	637785	dota2-1win-hkr-2026-09-20	Dota 2: 1win vs Hokori (BO3) - PGL Wallachia Group Stage
+980502	633431	epl-lee-cry-2026-09-20	Leeds United FC vs. Crystal Palace FC
+976885	630410	mex-ame-gua-2026-09-19	CF América vs. CD Guadalajara
+1022685	628388	mlb-kc-pit-2026-09-20	Kansas City Royals vs. Pittsburgh Pirates
+1016817	609883	mlb-nyy-ari-2026-09-19	New York Yankees vs. Arizona Diamondbacks
+981271	595138	lal-val-rso-2026-09-20-more-markets	Valencia CF vs. Real Sociedad de Fútbol - More Markets
+1022693	574137	mlb-det-cws-2026-09-20	Detroit Tigers vs. Chicago White Sox
+149565	563786	russia-parliamentary-election-winner	Russia Parliamentary Election Winner
+985393	559736	cfb-wvir-vir-2026-09-19	West Virginia vs. Virginia
+981059	546718	lal-dep-bet-2026-09-20	RC Deportivo A Coruña vs. Real Betis Balompié
+1022705	544275	mlb-nyy-ari-2026-09-20	New York Yankees vs. Arizona Diamondbacks
+204566	535324	mecklenburg-vorpommern-parliamentary-election-winner	Mecklenburg-Vorpommern Parliamentary Election Winner
+1042266	531109	lol-dnsc-t1a-2026-09-20	LoL: DN SOOPers Challengers vs T1 Academy (BO1) - World Star Challengers Invitational Group A
+1044896	530560	cs2-baks-blackp-2026-09-20	Counter-Strike: BakS eSports vs Black Phoenix (BO3) - CCT Europe Series #9 Group Stage
+1042264	523275	lol-ktc-blgj-2026-09-20	LoL: KT Rolster Challengers vs Bilibili Gaming Junior (BO1) - World Star Challengers Invitational Group B
+1016821	521168	mlb-min-laa-2026-09-19	Minnesota Twins vs. Los Angeles Angels
+972407	518441	ufc-tai1-rob18-2026-09-19	UFC 331: Tai Tuivasa vs. Robelis Despaigne (Heavyweight, Prelims)
+980500	511799	bun-s04-elv-2026-09-20	FC Schalke 04 vs. SV 07 Elversberg
+983633	511401	mls-mia-sdg-2026-09-20-more-markets	Inter Miami CF vs. San Diego FC - More Markets
+980499	507323	fl1-ogc-lil-2026-09-20	OGC Nice vs. Lille OSC
+981275	505081	lal-get-mala-2026-09-20-more-markets	Getafe CF vs. Málaga CF - More Markets
+403985	489460	russia-parliamentary-election-turnout	Russia Parliamentary Election: Turnout
+980892	472566	bun-b04-lei-2026-09-20-more-markets	Bayer 04 Leverkusen vs. RB Leipzig - More Markets
+946004	461795	what-price-will-bitcoin-hit-in-september-2026	What price will Bitcoin hit in September?
+981272	461470	lal-dep-bet-2026-09-20-more-markets	RC Deportivo A Coruña vs. Real Betis Balompié - More Markets
+143443	452858	venezuela-leader-end-of-2026	Venezuela leader end of 2026?
+1022701	451926	mlb-sea-col-2026-09-20	Seattle Mariners vs. Colorado Rockies
+1042267	442955	lol-fue-edgy-2026-09-20	LoL: Fuego vs EDward Gaming Youth Team (BO1) - World Star Challengers Invitational Group A
+1022708	441636	mlb-sf-lad-2026-09-20	San Francisco Giants vs. Los Angeles Dodgers
+73130	438315	will-the-us-invade-iran-before-2027	Will the U.S. invade Iran before 2027?
+981021	435871	wnba-wsh-ind-2026-09-20	Washington Mystics vs. Indiana Fever
+1042269	433039	lol-koia-ktc-2026-09-20	LoL: ⁠Movistar KOI Fénix vs KT Rolster Challengers (BO1) - World Star Challengers Invitational Group B
+980886	426931	sea-mil-lec-2026-09-20-more-markets	AC Milan vs. US Lecce - More Markets
+972404	424201	ufc-alo-iwo-2026-09-19	UFC 331: Alonzo Menifield vs. Iwo Baraniewski (Light Heavyweight, Main Card)
+1050515	419073	dota2-ty-nem-2026-09-20	Dota 2: Team Yandex vs Team Nemesis (BO3) - PGL Wallachia Group Stage
+980505	419064	bun-scp-hof-2026-09-20	SC Paderborn 07 vs. TSG 1899 Hoffenheim
+983928	417455	por-por-ben-2026-09-20	FC Porto vs. Sport Lisboa e Benfica
+1022692	404514	mlb-bos-tb-2026-09-20	Boston Red Sox vs. Tampa Bay Rays
+980894	400816	sea-fro-com-2026-09-20-more-markets	Frosinone Calcio vs. Como 1907 - More Markets
+1044894	397111	cs2-lavked-ence-2026-09-20	Counter-Strike: Lavked vs ENCE (BO3) - CCT Europe Series #9 Group Stage
+1042265	396016	lol-koia-ctbca-2026-09-20	LoL: ⁠Movistar KOI Fénix vs CTBC Flying Oyster Academy (BO1) - World Star Challengers Invitational Group B
+1022683	382779	mlb-phi-nym-2026-09-20	Philadelphia Phillies vs. New York Mets
+1020834	376215	what-price-will-bitcoin-hit-september-14-20-2026	What price will Bitcoin hit September 14-20?
+1023463	375399	bitcoin-above-on-september-21-2026	Bitcoin above ___ on September 21?
+699735	370849	us-announces-end-of-iranian-blockade-byptptpt-20260713152715080	US announces end of Iranian blockade by...?
+32225	368057	which-party-will-win-the-house-in-2026	Which party will win the House in 2026?
+981070	367856	ere-twe-psv-2026-09-20-more-markets	FC Twente vs. PSV - More Markets
+1042268	365409	lol-ctbca-blgj-2026-09-20	LoL: CTBC Flying Oyster Academy vs Bilibili Gaming Junior (BO1) - World Star Challengers Invitational Group B
+979268	364862	sea-fro-com-2026-09-20	Frosinone Calcio vs. Como 1907
+1022711	364551	mlb-mil-bal-2026-09-20	Milwaukee Brewers vs. Baltimore Orioles
+1042263	364464	lol-fue-dnsc-2026-09-20	LoL: Fuego vs DN SOOPers Challengers (BO1) - World Star Challengers Invitational Group A
+980494	364142	bun-b04-lei-2026-09-20	Bayer 04 Leverkusen vs. RB Leipzig
+1016820	364005	mlb-sf-lad-2026-09-19	San Francisco Giants vs. Los Angeles Dodgers
+980883	357108	bun-scp-hof-2026-09-20-more-markets	SC Paderborn 07 vs. TSG 1899 Hoffenheim - More Markets
+972406	352757	ufc-mar8-cha3-2026-09-19	UFC 331: Marlon Vera vs. Charles Jourdain (Bantamweight, Prelims)
+981056	352556	lal-vil-lev-2026-09-20	Villarreal CF vs. Levante UD
+981273	346249	lal-vil-lev-2026-09-20-more-markets	Villarreal CF vs. Levante UD - More Markets
+985415	339696	cfb-pur-ucla-2026-09-19	Purdue vs. UCLA
+1022703	331704	mlb-min-laa-2026-09-20	Minnesota Twins vs. Los Angeles Angels
+1022700	327546	mlb-tor-tex-2026-09-20	Toronto Blue Jays vs. Texas Rangers
+81557	327080	who-will-be-the-next-prime-minister-of-israel-after-the-next-election	Prime Minister of Israel after the next election?
+980893	326226	epl-lee-cry-2026-09-20-more-markets	Leeds United FC vs. Crystal Palace FC - More Markets
+981085	322994	ere-fey-utr-2026-09-20-more-markets	Feyenoord Rotterdam vs. FC Utrecht - More Markets
+980890	312179	sea-juv-ata-2026-09-20-more-markets	Juventus FC vs. Atalanta BC - More Markets
+976292	310706	ere-fey-utr-2026-09-20	Feyenoord Rotterdam vs. FC Utrecht
+980888	306764	bun-s04-elv-2026-09-20-more-markets	FC Schalke 04 vs. SV 07 Elversberg - More Markets
+981022	303936	wnba-por-la-2026-09-20	Portland Fire vs. Los Angeles Sparks
+95248	302015	berlin-state-election-winner	Berlin State Election Winner
+976968	301492	mls-nas-chi-2026-09-19-more-markets	Nashville SC vs. Chicago Fire FC - More Markets
+73223	298655	friedrich-merz-out-as-chancellor-of-germany-before-2027	Friedrich Merz out as Chancellor of Germany by...?
+972405	296174	ufc-gsteve-sea18-2026-09-19	UFC 331: Gable Steveson vs. Sean Sharaf (Heavyweight, Prelims)
+1042262	287867	lol-edgy-t1a-2026-09-20	LoL: EDward Gaming Youth Team vs T1 Academy (BO1) - World Star Challengers Invitational Group A
+1022709	284658	mlb-mia-sd-2026-09-20	Miami Marlins vs. San Diego Padres
+987268	283690	mex-tol-san-2026-09-20-more-markets	Deportivo Toluca FC vs. Club Santos Laguna - More Markets
+1050516	275234	dota2-mouz-pibble-2026-09-20	Dota 2: MOUZ vs Pibbles Corp (BO3) - PGL Wallachia Group Stage
+1050465	274014	atp-andreev-purtsel-2026-09-20	Plovdiv 4: Adrian Andreev vs Saba Purtseladze
+983540	270627	mex-pac-tij-2026-09-20	CF Pachuca vs. Club Tijuana
+956176	266469	dtrump-out-as-president-by-september-30	Trump out as President by September 30?
+985372	266236	cfb-nevada-mtnst-2026-09-19	Nevada vs. Middle Tennessee
+1050584	263874	cs2-sta6-ttbs-2026-09-20	Counter-Strike: STATE vs Teletubisie (BO3) - Exort Fiesta Playoffs
+977804	263404	bra-cor1-flu-2026-09-20	SC Corinthians Paulista vs. Fluminense FC
+1050455	261478	atp-zahraj-erhard-2026-09-20	Saint Tropez: Patrick Zahraj vs Mathys Erhard
+1022695	260885	mlb-atl-hou-2026-09-20	Atlanta Braves vs. Houston Astros
+976975	260116	mls-sje-laf-2026-09-19-more-markets	San Jose Earthquakes vs. Los Angeles FC - More Markets
+1048651	259717	atp-izquier-monteir-2026-09-20	Szczecin: Nikolas Sanchez Izquierdo vs Thiago Monteiro
+981020	254718	wnba-nyl-tor-2026-09-20	New York Liberty vs. Toronto Tempo
+1050771	252178	cs2-bhe-bst-2026-09-20	Counter-Strike: Bounty Hunters Esports vs BESTIA (BO3) - Circuit X Curitiba Playoffs
+972402	251247	ufc-pat3-dchoi-2026-09-19	UFC 331: Patricio Pitbull vs. Dooho Choi (Featherweight, Main Card)
+711714	250650	israel-x-iran-ceasefire-continues-throughptptpt-20260716224448963	Israel x Iran ceasefire continues through...?
+983433	247242	tur-ame-bes-2026-09-20	Amed Sportif vs. Beşiktaş JK
+983347	246837	mls-mia-sdg-2026-09-20	Inter Miami CF vs. San Diego FC
+979267	245996	sea-par-gen-2026-09-20	Parma Calcio 1913 vs. Genoa CFC
+1050275	245681	wta-linana-burel-2026-09-20	Valencia: Alicia Herrero Linana vs Clara Burel
+946005	242791	what-price-will-ethereum-hit-in-september-2026	What price will Ethereum hit in September?
+1047479	241849	atp-pacheco-simakin-2026-09-19	Phan Thiet 4: Rodrigo Pacheco vs Ilia Simakin
+147974	237129	how-many-seats-will-united-russia-win-in-the-next-russian-legislative-election	United Russia seats in the next Russian legislative election?
+45915	235559	brazil-presidential-election	Brazil Presidential Election
+976293	234557	ere-twe-psv-2026-09-20	FC Twente vs. PSV
+976967	226353	mls-rsl-vwh-2026-09-19-more-markets	Real Salt Lake vs. Vancouver Whitecaps FC - More Markets
+983829	218373	arg-slo-boc-2026-09-20	CA San Lorenzo de Almagro vs. CA Boca Juniors
+1022698	215377	mlb-wsh-stl-2026-09-20	Washington Nationals vs. St. Louis Cardinals
+981019	213280	wnba-min-conn-2026-09-20	Minnesota Lynx vs. Connecticut Sun
+1041488	206296	highest-temperature-in-beijing-on-september-20-2026	Highest temperature in Beijing on September 20?
+981498	203840	mex-ame-gua-2026-09-19-more-markets	CF América vs. CD Guadalajara - More Markets
+1048462	196953	wta-barthel-stefano-2026-09-20	Ljubljana: Mona Barthel vs Samira De Stefano
+1038683	196206	elon-musk-of-tweets-september-19-september-21-2026	Elon Musk # tweets September 19 - September 21, 2026?
+980495	196179	bl2-h96-boc-2026-09-20	Hannover 96 vs. VfL Bochum
+1016810	195598	mlb-chc-cin-2026-09-19	Chicago Cubs vs. Cincinnati Reds
+976592	194729	mls-sje-laf-2026-09-19	San Jose Earthquakes vs. Los Angeles FC
+976610	189241	mls-rsl-vwh-2026-09-19	Real Salt Lake vs. Vancouver Whitecaps FC
+1051615	189094	atp-ostapen-vandeca-2026-09-20	San Diego 2: Daniil Ostapenkov vs Quinn Vandecasteele
+606422	188707	fed-decision-in-october-20260617190323537	Fed Decision in October?
+1020838	188527	what-price-will-ethereum-hit-september-14-20-2026	What price will Ethereum hit September 14-20?
+1044893	187219	cs2-rustec-azuola-2026-09-20	Counter-Strike: ex-RUSTEC vs Azuolas (BO3) - CCT Europe Series #9 Group Stage
+179546	186953	trump-x-greenland-deal-signed-by-december-31	Trump x Greenland deal signed by...?
+976606	185562	mls-skc-phi-2026-09-19	Sporting Kansas City vs. Philadelphia Union
+1022688	184435	mlb-chc-cin-2026-09-20	Chicago Cubs vs. Cincinnati Reds
+1048648	183865	atp-kotov-sharipo-2026-09-20	Guangzhou: Pavel Kotov vs Marat Sharipov
+981060	183523	es2-leg-gra-2026-09-20	CD Leganés vs. Granada CF
+974210	183229	wnba-sea-gsv-2026-09-19	Seattle Storm vs. Golden State Valkyries
+1047321	181360	wta-hibino-ito-2026-09-20	Singapore Open, Qualification: Nao Hibino vs Aoi Ito
+89502	179154	what-price-will-bitcoin-hit-before-2027	What price will Bitcoin hit in 2026?
+981023	178819	wnba-sea-las-2026-09-20	Seattle Storm vs. Las Vegas Aces
+988053	177103	bra-fla-bra-2026-09-20-more-markets	CR Flamengo vs. Red Bull Bragantino - More Markets
+986946	175698	ere-nec-goa-2026-09-20-more-markets	NEC vs. Go Ahead Eagles - More Markets
+1050770	174183	cs2-fxw7-shin-2026-09-20	Counter-Strike: Fluxo W7M vs ShindeN (BO3) - Circuit X Curitiba Playoffs
+980887	171446	fl1-ogc-lil-2026-09-20-more-markets	OGC Nice vs. Lille OSC - More Markets
+981747	166368	scop-cel-ran-2026-09-20	Celtic FC vs. Rangers FC
+1045489	166113	daviscup-fery-andrade-2026-09-20	Davis Cup: Arthur Fery vs. Andres Andrade
+976611	165768	mls-por-atl-2026-09-19	Portland Timbers vs. Atlanta United FC
+980493	165421	fl1-aja-sbr-2026-09-20	AJ Auxerre vs. Stade Brestois 29
+980497	163440	elc-wol-wba-2026-09-20	Wolverhampton Wanderers FC vs. West Bromwich Albion FC
+1051595	163179	atp-blanc-mmoh-2026-09-20	Tiburon: Darwin Blanch vs Michael Mmoh
+810896	158717	russia-elections-united-russia-wins-every-region	Russia Elections: United Russia Wins Every Region?
+1015581	157911	crint-zwe-aus-2026-09-20	Australia Tour of Zimbabwe ODIs: Zimbabwe vs Australia
+1048463	156590	wta-knutson-pigato-2026-09-20	Caldas da Rainha: Gabriela Knutson vs Lisa Pigato
+832909	155939	nfl-nyg-la-2026-09-22	Giants vs. Rams
+983350	154270	nor-bra-bog-2026-09-20-more-markets	SK Brann vs. FK Bodø/Glimt - More Markets
+976294	152831	ere-az-tel-2026-09-20	AZ vs. Telstar 1963
+1043843	151748	lol-kor-vie-2026-09-20	LoL: South Korea vs Vietnam (BO5) - 2026 Asian Games National Team Evaluation Match
+1008064	149533	elon-musk-of-tweets-september-15-september-22-2026	Elon Musk # tweets September 15 - September 22, 2026?
+976966	148427	mls-por-atl-2026-09-19-more-markets	Portland Timbers vs. Atlanta United FC - More Markets
+985411	147704	cfb-ndkst-sacst-2026-09-19	North Dakota State vs. Sacramento State
+166435	146139	next-prime-minister-of-sweden	Next Prime Minister of Sweden
+659548	146053	laliga-2027-champion-20260701200737375	LALIGA: 2027 Champion
+1025219	145306	dota2-kalmy-tm6-2026-09-15	Dota 2: Kalmychata vs Two Move (BO3) - European Pro League Group B
+978411	144751	den-bro-kob-2026-09-20	Brøndby IF vs. FC København
+981081	142968	lal-mad-rea-2026-09-20-exact-score	Club Atlético de Madrid vs. Real Madrid CF - Exact Score
+984504	142305	bra-fla-bra-2026-09-20	CR Flamengo vs. Red Bull Bragantino
+1048337	141178	cs2-navij1-bw-2026-09-20	Counter-Strike: NAVI Junior vs Bushido Wildcats (BO3) - European Pro League Series 9 Group C
+435099	140368	crude-oil-all-time-high-by	Crude Oil all time high by...?
+1046451	139638	atp-mmoh-wolf-2026-09-19	Tiburon: Michael Mmoh vs J.J. Wolf
+1016818	137963	mlb-sea-col-2026-09-19	Seattle Mariners vs. Colorado Rockies
+1016813	134969	mlb-tor-tex-2026-09-19	Toronto Blue Jays vs. Texas Rangers
+983497	134956	den-sjs-ran-2026-09-20-more-markets	Sønderjyske Fodbold vs. Randers FC - More Markets
+982127	133827	elc-wol-wba-2026-09-20-more-markets	Wolverhampton Wanderers FC vs. West Bromwich Albion FC - More Markets
+1016812	133676	mlb-kc-pit-2026-09-19	Kansas City Royals vs. Pittsburgh Pirates
+1051312	132776	what-price-will-bitcoin-hit-on-september-20-2026	What price will Bitcoin hit on September 20?
+34044	131570	will-china-invade-taiwan-before-2027	Will China invade Taiwan by end of 2026?
+907966	131465	what-price-will-wti-hit-in-september-2026	What will WTI Crude Oil (WTI) hit in September 2026?
+1041500	131138	highest-temperature-in-guangzhou-on-september-20-2026	Highest temperature in Guangzhou on September 20?
+1016815	128962	mlb-atl-hou-2026-09-19	Atlanta Braves vs. Houston Astros
+988423	128305	tur-ame-bes-2026-09-20-more-markets	Amed Sportif vs. Beşiktaş JK - More Markets
+983175	127172	jap-gam-vis-2026-09-20-more-markets	Gamba Ōsaka vs. Vissel Kōbe - More Markets
+1017442	126613	ethereum-above-on-september-20-2026	Ethereum above ___ on September 20?
+1015606	126589	dota2-lynx-pckcp-2026-09-13	Dota 2: Team Lynx vs PuckChamp (BO3) - European Pro League Group A
+1050484	126576	atp-pereira-tsitsi-2026-09-20	Plovdiv 4: Tiago Pereira vs Pavlos Tsitsipas
+1050436	126328	atp-kaouk-boulais-2026-09-20	Saint Tropez: Mickael Kaouk vs Justin Boulais
+90177	126130	will-the-us-confirm-that-aliens-exist-before-2027	Will the US confirm that aliens exist by...?
+977963	125295	jap-zel-rey-2026-09-20	FC Machida Zelvia vs. Kashiwa Reysol
+976601	124451	mls-dal-aus-2026-09-19	FC Dallas vs. Austin FC
+985394	123954	cfb-vtech-mary-2026-09-19	Virginia Tech vs. Maryland
+1047320	123423	wta-shublad-astakho-2026-09-19	Korea Open, Qualification: Alexandra Shubladze vs Darya Astakhova
+1048461	123288	wta-ibragim-saito-2026-09-20	Korea Open, Qualification: Alevtina Ibragimova vs Sara Saito
+976884	123153	mex-mon1-caz-2026-09-19	CF Monterrey vs. CF Cruz Azul
+1047323	122524	wta-garland-morvayo-2026-09-20	Singapore Open, Qualification: Joanna Garland vs Viktoria Morvayova
+981752	122293	por-cds-scb-2026-09-20-more-markets	CD Santa Clara vs. SC Braga - More Markets
+985360	118492	cfb-flint-flatl-2026-09-19	Florida International vs. Florida Atlantic
+1023460	114897	ethereum-above-on-september-21-2026	Ethereum above ___ on September 21?
+1007040	114879	saudi-oil-pipeline-east-west-restarts-byptptpt	Saudi Oil Pipeline (East-West) restarts by...?
+983831	113844	arg-ros-aaj-2026-09-20	CA Rosario Central vs. AA Argentinos Juniors
+981063	113671	ere-az-tel-2026-09-20-more-markets	AZ vs. Telstar 1963 - More Markets
+267102	113623	kharg-island-no-longer-under-iranian-control-by-march-31	Kharg Island no longer under Iranian control by...?
+972408	111986	ufc-mic34-joo-2026-09-19	UFC 331: Michael Aswell vs. JooSang Yoo (Featherweight, Prelims)
+1017441	111283	bitcoin-price-on-september-20-2026	Bitcoin price on September 20?
+977800	109806	bra-gre-pal-2026-09-20	Grêmio FBPA vs. SE Palmeiras
+202857	109066	pro-football-2027-champion-20260729185915366	Pro Football: 2027 Champion
+208023	108217	will-xi-jinping-visit-us-before-2027	Will Xi Jinping visit US by...?
+1045488	107855	daviscup-zverev-prizmic-2026-09-20	Davis Cup: Alexander Zverev vs. Dino Prizmic
+276527	107808	bab-el-mandeb-strait-effectively-closed-by	Bab el-Mandeb Strait effectively closed by...?
+1045657	106445	btc-updown-15m-1789865100	Bitcoin Up or Down - September 19, 8:45PM-9:00PM ET
+1048650	106356	atp-caniato-canas-2026-09-20	Biella: Carlo Alberto Caniato vs Alejandro Moro Canas
+449163	106112	israel-closes-its-airspace-by	Israel closes its airspace by...?
+1041482	105695	highest-temperature-in-singapore-on-september-20-2026	Highest temperature in Singapore on September 20?
+1050480	105647	atp-echargu-potenza-2026-09-20	Saint Tropez: Moez Echargui vs Luca Potenza
+1051608	105460	atp-fenty-bigun-2026-09-20	San Diego 2: Andrew Fenty vs Kaylan Bigun
+1041824	104815	highest-temperature-in-chicago-on-september-20-2026	Highest temperature in Chicago on September 20?
+985389	102862	cfb-byu-colst-2026-09-19	BYU vs. Colorado State
+1038343	102809	saudi-arabia-military-action-against-yemen-on-20260916	Saudi Arabia military action against Yemen on...?
+981104	102246	lal-val-rso-2026-09-20-halftime-result	Valencia CF vs. Real Sociedad de Fútbol - Halftime Result
+978066	101908	nor-bra-bog-2026-09-20	SK Brann vs. FK Bodø/Glimt
+982816	101785	bl2-h96-boc-2026-09-20-more-markets	Hannover 96 vs. VfL Bochum - More Markets
+1047324	100505	wta-kuramoc-yao-2026-09-19	Korea Open, Qualification: Miho Kuramochi vs Xinxin Yao
+980896	100431	sea-par-gen-2026-09-20-more-markets	Parma Calcio 1913 vs. Genoa CFC - More Markets
+976976	100387	mls-dcu-clt-2026-09-19-more-markets	D.C. United SC vs. Charlotte FC - More Markets
+32228	99705	balance-of-power-2026-midterms	Balance of Power: 2026 Midterms
+204972	99189	brazil-presidential-election-first-round-2nd-place	Brazil Presidential Election First Round: 2nd Place
+980501	98949	bl2-fce-stp-2026-09-20	FC Energie Cottbus vs. FC St. Pauli 1910
+1043508	98565	bitcoin-up-or-down-on-september-20-2026	Bitcoin Up or Down on September 20?
+620025	98239	us-iran-final-nuclear-deal-by-20260621201254412	US-Iran Final Nuclear Deal by…?
+985413	97419	cfb-mont-oregst-2026-09-19	Montana vs. Oregon State
+1041501	97216	highest-temperature-in-qingdao-on-september-20-2026	Highest temperature in Qingdao on September 20?
+1050444	96935	atp-squire-janvier-2026-09-20	Saint Tropez: Henri Squire vs Maxime Janvier
+1045579	96555	cs2-brute-33-2026-09-20	Counter-Strike: Brute vs BET-M 33 (BO3) - NODWIN Clutch Series Group Stage
+982815	95987	bl2-fce-stp-2026-09-20-more-markets	FC Energie Cottbus vs. FC St. Pauli 1910 - More Markets
+30829	95742	democratic-presidential-nominee-2028	Democratic Presidential Nominee 2028
+1051610	94428	atp-sell-rybakov-2026-09-20	San Diego 2: Karue Sell vs Alex Rybakov
+1041503	94184	highest-temperature-in-manila-on-september-20-2026	Highest temperature in Manila on September 20?
+1047040	94178	btc-updown-5m-1789893000	Bitcoin Up or Down - September 20, 4:30AM-4:35AM ET
+1045493	93722	daviscup-tabilo-jodar-2026-09-20	Davis Cup: Alejandro Tabilo vs. Rafael Jodar
+980503	93297	elc-nor-bol-2026-09-20	Norwich City FC vs. Bolton Wanderers FC
+985717	92775	scop-cel-ran-2026-09-20-more-markets	Celtic FC vs. Rangers FC - More Markets
+982566	92667	bra-cor1-flu-2026-09-20-more-markets	SC Corinthians Paulista vs. Fluminense FC - More Markets
+985351	92138	cfb-ecar-old-2026-09-19	East Carolina vs. Old Dominion
+976970	90960	mls-skc-phi-2026-09-19-more-markets	Sporting Kansas City vs. Philadelphia Union - More Markets
+1047325	90620	wta-yamaguc-okamura-2026-09-20	Singapore Open, Qualification: Mei Yamaguchi vs Kyoka Okamura
+976586	90454	mls-mim-clb-2026-09-19	CF Montréal vs. Columbus Crew
+985361	90197	cfb-marsh-msrst-2026-09-19	Marshall vs. Missouri State
+1046557	89943	btc-updown-5m-1789883100	Bitcoin Up or Down - September 20, 1:45AM-1:50AM ET
+1038330	89833	of-views-of-next-mrbeast-video-on-day-1-20260916	# of views of next MrBeast video on day 1?
+980891	89531	fl1-aja-sbr-2026-09-20-more-markets	AJ Auxerre vs. Stade Brestois 29 - More Markets
+1048268	88048	btc-updown-5m-1789916700	Bitcoin Up or Down - September 20, 11:05AM-11:10AM ET
+1050437	87668	atp-jade-penisto-2026-09-20	Saint Tropez: Daniel Jade vs Ryan Peniston
+980533	87218	epl-mac-sun-2026-09-20-exact-score	Manchester City FC vs. Sunderland AFC - Exact Score
+977802	87188	cze1-ssp-fvp-2026-09-20	SK Slavia Praha vs. FC Viktoria Plzeň
+448037	86862	hantavirus-pandemic-in-2026	Hantavirus pandemic in 2026?
+1048670	86411	btc-updown-5m-1789923900	Bitcoin Up or Down - September 20, 1:05PM-1:10PM ET
+549019	86068	anthropic-ipo-by	Anthropic IPO by __?
+1046003	86025	btc-updown-5m-1789872300	Bitcoin Up or Down - September 19, 10:45PM-10:50PM ET
+981502	85606	itsb-mod-emp-2026-09-20	Modena FC 2018 vs. Empoli FC
+978741	85399	kor-poh-seo-2026-09-20	Pohang Steelers FC vs. FC Seoul
+1048600	85227	btc-updown-5m-1789922700	Bitcoin Up or Down - September 20, 12:45PM-12:50PM ET
+976969	84556	mls-col-sea-2026-09-19-more-markets	Colorado Rapids SC vs. Seattle Sounders FC - More Markets
+980507	84235	bl2-bie-hei-2026-09-20	DSC Arminia Bielefeld vs. 1. FC Heidenheim
+624242	82356	where-will-the-next-next-round-of-us-iran-peace-talks-beptptpt-20260623023740663	Where will the next next round of US-Iran peace talks be...?

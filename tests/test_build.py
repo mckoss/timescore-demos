@@ -18,6 +18,7 @@ import build  # noqa: E402
 import check_version  # noqa: E402
 import imdb  # noqa: E402
 import polymarket  # noqa: E402
+import polymarket_backfill  # noqa: E402
 import wikipages  # noqa: E402
 import wikitopics  # noqa: E402
 import wikipedia  # noqa: E402
@@ -310,6 +311,20 @@ class PolymarketTest(unittest.TestCase):
                 polymarket.tag_events(days, cache)
             self.assertEqual(sorted(asked), ['7', '8'])   # the second run asks again for nothing
             self.assertEqual(polymarket.load_tags(cache), {'7': ['sports'], '8': ['bitcoin', 'crypto']})
+
+    def test_backfill_chunks(self):
+        d = datetime.date
+        self.assertEqual(list(polymarket_backfill.chunks(d(2023, 11, 1), d(2024, 6, 15))),
+                         [(d(2023, 11, 1), d(2024, 2, 1)), (d(2024, 2, 1), d(2024, 5, 1)),
+                          (d(2024, 5, 1), d(2024, 6, 15))])
+
+    def test_backfill_keeps_collected_days(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            rows = [{'event_id': 7, 'dollars': 99, 'slug': 'x-y', 'title': 'X  vs. Y'}]
+            self.assertTrue(polymarket_backfill.write_day('2026-11-01', rows, tmp))
+            self.assertFalse(polymarket_backfill.write_day('2026-11-01', rows, tmp))
+            with open(os.path.join(tmp, '2026-11-01.tsv'), encoding='utf-8') as f:
+                self.assertEqual(f.read().splitlines()[1:], ['event_id\tdollars\tslug\ttitle', '7\t99\tx-y\tX vs. Y'])
 
     def test_build_reads_the_files(self):
         with tempfile.TemporaryDirectory() as tmp:

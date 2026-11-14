@@ -1,0 +1,302 @@
+# Dollars traded on Polymarket events on 2024-10-27 (UTC), from its trades on Polygon as indexed by Dune. Market data from Polymarket.
+event_id	dollars	slug	title
+903193	21725209	presidential-election-winner-2024	Presidential Election Winner 2024
+12585	13990584	champions-league-winner-2025	Champions League Winner
+903216	3708936	presidential-election-popular-vote-winner-2024	Popular Vote Winner 2024
+11439	3531877	superbowl-champion-2025	Super Bowl Champion 2025
+13431	1492526	israel-military-action-against-iraq-before-november	Israel military action against Iraq before November?
+11827	698424	fed-interest-rates-november-2024	Fed Interest Rates: November 2024
+903211	683480	electoral-college-margin-of-victory-in-the-2024-presidential-election	Electoral College Margin of Victory?
+10223	631297	balance-of-power-2024-election	Balance of Power: 2024 Election
+12361	600244	ballon-dor-winner	Ballon d'Or Winner
+13683	503382	what-will-trump-say-during-new-york-rally-oct-27	What will Trump say during New York rally?
+12483	492067	premier-league-winner-24-25	Premier League Winner
+11910	378415	popular-vote-margin-of-victory-in-presidential-election	Popular Vote Margin of Victory?
+10656	373670	which-party-wins-presidency-popular-vote	Who wins Presidency + Popular Vote?
+903378	364903	highest-grossing-movie-in-2024	Highest grossing movie in 2024?
+13116	325218	what-price-will-bitcoin-hit-in-october	What price will Bitcoin hit in October?
+903679	292205	virginia-presidential-election-winner	Virginia Presidential Election Winner
+13611	281264	venom-the-last-dance-opening-weekend-box-office	'Venom: The Last Dance' Opening Weekend Box Office
+12842	271220	worlds-2024-lol-winner	League of Legends: Worlds Winner 2024
+10170	261433	new-york-presidential-election-winner-2024	New York Presidential Election Winner
+13001	256776	another-iran-strike-on-israel-in-october	Another Iran strike on Israel in October?
+13566	212115	nfl-chi-was-2024-10-27	Bears vs. Commanders
+903640	206117	new-hampshire-presidential-election-winner	New Hampshire Presidential Election Winner
+11468	177246	trump-wins-every-swing-state	Trump wins every swing state?
+13558	166639	nfl-bal-cle-2024-10-27	Ravens vs. Browns
+903665	158304	michigan-presidential-election-winner	Who will win Michigan?
+13557	156991	nfl-phi-cin-2024-10-27	Eagles vs. Bengals
+903256	156228	will-china-invade-taiwan-in-2024	Will China invade Taiwan in 2024?
+13565	145475	nfl-kc-lv-2024-10-27	Chiefs vs. Raiders
+13559	144065	nfl-nyj-ne-2024-10-27	Jets vs. Patriots
+12006	140104	will-ukraine-hold-kursk-through-october-31	Will Ukraine hold Kursk through October 31?
+903641	136184	colorado-presidential-election-winner	Colorado Presidential Election Winner
+13759	133236	ethereum-above-2600-on-november-1	Ethereum above $2,600 on November 1?
+10833	131584	will-trump-drop-out-of-presidential-race	Will Trump drop out of presidential race?
+13663	129600	epl-ars-liv-2024-10-27	Arsenal vs. Liverpool
+13567	128278	nfl-dal-sf-2024-10-27	Cowboys vs. 49ers
+903667	125992	pennsylvania-presidential-election-winner	Who will win Pennsylvania?
+903636	120974	arizona-presidential-election-winner	Who will win Arizona?
+13616	120737	nba-phi-ind-2024-10-27	76ers vs. Pacers
+11888	116259	will-trump-vance-be-gop-ticket-on-election-day	Trump-Vance Republican ticket on election day?
+13564	116016	nfl-car-den-2024-10-27	Panthers vs. Broncos
+13433	103747	will-kamala-go-on-joe-rogan-before-election	Will Kamala go on Joe Rogan before election?
+903648	98354	georgia-presidential-election-winner	Who will win Georgia?
+12815	93727	nba-champion-2024-2025	NBA Champion
+13711	92416	mexican-grand-prix-winner	Mexico City Grand Prix Winner
+11940	87317	number-of-debates-between-trump-and-harris	# of debates between Trump and Harris?
+13561	86293	nfl-gb-jax-2024-10-27	Packers vs. Jaguars
+13660	85008	epl-wes-mun-2024-10-27	West Ham vs. Man Utd
+12027	83719	college-football-champion-2025	College Football Champion 2025
+13556	82023	nfl-atl-tb-2024-10-27	Falcons vs. Buccaneers
+13615	81663	nba-sac-lal-2024-10-26	Kings vs. Lakers
+12672	80974	la-liga-winner	La Liga Winner
+13563	78702	nfl-buf-sea-2024-10-27	Bills vs. Seahawks
+13562	77516	nfl-no-lac-2024-10-27	Saints vs. Chargers
+13144	76833	israel-strikes-iranian-oil-in-october	Israel strikes Iranian oil in October?
+11968	73854	democratic-vp-nominee-on-election-day	Democratic VP nominee on election day?
+13560	73237	nfl-ari-mia-2024-10-27	Cardinals vs. Dolphins
+13114	73203	what-price-will-ethereum-hit-in-october	What price will Ethereum hit in October?
+903637	70174	nevada-presidential-election-winner	Who will win Nevada?
+13792	67120	another-iran-strike-on-israel-in-2024	Another Iran strike on Israel in 2024?
+13614	65870	nba-dal-phx-2024-10-26	Mavericks vs. Suns
+13617	62279	nba-mil-bkn-2024-10-27	Bucks vs. Nets
+13554	61940	nfl-ten-det-2024-10-27	Titans vs. Lions
+13662	60828	epl-cry-tot-2024-10-27	Crystal Palace vs. Spurs
+903639	59309	california-presidential-election-winner	California Presidential Election Winner
+13791	58316	what-will-trump-say-during-georgia-rally-oct-28	What will Trump say during Atlanta, Georgia rally?
+11524	55596	us-election-tipping-point-state	Tipping Point State in 2024 Election?
+13618	55556	nba-nop-por-2024-10-27	Pelicans vs. Trail Blazers
+12299	54724	so-paulo-mayoral-election-2024	São Paulo mayoral election 2024
+11973	53648	will-kamala-harris-win-every-swing-state	Will Kamala Harris win all 6 swing states?
+13272	51678	how-many-swing-states-will-trump-win	How many swing states will Trump win?
+4076	51271	which-party-will-win-the-2024-united-states-presidential-election	Which party wins 2024 US Presidential Election?
+13747	49964	donald-trump-of-tweets-oct-25-nov-1	Donald Trump # of tweets Oct 25 - Nov 1?
+13661	49814	epl-che-new-2024-10-27	Chelsea vs. Newcastle
+13728	48323	which-party-will-win-the-most-seats-in-japanese-general-election	Which party will win the most seats in Japanese general election?
+13606	48210	nba-bos-det-2024-10-26	Celtics vs. Pistons
+11235	48193	f1-2024-season-winner	F1 2024 Drivers Champion
+903650	47193	north-carolina-presidential-election-winner	Who will win North Carolina?
+10415	46406	presidential-election-republicans-win-a-solid-blue-state	Trump wins a solid blue state?
+13458	45326	fortaleza-mayoral-election-2024	Fortaleza mayoral election 2024
+13547	43617	world-series-dodgers-vs-yankees-game-2	World Series: Dodgers vs. Yankees Game 2
+903683	40784	wisconsin-presidential-election-winner	Who will win Wisconsin?
+13737	40571	will-trump-win-florida-by-12-points	Will Trump win Florida by 12+ points?
+13555	40157	nfl-ind-hou-2024-10-27	Colts vs. Texans
+13475	39756	will-trump-win-30-or-more-of-black-men	Will Trump win 30% of Black men?
+13143	37456	israel-strike-on-iranian-nuclear-facility-in-2024	Israel strike on Iranian nuclear facility in 2024?
+13748	37190	elon-musk-of-tweets-oct-25-nov-1	Elon Musk # of tweets Oct 25 - Nov 1?
+13571	36651	trumps-margin-of-victory-higher-in-florida-or-alaska	Will Trump do better in Florida or Alaska?
+13760	35439	bitcoin-above-68000-on-november-1	Bitcoin above $68,000 on November 1?
+13175	35151	will-trump-win-florida-by-8-points	Will Trump win Florida by 8+ points?
+10022	35041	ohio-us-senate-election-winner	Ohio Senate Election Winner
+13719	34703	what-day-will-the-ap-call-the-election	What day will the AP call the election?
+13380	33865	will-either-kamala-or-trump-win-every-swing-state	Will either Kamala or Trump win every swing state?
+11455	32155	trump-blowout-victory	Trump blowout victory?
+13240	31245	rabois-parlay-trump-wins-pa-mi-ga-az	Rabois Parlay: Trump wins PA, MI, GA and AZ?
+10169	28843	new-mexico-presidential-election-winner-2024	New Mexico Presidential Election Winner
+12028	28709	will-russia-capture-pokrovsk-before-november	Will Russia capture Pokrovsk before November?
+11322	28336	will-biden-complete-his-term-as-president	Will Biden finish his term?
+903643	28091	new-jersey-presidential-election-winner	New Jersey Presidential Election Winner
+13749	27584	trump-vs-harris-polling-margin-on-nov-4	Trump vs. Harris polling margin on Nov 4?
+13761	27498	solana-above-170-on-november-1	Solana above $170 on November 1?
+12973	26865	khamenei-out-as-supreme-leader-of-iran-in-2024	Khamenei out as Supreme Leader of Iran in 2024?
+11639	26299	biden-resigns-from-presidency-before-election	Will Biden resign before the election?
+13613	25459	nba-hou-sas-2024-10-26	Rockets vs. Spurs
+903674	24861	texas-presidential-election-winner	Texas Presidential Election Winner
+11413	24439	next-uk-leader-of-the-conservatives	Next UK leader of the Conservatives?
+13787	24264	nfl-week-8-spreads	NFL Week 8: Spreads
+13478	24198	who-will-win-white-women	Who will win white women?
+903666	24093	minnesota-presidential-election-winner	Minnesota Presidential Election Winner
+12269	23161	f1-constructors-championship-winner	F1 Constructors Champion
+10842	23080	trump-sentenced-to-how-much-prison-time	Trump prison time in NY case before election?
+10558	22617	how-many-named-storms-during-atlantic-hurricane-season-2024	How many named storms during Atlantic Hurricane Season?
+13707	22575	will-rogan-announce-hes-voting-trump	Will Joe Rogan announce he is voting for Trump?
+13703	20985	will-the-winning-candidate-also-win-the-popular-vote	Winning candidate also wins popular vote?
+12508	20758	will-there-be-another-debate	Will there be another debate?
+13678	20708	record-turnout-in-2024-presidential-election	Record turnout in 2024 Presidential election?
+12603	20088	russia-x-ukraine-ceasefire-in-2024	Russia x Ukraine Ceasefire in 2024?
+10172	19847	congressional-district-2nd-nebraska-presidential-election-winner	Nebraska's 2nd Congressional District Presidential Election Winner
+10021	19518	montana-us-senate-election-winner	Montana Senate Election Winner
+13241	19461	stanley-cup-winner	Stanley Cup Champion 2025
+13620	19235	nba-lac-gsw-2024-10-27	Clippers vs. Warriors
+10705	19088	netanyahu-out-by-october-31	Netanyahu out by October 31?
+12779	18879	us-military-action-against-iran-before-november	U.S. military action against Iran before November?
+13765	18858	elon-musk-arrested-in-2024	Elon Musk arrested in 2024?
+12877	18833	will-trump-be-speaker-by-january-1	Will Trump be Speaker by January 1?
+12120	18572	favorite-to-win-on-polymarket-day-before-election	Favorite to win on Polymarket day before election?
+12879	18564	first-pumpfun-coin-to-1b	First Pump.fun coin to 1b?
+11798	18561	will-kamala-drop-out-before-election	Will Kamala Harris drop out of presidential race?
+11974	18556	kamala-harris-blowout-victory	Kamala Harris blowout victory?
+10214	17561	arizona-us-senate-election-winner	Arizona Senate Election Winner
+13619	17527	nba-atl-okc-2024-10-27	Hawks vs. Thunder
+13607	17396	nba-mia-cha-2024-10-26	Heat vs. Hornets
+13341	16120	will-trump-lose-new-york-by-less-then-10-points	Will Kamala win New York by 10+ points?
+903271	16118	andrew-tate-guilty-of-human-trafficking-in-2024	Andrew Tate guilty of human trafficking in 2024?
+13746	16098	will-microsoft-shareholders-vote-for-bitcoin-investment	MSFT shareholders vote for Bitcoin investment?
+12528	16022	will-joe-biden-endorse-donald-trump	Will Joe Biden endorse Donald Trump?
+12005	15557	rfk-popular-vote-share	RFK Jr. popular vote share?
+13697	15534	october-2024-temperature-increase-c	October 2024 Temperature Increase (ºC)
+10882	15427	will-joe-pardon-hunter-biden	Will Joe pardon Hunter Biden?
+903662	15390	massachusetts-presidential-election-winner	Massachusetts Presidential Election Winner
+13551	15372	trump-wins-ends-ukraine-war-in-90-days	Trump ends Ukraine war in first 90 days?
+12248	15198	world-series-champion-2024	World Series Champion 2024
+903649	15135	hawaii-presidential-election-winner	Hawaii Presidential Election Winner
+11782	14930	iran-nuke-in-2024	Iran Nuke in 2024?
+12580	14848	which-party-wins-the-most-seats-in-lithuanian-election	Which party wins the most seats in Lithuanian Election?
+903656	14541	ohio-presidential-election-winner	Ohio Presidential Election Winner
+13160	14264	will-russia-capture-kurakhove-before-december	Will Russia capture Kurakhove before December?
+10260	14127	maine-us-senate-election-winner	Maine Senate Election Winner
+13239	13542	will-either-florida-minnesota-new-hampshire-or-texas-flip-in-2024	Will either FL, MN, NH, or TX flip in 2024?
+13168	13335	nba-eastern-conference-champion	NBA Eastern Conference Champion
+10219	13014	maryland-us-senate-election-winner	Maryland Senate Election Winner
+10218	12978	texas-us-senate-election-winner	Texas Senate Election Winner
+903646	12845	florida-presidential-election-winner	Florida Presidential Election Winner
+903677	12665	vermont-presidential-election-winner	Vermont Presidential Election Winner
+13377	12636	uruguay-presidential-election-winner	Uruguay Presidential Election
+13784	12337	cfb-kansas-state-vs-kansas	CFB: Kansas State vs. Kansas
+11889	12312	harris-walz-final-democratic-ticket	Harris-Walz Democratic ticket on election day?
+10717	12251	of-republican-senate-seats-after-election	# of Republican Senate seats after Election?
+12928	12237	will-israel-troops-enter-beirut-by-october-31	Will Israeli troops enter Beirut by October 31?
+12623	12229	pennsylvania-margin-of-victory	Pennsylvania Margin of Victory
+13610	12104	nba-tor-min-2024-10-26	Raptors vs. Timberwolves
+903508	12045	how-many-fed-rate-cuts-this-year	How many Fed rate cuts this year?
+12934	12042	2024-october-hottest-on-record	2024 October hottest on record?
+903514	11281	house-control-after-2024-election	House control after 2024 election?
+13786	11186	cfb-hawaii-vs-nevada	CFB: Hawaii vs. Nevada
+903728	11166	supreme-court-vacancy-in-2024	Supreme Court vacancy in 2024?
+13753	11112	what-price-will-gold-close-at-in-2024	What Price will Gold close at in 2024?
+10257	11095	massachusetts-us-senate-election-winner	Massachusetts Senate Election Winner
+13612	11073	nba-orl-mem-2024-10-26	Magic vs. Grizzlies
+13708	10814	us-military-action-against-yemen-in-2024	U.S. military action against Yemen in 2024?
+13267	10623	north-carolina-margin-of-victory	North Carolina Margin of Victory
+13727	10284	will-gd-win-a-majority-in-georgia-parliamentary-election	Will GD win a majority in Georgia parliamentary election?
+12297	10225	nfl-mvp-1	NFL MVP
+13604	10096	nba-cle-wsh-2024-10-26	Cavaliers vs. Wizards
+903660	9950	maine-presidential-election-winner	Maine Presidential Election Winner
+903658	9915	kentucky-presidential-election-winner	Kentucky Presidential Election Winner
+13682	9895	will-silver-close-over-40-at-the-end-of-2024	Will Silver close over $40 at the end of 2024?
+903196	9886	trump-jail-before-election-day	Trump in jail before election day?
+12283	9760	will-ukraine-hold-kursk-through-2024	Will Ukraine hold Kursk through 2024?
+13252	9545	wisconsin-margin-of-victory	Wisconsin Margin of Victory
+11901	9542	israel-x-hamas-ceasefire-in-2024	Israel x Hamas ceasefire in 2024?
+13542	9496	world-series-champion-dodgers-vs-yankees	World Series Champion: Dodgers vs. Yankees
+903440	9419	ethereum-all-time-high-in-2024	Ethereum all time high in 2024?
+903370	9244	first-ftx-bankruptcy-payout	First FTX bankruptcy payout?
+12996	9239	israel-declares-war-on-iran-in-october	Israel declares war on Iran in October?
+903663	9086	maryland-presidential-election-winner	Maryland Presidential Election Winner
+903289	8881	will-a-nuclear-weapon-detonate-in-2024	Will a nuclear weapon detonate in 2024?
+13720	8757	what-will-trump-say-during-pennsylvania-rally-oct-26	What will Trump say during Pennsylvania rally?
+11878	8499	fed-interest-rates-december-2024	Fed decision in December?
+13268	8371	michigan-margin-of-victory	Michigan Margin of Victory
+11887	8369	tim-walz-out-as-democratic-vp-nominee	Tim Walz replaced as Democratic VP nominee?
+12795	8214	israel-x-hezbollah-ceasefire-in-2024	Israel x Hezbollah Ceasefire in 2024?
+12858	7820	airdrops-in-2024	Airdrops in 2024
+10047	7795	how-many-spacex-starship-launches-reach-space-in-2024	How many SpaceX Starship launches reach space in 2024?
+903262	7539	will-usdc-flip-usdt-in-market-cap-in-2024	Will USDC flip USDT in market cap in 2024?
+12777	7470	iran-strike-on-us-military-before-november	Iran strike on US military before November?
+10890	7429	trump-increase-share-of-black-voters	Trump gets more black voters than in 2020?
+13251	7388	georgia-margin-of-victory	Georgia Margin of Victory
+10019	7285	pennsylvania-us-senate-election-winner	Pennsylvania Senate Election Winner
+13273	7283	closest-state-in-the-presidential-election	Closest state in the Presidential election?
+13358	7186	ethbtc-above-0pt04-on-halloween	ETHBTC above 0.04 on Halloween?
+13603	7084	nba-lac-den-2024-10-26	Clippers vs. Nuggets
+13479	7018	who-will-win-latino-men	Who will win Latino men?
+12955	6587	israel-withdraws-from-lebanon-before-november	Israel withdraws from Lebanon before November?
+13608	6569	nba-okc-chi-2024-10-26	Thunder vs. Bulls
+903261	6510	tether-insolvent-in-2024	Tether Insolvent in 2024?
+13780	6312	cfb-penn-state-vs-wisconsin	CFB: Penn State vs. Wisconsin
+11022	6273	next-israel-x-hamas-ceasefire-in	Next Israel x Hamas ceasefire in…?
+13712	6245	cs2-esl-challenger-katowice-2024-winner	CS2: ESL Challenger Katowice 2024 Winner
+11794	6181	will-openai-release-gpt-5-in-2024	GPT-5 released in 2024?
+13785	6104	cfb-colorado-vs-cincinnati	CFB: Colorado vs. Cincinnati
+10018	5977	nevada-us-senate-election-winner	Nevada Senate Election Winner
+13298	5954	which-state-will-kamala-win-by-the-largest-margin	Which state will Kamala win by the largest margin?
+13369	5880	moldova-presidential-election-winner	Moldova Presidential Election Winner
+10343	5844	republicans-flip-a-2020-biden-state	Trump flips a 2020 Biden state?
+12764	5803	hyperliquid-token-launch-wen	Hyperliquid token launch wen?
+10342	5665	dems-flip-a-2020-trump-state	Kamala flips a 2020 Trump state?
+12781	5649	us-military-strike-on-lebanon-before-november	U.S. military strike on Lebanon before November?
+13782	5602	cfb-texas-am-vs-lsu	CFB: Texas A&M vs. LSU
+903635	5592	alaska-presidential-election-winner	Alaska Presidential Election Winner
+12356	5547	will-kamala-go-on-lex-fridman-podcast	Will Kamala go on Lex Fridman podcast?
+12831	5476	europa-league-winner-24-25	Europa League Winner
+903672	5352	south-dakota-presidential-election-winner	South Dakota Presidential Election Winner
+11209	5280	who-will-win-san-francisco-mayoral-election	Who will win San Francisco Mayor Election?
+903653	5252	illinois-presidential-election-winner	Illinois Presidential Election Winner
+13725	5181	israel-withdraws-from-lebanon-before-december	Israel withdraws from Lebanon before December?
+903426	4954	trump-election-interference-trial-date	Trump DC election interference trial date?
+13700	4907	bitcoin-up-on-nov-6	Bitcoin up on Nov 6?
+12489	4761	jd-vance-replaced-as-republican-vp-nominee	JD Vance replaced as Republican VP nominee?
+13570	4641	nfl-nyg-pit-2024-10-28	Giants vs. Steelers
+12862	4602	us-recession-announced-by-nber-before-june-2025	U.S. recession before May 2025?
+13788	4596	netanyahu-out-in-2024	Netanyahu out in 2024?
+13462	4541	next-nfl-head-coach-fired	Next NFL Head Coach Fired?
+13790	4526	nfl-week-8-totals	NFL Week 8: Totals
+11933	4521	nfc-south-winner-1	NFC South Winner
+11938	4520	afc-south	AFC South Winner
+12756	4474	epl-top-scorer	English Premier League Top Scorer
+13299	4470	nba-assists-leader	NBA Assists Leader
+13739	4398	election-called-by	Election called by...?
+903799	4397	michigan-us-senate-election-winner	Michigan Senate Election Winner
+13162	4374	will-iran-strike-gulf-oil-facilities-in-october	Will Iran strike gulf oil facilities in October?
+12708	4354	heisman-winner	Heisman Winner
+903774	4242	jake-paul-vs-mike-tyson-who-will-win	Jake Paul vs. Mike Tyson: Who will win?
+13483	4188	will-russia-recapture-sudzha-before-december	Will Russia recapture Sudzha before December?
+13595	4091	donald-trump-538-odds-55-on-friday	Donald Trump 538 odds >55% on Friday?
+13274	4053	unemployment-rate-over-4pt1-in-october	Unemployment rate over 4.1% in October?
+903691	4046	will-bitcoin-hit-100k-in-2024	Will Bitcoin hit $100k in 2024?
+13242	4042	30-year-mortgage-rate-below-6-before-election	30-year mortgage rate below 6% before election?
+12766	4009	berachain-token-launch-wen	Berachain token launch wen?
+12035	4009	of-republican-house-seats-after-election	# of Republican House seats after Election? (brackets)
+13676	4009	us-bank-failure-before-december	US bank failure before December?
+13290	3775	nba-scoring-leader	NBA Scoring Leader
+12129	3758	trump-wins-and-nominates-rfk-jr-to-cabinet	Trump nominates RFK Jr. to Cabinet?
+12066	3755	of-debates-between-vance-and-walz	# of debates between Vance and Walz?
+13145	3701	strike-on-dimonah-nuclear-base-in-october	Strike on Dimonah nuclear base in October?
+10253	3688	new-york-us-senate-election-winner	New York Senate Election Winner
+13117	3650	what-price-will-solana-hit-in-october	What price will Solana hit in October?
+903761	3649	indiana-governor-election-winner	Indiana Governor Election Winner
+903771	3588	when-will-gpt-5-be-announced	When will GPT-5 be announced?
+13522	3560	kamala-harris-fires-campaign-manager	Kamala Harris fires campaign manager?
+13548	3546	world-series-yankees-vs-dodgers-game-3	World Series: Yankees vs. Dodgers Game 3
+12085	3434	100-monkeypox-cases-in-us-by-october-31	100+ monkeypox cases in US by October 31?
+902520	3421	which-party-will-control-the-us-senate-after-the-2024-election	Senate control after 2024 election?
+12365	3415	scholz-out-as-chancellor-of-germany-in-2024	Scholz out as chancellor of Germany in 2024?
+13552	3359	will-gold-close-over-3000-at-the-end-of-2024	Will Gold close over $3,000 at the end of 2024?
+12366	3341	starmer-out-as-uk-prime-minister-in-2024	Starmer out as UK prime minister in 2024?
+12278	3257	afc-champion	AFC Champion
+903681	3243	washington-presidential-election-winner	Washington Presidential Election Winner
+12304	3232	will-george-w-bush-endorse-harris-before-election	Will George W. Bush endorse Kamala Harris?
+13456	3232	curitiba-mayoral-election-2024	Curitiba mayoral election 2024
+903684	3220	wyoming-presidential-election-winner	Wyoming Presidential Election Winner
+13755	3215	will-trump-win-ohio-by-12-points	Will Trump win Ohio by 12+ points?
+903208	3181	will-north-korea-invade-south-korea-in-2024	Will North Korea invade South Korea in 2024?
+12940	3146	will-berachain-launch-in-2024	Will Berachain launch in 2024?
+10262	3127	us-recession-in-2024-1	U.S. Recession in 2024?
+903743	3117	will-bitcoin-hit-250k-in-2024	Will Bitcoin hit $250k in 2024?
+13680	3090	will-kamala-get-more-votes-than-biden	Will Kamala get more votes than Biden?
+903642	3049	connecticut-presidential-election-winner	Connecticut Presidential Election Winner
+12851	3035	premier-league-top-4-finishers	Premier League: Top 4 finishers
+13158	3031	will-russia-capture-siversk-before-december	Will Russia capture Siversk before December?
+13473	2987	will-trump-do-better-with-men-in-2024-than-2020	Will Trump do better with men than in 2020 election?
+13482	2978	will-trump-win-55-or-more-of-voters-without-a-college-degree	Will Trump win 55% of voters without a college degree?
+13269	2967	nevada-margin-of-victory	Nevada Margin of Victory
+13731	2941	will-trump-win-alabama-by-30-points	Will Trump win Alabama by 30+ points?
+10382	2931	washington-dc-presidential-election-winner	Washington DC Presidential Election Winner
+12733	2882	bitcoin-new-all-time-high-in-2024	Bitcoin new all time high in 2024?
+13112	2868	premier-league-which-teams-will-be-relegated	Premier League: Which teams will be relegated?
+13679	2788	will-trump-get-more-votes-than-2020	Will Trump get more votes than 2020?
+13464	2746	turnout-in-2024-presidential-election	Turnout in 2024 Presidential election?
+13722	2746	trump-grope-video-relaesed-before-the-election	Trump grope video released before the election?
+10920	2726	will-trump-win-miami	Will Trump win Miami?
+13762	2720	will-harris-win-california-by-25-points	Will Harris win California by 25+ points?
+12277	2692	global-heat-increase-2024	Global Heat Increase 2024
+12684	2631	swing-districts-2024	Who will win each swing district?
+13777	2488	cfb-miami-vs-florida-state	CFB: Miami vs. Florida State
+903670	2474	rhode-island-presidential-election-winner	Rhode Island Presidential Election Winner
+13442	2462	us-arms-embargo-on-israel-in-2024	U.S. arms embargo on Israel in 2024?
+13733	2446	will-harris-win-virginia-by-6-points	Will Harris win Virginia by 6+ points?
+903669	2363	missouri-presidential-election-winner	Missouri Presidential Election Winner
+13572	2337	will-2-of-votes-go-to-3rd-party-candidates-in-us-election	Will ≥2% of votes go to 3rd Party candidates?
+903559	2313	ethereum-all-time-high-wen	Ethereum all time high wen?

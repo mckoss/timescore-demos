@@ -1,0 +1,302 @@
+# Dollars traded on Polymarket events on 2024-11-09 (UTC), from its trades on Polygon as indexed by Dune. Market data from Polymarket.
+event_id	dollars	slug	title
+12815	18731209	nba-champion-2024-2025	NBA Champion
+12585	6906078	champions-league-winner-2025	Champions League Winner
+11439	6242245	superbowl-champion-2025	Super Bowl Champion 2025
+14023	3883507	who-will-be-inaugurated-as-president	Who will be inaugurated as President?
+12297	2608961	nfl-mvp-1	NFL MVP
+10214	2141722	arizona-us-senate-election-winner	Arizona Senate Election Winner
+13572	1995220	will-2-of-votes-go-to-3rd-party-candidates-in-us-election	Will ≥2% of votes go to 3rd Party candidates?
+13241	1653848	stanley-cup-winner	Stanley Cup Champion 2025
+12483	1598226	premier-league-winner-24-25	Premier League Winner
+903216	991587	presidential-election-popular-vote-winner-2024	Popular Vote Winner 2024
+12672	668234	la-liga-winner	La Liga Winner
+903636	642043	arizona-presidential-election-winner	Who will win Arizona?
+13945	599126	what-price-will-bitcoin-hit-in-november	What price will Bitcoin hit in November?
+11468	583110	trump-wins-every-swing-state	Trump wins every swing state?
+11910	484085	popular-vote-margin-of-victory-in-presidential-election	Popular Vote Margin of Victory?
+903211	453563	electoral-college-margin-of-victory-in-the-2024-presidential-election	Electoral College Margin of Victory?
+13678	453412	record-turnout-in-2024-presidential-election	Record turnout in 2024 Presidential election?
+10018	415282	nevada-us-senate-election-winner	Nevada Senate Election Winner
+13946	368894	what-price-will-ethereum-hit-in-november	What price will Ethereum hit in November?
+13551	313033	trump-wins-ends-ukraine-war-in-90-days	Trump ends Ukraine war in first 90 days?
+10223	302505	balance-of-power-2024-election	Balance of Power: 2024 Election
+11878	288366	fed-interest-rates-december-2024	Fed decision in December?
+13464	282546	turnout-in-2024-presidential-election	Turnout in 2024 Presidential election?
+10935	256796	will-ethereum-hit-10k-in-2024	Will Ethereum hit $10k in 2024?
+903440	251588	ethereum-all-time-high-in-2024	Ethereum all time high in 2024?
+903637	246354	nevada-presidential-election-winner	Who will win Nevada?
+14231	239243	popular-vote-margin-of-victory-0pt25-ranges	Popular vote margin of victory (0.25% ranges)?
+14143	238628	epl-bri-mac-2024-11-09	Brighton vs. Man City
+903378	228324	highest-grossing-movie-in-2024	Highest grossing movie in 2024?
+14074	226354	nba-uta-sas-2024-11-09	Jazz vs. Spurs
+10717	204418	of-republican-senate-seats-after-election	# of Republican Senate seats after Election?
+10019	202763	pennsylvania-us-senate-election-winner	Pennsylvania Senate Election Winner
+903508	192633	how-many-fed-rate-cuts-this-year	How many Fed rate cuts this year?
+12027	161962	college-football-champion-2025	College Football Champion 2025
+903514	156431	house-control-after-2024-election	House control after 2024 election?
+14178	155520	trump-pardons	Who will Trump pardon in first 100 days?
+14144	148006	epl-liv-ast-2024-11-09	Liverpool vs. Villa
+903256	146033	will-china-invade-taiwan-in-2024	Will China invade Taiwan in 2024?
+14066	143099	nba-gsw-cle-2024-11-08	Warriors vs. Cavaliers
+903774	138131	jake-paul-vs-mike-tyson-who-will-win	Jake Paul vs. Mike Tyson: Who will win?
+11322	136975	will-biden-complete-his-term-as-president	Will Biden finish his term?
+13272	130575	how-many-swing-states-will-trump-win	How many swing states will Trump win?
+14258	129226	arizona-senate-election-margin-of-victory	Arizona Senate Election Margin of Victory
+903559	126284	ethereum-all-time-high-wen	Ethereum all time high wen?
+14034	123944	trump-administration	Who will be part of Trump's Administration?
+903743	118693	will-bitcoin-hit-250k-in-2024	Will Bitcoin hit $250k in 2024?
+14162	116393	trump-signs-national-abortion-ban-in-first-100-days	Trump signs national abortion ban?
+14064	107464	nba-bkn-bos-2024-11-08	Nets vs. Celtics
+14067	107072	nba-phx-dal-2024-11-08	Suns vs. Mavericks
+14072	105604	nba-phi-lal-2024-11-08	76ers vs. Lakers
+14244	102012	cfb-georgia-vs-ole-miss	CFB: Georgia vs. Ole Miss
+11235	100003	f1-2024-season-winner	F1 2024 Drivers Champion
+14239	98916	bitcoin-above-76000-on-november-15	Bitcoin above $76,000 on November 15?
+14061	94667	nba-atl-det-2024-11-08	Hawks vs. Pistons
+14071	87997	nba-mia-den-2024-11-08	Heat vs. Nuggets
+14240	86052	ethereum-above-3000-on-november-15	Ethereum above $3,000 on November 15?
+14140	84532	epl-bre-bou-2024-11-09	Brentford vs. Bournemouth
+903691	82226	will-bitcoin-hit-100k-in-2024	Will Bitcoin hit $100k in 2024?
+14073	79276	nba-lac-sac-2024-11-08	Clippers vs. Kings
+14237	78918	elon-musk-of-tweets-nov-8-15	Elon Musk # of tweets Nov 8-15?
+12623	74567	pennsylvania-margin-of-victory	Pennsylvania Margin of Victory
+14224	73121	will-elons-daughter-move-out-of-the-us	Will Elon's daughter move out of the U.S.?
+14201	72188	who-will-trump-nominate-for-hhs-secretary	Who will Trump pick for HHS Secretary?
+13380	71030	will-either-kamala-or-trump-win-every-swing-state	Will either Kamala or Trump win every swing state?
+13936	70635	iran-strike-on-israel-by-nov-8	Iran strike on Israel by Nov 8?
+14062	69099	nba-ind-cha-2024-11-08	Pacers vs. Hornets
+12129	68779	trump-wins-and-nominates-rfk-jr-to-cabinet	Trump nominates RFK Jr. to Cabinet?
+12035	67327	of-republican-house-seats-after-election	# of Republican House seats after Election? (brackets)
+12114	67065	trump-wins-and-appoints-elon-musk-to-cabinet	Trump nominates Elon Musk to Cabinet?
+11911	65041	will-eth-hit-2k-or-4k-first	Will $ETH hit $2000 or $4000 first?
+13143	64812	israel-strike-on-iranian-nuclear-facility-in-2024	Israel strike on Iranian nuclear facility in 2024?
+14120	64811	what-will-trump-say-in-speech-after-election-is-called	What will Trump say in first speech after AP calls the election?
+13792	63047	another-iran-strike-on-israel-in-2024	Another Iran strike on Israel in 2024?
+12269	60049	f1-constructors-championship-winner	F1 Constructors Champion
+13944	59459	iran-strike-on-israel-before-december	Iran strike on Israel before December?
+13708	57500	us-military-action-against-yemen-in-2024	U.S. military action against Yemen in 2024?
+14233	56276	who-will-be-the-billboard-1-pop-star-of-the-century	Who will be the Billboard #1 pop star of the century?
+14241	54880	solana-above-200-on-november-15	Solana above $200 on November 15?
+11518	54470	china-unban-bitcoin-in-2024	Will China unban Bitcoin in 2024?
+14142	52940	epl-wol-sou-2024-11-09	Wolves vs. Southampton
+14076	48756	nba-bkn-cle-2024-11-09	Nets vs. Cavaliers
+13742	47258	last-state-to-be-called-in-presidential-election	Last state to be called in Presidential election?
+14139	45941	epl-wes-eve-2024-11-09	West Ham vs. Everton
+11524	43985	us-election-tipping-point-state	Tipping Point State in 2024 Election?
+13571	43849	trumps-margin-of-victory-higher-in-florida-or-alaska	Will Trump do better in Florida or Alaska?
+13746	43549	will-microsoft-shareholders-vote-for-bitcoin-investment	MSFT shareholders vote for Bitcoin investment?
+12795	39360	israel-x-hezbollah-ceasefire-in-2024	Israel x Hezbollah Ceasefire in 2024?
+903560	38616	solana-all-time-high-wen	Solana all time high wen?
+14266	37799	iran-strike-on-israel-by-nov-15	Iran strike on Israel by Friday?
+13940	36527	trump-declassifies-jfk-files-in-first-100-days	Trump declassifies JFK files in first 100 days?
+14188	34555	trump-ends-ukraine-war-before-inauguration	Trump ends Ukraine war before inauguration?
+13341	33834	will-trump-lose-new-york-by-less-then-10-points	Will Kamala win New York by 10+ points?
+14126	33675	nfl-nyg-car-2024-11-10	Giants vs. Panthers
+903744	32855	will-ethereum-hit-15k-in-2024	Will Ethereum hit $15k in 2024?
+14077	32332	nba-tor-lac-2024-11-09	Raptors vs. Clippers
+14193	32209	trump-sentenced-to-prison-in-ny-case-before-inauguration	Trump sentenced to prison in NY case before inauguration?
+13910	31447	will-fischer-win-nebraska-senate-election-by-7-points	Will Fischer win Nebraska senate election by 7+ points?
+14043	31280	ufc-fight-night-magny-vs-prates	UFC Fight Night: Magny vs. Prates
+11209	31006	who-will-win-san-francisco-mayoral-election	Who will win San Francisco Mayor Election?
+14031	30838	iowa-margin-of-victory	Iowa Margin of Victory
+14217	30357	cfb-iowa-vs-ucla	CFB: Iowa vs. UCLA
+14220	28379	fed-interest-rates-january-2025	Fed decision in January?
+13160	27591	will-russia-capture-kurakhove-before-december	Will Russia capture Kurakhove before December?
+14141	27035	epl-cry-ful-2024-11-09	Crystal Palace vs. Fulham
+13269	26885	nevada-margin-of-victory	Nevada Margin of Victory
+13250	26834	arizona-margin-of-victory	Arizona Margin of Victory
+14243	26692	cfb-minnesota-vs-rutgers	CFB: Minnesota vs. Rutgers
+13793	26532	another-israeli-military-action-against-iran-in-2024	Another Israeli military action against Iran in 2024?
+14130	26508	nfl-sf-tb-2024-11-10	49ers vs. Buccaneers
+14092	26260	trump-ends-gaza-war-in-100-days	Trump ends Gaza war in first 100 days?
+14060	25674	nba-nop-orl-2024-11-08	Pelicans vs. Magic
+13715	25645	ecb-interest-rates-december-2024	ECB Interest Rates: December 2024
+14132	25628	nfl-min-jax-2024-11-10	Vikings vs. Jaguars
+13801	25105	trump-wins-312-evs-swing-state-sweep	Trump wins 312-226 - swing state sweep
+903289	25006	will-a-nuclear-weapon-detonate-in-2024	Will a nuclear weapon detonate in 2024?
+14075	24841	nba-chi-atl-2024-11-09	Bulls vs. Hawks
+13483	24812	will-russia-recapture-sudzha-before-december	Will Russia recapture Sudzha before December?
+14105	24731	who-will-win-young-men	Who will win young men?
+11782	24400	iran-nuke-in-2024	Iran Nuke in 2024?
+13811	24331	wicked-opening-weekend-box-office	'Wicked' Opening Weekend Box Office
+14234	23988	donald-trump-of-tweets-nov-8-15	Donald Trump # of tweets Nov 8-15?
+14228	23302	romania-presidential-election	(Old) Romania Election
+13273	23246	closest-state-in-the-presidential-election	Closest state in the Presidential election?
+13267	23077	north-carolina-margin-of-victory	North Carolina Margin of Victory
+14089	22617	israel-military-response-against-iran-in-november	Israel military strike against Iran in November?
+14255	22302	cfb-alabama-vs-lsu	CFB: Alabama vs. LSU
+14137	22019	nfl-det-hou-2024-11-10	Lions vs. Texans
+14038	21622	will-biden-resign-in-november	Will Biden resign in November?
+13157	21587	will-ruusia-capture-chasiv-yar-before-december	Will Russia capture Chasiv Yar before December?
+13725	21175	israel-withdraws-from-lebanon-before-december	Israel withdraws from Lebanon before December?
+10882	20648	will-joe-pardon-hunter-biden	Will Joe pardon Hunter Biden?
+14180	19157	trump-in-jail-before-inauguration	Trump in jail before inauguration?
+902963	19086	opensea-token-1-billion-a-week-after-launch	OpenSea token >1 billion a week after launch?
+14065	18806	nba-mil-nyk-2024-11-08	Bucks vs. Knicks
+12283	18701	will-ukraine-hold-kursk-through-2024	Will Ukraine hold Kursk through 2024?
+14070	18507	nba-por-min-2024-11-08	Trail Blazers vs. Timberwolves
+12279	18403	nfc-champion	NFC Champion
+14223	17703	cfb-san-diego-state-vs-new-mexico	CFB: San Diego State vs. New Mexico
+14261	17531	trump-declassifies-diddy-list	Trump declassifies Diddy list?
+13704	17028	mls-cup-winner	MLS Cup Winner
+13734	16962	will-harris-win-new-jersey-by-10-points	Will Harris win New Jersey by 10+ points?
+14248	16946	cfb-army-vs-north-texas	CFB: Army vs. North Texas
+14232	16944	hamas-out-of-qatar-before-trump-in-office	Hamas leadership out of Qatar before Trump in office?
+11339	16734	will-the-us-confirm-that-aliens-exist-in-2024	Will the US confirm that aliens exist in 2024?
+13169	16329	nba-western-conference-champion	NBA Western Conference Champion
+14189	16015	next-senate-majority-leader	Next Senate Majority Leader?
+14267	15687	co-8-election-caraveo-d-vs-evans-r	CO-8 election: Caraveo (D) vs. Evans (R)
+12603	15529	russia-x-ukraine-ceasefire-in-2024	Russia x Ukraine Ceasefire in 2024?
+14149	15247	epl-che-ars-2024-11-10	Chelsea vs. Arsenal
+14262	15099	trump-declassifies-epstein-list	Trump declassifies Epstein list in first 100 days?
+14184	14847	who-will-trump-nominate-for-treasury-secretary	Who will Trump pick for Treasury Secretary?
+14246	14832	cfb-indiana-vs-michigan	CFB: Indiana vs. Michigan
+13924	14334	which-3rd-party-candidate-wins-most-votes	Which 3rd party candidate wins most votes?
+12858	14131	airdrops-in-2024	Airdrops in 2024
+14127	14011	nfl-den-kc-2024-11-10	Broncos vs. Chiefs
+10047	13852	how-many-spacex-starship-launches-reach-space-in-2024	How many SpaceX Starship launches reach space in 2024?
+12831	13802	europa-league-winner-24-25	Europa League Winner
+13789	13723	will-trump-pardon-hunter-biden	Will Trump pardon Hunter Biden?
+14136	13446	nfl-nyj-ari-2024-11-10	Jets vs. Cardinals
+14226	13262	germany-confidence-vote-in-2024	Germany confidence vote in 2024?
+14242	12700	cfb-cincinnati-vs-west-virginia	CFB: Cincinnati vs. West Virginia
+11567	12647	trump-wins-and-picks-jamie-dimon-for-treasury-secretary	Trump wins and picks Dimon for Treasury Secretary?
+13434	12511	north-korea-x-south-korea-military-clash-in-2024	North Korea x South Korea military clash in 2024?
+15437	12495	who-will-biden-pardon	Who will Biden pardon?
+14039	12349	will-biden-resign-in-2024	Will Biden resign in 2024?
+14068	12329	nba-hou-okc-2024-11-08	Rockets vs. Thunder
+12879	11818	first-pumpfun-coin-to-1b	First Pump.fun coin to 1b?
+13753	11682	what-price-will-gold-close-at-in-2024	What Price will Gold close at in 2024?
+13175	11581	will-trump-win-florida-by-8-points	Will Trump win Florida by 8+ points?
+14196	11560	who-will-attend-trump-inauguration	Who will attend Trump inauguration?
+14230	11546	will-sotomayor-retire-from-scotus-before-inauguration	Sotomayor steps down from Supreme Court before inauguration?
+12151	11508	trump-wins-and-nominates-tulsi-gabbard-to-cabinet	Trump nominates Tulsi Gabbard to Cabinet?
+14079	11355	nba-bos-mil-2024-11-10	Celtics vs. Bucks
+14185	11290	who-will-trump-nominate-for-secretary-of-state	Who will Trump pick for Secretary of State?
+12063	10725	az-06-election-engel-d-vs-ciscomani-r	AZ-06 election: Engel (D) vs. Ciscomani (R)
+13679	10611	will-trump-get-more-votes-than-2020	Will Trump get more votes than 2020?
+13948	10561	what-price-will-solana-hit-in-november	What price will Solana hit in November?
+14199	10452	will-trump-create-a-national-bitcoin-reserve-in-his-first-100-days	Will Trump create Bitcoin reserve in first 100 days?
+13240	10344	rabois-parlay-trump-wins-pa-mi-ga-az	Rabois Parlay: Trump wins PA, MI, GA and AZ?
+14151	10258	trump-ends-taxes-on-tips-in-first-100-days	Trump ends taxes on tips in first 100 days?
+14259	10227	trump-transgender-sports-ban	Trump transgender sports ban?
+14251	9939	cfb-oregon-vs-maryland	CFB: Oregon vs. Maryland
+13884	9862	trump-wins-az-ga-mi-pa-wi-nc-306-evs	Trump wins 306-232 - AZ, GA, MI, PA, WI, NC
+12764	9748	hyperliquid-token-launch-wen	Hyperliquid token launch wen?
+13882	9741	will-harris-win-maine-by-5-points	Will Harris win Maine by 5+ points?
+14249	9509	cfb-colorado-vs-texas-tech	CFB: Colorado vs. Texas Tech
+14135	9424	nfl-phi-dal-2024-11-10	Eagles vs. Cowboys
+14187	9299	who-will-trump-nominate-for-defense-secretary	Who will Trump pick for Defense Secretary?
+14129	9126	nfl-pit-was-2024-11-10	Steelers vs. Commanders
+12708	8819	heisman-winner	Heisman Winner
+13935	8742	aoc-pregnant-in-2024	AOC pregnant in 2024?
+13762	8444	will-harris-win-california-by-25-points	Will Harris win California by 25+ points?
+14133	8343	nfl-buf-ind-2024-11-10	Bills vs. Colts
+13298	8140	which-state-will-kamala-win-by-the-largest-margin	Which state will Kamala win by the largest margin?
+903771	7771	when-will-gpt-5-be-announced	When will GPT-5 be announced?
+13377	7476	uruguay-presidential-election-winner	Uruguay Presidential Election
+14250	7415	cfb-south-carolina-vs-vanderbilt	CFB: South Carolina vs. Vanderbilt
+13754	7403	will-trump-win-iowa-by-12-points	Will Trump win Iowa by 12+ points?
+14033	7318	speaker-of-the-house-for-the-119th-congress	Who will be the Speaker of the House?
+14183	7045	november-2024-temperature-increase-c	November 2024 Temperature Increase (ºC)
+14138	6907	nfl-mia-la-2024-11-11	Dolphins vs. Rams
+13342	6845	will-trump-win-alaska-by-6-points	Will Trump win Alaska by 6+ points?
+14260	6808	will-trumps-hush-money-conviction-be-overturned	Will Trump's hush money conviction be overturned?
+14131	6727	nfl-atl-no-2024-11-10	Falcons vs. Saints
+4076	6700	which-party-will-win-the-2024-united-states-presidential-election	Which party wins 2024 US Presidential Election?
+13813	6635	world-chess-championship-2024-winner	World Chess Championship 2024 Winner
+11022	6307	next-israel-x-hamas-ceasefire-in	Next Israel x Hamas ceasefire in…?
+14247	6174	cfb-iowa-state-vs-kansas	CFB: Iowa State vs. Kansas
+14227	6073	bundestag-dissolved-in-2024	German Bundestag dissolved in 2024?
+14256	6025	cfb-penn-state-vs-washington	CFB: Penn State vs. Washington
+13794	6009	will-russia-capture-pokrovsk-in-2024	Will Russia capture Pokrovsk in 2024?
+14128	5998	nfl-ne-chi-2024-11-10	Patriots vs. Bears
+13290	5959	nba-scoring-leader	NBA Scoring Leader
+13158	5932	will-russia-capture-siversk-before-december	Will Russia capture Siversk before December?
+14216	5893	scorigami-in-nfl-week-10	Scorigami in NFL Week 10?
+14117	5719	2024-november-hottest-on-record	2024 November hottest on record?
+14069	5687	nba-was-mem-2024-11-08	Wizards vs. Grizzlies
+13442	5581	us-arms-embargo-on-israel-in-2024	U.S. arms embargo on Israel in 2024?
+14257	5550	cfb-utah-vs-byu	CFB: Utah vs. BYU
+14191	5483	who-will-trump-nominate-for-agriculture-secretary	Who will Trump pick for Agriculture Secretary?
+12365	5454	scholz-out-as-chancellor-of-germany-in-2024	Scholz out as chancellor of Germany in 2024?
+12056	5422	ca-22-election-salas-d-vs-valadao-r	CA-22 election: Salas (D) vs. Valadao (R)
+13665	5267	us-military-action-against-iran-in-2024	U.S. military action against Iran in 2024?
+13475	5174	will-trump-win-30-or-more-of-black-men	Will Trump win 30% of Black men?
+12278	5099	afc-champion	AFC Champion
+13676	4941	us-bank-failure-before-december	US bank failure before December?
+903728	4854	supreme-court-vacancy-in-2024	Supreme Court vacancy in 2024?
+13299	4802	nba-assists-leader	NBA Assists Leader
+12900	4587	bundesliga-winner	Bundesliga Winner
+14253	4461	cfb-notre-dame-vs-florida-state	CFB: Notre Dame vs. Florida State
+12282	4389	pavel-durov-leaves-france-in-2024	Pavel Durov leaves France in 2024?
+14245	4378	cfb-clemson-vs-virginia-tech	CFB: Clemson vs. Virginia Tech
+13887	4359	how-many-votes-will-trump-get	How many votes will Trump get?
+12246	4278	ak-1-election-peltola-d-vs-begich-r	AK-1 election: Peltola (D) vs. Begich (R)
+14134	4266	nfl-ten-lac-2024-11-10	Titans vs. Chargers
+13135	4264	jd-vance-positive-favorability-before-the-election	JD Vance positive favorability before the election?
+14078	4102	nba-hou-det-2024-11-10	Rockets vs. Pistons
+14208	4089	who-will-trump-nominate-for-commerce-secretary	Who will Trump pick for Commerce Secretary?
+14063	4022	trump-deportation-executive-order-in-first-100-days	Trump deportation executive order in first 100 days?
+10558	3927	how-many-named-storms-during-atlantic-hurricane-season-2024	How many named storms during Atlantic Hurricane Season?
+903262	3924	will-usdc-flip-usdt-in-market-cap-in-2024	Will USDC flip USDT in market cap in 2024?
+14214	3915	who-will-trump-nominate-for-homeland-security-secretary	Who will Trump pick for Homeland Security Secretary?
+13168	3914	nba-eastern-conference-champion	NBA Eastern Conference Champion
+14145	3900	epl-mun-lei-2024-11-10	Man Utd vs. Leicester
+13271	3865	will-3rd-parties-write-ins-cost-kamala-michigan	Will 3rd parties cost Kamala Michigan?
+14222	3819	trump-deportation-executive-order-on-day-1	Trump deportation executive order on Day 1?
+14091	3808	las-vegas-grand-prix-winner	Las Vegas Grand Prix Winner
+11901	3710	israel-x-hamas-ceasefire-in-2024	Israel x Hamas ceasefire in 2024?
+903746	3704	solana-etf-approved-in-2024	Solana ETF approved in 2024?
+12219	3636	will-germanys-afd-make-it-into-government	Will AfD make it into Thuringia or Saxony government?
+14197	3615	who-will-trump-nominate-for-secretary-of-the-energy	Who will Trump pick for Energy Secretary?
+14094	3600	ethbtc-above-0pt035-on-nov-30	ETHBTC above 0.035 on Nov 30?
+14264	3532	nfl-week-10-spreads	NFL Week 10: Spreads
+11979	3523	fantasy-football-top-qb-2024	Fantasy Football: Top QB 2024
+12277	3501	global-heat-increase-2024	Global Heat Increase 2024
+14148	3448	epl-not-new-2024-11-10	Nottingham Forest vs. Newcastle
+14218	3346	will-trump-remove-jerome-powell-in-first-100-days	Will Trump remove Jerome Powell in first 100 days?
+13251	3325	georgia-margin-of-victory	Georgia Margin of Victory
+13737	3314	will-trump-win-florida-by-12-points	Will Trump win Florida by 12+ points?
+13651	3279	will-trump-do-better-with-lgtbq-voters-than-in-2020	Will Trump do better with LGTBQ voters than in 2020?
+12550	3279	will-pumpfun-launch-a-token-in-2024	Will Pump.fun launch a token in 2024?
+10080	3263	next-james-bond-actor	Next James Bond actor?
+12008	3233	fantasy-football-top-flex-2024	Fantasy Football: Top Flex 2024
+14225	3172	sri-lanka-legislative-election	Sri Lanka Parliamentary Election
+13444	3161	serie-a-winner	Serie A Winner
+14219	3156	who-will-replace-jd-vance-as-ohio-senator	Who will replace JD Vance as Ohio Senator?
+12785	3066	crypto-boxing	Crypto Boxing
+13788	3025	netanyahu-out-in-2024	Netanyahu out in 2024?
+12756	2997	epl-top-scorer	English Premier League Top Scorer
+903715	2994	doge-etf-approved-in-2024	Doge ETF approved in 2024?
+13301	2803	nba-rebounds-leader	NBA Rebounds Leader
+14195	2738	trumps-november-26-sentencing-pushed-back	Trump's November 26 sentencing pushed back?
+14146	2696	epl-tot-ips-2024-11-10	Spurs vs. Ipswich
+13814	2678	will-christian-mccaffrey-play-week-10	Will Christian McCaffrey play Week 10?
+13942	2677	trump-declassifies-ufo-files-in-first-100-days	Trump declassifies UFO files in first 100 days?
+12973	2676	khamenei-out-as-supreme-leader-of-iran-in-2024	Khamenei out as Supreme Leader of Iran in 2024?
+14190	2674	hawk-tuah-token-dropped-by-thanksgiving	Hawk Tuah token by Thanksgiving?
+14204	2604	will-cult-launch-a-coin-on-saturday	Will $CULT launch on 11/9?
+14198	2597	israel-strikes-iranian-oil-in-2024	Israel strikes Iranian oil in 2024?
+13808	2589	who-will-win-late-deciders	Who will win late deciders?
+10310	2546	trump-vs-boden-first-to-1b	Trump vs. Boden: First to 1B
+903370	2255	first-ftx-bankruptcy-payout	First FTX bankruptcy payout?
+13919	2195	trump-sun-belt-swing-state-sweep	Trump Sun Belt swing state sweep?
+903208	2193	will-north-korea-invade-south-korea-in-2024	Will North Korea invade South Korea in 2024?
+12307	2137	pershing-square-ipo-in-2024	Pershing Square IPO in 2024?
+14040	2136	megaquake-in-november	Megaquake in November?
+13682	2128	will-silver-close-over-40-at-the-end-of-2024	Will Silver close over $40 at the end of 2024?
+14210	2125	who-will-trump-nominate-for-labor-secretary	Who will Trump pick for Labor Secretary?
+14182	2041	trump-ends-department-of-education-in-first-100-days	Will Trump end Department of Education in first 100 days?
+903174	1996	will-openai-announce-it-has-achieved-agi-in-2024	OpenAI announces it has achieved AGI in 2024?
+10262	1992	us-recession-in-2024-1	U.S. Recession in 2024?
+13883	1950	will-harris-win-vermont-by-32-points	Will Harris win Vermont by 32+ points?
+13507	1887	israel-withdraws-from-gaza-in-2024	Israel withdraws from Gaza in 2024?
+11924	1864	wa-03-house-race-perez-d-vs-kent-r	WA-03 election: Glusenkamp Perez (D) vs. Kent (R)
+13340	1857	will-trump-win-texas-by-10-points	Will Trump win Texas by 10+ points?
+12059	1808	ca-27-election-whitesides-d-vs-garcia-r	CA-27 election: Whitesides (D) vs. Garcia (R)
+12005	1726	rfk-popular-vote-share	RFK Jr. popular vote share?
+14207	1723	who-will-trump-nominate-for-interior-secretary	Who will Trump pick for Interior Secretary?
+13337	1672	annual-inflation-above-2pt4-in-october	Annual inflation above 2.4% in October?
+14186	1634	who-will-trump-nominate-for-attorney-general	Who will Trump pick for Attorney General?

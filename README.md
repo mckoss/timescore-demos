@@ -17,7 +17,7 @@ mckoss.com domain, so mckoss.github.io/timescore-demos redirects there).
 | **New IMDb ratings** | A movie's new ratings on IMDb in a day | Daily from IMDb's [non-commercial datasets](https://developer.imdb.com/non-commercial-datasets), from the first run on |
 | **TMDB popularity** | A movie's popularity score on [The Movie Database](https://www.themoviedb.org) that day | Daily from TMDB's [daily exports](https://developer.themoviedb.org/docs/daily-id-exports), which go back about three months |
 | **Wikipedia pageviews** | An English Wikipedia article's views that day | Daily from Wikimedia's [Pageviews API](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html), back to November 2023 |
-| **Polymarket volume** | The dollars traded on a [Polymarket](https://polymarket.com) event (all its markets) that day | Daily from Polymarket's public market API, from the first run on (Polymarket doesn't publish daily history) |
+| **Polymarket volume** | The dollars traded on a [Polymarket](https://polymarket.com) event (all its markets) that day | Daily from Polymarket's public market API; before Nov 14, 2026, backfilled to Nov 2023 from its on-chain trades via [Dune](https://dune.com) |
 
 Posters and English titles come from the TMDB API. Wikipedia articles' short
 descriptions and free images come from Wikipedia's API.
@@ -76,6 +76,9 @@ runs every day at 09:41 UTC (and can be run by hand from the Actions tab):
    volume to `data/polymarket/YYYY-MM-DD.tsv`, dated by the middle of the
    24 hours it covers (the 09:41 UTC run collects yesterday). A day missed
    is gone, since Polymarket doesn't publish daily history.
+   The history before the first run (Nov 2023 on) was backfilled once by
+   `collect/polymarket_backfill.py` from Dune, which indexes Polymarket's
+   trades on the Polygon blockchain; it needs a Dune API key.
    It also looks up each new event's tags once and keeps those that map to
    the tab's topics (Sports, Esports, Crypto, Politics, World, Economy, Tech
    & science, Culture) in `data/polymarket-tags.tsv`.
