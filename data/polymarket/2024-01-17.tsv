@@ -1,0 +1,91 @@
+# Dollars traded on Polymarket events on 2024-01-17 (UTC), from its trades on Polygon as indexed by Dune. Market data from Polymarket.
+event_id	dollars	slug	title
+903198	184423	new-hampshire-republican-primary-winner	New Hampshire Republican Primary Winner
+903193	66380	presidential-election-winner-2024	Presidential Election Winner 2024
+5853	56628	who-will-win-the-us-2024-democratic-presidential-nomination	[Single Markets] Democratic Nominee 2024
+903230	40318	bitcoin-etfs-first-week-combined-aum	Bitcoin ETFs first week combined AUM
+903247	29251	will-novak-djokovic-win-the-australian-open-2024	Will Novak Djokovic win the Australian Open?
+903080	23220	bitcoin-all-time-high-by-mar-31	Bitcoin all time high by Mar 31?
+903250	21035	finland-presidential-election-who-will-win	Finland Presidential Election Winner
+903215	19779	democratic-nominee-2024	Democratic Nominee 2024
+903089	17457	fed-rate-cut-by	Fed rate cut by...?
+903151	17129	hamas-lose-power-in-gaza-before-february	Hamas lose power in Gaza before February?
+903214	17046	republican-nominee-2024	Republican Nominee 2024
+903258	15940	trump-margin-of-victory-in-new-hampshire-primary	Trump Margin of Victory in New Hampshire Primary?
+902516	14934	will-biden-drop-out-of-presidential-race	Biden drops out of presidential race?
+903130	14757	will-btc-hit-50000-by-jan-31	Will BTC hit $50,000 by Jan 31?
+903112	14715	trump-wins-every-state-in-rep-nomination	Trump wins every state in Rep. Nomination?
+903211	14600	electoral-college-margin-of-victory-in-the-2024-presidential-election	Electoral College Margin of Victory?
+903225	10948	will-there-be-a-us-government-shutdown-by-jan-20	Will there be a US government shutdown by Jan 20?
+903256	10934	will-china-invade-taiwan-in-2024	Will China invade Taiwan in 2024?
+903218	10644	will-israel-invade-lebanon-by-january-20	Will Israel invade Lebanon by January 20?
+903219	10255	ethereum-etf-approved-by-may-31	Ethereum ETF approved by May 31?
+903224	10243	trump-margin-of-victory-in-iowa-caucus	Trump Margin of Victory in Iowa Caucus?
+903248	8929	will-eth-hit-3000-in-january	Will ETH hit $3,000 in January?
+903197	7903	super-bowl-winner-2024	Super Bowl Winner 2024
+903196	7018	trump-jail-before-election-day	Trump in jail before election day?
+903174	6729	will-openai-announce-it-has-achieved-agi-in-2024	OpenAI announces it has achieved AGI in 2024?
+903246	5967	oscars-2024-best-picture	Oscars: Best Picture
+903098	5390	will-us-supreme-court-vote-to-reinstate-trump-on-colorados-2024-ballot	Will U.S. Supreme Court vote to reinstate Trump on Colorado's 2024 ballot?
+903261	5140	tether-insolvent-in-2024	Tether Insolvent in 2024?
+903267	4855	south-carolina-republican-primary-winner	South Carolina Republican Primary Winner
+902605	4356	sbf-sentenced-to-50-years	SBF sentenced to 50+ years?
+902951	4166	layerzero-airdrop-by-april	LayerZero airdrop by April?
+903104	4041	who-will-be-named-in-epstein-documents	Who will be named in Epstein documents?
+903241	4016	largest-company-in-the-world-on-january-31	Largest company in the world on January 31?
+903100	3753	will-another-state-disqualify-trump-from-ballot-by-jan-31	Will another state court disqualify Trump from ballot by Jan 31?
+4076	3364	which-party-will-win-the-2024-united-states-presidential-election	Which party wins 2024 US Presidential Election?
+903263	2775	will-weed-be-rescheduled-in-2024	Will weed be rescheduled in 2024?
+903249	2734	will-2024-be-the-hottest-year-on-record	Will 2024 be the hottest year on record?
+902950	2620	will-circle-ipo-by-june	Will Circle IPO by June?
+903228	2580	will-ecuadorian-drug-lord-fito-remain-at-large-throughout-january	Will Ecuadorian drug lord Fito remain at large throughout January?
+903204	2250	mexican-presidential-election-who-will-win	Mexico Presidential Election Winner
+5828	2136	who-will-win-the-us-2024-republican-presidential-nomination	[Single Markets] Republican Nominee 2024
+903216	1819	presidential-election-popular-vote-winner-2024	Popular Vote Winner 2024
+903262	1814	will-usdc-flip-usdt-in-market-cap-in-2024	Will USDC flip USDT in market cap in 2024?
+903175	1750	will-trump-appear-on-maine-primary-ballot	Will Trump appear on Maine primary ballot?
+903237	1660	will-sweden-join-nato-by-february-29	Will Sweden join NATO by February 29?
+903264	1490	will-nikki-haley-or-ron-desantis-drop-out-first	Will Nikki Haley or Ron DeSantis drop out first?
+903184	1324	will-hezbollah-deploy-ground-forces-in-israel-in-january	Will Hezbollah deploy ground forces in Israel in January?
+903188	1124	meissner-effect-confirmed-near-room-temperature	Meissner effect confirmed near room temperature?
+901206	1082	will-joe-biden-be-president-of-the-united-states-on	Will Joe Biden be President of the United States on...?
+903029	1040	solana-airdrops-by-march-1	Solana Airdrops by March 1
+903226	1034	of-elon-musk-tweets-between-january-10-16	# of Elon Musk tweets between January 10-16?
+903139	879	will-spacexs-starship-launch-before-march	Will SpaceX's Starship launch before March?
+901300	808	will-gpt-4-have-500b-parameters	Will GPT-4 have 500b+ parameters?
+902712	737	will-saudi-arabia-boost-oil-production-in-q4	Will Saudi Arabia boost oil production in Q4?
+903238	624	will-btc-or-eth-reach-all-time-high-first	Will BTC or ETH reach all-time high first?
+903269	600	nfl-dailies-2024-01-20	NFL
+902767	561	trump-and-biden-both-lose-nomination	Trump and Biden both lose nomination?
+902925	545	will-an-ai-win-the-5-million-ai-math-olympiad-prize-before-august	Will an AI win the $5 million AI Math Olympiad Prize before August?
+902938	500	will-10-of-votes-go-to-3rd-party-candidates-in-the-2024-us-presidential-election	Will ≥10% of Votes go to 3rd Party Candidates in US Election?
+903203	500	neri-oxmans-mit-degree-revoked	Neri Oxman's MIT degree revoked?
+903191	429	ethereum-spot-etf-approved-by	Ethereum ETF approved by...?
+903266	324	will-kamala-harris-be-the-democratic-vp-nominee	Will Kamala Harris be the Democratic VP nominee?
+903239	274	will-jordan-henderson-leave-saudi-arabia-this-transfer-window	Will Jordan Henderson leave Saudi Arabia this transfer window?
+903120	250	cz-jail-before-march	CZ jail before March?
+903146	181	will-google-announce-1000-new-layoffs-before-february	Will Google announce 1000+ new layoffs before February?
+903065	171	another-israel-x-hamas-ceasefire-before-february	Another Israel x Hamas ceasefire before February?
+902458	149	will-republican-vp-nominee-be-a-woman	Will Republican VP nominee be a woman?
+903046	145	starlink-available-in-gaza-by-jan-31	Starlink available in Gaza by Jan 31?
+903280	143	will-pakistan-strike-iran-by-saturday	Will Pakistan strike Iran by Saturday?
+903171	138	will-iran-officially-join-the-war-before-february	Will Iran officially join the war before February?
+902323	104	will-man-city-win-the-premier-league	Will Man City win the Premier League?
+903068	96	us-call-for-gaza-ceasefire-before-february	US call for Gaza ceasefire before February?
+903169	67	will-a-world-leader-shit-themselves-before-march	Will a world leader shit themselves before March?
+903138	60	will-kanye-release-vultures-by	Will Kanye release Vultures by..?
+903176	53	will-solana-go-down-in-january	Will Solana Network go down in January?
+903047	52	ceasefire-between-russia-and-ukraine-by-june	Ceasefire between Russia and Ukraine by June 30?
+902090	45	trump-and-biden-both-win-nomination	Trump and Biden both win nomination?
+903081	41	dune-2-bigger-opening-weekend-than-dune	'Dune 2' bigger opening weekend than 'Dune'?
+903132	20	jupiter-airdrop-by-jan-31	Jupiter airdrop by Jan 31?
+903161	15	netanyahu-out-by-june-30	Netanyahu out by June 30?
+903195	10	will-openai-release-gpt-4pt5-before-april	Will OpenAI release GPT-4.5 before April?
+903270	9	nfl-dailies-2024-01-21	NFL
+903147	7	will-ukraine-receive-f-16s-by-end-of-january	Will Ukraine receive F-16s by end of January?
+903149	5	bonk-all-time-high-before-february	$BONK all time high before February?
+903022	5	fed-interest-rates-january-2024	Fed Interest Rates: January 2024
+902205	3	north-korea-nuke-by	North Korea nuke by...?
+903277	2	oscars-2024-best-actor	Oscars: Best Actor
+903122	2	ayatollah-khamenei-still-in-power-in-iran-by-june-30	Ayatollah Khamenei still in power in Iran by June 30?
+896616	1	will-a-nuclear-weapon-detonate-by	Will a nuclear weapon detonate by...?

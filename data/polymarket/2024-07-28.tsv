@@ -1,0 +1,302 @@
+# Dollars traded on Polymarket events on 2024-07-28 (UTC), from its trades on Polygon as indexed by Dune. Market data from Polymarket.
+event_id	dollars	slug	title
+903193	3629697	presidential-election-winner-2024	Presidential Election Winner 2024
+11385	2306819	democratic-vp-nominee	Democratic VP nominee?
+903215	2156262	democratic-nominee-2024	Democratic Nominee 2024
+11580	556633	trump-to-announce-strategic-bitcoin-reserve-in-july	Will Trump announce strategic Bitcoin reserve?
+11321	302797	will-biden-resign-by-july-31	Will Biden announce resignation by July 31?
+903216	295332	presidential-election-popular-vote-winner-2024	Popular Vote Winner 2024
+10857	292074	venezuela-election-winner	Venezuela Presidential Election Winner
+903650	155521	north-carolina-presidential-election-winner	Who will win North Carolina?
+11451	147875	paris-olympics-which-country-wins-most-medals	Most medals at Paris Olympics?
+11599	145299	democratic-presidential-nominee	Biden D-Nom replacement?
+11074	120460	fed-interest-rates-july-2024	Fed Interest Rates: July 2024
+11351	110155	what-price-will-btc-reach-in-july	What price will $BTC reach in July?
+5853	105537	who-will-win-the-us-2024-democratic-presidential-nomination	[Single Markets] Democratic Nominee 2024
+11439	103816	superbowl-champion-2025	Super Bowl Champion 2025
+903089	95854	fed-rate-cut-by	Fed rate cut by...?
+11441	92170	2024-july-hottest-on-record	2024 July hottest on record?
+11638	81711	who-will-endorse-kamala	Who will endorse Kamala?
+11447	81353	paris-olympics-which-country-wins-most-gold-medals	Most gold medals at Paris Olympics?
+11322	79878	will-biden-complete-his-term-as-president	Will Biden finish his term?
+903640	78233	new-hampshire-presidential-election-winner	New Hampshire Presidential Election Winner
+903667	74953	pennsylvania-presidential-election-winner	Who will win Pennsylvania?
+10656	73436	which-party-wins-presidency-popular-vote	Who wins Presidency + Popular Vote?
+11554	72254	mens-basketball-gold-medal-winner	Men's Basketball Winner
+11650	67876	jd-vance-steps-down-as-republican-vp-nominee	JD Vance replaced as Republican VP nominee?
+11430	56686	will-deadpool-wolverine-gross-more-than-200m-opening-weekend	Deadpool & Wolverine' over $200m opening weekend?
+10362	56590	deadpool-and-wolverine-opening-weekend-box-office	'Deadpool & Wolverine' Opening Weekend Box Office
+10223	51338	balance-of-power-2024-election	Balance of Power: 2024 Election
+11316	51084	gretchen-whitmer-wins-democratic-presidential-nomination	Gretchen Whitmer Democratic Presidential Nominee?
+903636	44710	arizona-presidential-election-winner	Who will win Arizona?
+903508	39289	how-many-fed-rate-cuts-this-year	How many Fed rate cuts this year?
+10798	35279	will-israel-invade-lebanon-before-september	Will Israel invade Lebanon before September?
+11637	33852	trump-x-kamala-debate-before-election	Will Trump and Harris debate before election?
+11565	33010	will-biden-announce-resignation-by-august-31	Biden resigns from presidency by August 31?
+903211	32751	electoral-college-margin-of-victory-in-the-2024-presidential-election	Electoral College Margin of Victory?
+903665	30876	michigan-presidential-election-winner	Who will win Michigan?
+11585	28956	100m-breaststroke-m-gold-medal-winner	100m Breaststroke Winner (M)
+903440	28448	ethereum-all-time-high-in-2024	Ethereum all time high in 2024?
+11590	28280	100m-butterfly-w-gold-medal-winner	100m Butterfly Winner (W)
+11627	27050	when-will-democrats-nominate-presidential-candidate	When will Democratic Nominee be chosen?
+903378	26341	highest-grossing-movie-in-2024	Highest grossing movie in 2024?
+903637	25491	nevada-presidential-election-winner	Who will win Nevada?
+903261	24654	tether-insolvent-in-2024	Tether Insolvent in 2024?
+11640	24332	will-biden-speak-at-the-dnc	Will Biden speak at the DNC?
+11722	24067	bitcoin-above-68000-on-august-2	Bitcoin above $68,000 on August 2?
+11685	23558	kamala-announce-vp-pick-by-aug-7	Will Kamala announce VP pick by Aug 7?
+11696	23452	fed-interest-rates-september-2024	Fed Interest Rates: September 2024
+11731	20136	india-vs-sri-lanka-2nd-cricket-t20i-match	India vs. Sri Lanka - 2nd Cricket T20I Match
+11563	19868	biden-diagnosed-with-medical-condition-before-dnc	Biden diagnosed with "medical condition" before DNC?
+11353	19278	what-price-will-eth-reach-in-july	What price will $ETH reach in July?
+11426	18905	solana-flips-eth-in-daily-fees-in-july	Solana flips ETH in daily fees in July?
+903559	18429	ethereum-all-time-high-wen	Ethereum all time high wen?
+903771	17152	when-will-gpt-5-be-announced	When will GPT-5 be announced?
+11233	17106	biden-campaign-accepts-crypto-donations-before-august	Biden campaign accepts crypto donations before August?
+903683	14992	wisconsin-presidential-election-winner	Who will win Wisconsin?
+11559	14549	mens-soccer-gold-medal-winner	Men's Soccer Winner
+11654	14527	ufc-304	UFC 304
+11730	13303	tennis-winner-m	Singles Tennis Winner (M)
+903684	13017	wyoming-presidential-election-winner	Wyoming Presidential Election Winner
+11483	12723	will-btc-hit-50k-or-70k-first	Will $BTC hit $50k or $70k first?
+10228	12645	eigenlayer-market-cap-fdv-one-day-after-launch	Eigenlayer market cap (FDV) one day after launch?
+10882	12567	will-joe-pardon-hunter-biden	Will Joe pardon Hunter Biden?
+11029	12491	what-price-will-btc-dip-below-before-august	What price will $BTC dip below before August?
+11468	12332	trump-wins-every-swing-state	Trump wins every swing state?
+10241	12079	nebraska-us-senate-election-winner	Nebraska Senate Election Winner
+11683	11884	will-kamala-give-a-speech-at-bitcoin-conference	Will Kamala speak at Bitcoin conference?
+11413	11715	next-uk-leader-of-the-conservatives	Next UK leader of the Conservatives?
+903514	11620	house-control-after-2024-election	House control after 2024 election?
+11733	11568	will-israel-invade-lebanon-by-friday	Will Israel invade Lebanon by Friday?
+11706	11180	400m-individual-medley-m-gold-medal-winner	400m Individual Medley Winner (M)
+903382	11011	will-michelle-obama-announce-presidential-run-before-august	Will Michelle Obama announce presidential run before August?
+11052	10797	next-french-prime-minister	Next French Prime Minister
+4076	9383	which-party-will-win-the-2024-united-states-presidential-election	Which party wins 2024 US Presidential Election?
+11440	9158	biden-cognitive-test-before-august	Biden cognitive test in July?
+11729	9023	538-favorite-when-forecast-is-turned-on	538 favorite when forecast is turned on?
+903666	8451	minnesota-presidential-election-winner	Minnesota Presidential Election Winner
+11630	8317	kamala-nominated-before-democratic-convention	Will Kamala be Nominee before Convention?
+11474	8205	trump-says-mog-at-bitcoin-conference	Trump says "mog" at Bitcoin Conference?
+11725	8189	elon-musk-of-tweets-july-26-aug-2	Elon Musk # of tweets July 26 - Aug 2?
+11562	8011	womens-soccer-gold-medal-winner	Women's Soccer Winner
+11569	7933	100m-m-gold-medal-winner	100m Winner (M)
+11662	6852	kamala-announces-vp-pick-in-july	Kamala announces VP pick in July?
+11723	6401	ethereum-above-3300-on-august-2	Ethereum above $3,300 on August 2?
+11684	6000	will-kamala-say-brat-before-august	Will Kamala say "Brat" before August?
+11524	5472	us-election-tipping-point-state	Tipping Point State in 2024 Election?
+10020	5470	wisconsin-us-senate-election-winner	Wisconsin Senate Election Winner
+11716	5089	how-many-gold-medals-will-katie-ledecky-win	How many gold medals will Katie Ledecky win?
+11713	5044	800m-freestyle-w-gold-medal-winner	800m Freestyle Winner (W)
+11703	5021	will-a-presidential-candidate-say-mog-at-btc-conference	Will a presidential candidate say Mog at BTC conference?
+903656	5005	ohio-presidential-election-winner	Ohio Presidential Election Winner
+11337	4891	will-trump-be-president-by-september-1	Will Trump be president by September 1?
+11220	4815	nasrallah-remains-leaderl-of-hezbollah-through-july	Nasrallah remains leader of Hezbollah through July?
+11301	4744	dnc-open-convention	DNC open convention?
+903266	4670	will-kamala-harris-be-the-democratic-vp-nominee	Will Kamala Harris be the Democratic VP nominee?
+11566	4620	1500m-m-gold-medal-winner	1500m Winner (M)
+11040	4545	hunter-biden-prison-time-in-gun-sentence	Hunter Biden prison time in gun sentence?
+903768	4450	washington-governor-election-winner	Washington Governor Election Winner
+11668	4414	will-kamala-say-coconut-before-august	Will Kamala say "coconut" before August?
+11717	4254	trump-kamala-agree-to-to-september-10-debate	Trump and Harris agree to Sept 10 debate?
+11557	4235	womens-basketball-gold-medal-winner	Women's Basketball Winner
+10935	4161	will-ethereum-hit-10k-in-2024	Will Ethereum hit $10k in 2024?
+10021	4042	montana-us-senate-election-winner	Montana Senate Election Winner
+11314	3902	democratic-candidates-announce-run-for-president-before-dnc	Democratic candidates announce run for president before DNC?
+10828	3900	trump-conviction-overturned-before-election	Trump conviction overturned before election?
+11621	3754	gender-of-the-democratic-ticket	Gender of the Democratic ticket?
+903663	3667	maryland-presidential-election-winner	Maryland Presidential Election Winner
+11526	3655	kamala-harris-and-jd-vance-debate-before-election	Kamala Harris and JD Vance debate before election?
+11336	3633	will-trump-be-speaker-by-august-1	Will Trump be Speaker by August 1?
+11235	3546	f1-2024-season-winner	F1 2024 Drivers Champion
+11581	3247	200m-m-gold-medal-winner	200m Winner (M)
+11265	3134	airdrops-by-september-30	Airdrops by September 30?
+903660	3122	maine-presidential-election-winner	Maine Presidential Election Winner
+11710	3038	3rd-most-gold-medals-at-paris-olympics-1	3rd most gold medals at Paris Olympics?
+903757	2949	north-carolina-governor-election-winner	North Carolina Governor Election Winner
+903631	2835	alabama-presidential-election-winner	Alabama Presidential Election Winner
+903643	2804	new-jersey-presidential-election-winner	New Jersey Presidential Election Winner
+903658	2791	kentucky-presidential-election-winner	Kentucky Presidential Election Winner
+11698	2783	200m-freestyle-m-gold-medal-winner	200m Freestyle Winner (M)
+11536	2686	rfk-jr-endorses-trump	RFK Jr. endorses Trump in August?
+10565	2582	will-todd-fine-win-the-2024-us-presidential-election	Will Todd Fine win the 2024 US Presidential Election?
+11195	2478	faithless-elector-in-us-election	Faithless elector in US election?
+11344	2462	will-biden-go-on-the-all-in	Will Biden go on the All-In Podcast?
+10164	2403	congressional-district-1st-nebraska-presidential-election-winner	Nebraska's 1st Congressional District Presidential Election Winner
+10842	2384	trump-sentenced-to-how-much-prison-time	Trump prison time in NY case before election?
+903799	2363	michigan-us-senate-election-winner	Michigan Senate Election Winner
+903642	2362	connecticut-presidential-election-winner	Connecticut Presidential Election Winner
+11694	2329	trump-vs-biden-staircase-olympics	Trump vs. Biden: Staircase Olympics
+10766	2292	ceasefire-between-russia-and-ukraine-before-october	Ceasefire between Russia and Ukraine before October?
+903662	2275	massachusetts-presidential-election-winner	Massachusetts Presidential Election Winner
+11644	2265	will-elon-speak-at-bitcoin-conference	Will Elon Musk give a speech at Bitcoin conference?
+11639	2191	biden-resigns-from-presidency-before-election	Will Biden resign before the election?
+903648	2125	georgia-presidential-election-winner	Who will win Georgia?
+903744	2116	will-ethereum-hit-15k-in-2024	Will Ethereum hit $15k in 2024?
+11646	2091	major-challenger-to-kamala-for-democratic-nomination	Major challenger to Kamala for Democratic nomination?
+903759	2079	new-hampshire-governor-election-winner	New Hampshire Governor Election Winner
+10717	2059	of-republican-senate-seats-after-election	# of Republican Senate seats after Election?
+11643	2047	fox-news-hosts-debate-between-trump-harris	Trump and Harris agree to Fox News debate?
+10022	2023	ohio-us-senate-election-winner	Ohio Senate Election Winner
+11458	2015	will-nadal-win-a-gold-medal-in-paris	Will Nadal win a gold medal in Paris?
+11499	2006	fact-check-was-the-trump-shooter-a-chinese-man	Fact Check: Was the Trump shooter "a Chinese man"?
+10890	1907	trump-increase-share-of-black-voters	Trump gets more black voters than in 2020?
+11677	1905	was-biden-campaign-call-fake	Was Biden campaign call fake?
+10925	1887	trump-ineligible-to-run-for-president	Trump ineligible to run for President?
+11484	1841	us-government-bitcoin-reserves-in-2024	US government Bitcoin reserves in 2024?
+11508	1785	was-the-shooter-a-democrat-or-republican	Was the shooter a Democrat or Republican?
+11532	1769	fact-check-law-enforcement-ordered-to-hold-fire	Fact Check: Was there an order to hold fire?
+903289	1718	will-a-nuclear-weapon-detonate-in-2024	Will a nuclear weapon detonate in 2024?
+10558	1682	how-many-named-storms-during-atlantic-hurricane-season-2024	How many named storms during Atlantic Hurricane Season?
+903691	1672	will-bitcoin-hit-100k-in-2024	Will Bitcoin hit $100k in 2024?
+10799	1668	israel-x-hamas-ceasefire-before-september	Israel x Hamas ceasefire before September?
+10170	1536	new-york-presidential-election-winner-2024	New York Presidential Election Winner
+11687	1530	will-kamala-announce-vp-pick-before-dnc	Will Kamala announce VP pick before DNC?
+11686	1509	will-the-director-of-fbi-be-firedresign	Will the Director of FBI be fired/resign?
+11724	1498	solana-above-180-on-august-2	Solana above $180 on August 2?
+902520	1461	which-party-will-control-the-us-senate-after-the-2024-election	Senate control after 2024 election?
+11720	1449	france-train-attack-claimed-by-terror-org	France train attack claimed by terror org?
+10831	1441	trump-hush-money-sentencing	Trump Hush Money sentence before election?
+11697	1439	will-taylor-swift-endorse-kamla-harris	Will Taylor Swift endorse Kamala Harris?
+11001	1427	trump-conviction-declared-a-mistrial	Trump conviction declared a mistrial?
+903256	1395	will-china-invade-taiwan-in-2024	Will China invade Taiwan in 2024?
+10169	1367	new-mexico-presidential-election-winner-2024	New Mexico Presidential Election Winner
+11503	1315	fact-check-was-it-a-rogue-actor	Fact Check: Was it a rogue actor?
+11718	1289	will-jd-vance-say-couch-before-august	Will JD Vance say "Couch" before August?
+10601	1283	will-rfk-jr-win-a-state	RFK Jr. wins a state?
+11455	1206	trump-blowout-victory	Trump blowout victory?
+903728	1205	supreme-court-vacancy-in-2024	Supreme Court vacancy in 2024?
+11457	1203	will-djokovic-win-a-gold-medal-in-paris	Will Djokovic win a gold medal in Paris?
+902090	1159	trump-and-biden-both-win-nomination	Trump and Biden both win nomination?
+903329	1148	covid-lab-leak-confirmed-by-us-in-2024	COVID lab leak confirmed by US in 2024?
+11422	1136	will-obama-go-on-the-all-in-podcast	Will Obama go on the All-In Podcast?
+11507	1100	fact-check-was-trump-wearing-a-bulletproof-vest	Fact Check: Was Trump wearing a bulletproof vest?
+11277	1095	infowars-shut-down-before-august	Infowars shut down before August?
+10807	1086	ansem-criminal-charges-in-2024	Ansem criminal charges in 2024?
+11660	1035	will-kamala-go-on-hot-ones	Will Kamala Harris go on Hot Ones by August 31?
+903560	1012	solana-all-time-high-wen	Solana all time high wen?
+10351	1005	iran-nuke-by-july-31	Iran Nuke by July 31?
+11667	972	will-joe-bidens-538-approval-reach-40pt0-in-july	Will Biden's 538 approval reach 40% in July?
+10705	963	netanyahu-out-by-october-31	Netanyahu out by October 31?
+11339	952	will-the-us-confirm-that-aliens-exist-in-2024	Will the US confirm that aliens exist in 2024?
+11435	902	democrat-other-than-biden-wins-the-presidential-election	Democrat other than Biden wins the Election?
+903635	889	alaska-presidential-election-winner	Alaska Presidential Election Winner
+10804	886	israel-military-action-against-iran-by-end-of-2024	Israel military action against Iran by end of 2024?
+11434	867	will-france-recognize-palestine-before-september	Will France recognize Palestine before September?
+11518	810	china-unban-bitcoin-in-2024	Will China unban Bitcoin in 2024?
+11109	801	first-trump-coin-to-1b	First Trump Coin to $1b?
+902938	773	will-10-of-votes-go-to-3rd-party-candidates-in-the-2024-us-presidential-election	Will ≥10% of Votes go to 3rd Party Candidates in US Election?
+11025	758	chatgpt-integration-with-iphones-before-october	ChatGPT integration with iPhone before October?
+903679	757	virginia-presidential-election-winner	Virginia Presidential Election Winner
+11708	756	3rd-most-medals-at-paris-olympics	3rd most medals at Paris Olympics?
+903196	713	trump-jail-before-election-day	Trump in jail before election day?
+11645	675	will-kamala-drop-out-in-july	Will Kamala drop out in July?
+11143	652	will-trump-launch-a-coin-before-the-election	Will Trump launch a coin before the election?
+903715	634	doge-etf-approved-in-2024	Doge ETF approved in 2024?
+10214	626	arizona-us-senate-election-winner	Arizona Senate Election Winner
+903249	626	will-2024-be-the-hottest-year-on-record	Will 2024 be the hottest year on record?
+11063	605	shkreli-settle-with-pleasr-over-wu-tang-album-before-august	Shkreli settles over Wu-Tang album before August?
+10017	579	tiktok-sale-announced-before-august	TikTok sale announced before August?
+10778	575	will-trump-say-mog-in-2024	Will Trump say "mog" in 2024?
+10483	565	fed-rate-hike-in-2024	Fed rate hike in 2024?
+11410	542	diddy-arrested-before-august	Diddy arrested before August?
+903743	542	will-bitcoin-hit-250k-in-2024	Will Bitcoin hit $250k in 2024?
+11589	533	100m-butterfly-m-gold-medal-winner	100m Butterfly Winner (M)
+903674	529	texas-presidential-election-winner	Texas Presidential Election Winner
+10833	527	will-trump-drop-out-of-presidential-race	Will Trump drop out of presidential race?
+10810	521	will-trump-mention-maga-before-election	Will Trump mention $MAGA before Election?
+11345	486	nvidia-largest-company-in-july	NVIDIA largest company in July?
+903639	478	california-presidential-election-winner	California Presidential Election Winner
+903774	461	jake-paul-vs-mike-tyson-who-will-win	Jake Paul vs. Mike Tyson: Who will win?
+11349	459	jamie-dimon-democratic-presidential-nominee	Jamie Dimon Democratic Presidential Nominee?
+11472	450	will-any-country-medal-for-the-first-time-in-paris-olympics	Country gets medal for first time in Paris Olympics?
+11583	450	5000m-m-gold-medal-winner	5000m Winner (M)
+10627	443	bieber-baby-boy-or-girl	Bieber Baby: Boy or Girl?
+10844	432	israel-withdraws-from-gaza-before-september	Israel withdraws from Gaza before September?
+10018	426	nevada-us-senate-election-winner	Nevada Senate Election Winner
+10827	420	trump-sentenced-to-prison	Trump sentenced to prison in NY case before election?
+903263	413	will-weed-be-rescheduled-in-2024	Will weed be rescheduled in 2024?
+11682	410	actblue-raises-over-14pt5b-by-july-31	ActBlue raises over $14.5b by July 31?
+11719	406	which-athlete-will-win-the-most-gold-medals-at-paris-olympics	Which athlete will win the most gold medals at Paris Olympics?
+11564	397	hammer-throw-m-gold-medal-winner	Hammer Throw Winner (M)
+11028	390	elon-musk-bans-apple-devices-at-his-companies	Elon Musk bans Apple devices at his companies?
+10218	356	texas-us-senate-election-winner	Texas Senate Election Winner
+10600	348	will-zelensky-remain-president-of-ukraine-through-september	Zelensky remains President of Ukraine through September?
+11202	346	will-the-us-presidential-election-be-called-on-nov-5	Will the election be called on Nov 5?
+10373	339	us-presidential-election-democrats-win-a-solid-red-state	Kamala Harris wins a solid red state?
+11707	327	400m-individual-medley-w-gold-medal-winner	400m Individual Medley Winner (W)
+11693	296	jd-usha-vance-divorce-before-election	JD & Usha Vance divorce before election?
+11568	293	biden-nominated-by-august-7	Biden nominated by August 7?
+11651	291	will-rfk-jr-drop-out-before-september	Will RFK Jr. drop out before September?
+11022	281	next-israel-x-hamas-ceasefire-in	Next Israel x Hamas ceasefire in…?
+11680	272	biden-nominates-a-man-as-secret-service-director	Biden appoints a man as Secret Service Director?
+10199	266	nic-carter-vs-david-hoffman-Fight	Nic Carter vs. David Hoffman: Who will win?
+11348	249	garland-releases-biden-hur-tape-by-august-31	Garland releases Biden-Hur tape by August 31?
+11699	249	200m-freestyle-w-gold-medal-winner	200m Freestyle Winner (W)
+11403	243	andrew-tate-flee-the-eu	Andrew Tate flee the EU?
+11342	241	biden-nominated-by-virtual-roll-call-before-dnc	Biden nominated before Democratic convention?
+11624	228	will-democratic-vp-nominee-be-a-white-man	Will Democratic VP nominee be a white man?
+11431	211	biden-confirmed-parkinsons-in-july	Biden confirmed to have Parkison's by July 31?
+903646	205	florida-presidential-election-winner	Florida Presidential Election Winner
+10047	201	how-many-spacex-starship-launches-reach-space-in-2024	How many SpaceX Starship launches reach space in 2024?
+11560	200	will-kraken-ipo-in-2024	Will Kraken IPO in 2024?
+903681	198	washington-presidential-election-winner	Washington Presidential Election Winner
+11347	191	biden-recorded-crying-in-july	Biden recorded crying in July?
+11675	172	will-trump-tweet-again-before-election	Will Trump post on X again before election?
+11541	164	vivek-takes-vance-place-as-us-senator-for-oh	Vivek replaces Vance as U.S. senator for Ohio?
+11582	162	100m-backstroke-m-gold-medal-winner	100m Backstroke Winner (M)
+903174	161	will-openai-announce-it-has-achieved-agi-in-2024	OpenAI announces it has achieved AGI in 2024?
+11700	154	200m-individual-medley-m-gold-medal-winner	200m Individual Medley Winner (M)
+11732	149	nasrallah-remains-leader-of-hezbollah-through-august	Nasrallah remains leader of Hezbollah through August?
+11567	143	trump-wins-and-picks-jamie-dimon-for-treasury-secretary	Trump wins and picks Dimon for Treasury Secretary?
+11571	141	400m-hurdles-m-gold-medal-winner	400m Hurdles Winner (M)
+903262	136	will-usdc-flip-usdt-in-market-cap-in-2024	Will USDC flip USDT in market cap in 2024?
+903188	135	meissner-effect-confirmed-near-room-temperature	Meissner effect confirmed near room temperature?
+903746	128	solana-etf-approved-in-2024	Solana ETF approved in 2024?
+11556	126	trump-post-about-a-memecoin-before-election	Trump post about a memecoin before election?
+11622	126	cody-ko-address-allegations-in-july	Cody Ko address allegations in July?
+11471	120	democratic-blitz-primary	Democratic Blitz primary?
+11588	120	shot-put-m-gold-medal-winner	Shot Put Winner (M)
+11598	117	discus-thrower-gold-medal-winner	Discus Winner (M)
+11570	116	110m-hurdles-gold-medal-winner	110m Hurdles Winner (M)
+11444	115	kanye-west-retires-in-july	Kanye West retires in July?
+903652	115	north-dakota-presidential-election-winner	North Dakota Presidential Election Winner
+15437	113	who-will-biden-pardon	Who will Biden pardon?
+10731	109	will-milady-flip-bayc-in-2024	Will Milady flip BAYC in 2024?
+903208	108	will-north-korea-invade-south-korea-in-2024	Will North Korea invade South Korea in 2024?
+11546	104	next-england-manager	Next England manager?
+903292	100	sundar-pichai-out-as-google-ceo-in-2024	Sundar Pichai out as Google CEO in 2024?
+903763	96	missouri-governor-election-winner	Missouri Governor Election Winner
+11587	94	100m-breaststroke-w-gold-medal-winner	100m Breaststroke Winner (W)
+903540	91	when-will-satoshis-identity-be-proven	When will Satoshi's identity be proven?
+10343	88	republicans-flip-a-2020-biden-state	Trump flips a 2020 Biden state?
+10235	79	utah-us-senate-election-winner	Utah Senate Election Winner
+11543	76	fact-check-iran-behind-attempt-on-trump	Fact Check: Iran behind attempt on Trump?
+10080	62	next-james-bond-actor	Next James Bond actor?
+10748	61	bird-flu-pandemic-in-2024	Bird flu pandemic in 2024?
+11734	60	az-8-republican-primary-winner	AZ-8 Republican Primary Winner
+10809	59	iggy-azalea-criminal-charges-in-2024	Iggy Azalea criminal charges in 2024?
+11594	59	100m-freestyle-m-gold-medal-winner	100m Freestyle Winner (M)
+903326	58	will-america-ban-zyn-in-2024	Will America ban Zyn in 2024?
+10310	57	trump-vs-boden-first-to-1b	Trump vs. Boden: First to 1B
+11550	50	fact-check-foreign-government-behind-attempt-on-trump	Fact Check: Foreign government behind attempt on Trump?
+10242	50	minnesota-us-senate-election-winner	Minnesota Senate Election Winner
+10875	49	fauci-jail-in-2024	Fauci jail in 2024?
+11232	48	israel-parliament-dissolves-in-2024	Israel parliament dissolves in 2024?
+11427	42	will-circle-ipo-in-2024	Will Circle IPO in 2024?
+11020	41	will-stancil-wins-minnesota-61a-house-primary	Will Stancil wins Minnesota House Democratic Primary?
+10019	40	pennsylvania-us-senate-election-winner	Pennsylvania Senate Election Winner
+903641	36	colorado-presidential-election-winner	Colorado Presidential Election Winner
+11595	36	100m-freestyle-w-gold-medal-winner	100m Freestyle Winner (W)
+903434	35	taylor-swift-engaged-in-2024	Taylor Swift engaged in 2024?
+11450	35	us-congress-stock-trading-ban-by-august-31	US congress stock trading ban by August 31?
+11002	35	will-trump-appeal-his-hush-money-conviction	Will Trump appeal his hush money conviction?
+11538	33	who-will-the-teamsters-endorse	Who will the Teamsters endorse?
+11402	32	biden-removed-via-25th-amendment-before-election	Biden removed via 25th Amendment?
+11611	31	200m-backstroke-m-gold-medal-winner	200m Backstroke Winner (M)
+10233	31	how-many-members-of-the-squad-will-lose-their-primaries	How many "Squad" members will lose their primaries?
+11436	31	karine-jean-pierre-out-as-press-secretary-by-july-31	Karine Jean-Pierre out as Press Secretary by July 31?
+903671	29	south-carolina-presidential-election-winner	South Carolina Presidential Election Winner
+10710	28	icc-issues-an-arrest-warrant-for-netanyahu	ICC issues an arrest warrant for Netanyahu?
+11343	28	us-bank-failure-before-september	US bank failure before September?
+10603	26	will-rfk-jr-debate-biden-or-trump	Will RFK Jr. debate Biden/Trump?
+10257	25	massachusetts-us-senate-election-winner	Massachusetts Senate Election Winner
