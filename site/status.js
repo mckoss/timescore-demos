@@ -9,12 +9,13 @@
 
 import { formatDate, showVersion } from './freshness.js?v=__VERSION__';
 
-const NAMES = { imdb: 'New IMDb ratings', tmdb: 'TMDB popularity', wikipedia: 'Wikipedia pageviews' };
-const SHORT = { imdb: 'IMDb data', tmdb: 'TMDB data', wikipedia: 'Wikipedia data' };
+const NAMES = { imdb: 'New IMDb ratings', tmdb: 'TMDB popularity', wikipedia: 'Wikipedia pageviews',
+  polymarket: 'Polymarket volume' };
+const SHORT = { imdb: 'IMDb data', tmdb: 'TMDB data', wikipedia: 'Wikipedia data', polymarket: 'Polymarket data' };
 // Days a source's newest data trails today. Wikimedia publishes a day's
 // pageviews after the next day's update has run, so yesterday is normal there.
-const LAG_DAYS = { imdb: 0, tmdb: 0, wikipedia: 1 };
-const NOUNS = { imdb: 'movies', tmdb: 'movies', wikipedia: 'articles' };
+const LAG_DAYS = { imdb: 0, tmdb: 0, wikipedia: 1, polymarket: 1 };   // Polymarket: each run collects the 24 hours before it
+const NOUNS = { imdb: 'movies', tmdb: 'movies', wikipedia: 'articles', polymarket: 'events' };
 const NOTHING = { days: [], rows: 0, bytes: 0 };   // a source an older log entry predates
 const TRIGGERS = {
   schedule: 'Daily schedule',
@@ -178,7 +179,7 @@ function showCoverage({ log, dates }) {
   const width = labelWidth + CHART_DAYS * (cell + gap);
   const height = top + rows.length * (cell + gap) + 24;
   const chart = svg('svg', { viewBox: `0 0 ${width} ${height}`, class: 'coverage', role: 'img',
-    'aria-label': 'Which of the last 60 days had an update, IMDb data, TMDB data and Wikipedia data' });
+    'aria-label': 'Which of the last 60 days had an update, IMDb data, TMDB data, Wikipedia data and Polymarket data' });
 
   rows.forEach((row, r) => {
     const y = top + r * (cell + gap);
@@ -216,7 +217,8 @@ function showCoverage({ log, dates }) {
 
   const legend = document.querySelector('[data-coverage-legend]');
   for (const [className, text] of [['cell-runs', 'Update ran'], ['cell-imdb', 'IMDb data'],
-    ['cell-tmdb', 'TMDB data'], ['cell-wikipedia', 'Wikipedia data'], ['cell-missing', 'Missing'],
+    ['cell-tmdb', 'TMDB data'], ['cell-wikipedia', 'Wikipedia data'], ['cell-polymarket', 'Polymarket data'],
+    ['cell-missing', 'Missing'],
     ['cell-pending', 'Not due yet']]) {
     const item = document.createElement('span');
     item.className = 'legend-item';

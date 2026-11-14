@@ -67,6 +67,11 @@ jobs:
       - name: Collect Wikipedia pageviews
         run: python collect/wikipedia.py
 
+      # The dollars traded on each event in the 24 hours before the run (a
+      # day missed is gone: Polymarket doesn't publish daily history).
+      - name: Collect Polymarket volume
+        run: python collect/polymarket.py
+
       - name: Build the charts
         env:
           TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}

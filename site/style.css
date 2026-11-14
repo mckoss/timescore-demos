@@ -139,6 +139,7 @@ h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0; }
   --series-imdb: #2a78d6;
   --series-tmdb: #eb6834;
   --series-wikipedia: #1baf7a;
+  --series-polymarket: #eda100;
   --series-runs: #6d6a69;
   --critical: #c62828;
   --critical-bg: #fde8e6;
@@ -149,6 +150,7 @@ h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0; }
     --series-imdb: #3987e5;
     --series-tmdb: #d95926;
     --series-wikipedia: #199e70;
+    --series-polymarket: #c98500;
     --series-runs: #a8a5a1;
     --critical: #ff7a70;
     --critical-bg: #3a1714;
@@ -192,6 +194,7 @@ h1, h2, h3 { font-weight: 800; line-height: 1.15; margin: 0; }
 .cell-imdb { fill: var(--series-imdb); background: var(--series-imdb); }
 .cell-tmdb { fill: var(--series-tmdb); background: var(--series-tmdb); }
 .cell-wikipedia { fill: var(--series-wikipedia); background: var(--series-wikipedia); }
+.cell-polymarket { fill: var(--series-polymarket); background: var(--series-polymarket); }
 .cell-none { fill: transparent; }
 .cell-pending { fill: transparent; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 3 2; }
 span.cell-pending { border: 1.5px dashed var(--line); }
@@ -353,3 +356,12 @@ span.cell-missing { background: var(--critical-bg); border: 1.5px solid var(--cr
 .search-description { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .search-status { margin: 6px 0 0; font-size: 12px; color: var(--muted); min-height: 1em; }
 .legend-state { color: var(--muted); font-size: 12px; }
+
+/* A source without images (Polymarket): no poster column. */
+.no-images .list-poster, .no-images .race-poster { display: none; }
+.no-images .list li { grid-template-columns: 1.6em minmax(0, 1fr) auto; }
+.no-images .ranking-card { grid-template-columns: minmax(0, 1fr) auto; }
+.no-images .race-bar { grid-template-columns: minmax(0, 240px) 1fr; }
+@media (max-width: 640px) {
+  .no-images .race-bar { grid-template-columns: minmax(0, 140px) 1fr; }
+}

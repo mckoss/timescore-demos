@@ -7,6 +7,7 @@ import os
 import sys
 import tempfile
 import unittest
+import unittest.mock
 
 sys.dont_write_bytecode = True
 ROOT = os.path.join(os.path.dirname(__file__), '..')
@@ -16,6 +17,7 @@ sys.path.insert(0, os.path.join(ROOT, 'build'))
 import build  # noqa: E402
 import check_version  # noqa: E402
 import imdb  # noqa: E402
+import polymarket  # noqa: E402
 import wikipages  # noqa: E402
 import wikitopics  # noqa: E402
 import wikipedia  # noqa: E402
@@ -250,6 +252,52 @@ class WikipediaTest(unittest.TestCase):
 
     def test_credit_is_plain_text(self):
         self.assertEqual(wikipages.plain('<a href="//commons.wikimedia.org/wiki/User:X">X &amp; Y</a>\n'), 'X & Y')
+
+
+class PolymarketTest(unittest.TestCase):
+    def market(self, volume, event_id, event_volume, slug='e', title='Event'):
+        return {'volume24hr': volume, 'events': [{'id': event_id, 'slug': slug, 'title': title,
+                                                  'volume24hr': event_volume}]}
+
+    def test_events_use_their_own_total(self):
+        # An election's two candidate markets: the event's own total covers both (and any not seen).
+        events = polymarket.events_of([self.market(100, 1, 500, 'pres', 'President'),
+                                       self.market(50, 1, 500, 'pres', 'President')])
+        self.assertEqual(events, {'1': (500.0, 'pres', 'President')})
+
+    def test_events_fall_back_to_their_markets(self):
+        events = polymarket.events_of([self.market('120.5', 2, None, 'game'), self.market(30, 2, 0, 'game')])
+        self.assertEqual(events['2'][0], 150.5)
+
+    def test_top_events(self):
+        events = {'1': (10.4, 'a', 'A'), '2': (500.0, 'b', 'B'), '3': (0.2, 'c', 'C')}
+        self.assertEqual(polymarket.top_events(events), [('2', 500, 'b', 'B'), ('1', 10, 'a', 'A')])
+        self.assertEqual(len(polymarket.top_events({str(n): (n + 1.0, 's', 't') for n in range(400)})),
+                         polymarket.TOP)
+
+    def test_the_day_is_the_middle_of_the_window(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            now = datetime.datetime(2026, 11, 15, 9, 41, tzinfo=datetime.timezone.utc)
+            with unittest.mock.patch.object(polymarket, 'busiest_markets',
+                                            return_value=[self.market(5, 7, 99, 'x-y', 'X vs. Y')]):
+                self.assertTrue(polymarket.collect(now, tmp))
+                self.assertFalse(polymarket.collect(now, tmp))   # already collected
+            with open(os.path.join(tmp, '2026-11-14.tsv'), encoding='utf-8') as f:
+                self.assertEqual(f.read().splitlines()[1:], ['event_id\tdollars\tslug\ttitle', '7\t99\tx-y\tX vs. Y'])
+
+    def test_build_reads_the_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            os.makedirs(os.path.join(tmp, 'data', 'polymarket'))
+            with open(os.path.join(tmp, 'data', 'polymarket', '2026-11-14.tsv'), 'w', encoding='utf-8') as f:
+                f.write('# comment\nevent_id\tdollars\tslug\ttitle\n7\t99\tx-y\tX vs. Y\n')
+            cwd = os.getcwd()
+            os.chdir(tmp)
+            try:
+                days = build.read_days('polymarket')
+            finally:
+                os.chdir(cwd)
+        self.assertEqual(days[0][1], {'polymarket:7': (99.0, 'X vs. Y')})
+        self.assertEqual(build.SLUGS['polymarket:7'], 'x-y')
 
 
 class VersionTest(unittest.TestCase):

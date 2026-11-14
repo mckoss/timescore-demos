@@ -88,6 +88,7 @@ function showSources(sources) {
 function renderSource(id, source) {
   const section = document.getElementById('source-template').content.firstElementChild.cloneNode(true);
   section.querySelector('[data-name]').textContent = source.name;
+  section.classList.toggle('no-images', source.images === false);   // Polymarket: text only
   section.querySelector('[data-about]').textContent = source.about;
   const range = section.querySelector('[data-range]');
   if (!source.collected) {
@@ -265,7 +266,7 @@ function renderRanking(source, history) {
       for (const [key, c] of cards) {
         if (c.rank === OFF_LIST) continue;
         c.value = from.get(key) + (c.target - from.get(key)) * eased;
-        c.meta.textContent = `${formatScore(c.value)} · ${movement(c.previous, c.rank + 1)}`;
+        c.meta.textContent = `${formatScore(c.value, source.prefix)} · ${movement(c.previous, c.rank + 1)}`;
       }
       if (t < 1) tween = requestAnimationFrame(step);
       else board.classList.remove('moving');
@@ -274,7 +275,7 @@ function renderRanking(source, history) {
 
     spoken.replaceChildren(...items.map((item) => {
       const li = document.createElement('li');
-      li.append(`${source.items[item.key].title}, ${formatScore(item.score)} `, history.toggle(item.key));
+      li.append(`${source.items[item.key].title}, ${formatScore(item.score, source.prefix)} `, history.toggle(item.key));
       return li;
     }));
   }
@@ -482,7 +483,7 @@ function renderHistory(figure, source, id) {
       item.append(remove);
       return item;
     }));
-    drawHistory(plot, lines, source.start, days);
+    drawHistory(plot, lines, source.start, days, source.prefix);
     drawn = lines;
   }
   // Redraw at the new width when the window is resized.
@@ -492,7 +493,7 @@ function renderHistory(figure, source, id) {
     const width = plot.clientWidth;
     if (drawn && !figure.hidden && width && Math.abs(width - lastWidth) > 4) {
       lastWidth = width;
-      drawHistory(plot, drawn, source.start, days);
+      drawHistory(plot, drawn, source.start, days, source.prefix);
     }
   }).observe(plot);
 
@@ -514,7 +515,7 @@ function renderHistory(figure, source, id) {
 
 // The history chart: one line per item, a date axis, a score axis from zero,
 // and a crosshair that reads out every line's score on the day under it.
-function drawHistory(plot, lines, start, days) {
+function drawHistory(plot, lines, start, days, prefix = '') {
   if (!lines.length) { plot.replaceChildren(); return; }
   // Drawn at the panel's own width, so the text stays readable on a phone.
   const width = Math.max(280, Math.round(plot.clientWidth || 1000));
@@ -532,7 +533,7 @@ function drawHistory(plot, lines, start, days) {
       class: v === 0 ? 'history-axis' : 'history-grid' }));
     const label = svgElement('text', { x: pad.left - 8, y: y(v), class: 'history-tick', 'text-anchor': 'end',
       'dominant-baseline': 'central' });
-    label.textContent = formatCompact(v);
+    label.textContent = v ? prefix + formatCompact(v) : '0';
     chart.append(label);
   }
   // A date under the first day of each month (every few months for a long history).
@@ -550,6 +551,8 @@ function drawHistory(plot, lines, start, days) {
     let path = '';
     line.daily.forEach((v, d) => { path += `${d ? 'L' : 'M'}${x(d).toFixed(1)} ${y(v).toFixed(1)}`; });
     chart.append(svgElement('path', { d: path, class: 'history-line', style: `stroke: var(--series-${line.slot + 1})` }));
+    // With one day of data a line has no length: show the day as a dot.
+    if (days === 1) chart.append(svgElement('circle', { cx: x(0), cy: y(line.daily[0]), r: 5, style: `fill: var(--series-${line.slot + 1})` }));
   }
   const cross = svgElement('line', { y1: pad.top, y2: height - pad.bottom, class: 'history-cross', visibility: 'hidden' });
   const dots = lines.map((line) => svgElement('circle', { r: 4.5, class: 'history-dot',
@@ -585,7 +588,7 @@ function drawHistory(plot, lines, start, days) {
       swatch.style.background = `var(--series-${line.slot + 1})`;
       const value = document.createElement('span');
       value.className = 'history-tip-value';
-      value.textContent = formatScore(line.daily[d]);
+      value.textContent = formatScore(line.daily[d], prefix);
       row.append(swatch, line.title, value);
       tip.append(row);
     }
@@ -881,7 +884,7 @@ function renderRace(figure, source) {
       b.bar.style.transform = `translateY(calc(${b.y.toFixed(3)} * var(--race-row)))`;
       b.bar.classList.toggle('hidden', !shown);
       b.fill.style.width = `${(value / max) * 100}%`;
-      b.value.textContent = formatScore(value);
+      b.value.textContent = formatScore(value, source.prefix);
     });
     snap = false;
   }
@@ -903,8 +906,8 @@ function renderRace(figure, source) {
 // — Formatting ——————————————————————————————————————————————————————————
 
 function addDays(date, n) { return new Date(Date.parse(date) + n * DAY_MS).toISOString().slice(0, 10); }
-function formatScore(value) {
-  return value >= 100 ? Math.round(value).toLocaleString('en-US') : value.toFixed(1);
+function formatScore(value, prefix = '') {
+  return prefix + (value >= 100 ? Math.round(value).toLocaleString('en-US') : value.toFixed(1));
 }
 
 // A link to the update log, after the freshness line.
