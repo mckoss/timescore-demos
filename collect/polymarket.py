@@ -13,6 +13,9 @@ that window: the daily 09:41 UTC run collects yesterday. A day that's
 already collected is skipped, and one that's missed is gone (Polymarket
 doesn't publish daily history).
 
+It also looks up each event's tags once (Sports, Crypto, Politics…), keeping
+the ones that map to the site's topics (GROUPS) in data/polymarket-tags.tsv.
+
 Market data from Polymarket; this site isn't affiliated with Polymarket.
 """
 
@@ -29,6 +32,9 @@ import urllib.request
 sys.dont_write_bytecode = True
 
 MARKETS = 'https://gamma-api.polymarket.com/markets'
+EVENT_TAGS = 'https://gamma-api.polymarket.com/events/{id}/tags'
+TAGS = 'data/polymarket-tags.tsv'
+TAG_LOOKUPS = 1000    # events tagged per run, at most; the rest wait for the next run
 PAGE = 100            # the API's page size
 OPEN_PAGES = 10       # the 1,000 busiest open markets
 CLOSED_PAGES = 5      # and the 500 busiest closed ones
@@ -143,11 +149,99 @@ def collect(now, out):
     return True
 
 
+# — Topics ————————————————————————————————————————————————————————————————
+
+# The topics the site shows, from Polymarket's tags (an event can be in
+# several). Esports events are also tagged Sports, so Sports leaves them out.
+GROUPS = [
+    ('sports', 'Sports'),
+    ('esports', 'Esports'),
+    ('crypto', 'Crypto'),
+    ('politics', 'Politics'),
+    ('world', 'World'),
+    ('economy', 'Economy'),
+    ('tech', 'Tech & science'),
+    ('culture', 'Culture'),
+]
+TAG_GROUPS = {
+    'sports': {'sports'},
+    'esports': {'esports'},
+    'crypto': {'crypto', 'crypto-prices', 'bitcoin', 'ethereum', 'solana', 'xrp'},
+    'politics': {'politics', 'elections', 'us-politics', 'trump', 'us-presidential-election',
+                 'global-elections', 'world-elections', 'congress', 'midterms'},
+    'world': {'geopolitics', 'world', 'middle-east', 'ukraine', 'russia', 'iran', 'israel', 'china',
+              'diplomacy-ceasefire', 'gaza'},
+    'economy': {'economy', 'finance', 'fed', 'fed-rates', 'business', 'stocks', 'economic-policy',
+                'inflation', 'earnings', 'commodities'},
+    'tech': {'tech', 'ai', 'science', 'space', 'openai', 'big-tech'},
+    'culture': {'pop-culture', 'culture', 'movies', 'music', 'celebrities', 'awards', 'mentions',
+                'tweet-markets', 'entertainment'},
+}
+KEPT_TAGS = set().union(*TAG_GROUPS.values())
+
+
+def groups_of(tags):
+    """The ids of the GROUPS an event with these tag slugs is in."""
+    tags = set(tags or ())
+    groups = {group for group, wanted in TAG_GROUPS.items() if tags & wanted}
+    if 'esports' in groups:
+        groups.discard('sports')
+    return groups
+
+
+def load_tags(path=TAGS):
+    """{event id: [tag slug, …]} from the cache."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding='utf-8') as f:
+        rows = [line.rstrip('\n').split('\t') for line in f.read().splitlines()[1:] if line]
+    return {row[0]: [tag for tag in row[1].split(';') if tag] for row in rows}
+
+
+def save_tags(tags, path=TAGS):
+    os.makedirs(os.path.dirname(path) or '.', exist_ok=True)
+    with open(path, 'w', encoding='utf-8', newline='') as f:
+        f.write('event_id\ttags\n')
+        for ident in sorted(tags, key=lambda i: (len(i), i)):
+            f.write(f'{ident}\t{";".join(sorted(tags[ident]))}\n')
+
+
+def tag_events(out, path=TAGS, limit=TAG_LOOKUPS):
+    """Looks up the tags of collected events not in the cache yet (up to limit)."""
+    tags = load_tags(path)
+    missing = []
+    for name in sorted(os.listdir(out), reverse=True) if os.path.isdir(out) else []:
+        if not name.endswith('.tsv'):
+            continue
+        with open(os.path.join(out, name), encoding='utf-8') as f:
+            for line in f.read().splitlines()[2:]:
+                ident = line.split('\t', 1)[0]
+                if ident and ident not in tags and ident not in missing:
+                    missing.append(ident)
+    looked_up = 0
+    for ident in missing[:limit]:
+        try:
+            found = get_json(EVENT_TAGS.format(id=urllib.parse.quote(ident))) or []
+        except urllib.error.HTTPError as error:
+            if error.code != 404:
+                raise
+            found = []
+        tags[ident] = sorted({t.get('slug') for t in found if t.get('slug') in KEPT_TAGS})
+        looked_up += 1
+        time.sleep(PAUSE / 2)
+    if looked_up:
+        save_tags(tags, path)
+    print(f'Looked up the tags of {looked_up} event(s)'
+          + (f'; {len(missing) - looked_up} wait for the next run.' if len(missing) > looked_up else '.'))
+    return tags
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split('\n\n')[0])
     parser.add_argument('--out', default='data/polymarket')
     args = parser.parse_args()
     collect(datetime.datetime.now(datetime.timezone.utc), args.out)
+    tag_events(args.out)
 
 
 if __name__ == '__main__':

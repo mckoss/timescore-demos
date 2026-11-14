@@ -7,6 +7,18 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.13.0] - 2026-11-14
+### Added
+- Topics on the Polymarket tab: Sports, Esports, Crypto, Politics, World,
+  Economy, Tech & science and Culture, from Polymarket's own tags, each with
+  its top events at every half-life. The collector looks up each new
+  event's tags once (one small request per event) and keeps the ones that
+  map to a topic in `data/polymarket-tags.tsv`.
+
+### Changed
+- The build's topic lists work for any source with tags, not just
+  Wikipedia.
+
 ## [1.12.0] - 2026-11-14
 ### Added
 - A Polymarket volume tab: Polymarket events (an election, a game, a

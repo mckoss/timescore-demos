@@ -7,9 +7,9 @@ month and a year), and writes site/data/movies.json with:
 - the top items at each half-life as of the latest day, with how far each
   moved since the day before, and the weekly trending list (each item's
   Week score divided by its Month score);
-- for Wikipedia, the same top lists for each topic (People, Politics,
-  Sports and so on: wikitopics.GROUPS), ranked among every article in the
-  data that has been tagged with its topics;
+- for Wikipedia and Polymarket, the same top lists for each topic
+  (wikitopics.GROUPS: People, Politics, Sports…; polymarket.GROUPS: Sports,
+  Crypto, Politics…), ranked among every item tagged with its topics;
 - for each item shown: its title, image, link and (for Wikipedia) its short
   description and the image's author and license;
 - each shown item's daily values (series), for the page to score at any
@@ -44,6 +44,7 @@ from timescore import EMPTY, add_event, score_at  # noqa: E402
 import posters  # noqa: E402
 import wikipages  # noqa: E402
 import wikitopics  # noqa: E402
+import polymarket  # noqa: E402
 
 HALF_LIVES = [('Day', 1), ('Week', 7), ('Month', 30.44), ('Year', 365.25)]
 LIST_SIZE = 23     # each list: the 20 the page shows, and 3 fading out below
@@ -212,11 +213,12 @@ def article(key, title, row):
     return out
 
 
-def topic_lists(pools, groups):
-    """{group: {half-life: list}} for each topic group with enough articles,
-    from the pools build_source filled and each key's set of groups."""
+def topic_lists(pools, groups, group_defs=None):
+    """{group: {half-life: list}} for each topic group (group_defs, Wikipedia's
+    by default) with enough items, from the pools build_source filled and each
+    key's set of groups."""
     out = {}
-    for group, _ in wikitopics.GROUPS:
+    for group, _ in group_defs or wikitopics.GROUPS:
         lists = {}
         for label, (now, before) in pools.items():
             mine = [(key, score) for key, score in now if group in groups.get(key, ())][:SHOWN]
@@ -324,21 +326,29 @@ def main():
         'sources': {},
     }
     built = {}
-    pools = {}
+    pools = {'wikipedia': {}, 'polymarket': {}}   # the sources with topics
     for source in SOURCES:
         days = read_days(source)
         if days:
-            built[source] = (days, *build_source(source, days, pools if source == 'wikipedia' else None))
+            built[source] = (days, *build_source(source, days, pools.get(source)))
 
     keys = set()
     for days, start, titles, lists, racers in built.values():
         keys |= racers | {item['key'] for items in lists.values() for item in items}
     found = posters.ensure(sorted(k for k in keys if k.split(':', 1)[0] in ('imdb', 'tmdb')))
     # Tag the articles that could make a topic's list, most-read first.
-    rankings = [[key for key, _ in now] for now, _ in pools.values()]
+    rankings = [[key for key, _ in now] for now, _ in pools['wikipedia'].values()]
     tagged = wikitopics.ensure(rankings, SHOWN) if rankings else {}
-    topics = topic_lists(pools, {key: wikitopics.groups_of(row) for key, row in tagged.items()})
-    keys |= {item['key'] for group in topics.values() for items in group.values() for item in items[:SHOWN]}
+    topics = {
+        'wikipedia': (wikitopics.GROUPS, topic_lists(
+            pools['wikipedia'], {key: wikitopics.groups_of(row) for key, row in tagged.items()})),
+        # Polymarket's tags are looked up by its collector (collect/polymarket.py).
+        'polymarket': (polymarket.GROUPS, topic_lists(
+            pools['polymarket'], {f'polymarket:{ident}': polymarket.groups_of(tags)
+                                  for ident, tags in polymarket.load_tags().items()}, polymarket.GROUPS)),
+    }
+    for _, lists in topics.values():
+        keys |= {item['key'] for group in lists.values() for items in group.values() for item in items[:SHOWN]}
     pages = wikipages.ensure(sorted(k for k in keys if k.startswith('wikipedia:')))
 
     def describe(key, titles):
@@ -360,11 +370,12 @@ def main():
         if source in built:
             days, start, titles, lists, racers = built[source]
             shown = racers | {item['key'] for items in lists.values() for item in items[:SHOWN]}
-            if source == 'wikipedia' and topics:
+            group_defs, source_topics = topics.get(source, ((), {}))
+            if source_topics:
                 entry['topics'] = [{'id': group, 'label': label}
-                                   for group, label in wikitopics.GROUPS if group in topics]
-                entry['topicLists'] = topics
-                shown |= {item['key'] for group in topics.values() for items in group.values()
+                                   for group, label in group_defs if group in source_topics]
+                entry['topicLists'] = source_topics
+                shown |= {item['key'] for group in source_topics.values() for items in group.values()
                           for item in items[:SHOWN]}
             entry.update({
                 'collected': len(days),
