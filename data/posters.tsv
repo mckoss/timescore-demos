@@ -2,6 +2,7 @@ key	tmdb_id	title	year	poster_path	checked
 imdb:tt0372784	272	Batman Begins	2005	/sPX89Td70IDDjVr85jdSBb4rWGr.jpg	2026-11-07
 imdb:tt0434409	752	V for Vendetta	2006	/1avD1JeaRiJX5M4ahPdZPypGoGN.jpg	2026-11-07
 imdb:tt0816692	157336	Interstellar	2014	/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg	2026-11-06
+imdb:tt11995650	1286656	I Play Rocky	2026	/xE5tY3lppZUyG7WKKThsuYHuAHr.jpg	2026-11-17
 imdb:tt12042730	687163	Project Hail Mary	2026	/iOb2fjXLbpJgyQXe46n1WtGCnaa.jpg	2026-11-06
 imdb:tt13611778	1294189	The Mongoose	2026	/eSS5mvSG84UUuvtbHel5Yu3Wik4.jpg	2026-11-07
 imdb:tt14173636	950028	The Invite	2026	/b7Dr8Chzse8VagexAporUu2RtLx.jpg	2026-11-06
@@ -31,11 +32,13 @@ imdb:tt34890576	1400940	Clayface	2026	/9l1NuFjel2j89hiuiJbsxfblqjy.jpg	2026-11-0
 imdb:tt35511966	1422041	LA BOLA NEGRA	2026	/jT5SR5qc9KvVg7HUEmjMWEUYMce.jpg	2026-11-07
 imdb:tt35538033	1423191	Resident Evil	2026	/gAgWJhUSQWCgtKR8170nMkYlBda.jpg	2026-11-06
 imdb:tt35856037	1437396	Your Mother Your Mother Your Mother	2026	/4KaPZSKnInnArErTTgy9Oy14leR.jpg	2026-11-06
+imdb:tt35866986	1437511	How to Rob a Bank	2026	/ifYDZkr2qkHFz87TNVvlxajOxl5.jpg	2026-11-17
 imdb:tt36267730	1574560	Last Man in Tower	2026	/8PHu0eeZABZCT0HrX79UoDAHivi.jpg	2026-11-08
 imdb:tt36586020	1400837	Other Mommy	2026	/fGRNCssTRrhYZxNzykGGCoMsAVq.jpg	2026-11-12
 imdb:tt37281055	1514026	Buddy	2026	/1BdZbNvl1SfrrX8J9X5tQzN6Ivu.jpg	2026-11-07
 imdb:tt37287335	1339713	Obsession	2026	/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg	2026-11-06
 imdb:tt38192494	1402181	Scene	2026	/1vjVJKpdT6gha7cpkmDJODpk8mU.jpg	2026-11-10
+imdb:tt38213251	1543469	Heartland	2026	/zhxlzxBlO1sWB1rPn7RmAoeQ2na.jpg	2026-11-17
 imdb:tt38651971	1576389	Gondhal	2025	/hUIXIenoIPPhEUFcfR5PBSLX9oZ.jpg	2026-11-11
 imdb:tt38773219	1567605	Ebenezer	2026	/6H2N59jJW1hZEzn2ZdrMvJw5vNI.jpg	2026-11-14
 imdb:tt38793125	1571955	Collision Course	2026	/s2eAK0uiODjlNUSIiOBwdp3at2u.jpg	2026-11-07
@@ -80,6 +83,7 @@ tmdb:1288445	1288445	Mutiny	2026	/pu2VxGlpGwffOx292w18b1tv96j.jpg	2026-11-04
 tmdb:1290418	1290418	The Cycle	2026	/n5gSNf55KWfDc9hqP4H1KCCSutE.jpg	2026-11-07
 tmdb:1291595	1291595	Insidious: Out of the Further	2026	/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg	2026-11-04
 tmdb:1294189	1294189	The Mongoose	2026	/eSS5mvSG84UUuvtbHel5Yu3Wik4.jpg	2026-11-04
+tmdb:1300968	1300968	The Hunger Games: Sunrise on the Reaping	2026	/j1MNyNNgNQL6f27cb3m3uKaPKd6.jpg	2026-11-17
 tmdb:1315772	1315772	Minions & Monsters	2026	/4LwvU9SZc8QQzW1X1FAPhNbXnEU.jpg	2026-11-04
 tmdb:1323244	1323244	Rage of Stars	2026	/oLld47ZT1I3iecM3OWhIphohQUJ.jpg	2026-11-04
 tmdb:1339713	1339713	Obsession	2026	/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg	2026-11-04
