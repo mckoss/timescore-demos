@@ -86,6 +86,7 @@ wikipedia:2016_United_States_House_of_Representatives_elections	0	History_and_So
 wikipedia:2016_United_States_Senate_elections	0	History_and_Society.Politics_and_government:0.94;Geography.Regions.Americas.North_America:0.87;Culture.Biography.Biography*:0.66	2026-11-07
 wikipedia:2016_United_States_elections	0	History_and_Society.Politics_and_government:0.91;Geography.Regions.Americas.North_America:0.57	2026-11-07
 wikipedia:2016_United_States_presidential_election	0	History_and_Society.Politics_and_government:0.85;Geography.Regions.Americas.North_America:0.79	2026-11-07
+wikipedia:2018_Australian_ball-tampering_scandal	0	Geography.Regions.Oceania:1.00;Culture.Sports:0.99	2026-11-19
 wikipedia:2018_Brazilian_general_election	0	Geography.Regions.Americas.South_America:0.97;History_and_Society.Politics_and_government:0.84	2026-11-07
 wikipedia:2018_FIFA_World_Cup	0	Culture.Sports:0.98;Geography.Regions.Asia.Asia*:0.55;Geography.Regions.Europe.Europe*:0.51	2026-11-07
 wikipedia:2018_Horizon_Air_Bombardier_Q400_incident	0	STEM.STEM*:0.94;History_and_Society.Transportation:0.94;STEM.Engineering:0.93;Geography.Regions.Americas.North_America:0.65	2026-11-07
@@ -241,6 +242,8 @@ wikipedia:2025–26_UEFA_Europa_League	0	Culture.Sports:1.00	2026-11-07
 wikipedia:2026	0		2026-11-07
 wikipedia:2026_AFC_Women's_Asian_Cup	0	Culture.Sports:0.99;Culture.Biography.Women:0.91;Culture.Biography.Biography*:0.55	2026-11-07
 wikipedia:2026_ASEAN_Championship	0	Culture.Sports:0.98;Geography.Regions.Asia.Southeast_Asia:0.92;Geography.Regions.Asia.Asia*:0.72	2026-11-07
+wikipedia:2026_ATP_Finals	0	Culture.Sports:1.00	2026-11-19
+wikipedia:2026_ATP_Finals_–_Singles	0	Culture.Sports:1.00	2026-11-19
 wikipedia:2026_AVC_Men's_Volleyball_Continental_Championship	0	Culture.Sports:1.00	2026-11-07
 wikipedia:2026_AVC_Women's_Volleyball_Continental_Championship	0	Culture.Sports:1.00;Geography.Regions.Asia.Asia*:0.59	2026-11-07
 wikipedia:2026_Adamuz_rail_disaster	0	History_and_Society.Transportation:1.00;Geography.Regions.Europe.Europe*:0.81;Geography.Regions.Europe.Southern_Europe:0.65	2026-11-07
@@ -319,6 +322,7 @@ wikipedia:2026_Grand_Slam_of_Darts	0	Culture.Sports:0.99	2026-11-15
 wikipedia:2026_Greenacres_Learjet_60_crash	0	STEM.Engineering:0.98;STEM.STEM*:0.98;History_and_Society.Transportation:0.98;Geography.Regions.Americas.North_America:0.62;History_and_Society.Politics_and_government:0.62	2026-11-07
 wikipedia:2026_Guam_gubernatorial_election	0	History_and_Society.Politics_and_government:0.93	2026-11-07
 wikipedia:2026_Holborn_and_St_Pancras_by-election	0	History_and_Society.Politics_and_government:1.00;Geography.Regions.Europe.Europe*:0.73;Geography.Regions.Europe.Northern_Europe:0.73	2026-11-07
+wikipedia:2026_Hong_Kong_Open_(badminton)	0	Culture.Sports:0.97;Geography.Regions.Asia.Asia*:0.65	2026-11-19
 wikipedia:2026_Hong_Kong_Sixes	0	Culture.Sports:1.00;Geography.Regions.Asia.Asia*:0.65;Geography.Regions.Asia.East_Asia:0.51	2026-11-07
 wikipedia:2026_Hungarian_parliamentary_election	0	History_and_Society.Politics_and_government:0.89;Geography.Regions.Europe.Eastern_Europe:0.82;Geography.Regions.Europe.Europe*:0.80	2026-11-07
 wikipedia:2026_IIHF_World_Championship	0	Culture.Sports:1.00	2026-11-07
@@ -481,6 +485,7 @@ wikipedia:2026_elections_in_India	0	Geography.Regions.Asia.South_Asia:0.94;Geogr
 wikipedia:2026_in_film	0	Culture.Media.Films:0.97;Culture.Media.Media*:0.96	2026-11-07
 wikipedia:2026_national_electoral_calendar	0	History_and_Society.Politics_and_government:0.99;History_and_Society.History:0.79	2026-11-07
 wikipedia:2026–27_CONCACAF_Nations_League	0	Culture.Sports:1.00	2026-11-18
+wikipedia:2026–27_CONCACAF_Nations_League_A	0	Culture.Sports:1.00	2026-11-19
 wikipedia:2026–27_EFL_Cup	0	Culture.Sports:1.00;Geography.Regions.Europe.Northern_Europe:0.62;Geography.Regions.Europe.Europe*:0.51	2026-11-07
 wikipedia:2026–27_Premier_League	0	Culture.Sports:0.99;Geography.Regions.Europe.Europe*:0.70;Geography.Regions.Europe.Northern_Europe:0.64	2026-11-07
 wikipedia:2026–27_UEFA_Champions_League	0	Culture.Sports:1.00;Geography.Regions.Europe.Europe*:0.55	2026-11-07
@@ -703,9 +708,11 @@ wikipedia:Akuma_(Street_Fighter)	0	Culture.Media.Video_games:0.99;Culture.Intern
 wikipedia:Al-Nassr_FC	0	Culture.Sports:0.99	2026-11-07
 wikipedia:Al-Qaeda	0		2026-11-07
 wikipedia:Al_Capone	1	Geography.Regions.Americas.North_America:0.86;Culture.Biography.Biography*:0.79;History_and_Society.Politics_and_government:0.77	2026-11-18
+wikipedia:Al_Davis	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.89;Geography.Regions.Americas.North_America:0.83	2026-11-19
 wikipedia:Al_Green_(politician)	1	History_and_Society.Politics_and_government:0.99;Culture.Biography.Biography*:0.98;Geography.Regions.Americas.North_America:0.96	2026-11-08
 wikipedia:Al_Michaels	1	Culture.Sports:0.98	2026-11-07
 wikipedia:Al_Pacino	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.96	2026-11-07
+wikipedia:Al_Sharpton	1	Geography.Regions.Americas.North_America:0.83;Culture.Biography.Biography*:0.59;History_and_Society.Politics_and_government:0.52	2026-11-19
 wikipedia:Alan_Cumming	1	Culture.Media.Media*:0.87;Culture.Biography.Biography*:0.79;Culture.Performing_arts:0.72	2026-11-07
 wikipedia:Alan_Greenspan	1	History_and_Society.Business_and_economics:0.77;Geography.Regions.Americas.North_America:0.69;Culture.Biography.Biography*:0.53	2026-11-07
 wikipedia:Alan_Jones_(racing_driver)	1	Culture.Sports:0.99	2026-11-07
@@ -895,6 +902,7 @@ wikipedia:Andrea_Bocelli	1	Culture.Media.Media*:0.86;Culture.Media.Music:0.65	20
 wikipedia:Andrea_Mitchell	1	Culture.Biography.Biography*:0.92;Culture.Media.Media*:0.78;Geography.Regions.Americas.North_America:0.62	2026-11-07
 wikipedia:Andrea_Yates	1	Culture.Biography.Biography*:0.90;Geography.Regions.Americas.North_America:0.62	2026-11-07
 wikipedia:Andreas_Almgren	1	Culture.Sports:0.99	2026-11-07
+wikipedia:Andrej_Stojaković	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.93	2026-11-19
 wikipedia:Andrew_Cuomo	1	Geography.Regions.Americas.North_America:0.94;Culture.Biography.Biography*:0.70	2026-11-07
 wikipedia:Andrew_Garfield	1	Culture.Media.Media*:0.95;Culture.Media.Films:0.92	2026-11-07
 wikipedia:Andrew_Keegan	1	Culture.Biography.Biography*:0.83;Culture.Media.Media*:0.77;Culture.Media.Films:0.62	2026-11-07
@@ -1064,6 +1072,7 @@ wikipedia:Armistice_Day	0	History_and_Society.Military_and_warfare:0.98;Geograph
 wikipedia:Armistice_of_11_November_1918	0	History_and_Society.Military_and_warfare:0.94	2026-11-12
 wikipedia:Arne_Slot	1	Culture.Sports:1.00;Geography.Regions.Europe.Europe*:0.66;Culture.Biography.Biography*:0.61	2026-11-09
 wikipedia:Arnold_Schwarzenegger	1	Culture.Biography.Biography*:0.67;Geography.Regions.Americas.North_America:0.59	2026-11-07
+wikipedia:Arrival_(film)	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.98	2026-11-19
 wikipedia:Arsenal_F.C.	0	Culture.Sports:0.99	2026-11-07
 wikipedia:Arslanbek_Makhmudov	1	Culture.Biography.Biography*:0.97;Culture.Sports:0.92	2026-11-07
 wikipedia:Artemis	0	Geography.Regions.Europe.Southern_Europe:0.89;Geography.Regions.Europe.Europe*:0.87;History_and_Society.History:0.86;Culture.Philosophy_and_religion:0.72;Culture.Literature:0.52	2026-11-07
@@ -1099,6 +1108,8 @@ wikipedia:Ashley_St._Clair	1	History_and_Society.Politics_and_government:0.84	20
 wikipedia:Ashley_Young	1	Culture.Sports:1.00;Geography.Regions.Europe.Northern_Europe:0.92;Geography.Regions.Europe.Europe*:0.86;Culture.Biography.Biography*:0.82	2026-11-11
 wikipedia:Ashlyn_Harris	1	Culture.Biography.Biography*:1.00;Culture.Sports:1.00;Culture.Biography.Women:0.99;Geography.Regions.Americas.North_America:0.70	2026-11-07
 wikipedia:Ashok_Kumar_Mahapatra	1	Culture.Biography.Biography*:0.99;Geography.Regions.Asia.South_Asia:0.53;Geography.Regions.Asia.Asia*:0.53	2026-11-07
+wikipedia:Ashton_Kutcher	1	Culture.Media.Media*:0.88;Culture.Media.Films:0.80;Culture.Biography.Biography*:0.78;Geography.Regions.Americas.North_America:0.69	2026-11-19
+wikipedia:Asia-Pacific_Economic_Cooperation	0	History_and_Society.Politics_and_government:0.64	2026-11-19
 wikipedia:Asia_Argento	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.65;Culture.Biography.Biography*:0.52;Culture.Biography.Women:0.51	2026-11-07
 wikipedia:Asia_Cup	0	Culture.Sports:0.99;Geography.Regions.Asia.Asia*:0.84	2026-11-07
 wikipedia:Asia_Kate_Dillon	1	History_and_Society.Society:1.00;Culture.Biography.Biography*:0.89;Culture.Media.Media*:0.61;Geography.Regions.Americas.North_America:0.59;Culture.Media.Films:0.50	2026-11-07
@@ -1161,6 +1172,7 @@ wikipedia:Avril_Lavigne	1	Culture.Media.Media*:0.93;Culture.Media.Music:0.83	202
 wikipedia:Awarapan	0	Geography.Regions.Asia.South_Asia:0.99;Geography.Regions.Asia.Asia*:0.99;Culture.Media.Media*:0.99;Culture.Media.Films:0.98	2026-11-07
 wikipedia:Awarapan_2	0	Culture.Media.Media*:0.98;Culture.Media.Films:0.94;Geography.Regions.Asia.Asia*:0.86;Geography.Regions.Asia.South_Asia:0.79	2026-11-07
 wikipedia:Awkwafina	1	Culture.Media.Media*:0.94;Culture.Biography.Biography*:0.92;Culture.Biography.Women:0.86;Culture.Media.Films:0.75;Geography.Regions.Americas.North_America:0.61	2026-11-07
+wikipedia:Awá_(Brazil)	0	Geography.Regions.Americas.South_America:0.99	2026-11-19
 wikipedia:Ayan_Broomfield	1	Culture.Sports:1.00;Geography.Regions.Americas.North_America:0.68;Culture.Biography.Biography*:0.54	2026-11-07
 wikipedia:Ayanna_Pressley	1	Culture.Biography.Biography*:0.97;History_and_Society.Politics_and_government:0.97;Geography.Regions.Americas.North_America:0.94	2026-11-13
 wikipedia:Ayatollah	0	Culture.Philosophy_and_religion:0.95	2026-11-07
@@ -1362,6 +1374,7 @@ wikipedia:Bill_Owens_(songwriter)	1	Culture.Media.Music:0.99;Culture.Media.Media
 wikipedia:Bill_Pullman	1	Culture.Biography.Biography*:0.85;Culture.Media.Media*:0.66;Culture.Media.Films:0.65;Geography.Regions.Americas.North_America:0.55	2026-11-07
 wikipedia:Bill_Pulte	1	Geography.Regions.Americas.North_America:0.97;Culture.Biography.Biography*:0.96	2026-11-07
 wikipedia:Bill_Skarsgård	1	Culture.Media.Media*:0.84;Culture.Biography.Biography*:0.77;Culture.Media.Films:0.71;Geography.Regions.Europe.Europe*:0.60;Geography.Regions.Europe.Northern_Europe:0.52	2026-11-07
+wikipedia:Bill_Watts	1	Culture.Media.Television:1.00;Culture.Media.Entertainment:1.00;Culture.Media.Media*:0.99;Culture.Biography.Biography*:0.67	2026-11-19
 wikipedia:Bill_Wyman	1	Culture.Media.Media*:0.96;Culture.Media.Music:0.91	2026-11-07
 wikipedia:Billie_Eilish	1	Culture.Media.Media*:0.95;Culture.Media.Music:0.92;Culture.Biography.Biography*:0.52	2026-11-07
 wikipedia:Billie_Jean_King	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.82;Culture.Biography.Women:0.79	2026-11-18
@@ -1439,6 +1452,7 @@ wikipedia:Bokeh_(film)	0	Culture.Media.Media*:1.00;Culture.Media.Films:1.00	2026
 wikipedia:Bombardier_Aerospace	0	STEM.Engineering:0.99;History_and_Society.Transportation:0.99;STEM.STEM*:0.98;Geography.Regions.Americas.North_America:0.53	2026-11-07
 wikipedia:Bon_Appétit,_Your_Majesty	0	Geography.Regions.Asia.Asia*:0.98;Geography.Regions.Asia.East_Asia:0.97;Culture.Media.Media*:0.95;Culture.Media.Television:0.91	2026-11-07
 wikipedia:Bond_girl	0	Culture.Media.Films:1.00;Culture.Media.Media*:0.99;Culture.Literature:0.56	2026-11-18
+wikipedia:Bongbong_Marcos	1	Geography.Regions.Asia.Asia*:0.80;Geography.Regions.Asia.Southeast_Asia:0.69	2026-11-19
 wikipedia:Bonnie_Blue	1	Culture.Media.Media*:0.72;Culture.Biography.Biography*:0.61	2026-11-07
 wikipedia:Bonnie_Blue_(actress)	1	Culture.Media.Media*:0.72;Culture.Biography.Biography*:0.61	2026-11-07
 wikipedia:Bonnie_Tyler	1	Culture.Media.Media*:0.97;Culture.Media.Music:0.77;Geography.Regions.Europe.Europe*:0.55	2026-11-07
@@ -1573,6 +1587,7 @@ wikipedia:CFB_Wainwright	0	Geography.Regions.Americas.North_America:0.87;History
 wikipedia:CFB_Wainwright_fire	0	Geography.Regions.Americas.North_America:1.00	2026-11-07
 wikipedia:CJ_Carr	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.99	2026-11-07
 wikipedia:CM_Punk	1	Culture.Media.Entertainment:0.98;Culture.Media.Television:0.98;Culture.Media.Media*:0.97;Culture.Biography.Biography*:0.62	2026-11-07
+wikipedia:CONCACAF_Nations_League	0	Culture.Sports:0.99	2026-11-19
 wikipedia:CUDA	0	STEM.STEM*:0.98;STEM.Computing:0.92	2026-11-14
 wikipedia:Cade_Klubnik	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.97	2026-11-16
 wikipedia:Cage_the_Elephant	0	Culture.Media.Media*:0.95;Culture.Media.Music:0.92	2026-11-16
@@ -1598,6 +1613,7 @@ wikipedia:Calypso_(mythology)	0	Culture.Literature:0.64;Geography.Regions.Europe
 wikipedia:Cam_Booser	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.89;Geography.Regions.Americas.North_America:0.83	2026-11-07
 wikipedia:Cam_Schlittler	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.99;Geography.Regions.Americas.North_America:0.86	2026-11-07
 wikipedia:Cam_Skattebo	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.93	2026-11-07
+wikipedia:Cameron_Bancroft	1	Culture.Sports:1.00;Geography.Regions.Oceania:1.00;Culture.Biography.Biography*:0.89	2026-11-19
 wikipedia:Cameron_Boozer	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.96;Geography.Regions.Americas.North_America:0.53	2026-11-07
 wikipedia:Cameron_Boyce	1	Culture.Biography.Biography*:0.95;Culture.Media.Films:0.89;Culture.Media.Media*:0.85;Geography.Regions.Americas.North_America:0.65	2026-11-08
 wikipedia:Cameron_Diaz	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.97;Geography.Regions.Americas.North_America:0.64;Culture.Biography.Biography*:0.59;Culture.Biography.Women:0.52	2026-11-07
@@ -1650,6 +1666,7 @@ wikipedia:Carmelo_Anthony	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.9
 wikipedia:Carnaval_de_Luz	0	Culture.Media.Media*:0.95;Culture.Media.Music:0.89;Geography.Regions.Europe.Europe*:0.72;Geography.Regions.Europe.Northern_Europe:0.64	2026-11-14
 wikipedia:Carol_Burnett	1	Culture.Media.Media*:0.91;Culture.Biography.Biography*:0.71;Geography.Regions.Americas.North_America:0.59	2026-11-07
 wikipedia:Carolina_Hurricanes	0	Culture.Sports:0.99;Geography.Regions.Americas.North_America:0.55	2026-11-07
+wikipedia:Caroline_Cossey	1	History_and_Society.Society:0.99;Culture.Biography.Biography*:0.97;Culture.Biography.Women:0.79;Culture.Media.Media*:0.54	2026-11-19
 wikipedia:Caroline_Kennedy	1	Geography.Regions.Americas.North_America:0.79;Culture.Biography.Biography*:0.70	2026-11-07
 wikipedia:Carolyn_Bessette-Kennedy	1	Culture.Biography.Biography*:0.94;Geography.Regions.Americas.North_America:0.82;Culture.Biography.Women:0.59	2026-11-07
 wikipedia:Carolyn_Bessette_Kennedy	1	Culture.Biography.Biography*:0.94;Geography.Regions.Americas.North_America:0.82;Culture.Biography.Women:0.59	2026-11-07
@@ -1817,6 +1834,7 @@ wikipedia:Chris_Johnson_(running_back)	1	Culture.Sports:0.99;Culture.Biography.B
 wikipedia:Chris_Langham	1	Culture.Media.Media*:0.90;Culture.Media.Entertainment:0.67	2026-11-07
 wikipedia:Chris_Malachowsky	1	STEM.STEM*:0.86;STEM.Computing:0.74	2026-11-10
 wikipedia:Chris_Martin	1	Culture.Media.Media*:0.96;Culture.Media.Music:0.93;Culture.Biography.Biography*:0.64	2026-11-07
+wikipedia:Chris_McCandless	1	Geography.Regions.Americas.North_America:0.67	2026-11-19
 wikipedia:Chris_Murphy	1	History_and_Society.Politics_and_government:0.95;Geography.Regions.Americas.North_America:0.91;Culture.Biography.Biography*:0.89	2026-11-07
 wikipedia:Chris_Oladokun	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.95	2026-11-07
 wikipedia:Chris_Pappas_(American_politician)	1	Culture.Biography.Biography*:0.99;History_and_Society.Politics_and_government:0.98;Geography.Regions.Americas.North_America:0.97	2026-11-07
@@ -1917,6 +1935,7 @@ wikipedia:Clytemnestra	0	Geography.Regions.Europe.Europe*:0.59;Geography.Regions
 wikipedia:Coachella	0	Culture.Media.Media*:0.70;Geography.Regions.Americas.North_America:0.52	2026-11-07
 wikipedia:Coachella_2026	0	Culture.Media.Media*:0.87;Culture.Media.Music:0.67	2026-11-07
 wikipedia:Coalition_Avenir_Québec	0	Geography.Regions.Americas.North_America:0.98;History_and_Society.Politics_and_government:0.64	2026-11-07
+wikipedia:Coca-Cola_formula	0	Culture.Food_and_drink:0.91;History_and_Society.Business_and_economics:0.83	2026-11-19
 wikipedia:Cockchafer	0	STEM.STEM*:1.00;STEM.Biology:1.00	2026-11-07
 wikipedia:Cockroach_Janta_Party	0	Geography.Regions.Asia.South_Asia:0.91;Geography.Regions.Asia.Asia*:0.90	2026-11-07
 wikipedia:Cocktail_2	0	Culture.Media.Media*:1.00;Culture.Media.Films:0.98;Geography.Regions.Asia.South_Asia:0.86;Geography.Regions.Asia.Asia*:0.84	2026-11-07
@@ -2036,6 +2055,7 @@ wikipedia:Curry_Barker	1	Culture.Media.Films:1.00;Culture.Media.Media*:1.00;Cult
 wikipedia:Curt_Cignetti	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.88;Geography.Regions.Americas.North_America:0.64	2026-11-07
 wikipedia:Curtis_Priem	1	Culture.Biography.Biography*:0.99;STEM.STEM*:0.77;STEM.Computing:0.54	2026-11-10
 wikipedia:Curtis_Sliwa	1	Geography.Regions.Americas.North_America:0.88;History_and_Society.Politics_and_government:0.58	2026-11-07
+wikipedia:Cutter_Gauthier	1	Culture.Sports:1.00;Culture.Biography.Biography*:1.00	2026-11-19
 wikipedia:Cyanide_(gamer)	1	Culture.Internet_culture:1.00;Culture.Media.Media*:1.00;Culture.Media.Video_games:1.00;Culture.Biography.Biography*:0.86	2026-11-07
 wikipedia:Cyberpunk:_Edgerunners	0	Culture.Media.Media*:0.88;Culture.Media.Television:0.61	2026-11-07
 wikipedia:Cyberpunk:_Edgerunners_2	0	Culture.Media.Media*:0.88	2026-11-07
@@ -2089,6 +2109,7 @@ wikipedia:Dan_Campbell	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.93;G
 wikipedia:Dan_Crenshaw	1	Culture.Biography.Biography*:0.97;History_and_Society.Politics_and_government:0.97;Geography.Regions.Americas.North_America:0.96	2026-11-07
 wikipedia:Dan_Hibiki	0	Culture.Media.Video_games:0.98;Culture.Internet_culture:0.97;Culture.Media.Media*:0.94;Culture.Literature:0.59	2026-11-07
 wikipedia:Dan_Hicks_(sportscaster)	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.83	2026-11-13
+wikipedia:Dan_Houser	1	Culture.Internet_culture:0.99;Culture.Media.Video_games:0.99;Culture.Media.Media*:0.97;Culture.Biography.Biography*:0.59	2026-11-19
 wikipedia:Dan_Hurley	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.93	2026-11-07
 wikipedia:Dan_Koh	1	Culture.Biography.Biography*:1.00;Geography.Regions.Americas.North_America:0.79	2026-11-07
 wikipedia:Dan_Levy_(Canadian_actor)	1	Culture.Media.Media*:0.88;Geography.Regions.Americas.North_America:0.59;Culture.Biography.Biography*:0.59	2026-11-07
@@ -2119,6 +2140,7 @@ wikipedia:Daniel_Lewin	0	Culture.Biography.Biography*:0.99;Geography.Regions.Ame
 wikipedia:Daniel_Naroditsky	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.80	2026-11-07
 wikipedia:Daniel_P._Driscoll	1	Culture.Biography.Biography*:0.94;Geography.Regions.Americas.North_America:0.75;History_and_Society.Military_and_warfare:0.72	2026-11-07
 wikipedia:Daniel_Radcliffe	1	Culture.Media.Media*:0.94;Culture.Media.Films:0.73;Culture.Biography.Biography*:0.62	2026-11-15
+wikipedia:Daniel_Roebuck	1	Culture.Biography.Biography*:0.99;Culture.Media.Films:0.84;Culture.Media.Media*:0.84	2026-11-19
 wikipedia:Daniel_Stewart_(Australian_footballer)	1	Geography.Regions.Oceania:0.97;Culture.Biography.Biography*:0.90	2026-11-07
 wikipedia:Daniel_Vogelbach	1	Culture.Sports:1.00;Culture.Biography.Biography*:1.00;Geography.Regions.Americas.North_America:0.75	2026-11-07
 wikipedia:Daniel_and_Luis_Moncada	1	Culture.Media.Media*:0.94;Culture.Biography.Biography*:0.94;Culture.Media.Films:0.58	2026-11-07
@@ -2781,6 +2803,7 @@ wikipedia:Fela_Kuti	1	Culture.Media.Music:0.94;Culture.Media.Media*:0.94;Culture
 wikipedia:Felix_Baumgartner	1	Culture.Sports:0.69;Geography.Regions.Europe.Western_Europe:0.67;Culture.Biography.Biography*:0.59	2026-11-08
 wikipedia:Felix_Nmecha	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.90;Geography.Regions.Europe.Europe*:0.69;Geography.Regions.Europe.Western_Europe:0.62	2026-11-07
 wikipedia:Fenerbahçe_S.K._(football)	0	Culture.Sports:0.97;Geography.Regions.Asia.West_Asia:0.64;Geography.Regions.Asia.Asia*:0.61	2026-11-07
+wikipedia:Ferdinand_Marcos	0	Geography.Regions.Asia.Asia*:0.69;History_and_Society.Politics_and_government:0.52;Geography.Regions.Asia.Southeast_Asia:0.50	2026-11-19
 wikipedia:Fermín_López	1	Culture.Sports:0.99;Geography.Regions.Europe.Southern_Europe:0.95;Geography.Regions.Europe.Europe*:0.82	2026-11-10
 wikipedia:Fernando_Mendoza	1	Culture.Sports:0.97;Culture.Biography.Biography*:0.94;Geography.Regions.Americas.North_America:0.55	2026-11-07
 wikipedia:Ferran_Torres	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.60;Geography.Regions.Europe.Europe*:0.60;Geography.Regions.Europe.Southern_Europe:0.59	2026-11-07
@@ -2910,6 +2933,7 @@ wikipedia:Gabriel_Jesus	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.77;
 wikipedia:Gabrielle_Union	1	Culture.Biography.Biography*:0.89;Culture.Media.Media*:0.67;Geography.Regions.Americas.North_America:0.61;Culture.Biography.Women:0.60	2026-11-07
 wikipedia:Gadi_Eisenkot	1	Geography.Regions.Asia.West_Asia:0.96;Geography.Regions.Asia.Asia*:0.94;Culture.Biography.Biography*:0.91	2026-11-07
 wikipedia:Gadsden_flag	0	History_and_Society.Politics_and_government:0.73;Geography.Regions.Americas.North_America:0.71	2026-11-10
+wikipedia:Gail_Halvorsen	1	Culture.Biography.Biography*:1.00;History_and_Society.Military_and_warfare:0.94;Geography.Regions.Americas.North_America:0.70	2026-11-19
 wikipedia:Gal_Gadot	1	Culture.Biography.Biography*:0.72;Culture.Media.Media*:0.68;Culture.Media.Films:0.62	2026-11-07
 wikipedia:Game_Changer_(film)	0	Culture.Media.Media*:0.95;Culture.Media.Films:0.94;Geography.Regions.Asia.Asia*:0.89;Geography.Regions.Asia.South_Asia:0.88	2026-11-08
 wikipedia:Game_of_Thrones	1	Culture.Media.Media*:0.96;Culture.Media.Television:0.83	2026-11-07
@@ -2941,6 +2965,7 @@ wikipedia:Gavin_Casalegno	1	Culture.Media.Media*:0.95;Culture.Biography.Biograph
 wikipedia:Gavin_McKenna	1	Culture.Sports:1.00;Culture.Biography.Biography*:1.00;Geography.Regions.Americas.North_America:0.78	2026-11-07
 wikipedia:Gavin_Newsom	1	Geography.Regions.Americas.North_America:0.92;History_and_Society.Politics_and_government:0.52	2026-11-07
 wikipedia:Gay_bomb	0	History_and_Society.Society:0.96;STEM.STEM*:0.64	2026-11-07
+wikipedia:Gayniggers_from_Outer_Space	0	Culture.Media.Media*:0.98;Culture.Media.Films:0.94;Culture.Media.Entertainment:0.94	2026-11-19
 wikipedia:Gaza_Strip	0	Geography.Regions.Asia.Asia*:0.97;Geography.Regions.Asia.West_Asia:0.94	2026-11-09
 wikipedia:Gaza_genocide	0		2026-11-09
 wikipedia:Gaza_war	0	Geography.Regions.Asia.West_Asia:0.95;Geography.Regions.Asia.Asia*:0.91	2026-11-07
@@ -3095,10 +3120,13 @@ wikipedia:Grand_Theft_Auto	0	Culture.Media.Media*:0.98;Culture.Internet_culture:
 wikipedia:Grand_Theft_Auto:_San_Andreas	0	Culture.Internet_culture:1.00;Culture.Media.Media*:0.99;Culture.Media.Video_games:0.99	2026-11-18
 wikipedia:Grand_Theft_Auto:_Vice_City	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:0.99	2026-11-18
 wikipedia:Grand_Theft_Auto_(video_game)	0	Culture.Media.Video_games:1.00;Culture.Internet_culture:1.00;Culture.Media.Media*:1.00	2026-11-18
+wikipedia:Grand_Theft_Auto_2	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:1.00	2026-11-19
+wikipedia:Grand_Theft_Auto_III	0	Culture.Media.Video_games:1.00;Culture.Internet_culture:1.00;Culture.Media.Media*:1.00	2026-11-19
 wikipedia:Grand_Theft_Auto_IV	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:0.99;Culture.Media.Media*:0.99	2026-11-17
 wikipedia:Grand_Theft_Auto_V	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:0.99	2026-11-07
 wikipedia:Grand_Theft_Auto_VI	0	Culture.Internet_culture:0.98;Culture.Media.Media*:0.95;Culture.Media.Video_games:0.87	2026-11-07
 wikipedia:Grand_Theft_Auto_VI:_An_Extended_Look	0	Culture.Media.Media*:0.98;Culture.Internet_culture:0.88;Culture.Media.Video_games:0.81	2026-11-18
+wikipedia:Grand_Theft_Auto_VI:_The_Album	0	Culture.Media.Media*:0.97;Culture.Media.Music:0.59	2026-11-19
 wikipedia:Granit_Xhaka	1	Culture.Sports:1.00;Geography.Regions.Europe.Europe*:0.83;Geography.Regions.Europe.Western_Europe:0.66;Culture.Biography.Biography*:0.58	2026-11-07
 wikipedia:Grant_Wilson_(American_football)	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.90	2026-11-16
 wikipedia:Grease_(film)	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.97;Geography.Regions.Americas.North_America:0.50	2026-11-07
@@ -3137,6 +3165,7 @@ wikipedia:Groypers	0	History_and_Society.Politics_and_government:0.79;Geography.
 wikipedia:Grāpple	0	STEM.STEM*:0.87;Culture.Food_and_drink:0.73;STEM.Biology:0.51	2026-11-07
 wikipedia:Guam	0		2026-11-07
 wikipedia:Guard,_Tomb_of_the_Unknown_Soldier_Identification_Badge	0	History_and_Society.Military_and_warfare:0.95	2026-11-13
+wikipedia:Guarding_Stars	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.91	2026-11-19
 wikipedia:Guess_2/3_of_the_average	0	History_and_Society.Business_and_economics:0.91;STEM.STEM*:0.89;STEM.Mathematics:0.88;STEM.Computing:0.83	2026-11-07
 wikipedia:Guillaume_Cizeron	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.53	2026-11-07
 wikipedia:Guillermo_Ochoa	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.76	2026-11-07
@@ -3278,10 +3307,12 @@ wikipedia:Heather_Headley	1	Culture.Media.Music:0.99;Culture.Media.Media*:0.99;C
 wikipedia:Heather_McComb	1	Culture.Biography.Biography*:1.00;Culture.Media.Films:0.89;Culture.Media.Media*:0.88;Culture.Biography.Women:0.60	2026-11-07
 wikipedia:Hedy_Fry	1	Geography.Regions.Americas.North_America:0.97;Culture.Biography.Biography*:0.94	2026-11-07
 wikipedia:Heeramandi	0	Geography.Regions.Asia.Asia*:0.89;Culture.Media.Media*:0.86;Geography.Regions.Asia.South_Asia:0.84;Culture.Media.Films:0.59	2026-11-09
+wikipedia:Heidi_Game	0	Culture.Sports:0.95	2026-11-19
 wikipedia:Heidi_Gardner	1	Culture.Media.Media*:0.78;Geography.Regions.Americas.North_America:0.59;Culture.Biography.Biography*:0.58	2026-11-18
 wikipedia:Heidi_Klum	1	Culture.Biography.Biography*:0.81;Culture.Visual_arts.Fashion:0.63	2026-11-07
 wikipedia:Heidi_Levine	1	Culture.Biography.Biography*:0.98;Geography.Regions.Asia.West_Asia:0.82;Geography.Regions.Asia.Asia*:0.80;Culture.Biography.Women:0.51	2026-11-07
 wikipedia:Heidi_Montag	1	Culture.Media.Media*:0.98;Culture.Biography.Biography*:0.86;Culture.Biography.Women:0.85;Culture.Media.Music:0.75	2026-11-07
+wikipedia:Heidi_Overton	1	Culture.Biography.Biography*:0.96;Geography.Regions.Americas.North_America:0.92	2026-11-19
 wikipedia:Heil_Hitler_(song)	0	Culture.Media.Media*:0.92;Culture.Media.Music:0.91	2026-11-08
 wikipedia:Heinrich_Hoffmann_(photographer)	1	Geography.Regions.Europe.Western_Europe:0.84;Geography.Regions.Europe.Europe*:0.81	2026-11-16
 wikipedia:Helen_Haines	1	Geography.Regions.Oceania:0.99;Culture.Biography.Biography*:0.80;History_and_Society.Politics_and_government:0.73	2026-11-07
@@ -3343,6 +3374,7 @@ wikipedia:Holland_Taylor	1	Culture.Biography.Biography*:0.92;Culture.Biography.W
 wikipedia:Hollow_Knight:_Silksong	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:1.00	2026-11-07
 wikipedia:Holly_Rowe	1	Culture.Biography.Biography*:0.78;Culture.Sports:0.77;Culture.Media.Media*:0.52	2026-11-07
 wikipedia:Hollywood_Arts	0	Culture.Media.Media*:0.97;Culture.Media.Television:0.93;Geography.Regions.Americas.North_America:0.52	2026-11-07
+wikipedia:Hollywood_Freeway_chickens	0	STEM.STEM*:0.82;STEM.Biology:0.52	2026-11-19
 wikipedia:Holt–Oram_syndrome	0	STEM.STEM*:0.98;STEM.Medicine_&_Health:0.93	2026-11-18
 wikipedia:Holy_War_(BYU–Utah)	0	Culture.Sports:0.97	2026-11-09
 wikipedia:Home_Alone	0	Culture.Media.Films:0.99;Culture.Media.Media*:0.99;Geography.Regions.Americas.North_America:0.71	2026-11-07
@@ -3479,6 +3511,7 @@ wikipedia:Ilse_Koch	1	Culture.Biography.Biography*:0.91;Geography.Regions.Europe
 wikipedia:Ilyas_Kashmiri	1	Geography.Regions.Asia.Asia*:0.67;History_and_Society.Politics_and_government:0.63;Geography.Regions.Asia.South_Asia:0.51	2026-11-07
 wikipedia:Imam	0	Culture.Philosophy_and_religion:0.92	2026-11-07
 wikipedia:Imane_Khelif	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.94;Geography.Regions.Africa.Northern_Africa:0.90;Geography.Regions.Africa.Africa*:0.88	2026-11-08
+wikipedia:Imelda_Marcos	1	Geography.Regions.Asia.Asia*:0.71;Geography.Regions.Asia.Southeast_Asia:0.60	2026-11-19
 wikipedia:Immortal_(2026_film)	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.00;Geography.Regions.Asia.South_Asia:0.92;Geography.Regions.Asia.Asia*:0.89	2026-11-07
 wikipedia:Imogen_Waterhouse	1	Culture.Biography.Biography*:0.92;Culture.Biography.Women:0.90;Culture.Media.Media*:0.88;Culture.Media.Films:0.80	2026-11-17
 wikipedia:Impeachment_in_the_United_States	0	Geography.Regions.Americas.North_America:0.90;History_and_Society.Politics_and_government:0.89	2026-11-07
@@ -3528,6 +3561,7 @@ wikipedia:Instagram	0	STEM.STEM*:0.67;Culture.Internet_culture:0.64	2026-11-07
 wikipedia:Insurrection_Act_of_1807	0	Geography.Regions.Americas.North_America:0.98;History_and_Society.Politics_and_government:0.92	2026-11-07
 wikipedia:Inter_Miami_CF	0	Culture.Sports:0.98	2026-11-07
 wikipedia:Interim_Leadership_Council	0	Geography.Regions.Asia.West_Asia:0.88;Geography.Regions.Asia.Asia*:0.82;History_and_Society.Politics_and_government:0.59	2026-11-07
+wikipedia:International_Men's_Day	0		2026-11-19
 wikipedia:International_Space_Station	0	STEM.STEM*:0.97;STEM.Space:0.96;History_and_Society.Transportation:0.94;STEM.Technology:0.92	2026-11-07
 wikipedia:International_Women's_Day	0	Culture.Biography.Biography*:0.52;Culture.Biography.Women:0.51	2026-11-07
 wikipedia:International_Workers'_Day	0		2026-11-07
@@ -3742,6 +3776,7 @@ wikipedia:James_Spader	1	Culture.Media.Media*:0.93;Culture.Media.Films:0.75;Cult
 wikipedia:James_Stewart	1	Culture.Media.Media*:0.92;Culture.Media.Films:0.86;Culture.Biography.Biography*:0.69;Geography.Regions.Americas.North_America:0.57	2026-11-07
 wikipedia:James_T._Kirk	0	Culture.Media.Media*:0.96;Culture.Media.Television:0.94;Culture.Literature:0.54	2026-11-07
 wikipedia:James_Talarico	1	Geography.Regions.Americas.North_America:0.78;Culture.Biography.Biography*:0.71	2026-11-07
+wikipedia:James_Thornton_(actor)	1	Culture.Biography.Biography*:0.86;Culture.Media.Media*:0.81;Geography.Regions.Europe.Northern_Europe:0.52;Geography.Regions.Europe.Europe*:0.52	2026-11-19
 wikipedia:James_Tolkan	1	Culture.Media.Media*:0.93;Culture.Media.Films:0.89;Culture.Biography.Biography*:0.85	2026-11-07
 wikipedia:James_Trafford	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.79;Geography.Regions.Europe.Europe*:0.70;Geography.Regions.Europe.Northern_Europe:0.63	2026-11-16
 wikipedia:James_Traficant	1	Geography.Regions.Americas.North_America:0.95;Culture.Biography.Biography*:0.93;History_and_Society.Politics_and_government:0.92	2026-11-07
@@ -3776,6 +3811,7 @@ wikipedia:Japan_national_football_team	0	Culture.Sports:1.00;Geography.Regions.A
 wikipedia:Jared_Goff	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.93;Geography.Regions.Americas.North_America:0.56	2026-11-07
 wikipedia:Jared_Kushner	1	Culture.Biography.Biography*:0.72;Geography.Regions.Americas.North_America:0.67	2026-11-07
 wikipedia:Jared_Leto	1	Culture.Media.Media*:0.98;Culture.Media.Films:0.95	2026-11-07
+wikipedia:Jared_Padalecki	1	Geography.Regions.Americas.North_America:0.74;Culture.Media.Media*:0.74	2026-11-19
 wikipedia:Jared_Verse	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.97	2026-11-07
 wikipedia:Jarell_Quansah	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.76	2026-11-07
 wikipedia:Jaromír_Jágr	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.59;Geography.Regions.Europe.Europe*:0.50	2026-11-18
@@ -4116,6 +4152,7 @@ wikipedia:Jordan_Cameron	1	Culture.Sports:1.00;Culture.Biography.Biography*:1.00
 wikipedia:Jordan_Clarkson	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.97	2026-11-07
 wikipedia:Jordan_Davis_(defensive_tackle)	1	Culture.Sports:0.97;Culture.Biography.Biography*:0.93	2026-11-10
 wikipedia:Jordan_Elliott	1	Culture.Sports:1.00;Culture.Biography.Biography*:1.00	2026-11-07
+wikipedia:Jordan_Firstman	1	Geography.Regions.Americas.North_America:0.82;Culture.Media.Media*:0.82;Culture.Biography.Biography*:0.56	2026-11-19
 wikipedia:Jordan_Fisher	1	Culture.Media.Media*:0.87;Culture.Biography.Biography*:0.61;Culture.Media.Music:0.57	2026-11-11
 wikipedia:Jordan_Henderson	1	Culture.Sports:1.00;Geography.Regions.Europe.Northern_Europe:0.84;Culture.Biography.Biography*:0.78;Geography.Regions.Europe.Europe*:0.75	2026-11-07
 wikipedia:Jordan_Love	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.85	2026-11-07
@@ -4171,6 +4208,7 @@ wikipedia:João_Cancelo	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.81;
 wikipedia:João_Fonseca_(tennis)	1	Culture.Sports:1.00	2026-11-07
 wikipedia:João_Pedro_(footballer,_born_2001)	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.98	2026-11-08
 wikipedia:Juan_Atkins	1	Culture.Media.Media*:0.98;Culture.Media.Music:0.98;Culture.Biography.Biography*:0.77	2026-11-07
+wikipedia:Juan_Mata	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.67	2026-11-19
 wikipedia:Jude_Bellingham	1	Culture.Sports:1.00;Geography.Regions.Europe.Europe*:0.60;Culture.Biography.Biography*:0.50	2026-11-07
 wikipedia:Jude_Law	1	Culture.Media.Media*:0.92;Culture.Media.Films:0.82;Culture.Biography.Biography*:0.62	2026-11-07
 wikipedia:Judge_Judy	1	Culture.Media.Media*:0.67;Culture.Media.Television:0.57	2026-11-07
@@ -4188,6 +4226,7 @@ wikipedia:Julia_Stiles	1	Culture.Media.Films:0.95;Culture.Media.Media*:0.94;Cult
 wikipedia:Julian_Assange	1	History_and_Society.Politics_and_government:0.62	2026-11-09
 wikipedia:Julian_Casablancas	1	Culture.Media.Media*:0.86;Culture.Media.Music:0.69	2026-11-09
 wikipedia:Julian_Champagnie	1	Culture.Biography.Biography*:1.00;Culture.Sports:0.98	2026-11-07
+wikipedia:Julian_Hall_(soccer)	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.95;Geography.Regions.Americas.North_America:0.93	2026-11-19
 wikipedia:Julian_McMahon	1	Geography.Regions.Oceania:1.00;Culture.Media.Media*:0.95;Culture.Media.Films:0.71	2026-11-08
 wikipedia:Julian_Nagelsmann	1	Culture.Sports:1.00;Geography.Regions.Europe.Western_Europe:0.82;Geography.Regions.Europe.Europe*:0.77;Culture.Biography.Biography*:0.65	2026-11-07
 wikipedia:Julian_Sayin	1	Culture.Sports:0.97;Culture.Biography.Biography*:0.92	2026-11-07
@@ -4327,6 +4366,7 @@ wikipedia:Kate_Upton	1	Culture.Biography.Biography*:0.97;Geography.Regions.Ameri
 wikipedia:Kate_Winslet	1	Culture.Media.Media*:0.94;Culture.Media.Films:0.88;Culture.Biography.Biography*:0.72;Culture.Biography.Women:0.70	2026-11-07
 wikipedia:Katharine,_Duchess_of_Kent	1	Culture.Biography.Biography*:0.95;Culture.Biography.Women:0.62;Geography.Regions.Europe.Northern_Europe:0.55	2026-11-07
 wikipedia:Katharine_McPhee	1	Culture.Media.Media*:0.95;Culture.Media.Music:0.78;Culture.Media.Television:0.64;Culture.Biography.Biography*:0.58	2026-11-17
+wikipedia:Katherine_Clark	1	Culture.Biography.Biography*:0.99;History_and_Society.Politics_and_government:0.98;Geography.Regions.Americas.North_America:0.95	2026-11-19
 wikipedia:Katherine_Jackson	1	Culture.Biography.Biography*:0.93;Culture.Media.Media*:0.85;Geography.Regions.Americas.North_America:0.78;Culture.Media.Music:0.62	2026-11-07
 wikipedia:Katherine_LaNasa	1	Culture.Biography.Biography*:0.96;Culture.Biography.Women:0.90;Culture.Media.Media*:0.87;Culture.Media.Films:0.70;Geography.Regions.Americas.North_America:0.65	2026-11-07
 wikipedia:Katherine_Ryan	1	Culture.Media.Media*:0.95;Culture.Media.Television:0.92;Culture.Biography.Biography*:0.91;Culture.Media.Entertainment:0.87	2026-11-07
@@ -4658,6 +4698,7 @@ wikipedia:Lee_Reeves_(boxer)	1	Culture.Biography.Biography*:1.00;Geography.Regio
 wikipedia:Legends_(2026_TV_series)	0	Culture.Media.Media*:0.96	2026-11-07
 wikipedia:Leif_Erikson	0	History_and_Society.History:0.86;Geography.Regions.Europe.Europe*:0.52	2026-11-07
 wikipedia:Leigh-Anne_Pinnock	1	Culture.Media.Media*:0.87;Culture.Media.Music:0.79;Culture.Biography.Biography*:0.59	2026-11-07
+wikipedia:Leigh_Francis	1	Culture.Media.Entertainment:0.87;Culture.Media.Television:0.80;Culture.Media.Media*:0.78;Culture.Biography.Biography*:0.74;Geography.Regions.Europe.Northern_Europe:0.71;Geography.Regions.Europe.Europe*:0.65	2026-11-19
 wikipedia:Leighton_Meester	1	Culture.Media.Media*:0.99;Culture.Biography.Biography*:0.52;Geography.Regions.Americas.North_America:0.50	2026-11-07
 wikipedia:Leighton_Vander_Esch	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.99	2026-11-15
 wikipedia:Lekha_Washington	1	Geography.Regions.Asia.South_Asia:0.97;Geography.Regions.Asia.Asia*:0.96;Culture.Media.Films:0.88;Culture.Media.Media*:0.82;Culture.Biography.Biography*:0.78	2026-11-07
@@ -4880,6 +4921,7 @@ wikipedia:List_of_songs_recorded_by_the_Beatles	0	Culture.Media.Media*:0.98;Cult
 wikipedia:List_of_states_and_territories_of_the_United_States	0	Geography.Regions.Americas.North_America:0.98	2026-11-07
 wikipedia:List_of_states_with_nuclear_weapons	0	History_and_Society.Military_and_warfare:0.72;STEM.STEM*:0.64	2026-11-08
 wikipedia:List_of_typefaces	0	Culture.Visual_arts.Visual_arts*:0.94	2026-11-07
+wikipedia:List_of_video_games_published_by_Rockstar_Games	0	Culture.Media.Video_games:1.00;Culture.Internet_culture:1.00;Culture.Media.Media*:0.99	2026-11-19
 wikipedia:Lists_of_islands	0	Geography.Geographical:0.98	2026-11-09
 wikipedia:Little_Big_Town	0	Culture.Media.Music:0.91;Culture.Media.Media*:0.88;Culture.Biography.Biography*:0.69	2026-11-07
 wikipedia:Little_Britain_(TV_series)	0	Culture.Media.Media*:0.96;Culture.Media.Entertainment:0.84;Culture.Media.Television:0.80	2026-11-11
@@ -4956,6 +4998,7 @@ wikipedia:Lucas_Hernandez	1	Culture.Sports:1.00;Geography.Regions.Europe.Europe*
 wikipedia:Lucas_Pinheiro_Braathen	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.50	2026-11-07
 wikipedia:Lucas_Trejo	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.89	2026-11-07
 wikipedia:Luci_Baines_Johnson	1	Geography.Regions.Americas.North_America:0.90	2026-11-07
+wikipedia:Lucia_Caminos	0	Culture.Internet_culture:0.90;Culture.Media.Video_games:0.84;Culture.Media.Media*:0.72	2026-11-19
 wikipedia:Lucian_Piane	1	Culture.Media.Media*:0.95;Culture.Biography.Biography*:0.52;Geography.Regions.Americas.North_America:0.50	2026-11-07
 wikipedia:Luciana_Pedraza	1	Culture.Biography.Biography*:0.97;Culture.Media.Films:0.65;Culture.Media.Media*:0.63;Geography.Regions.Americas.South_America:0.59;Culture.Biography.Women:0.50	2026-11-07
 wikipedia:Lucky_(miniseries)	0	Culture.Media.Media*:0.97;Culture.Media.Television:0.77;STEM.STEM*:0.53;STEM.Technology:0.52;Geography.Regions.Americas.North_America:0.51	2026-11-07
@@ -5031,6 +5074,7 @@ wikipedia:Macklemore	1	Culture.Media.Media*:0.84;Culture.Media.Music:0.76;Geogra
 wikipedia:Macklin_Celebrini	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.69;Geography.Regions.Americas.North_America:0.65	2026-11-07
 wikipedia:Mad_Max:_Fury_Road	0	Culture.Media.Films:1.00;Culture.Media.Media*:0.99	2026-11-09
 wikipedia:Madame_Web_(film)	0	Culture.Media.Media*:0.98;Culture.Media.Films:0.98;Culture.Literature:0.75;Culture.Visual_arts.Visual_arts*:0.64;Culture.Visual_arts.Comics_and_Anime:0.64	2026-11-09
+wikipedia:Madden_(film)	0	Culture.Sports:0.87;Culture.Media.Media*:0.84	2026-11-19
 wikipedia:Madeira	0	Geography.Regions.Europe.Europe*:0.84;Geography.Regions.Europe.Southern_Europe:0.77	2026-11-07
 wikipedia:Madeleine_Stowe	1	Culture.Media.Media*:0.96;Culture.Media.Films:0.94;Culture.Biography.Biography*:0.78;Culture.Biography.Women:0.60	2026-11-07
 wikipedia:Madharaasi	0	Culture.Media.Media*:0.97;Culture.Media.Films:0.93;Geography.Regions.Asia.Asia*:0.75;Geography.Regions.Asia.South_Asia:0.65	2026-11-07
@@ -5087,6 +5131,7 @@ wikipedia:Manchester_United_F.C.	0	Culture.Sports:1.00	2026-11-07
 wikipedia:Mandaadi	0	Culture.Media.Films:0.99;Culture.Media.Media*:0.99;Geography.Regions.Asia.South_Asia:0.88;Geography.Regions.Asia.Asia*:0.84	2026-11-07
 wikipedia:Mandarin_Ducks_and_Butterflies	0	Culture.Literature:0.97;Culture.Biography.Women:0.65;Culture.Biography.Biography*:0.53;Geography.Regions.Asia.East_Asia:0.50	2026-11-07
 wikipedia:Mandodari	0	Geography.Regions.Asia.Asia*:0.94;Culture.Philosophy_and_religion:0.86;Geography.Regions.Asia.South_Asia:0.85	2026-11-07
+wikipedia:Mandy_Moore	1	Culture.Media.Media*:0.98;Culture.Media.Films:0.81;Culture.Biography.Biography*:0.55	2026-11-19
 wikipedia:Maneka_Gandhi	1	History_and_Society.Politics_and_government:0.58;Culture.Biography.Biography*:0.55	2026-11-11
 wikipedia:Manhunters_(DC_Comics)	0	Culture.Visual_arts.Visual_arts*:0.99;Culture.Visual_arts.Comics_and_Anime:0.99;Culture.Literature:0.99	2026-11-07
 wikipedia:Mani_(musician)	1	Culture.Media.Media*:0.78;Culture.Media.Music:0.57	2026-11-07
@@ -5237,6 +5282,7 @@ wikipedia:Masters_Tournament	0	Culture.Sports:0.98	2026-11-07
 wikipedia:Masters_of_the_Air	0	Culture.Media.Media*:0.86	2026-11-09
 wikipedia:Masters_of_the_Universe_(2026_film)	0	Culture.Media.Media*:0.98;Culture.Media.Films:0.79;Culture.Media.Entertainment:0.52	2026-11-07
 wikipedia:MatPat	1	Culture.Internet_culture:0.83;Culture.Media.Media*:0.82;Culture.Biography.Biography*:0.81	2026-11-14
+wikipedia:Matan_Kahana	1	Geography.Regions.Asia.West_Asia:0.99;Geography.Regions.Asia.Asia*:0.98;Culture.Biography.Biography*:0.96	2026-11-19
 wikipedia:Match_cut	0	Culture.Media.Films:0.99;Culture.Media.Media*:0.98	2026-11-07
 wikipedia:Matchbox:_The_Movie	0	Culture.Media.Media*:0.97;Culture.Media.Films:0.53	2026-11-07
 wikipedia:Materialists_(film)	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.99;Geography.Regions.Americas.North_America:0.59	2026-11-07
@@ -5457,6 +5503,7 @@ wikipedia:Mike_Nichols	1	Culture.Media.Media*:0.95;Culture.Media.Films:0.84;Cult
 wikipedia:Mike_Norvell	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.84;Geography.Regions.Americas.North_America:0.62	2026-11-07
 wikipedia:Mike_O'Malley	1	Culture.Media.Media*:0.87;Culture.Biography.Biography*:0.80	2026-11-07
 wikipedia:Mike_Penders	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.78;Geography.Regions.Europe.Europe*:0.70;Geography.Regions.Europe.Western_Europe:0.59	2026-11-07
+wikipedia:Mike_Pettine	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.97;Geography.Regions.Americas.North_America:0.85	2026-11-19
 wikipedia:Mike_Rogers_(Michigan_politician)	1	Geography.Regions.Americas.North_America:0.97;Culture.Biography.Biography*:0.97;History_and_Society.Politics_and_government:0.97	2026-11-07
 wikipedia:Mike_Santana	1	Culture.Media.Entertainment:0.99;Culture.Media.Television:0.99;Culture.Media.Media*:0.99;Culture.Biography.Biography*:0.67	2026-11-07
 wikipedia:Mike_Tirico	1	Culture.Sports:0.94	2026-11-10
@@ -5488,6 +5535,7 @@ wikipedia:Milo_Yiannopoulos	1	History_and_Society.Politics_and_government:0.74;C
 wikipedia:Milwaukee	0	Geography.Regions.Americas.North_America:0.98	2026-11-07
 wikipedia:Milwaukee_Braves	0	Culture.Sports:0.99;Geography.Regions.Americas.North_America:0.91	2026-11-07
 wikipedia:Milwaukee_Brewers	0	Culture.Sports:1.00;Geography.Regions.Americas.North_America:0.68	2026-11-07
+wikipedia:Minecraft	0	Culture.Internet_culture:0.99;Culture.Media.Video_games:0.99;Culture.Media.Media*:0.99	2026-11-19
 wikipedia:Ming_Xi	1	Culture.Biography.Biography*:0.97;Geography.Regions.Asia.East_Asia:0.66;Geography.Regions.Asia.Asia*:0.50	2026-11-07
 wikipedia:Ming_dynasty	1	Geography.Regions.Asia.Asia*:0.95;Geography.Regions.Asia.East_Asia:0.88;History_and_Society.History:0.71	2026-11-07
 wikipedia:Minimum_Wage_(TV_series)	0	Culture.Media.Media*:0.84;Culture.Media.Television:0.80	2026-11-07
@@ -5639,6 +5687,7 @@ wikipedia:Muriel's_Wedding	0	Geography.Regions.Oceania:1.00;Culture.Media.Media*
 wikipedia:Mushtaq_Khan	1	Geography.Regions.Asia.South_Asia:0.88;Geography.Regions.Asia.Asia*:0.86;Culture.Media.Media*:0.77;Culture.Media.Films:0.72	2026-11-07
 wikipedia:Muslim_Brotherhood	0	History_and_Society.Politics_and_government:0.78	2026-11-07
 wikipedia:Mustafa_Kemal_Atatürk	0	Geography.Regions.Asia.Asia*:0.65;Geography.Regions.Asia.West_Asia:0.62	2026-11-11
+wikipedia:Mustard_(condiment)	0	Culture.Food_and_drink:0.96	2026-11-19
 wikipedia:Mutiny_(2026_film)	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.00	2026-11-07
 wikipedia:Mutya_Buena	1	Culture.Media.Media*:0.92;Culture.Biography.Biography*:0.88;Culture.Media.Music:0.86;Culture.Biography.Women:0.70	2026-11-07
 wikipedia:My_Brilliant_Career_(TV_series)	0	Culture.Media.Media*:0.90;Culture.Media.Television:0.89	2026-11-07
@@ -5728,6 +5777,7 @@ wikipedia:Nava_Mau	1	Culture.Biography.Biography*:1.00;History_and_Society.Socie
 wikipedia:Navi_Pillay	1	Culture.Biography.Biography*:0.92;History_and_Society.Politics_and_government:0.52	2026-11-07
 wikipedia:Navier–Stokes_equations	0	STEM.STEM*:1.00;STEM.Physics:0.93	2026-11-07
 wikipedia:Navier–Stokes_existence_and_smoothness	0	STEM.STEM*:0.99;STEM.Mathematics:0.87;STEM.Physics:0.69	2026-11-07
+wikipedia:Naya_Rivera	1	Culture.Media.Media*:0.94;Culture.Biography.Biography*:0.81;Culture.Biography.Women:0.50	2026-11-19
 wikipedia:Nayib_Bukele	1	Culture.Biography.Biography*:0.72;History_and_Society.Politics_and_government:0.52	2026-11-07
 wikipedia:Nayyi_Navelli	0	Culture.Media.Media*:1.00;Culture.Media.Films:1.00;Geography.Regions.Asia.Asia*:0.75;Geography.Regions.Asia.South_Asia:0.53	2026-11-07
 wikipedia:Nazriya_Nazim	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.96;Geography.Regions.Asia.Asia*:0.86;Geography.Regions.Asia.South_Asia:0.85;Culture.Biography.Biography*:0.76	2026-11-09
@@ -5786,6 +5836,7 @@ wikipedia:Nicholas_Brendon	1	Culture.Media.Media*:0.86;Culture.Media.Television:
 wikipedia:Nicholas_Galitzine	1	Culture.Media.Media*:0.94;Culture.Biography.Biography*:0.75	2026-11-07
 wikipedia:Nicholas_Hoult	1	Culture.Media.Media*:0.90;Culture.Media.Films:0.74;Culture.Biography.Biography*:0.72	2026-11-07
 wikipedia:Nick_Berry	1	Culture.Media.Media*:0.98;Culture.Media.Music:0.75;Culture.Biography.Biography*:0.75	2026-11-07
+wikipedia:Nick_Cannon	1	Culture.Media.Media*:0.96;Culture.Biography.Biography*:0.73	2026-11-19
 wikipedia:Nick_Cousins	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.98	2026-11-12
 wikipedia:Nick_Emmanwori	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.98	2026-11-07
 wikipedia:Nick_Foles	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.95;Geography.Regions.Americas.North_America:0.62	2026-11-11
@@ -5824,6 +5875,7 @@ wikipedia:Night_of_Champions_(2025)	0	Culture.Media.Entertainment:1.00;Culture.M
 wikipedia:Night_of_Champions_(2026)	0	Culture.Media.Entertainment:1.00;Culture.Media.Television:1.00;Culture.Media.Media*:0.99	2026-11-07
 wikipedia:Nightwish	0	Culture.Media.Media*:0.99;Culture.Media.Music:0.99;Geography.Regions.Europe.Europe*:0.89;Geography.Regions.Europe.Northern_Europe:0.89	2026-11-07
 wikipedia:Nik_Nazmi	1	Geography.Regions.Asia.Southeast_Asia:0.99;Geography.Regions.Asia.Asia*:0.98;Culture.Biography.Biography*:0.64	2026-11-07
+wikipedia:Nikita_Khrushchev	0	Geography.Regions.Europe.Europe*:0.86;Geography.Regions.Europe.Eastern_Europe:0.82;History_and_Society.Military_and_warfare:0.72	2026-11-19
 wikipedia:Nikita_Kucherov	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.94	2026-11-07
 wikipedia:Nikki_Catsouras_photographs_controversy	0		2026-11-07
 wikipedia:Nikki_Glaser	1	Culture.Biography.Biography*:0.96;Culture.Media.Media*:0.88;Geography.Regions.Americas.North_America:0.54;Culture.Media.Entertainment:0.50	2026-11-07
@@ -5896,6 +5948,7 @@ wikipedia:November_14	0	Culture.Biography.Biography*:0.52	2026-11-15
 wikipedia:November_15	0	Culture.Biography.Biography*:0.55	2026-11-16
 wikipedia:November_16	0	Culture.Biography.Biography*:0.55	2026-11-17
 wikipedia:November_17	0	Culture.Biography.Biography*:0.54	2026-11-18
+wikipedia:November_18	0	Culture.Biography.Biography*:0.53	2026-11-19
 wikipedia:November_2	0	Culture.Biography.Biography*:0.58	2026-11-07
 wikipedia:November_2015_Paris_attacks	0	History_and_Society.Politics_and_government:0.75	2026-11-14
 wikipedia:November_3	0		2026-11-07
@@ -6007,6 +6060,7 @@ wikipedia:Oona_Chaplin	1	Culture.Biography.Biography*:0.98;Culture.Media.Media*:
 wikipedia:OpenAI	0	STEM.STEM*:0.74	2026-11-07
 wikipedia:OpenAI–HuggingFace_incident	0	STEM.STEM*:0.95;STEM.Computing:0.88;STEM.Technology:0.55	2026-11-07
 wikipedia:OpenClaw	0	STEM.Computing:0.95;STEM.STEM*:0.95;Culture.Media.Software:0.83;STEM.Technology:0.77;Culture.Media.Media*:0.64	2026-11-07
+wikipedia:OpenFlexure_Microscope	0	STEM.STEM*:0.99	2026-11-19
 wikipedia:Open_Era_tennis_records_–_Men's_singles	0	Culture.Sports:1.00	2026-11-07
 wikipedia:Operation_Arctic_Fox	0	History_and_Society.Military_and_warfare:0.98;Geography.Regions.Europe.Europe*:0.93;Geography.Regions.Europe.Northern_Europe:0.61	2026-11-18
 wikipedia:Operation_Car_Wash	0	Geography.Regions.Americas.South_America:0.93	2026-11-07
@@ -6093,6 +6147,7 @@ wikipedia:Param_Sundari_(film)	0	Culture.Media.Media*:0.99;Culture.Media.Films:0
 wikipedia:Paramount_Skydance	0	History_and_Society.Business_and_economics:0.75;Geography.Regions.Americas.North_America:0.57;Culture.Media.Media*:0.56	2026-11-07
 wikipedia:Parasakthi_(2026_film)	0	Culture.Media.Media*:0.97;Geography.Regions.Asia.South_Asia:0.96;Culture.Media.Films:0.95;Geography.Regions.Asia.Asia*:0.91	2026-11-07
 wikipedia:Paris_(mythology)	0	History_and_Society.History:0.89;Geography.Regions.Europe.Europe*:0.86;Geography.Regions.Europe.Southern_Europe:0.81;Culture.Literature:0.71;Culture.Philosophy_and_religion:0.70	2026-11-07
+wikipedia:Paris_Hilton	1	Culture.Media.Media*:0.83;Culture.Biography.Biography*:0.57;Geography.Regions.Americas.North_America:0.52	2026-11-19
 wikipedia:Paris_Jackson	1	Culture.Media.Media*:0.82	2026-11-07
 wikipedia:Paris_Saint-Germain_FC	0	Culture.Sports:1.00	2026-11-07
 wikipedia:Parker_Posey	1	Culture.Media.Media*:0.96;Culture.Media.Films:0.86;Culture.Biography.Biography*:0.53	2026-11-07
@@ -6165,6 +6220,7 @@ wikipedia:Pedro_Pascal	1	Culture.Media.Media*:0.95;Culture.Biography.Biography*:
 wikipedia:Pedro_Porro	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.95;Geography.Regions.Europe.Europe*:0.72;Geography.Regions.Europe.Southern_Europe:0.51	2026-11-07
 wikipedia:Pedro_Álvarez_(baseball)	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.93;Geography.Regions.Americas.North_America:0.77	2026-11-07
 wikipedia:Peggy_Flanagan	1	Geography.Regions.Americas.North_America:0.91;Culture.Biography.Biography*:0.91	2026-11-07
+wikipedia:Peja_Stojaković	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.92	2026-11-19
 wikipedia:Pelé	1	Culture.Sports:0.97;Culture.Biography.Biography*:0.61	2026-11-07
 wikipedia:Penelope	0	History_and_Society.History:0.65;Culture.Literature:0.64;Geography.Regions.Europe.Europe*:0.59;Geography.Regions.Europe.Southern_Europe:0.55	2026-11-07
 wikipedia:Penelope_Keith	1	Culture.Biography.Biography*:0.74;Culture.Media.Media*:0.56;Geography.Regions.Europe.Northern_Europe:0.54;Geography.Regions.Europe.Europe*:0.52	2026-11-07
@@ -6252,6 +6308,7 @@ wikipedia:Places_in_the_Heart	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.
 wikipedia:Pladl_incest_and_murders	0	Geography.Regions.Americas.North_America:0.85	2026-11-07
 wikipedia:Plague_(disease)	0	STEM.STEM*:0.97;STEM.Medicine_&_Health:0.89	2026-11-07
 wikipedia:Planet_of_the_Apes	0	Culture.Media.Media*:0.97;Culture.Media.Films:0.78	2026-11-09
+wikipedia:PlayStation_5	0	Culture.Internet_culture:0.94;Culture.Media.Video_games:0.92;Culture.Media.Media*:0.89	2026-11-19
 wikipedia:Play_That_Funky_Music	0	Culture.Media.Media*:1.00;Culture.Media.Music:0.99	2026-11-14
 wikipedia:Pluribus_(TV_series)	0	Culture.Media.Media*:0.96;Culture.Media.Television:0.69	2026-11-07
 wikipedia:Plymouth_Parkway_F.C.	0	Culture.Sports:0.99	2026-11-10
@@ -6367,6 +6424,7 @@ wikipedia:Queen_Victoria	0	Culture.Biography.Biography*:0.86;Geography.Regions.E
 wikipedia:Queen_of_Tears	0	Culture.Media.Media*:0.97;Geography.Regions.Asia.East_Asia:0.97;Geography.Regions.Asia.Asia*:0.97;Culture.Media.Television:0.91	2026-11-09
 wikipedia:Queen_of_the_Mississippi_(2015_ship)	0	History_and_Society.Transportation:1.00	2026-11-15
 wikipedia:Queens_of_the_Stone_Age	0	Culture.Media.Music:0.98;Culture.Media.Media*:0.98;Culture.Biography.Biography*:0.68	2026-11-07
+wikipedia:Quentin_Grimes	1	Culture.Biography.Biography*:0.98;Culture.Sports:0.95	2026-11-19
 wikipedia:Quentin_Tarantino	1	Culture.Media.Films:0.96;Culture.Media.Media*:0.95;Culture.Biography.Biography*:0.65	2026-11-07
 wikipedia:Quenton_Nelson	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.99;Geography.Regions.Americas.North_America:0.53	2026-11-07
 wikipedia:Quincy_Jones	1	Culture.Media.Media*:0.91;Culture.Biography.Biography*:0.67;Culture.Media.Music:0.63;Geography.Regions.Americas.North_America:0.55	2026-11-08
@@ -6488,6 +6546,7 @@ wikipedia:Rebecca_Romijn	1	Culture.Biography.Biography*:0.86;Culture.Biography.W
 wikipedia:Rebel_Moon	0	Culture.Media.Media*:1.00;Culture.Media.Films:1.00	2026-11-09
 wikipedia:Rebel_Ridge	0	Culture.Media.Media*:0.95;Culture.Media.Films:0.86	2026-11-08
 wikipedia:Reconstruction_era	1	Geography.Regions.Americas.North_America:0.87	2026-11-13
+wikipedia:Red_Dead_Redemption_2	0	Culture.Internet_culture:0.99;Culture.Media.Media*:0.99;Culture.Media.Video_games:0.99	2026-11-19
 wikipedia:Red_Hot_Chili_Peppers	0	Culture.Media.Media*:0.96;Culture.Media.Music:0.92	2026-11-07
 wikipedia:Red_One_(film)	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.00	2026-11-08
 wikipedia:Red_Rising	0	Culture.Literature:0.99;Culture.Media.Books:0.96;Culture.Media.Media*:0.92	2026-11-07
@@ -6638,6 +6697,7 @@ wikipedia:Robert_Pattinson_filmography	0	Culture.Media.Media*:0.95;Culture.Media
 wikipedia:Robert_Redford	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.94;Culture.Biography.Biography*:0.83;Geography.Regions.Americas.North_America:0.52	2026-11-07
 wikipedia:Robert_Redford_filmography	0	Culture.Media.Films:0.92;Culture.Media.Media*:0.89;Culture.Biography.Biography*:0.84;Geography.Regions.Americas.North_America:0.52	2026-11-07
 wikipedia:Robert_Saleh	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.84;Geography.Regions.Americas.North_America:0.59	2026-11-07
+wikipedia:Robert_Stroud	1	Geography.Regions.Americas.North_America:0.91;History_and_Society.Politics_and_government:0.55	2026-11-19
 wikipedia:Robert_Sullivan_(judoka)	1	Culture.Biography.Biography*:1.00;Culture.Sports:0.99;Geography.Regions.Europe.Europe*:0.92;Geography.Regions.Europe.Northern_Europe:0.70	2026-11-07
 wikipedia:Roberto_De_Zerbi	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.97;Geography.Regions.Europe.Europe*:0.56	2026-11-07
 wikipedia:Roberto_Martínez	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.85;Geography.Regions.Europe.Europe*:0.61	2026-11-07
@@ -6649,6 +6709,7 @@ wikipedia:Roblox	0	Culture.Internet_culture:0.99;Culture.Media.Media*:0.98;Cultu
 wikipedia:Robyn	1	Culture.Media.Media*:0.97;Culture.Media.Music:0.96;Culture.Biography.Biography*:0.69;Geography.Regions.Europe.Northern_Europe:0.64;Culture.Biography.Women:0.59;Geography.Regions.Europe.Europe*:0.53	2026-11-12
 wikipedia:Rockefeller_family	0	Geography.Regions.Americas.North_America:0.62;Culture.Biography.Biography*:0.53	2026-11-07
 wikipedia:Rockstar_Games	0	Culture.Media.Media*:0.98;Culture.Internet_culture:0.97;Culture.Media.Video_games:0.96	2026-11-13
+wikipedia:Rockstar_North	0	Culture.Media.Video_games:0.99;Culture.Internet_culture:0.99;Culture.Media.Media*:0.98	2026-11-19
 wikipedia:Rockwell_B-1_Lancer	0	History_and_Society.Military_and_warfare:0.96;STEM.STEM*:0.88;History_and_Society.Transportation:0.88;STEM.Engineering:0.84	2026-11-07
 wikipedia:Rocky	0	Culture.Media.Media*:1.00;Culture.Media.Films:1.00	2026-11-09
 wikipedia:Rod_Brind'Amour	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.68;Geography.Regions.Americas.North_America:0.56	2026-11-07
@@ -6768,6 +6829,7 @@ wikipedia:Ruth_Ellis	1	Geography.Regions.Europe.Northern_Europe:0.84;Culture.Bio
 wikipedia:Ruth_Jones	1	Culture.Media.Media*:0.90;Culture.Biography.Biography*:0.87;Geography.Regions.Europe.Northern_Europe:0.79;Geography.Regions.Europe.Europe*:0.64;Culture.Media.Television:0.64	2026-11-07
 wikipedia:Ruth_Kearney	1	Culture.Media.Media*:0.99;Culture.Biography.Biography*:0.77;Culture.Media.Films:0.57	2026-11-07
 wikipedia:Rwanda	0	Geography.Regions.Africa.Africa*:0.85;Geography.Regions.Africa.Eastern_Africa:0.51	2026-11-07
+wikipedia:Ryan_Adams	1	Culture.Media.Media*:0.94;Culture.Media.Music:0.89	2026-11-19
 wikipedia:Ryan_Coogler	1	Culture.Media.Media*:0.89;Culture.Biography.Biography*:0.89;Culture.Media.Films:0.88;Geography.Regions.Americas.North_America:0.50	2026-11-07
 wikipedia:Ryan_Fitzpatrick	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.91;Geography.Regions.Americas.North_America:0.71	2026-11-07
 wikipedia:Ryan_Fox	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.89;Geography.Regions.Oceania:0.84	2026-11-07
@@ -6846,6 +6908,7 @@ wikipedia:Sam_Darnold	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.96;Ge
 wikipedia:Sam_Elliott	1	Culture.Media.Media*:0.92;Culture.Media.Films:0.84;Geography.Regions.Americas.North_America:0.79	2026-11-07
 wikipedia:Sam_Forstag	1	History_and_Society.Politics_and_government:0.97;Geography.Regions.Americas.North_America:0.96;Culture.Biography.Biography*:0.87	2026-11-07
 wikipedia:Sam_Hartman	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.98	2026-11-14
+wikipedia:Sam_Houser	1	Culture.Media.Video_games:0.98;Culture.Internet_culture:0.98;Culture.Media.Media*:0.94;Culture.Biography.Biography*:0.84	2026-11-19
 wikipedia:Sam_Leavitt_(American_football)	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.95	2026-11-07
 wikipedia:Sam_Levinson	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.74	2026-11-07
 wikipedia:Sam_Neill	1	Geography.Regions.Oceania:1.00;Culture.Media.Media*:0.90;Culture.Biography.Biography*:0.80;Culture.Media.Films:0.59	2026-11-07
@@ -7064,6 +7127,7 @@ wikipedia:Shelley_Beattie	1	Geography.Regions.Americas.North_America:0.87;Cultur
 wikipedia:Shelley_Duvall	1	Culture.Media.Media*:0.97;Culture.Media.Films:0.96;Culture.Biography.Women:0.68;Culture.Biography.Biography*:0.58	2026-11-09
 wikipedia:Shelley_Fabares	1	Culture.Media.Media*:0.98;Culture.Biography.Biography*:0.94;Culture.Media.Music:0.75;Culture.Media.Films:0.64	2026-11-07
 wikipedia:Shelter_(2026_film)	0	Culture.Media.Films:0.99;Culture.Media.Media*:0.99;Geography.Regions.Europe.Northern_Europe:0.79;Geography.Regions.Europe.Europe*:0.71	2026-11-07
+wikipedia:Shenzhen	0	Geography.Regions.Asia.East_Asia:1.00;Geography.Regions.Asia.Asia*:0.99	2026-11-19
 wikipedia:Sherri_Papini_kidnapping_hoax	0	Geography.Regions.Americas.North_America:0.82	2026-11-09
 wikipedia:Sherrod_Brown	1	Geography.Regions.Americas.North_America:0.90;History_and_Society.Politics_and_government:0.88;Culture.Biography.Biography*:0.84	2026-11-07
 wikipedia:Sherrone_Moore	1	Culture.Biography.Biography*:0.98;Culture.Sports:0.97;Geography.Regions.Americas.North_America:0.88	2026-11-07
@@ -7396,6 +7460,7 @@ wikipedia:Susan_Dell	1	Culture.Biography.Biography*:1.00;Geography.Regions.Ameri
 wikipedia:Susan_May_Pratt	1	Culture.Biography.Biography*:0.99;Culture.Biography.Women:0.97;Culture.Media.Films:0.89;Culture.Media.Media*:0.81	2026-11-07
 wikipedia:Susan_Saint_James	1	Culture.Biography.Women:0.95;Culture.Biography.Biography*:0.95;Geography.Regions.Americas.North_America:0.80;Culture.Media.Media*:0.59	2026-11-07
 wikipedia:Susan_Sarandon	1	Culture.Media.Media*:0.92;Culture.Media.Films:0.91;Culture.Biography.Biography*:0.78;Culture.Biography.Women:0.67;Geography.Regions.Americas.North_America:0.65	2026-11-07
+wikipedia:Susan_Smith	1	Culture.Biography.Biography*:0.94;Geography.Regions.Americas.North_America:0.85	2026-11-19
 wikipedia:Susan_Stafford	1	Culture.Biography.Biography*:0.93;Geography.Regions.Americas.North_America:0.91;Culture.Media.Media*:0.91;Culture.Media.Television:0.89	2026-11-07
 wikipedia:Sushila_Karki	1	Geography.Regions.Asia.South_Asia:0.99;Geography.Regions.Asia.Asia*:0.98;Culture.Biography.Biography*:0.62	2026-11-07
 wikipedia:Susie_Wiles	1	Geography.Regions.Americas.North_America:0.80;Culture.Biography.Biography*:0.72	2026-11-07
@@ -7428,13 +7493,16 @@ wikipedia:Tadej_Pogačar	1	Culture.Sports:1.00;Geography.Regions.Europe.Europe*:
 wikipedia:Taika_Waititi	1	Culture.Media.Media*:0.83;Culture.Biography.Biography*:0.77;Culture.Media.Films:0.70	2026-11-07
 wikipedia:Taipei_101	0	Geography.Regions.Asia.Asia*:0.89;Geography.Regions.Asia.East_Asia:0.81;Culture.Visual_arts.Visual_arts*:0.75;Culture.Visual_arts.Architecture:0.74	2026-11-07
 wikipedia:Taiwan	0	Geography.Regions.Asia.East_Asia:0.99;Geography.Regions.Asia.Asia*:0.99	2026-11-07
+wikipedia:Take-Two_Interactive	0	History_and_Society.Business_and_economics:0.88;Geography.Regions.Americas.North_America:0.71	2026-11-19
 wikipedia:Take_Charge_of_My_Heart	0	Culture.Media.Television:0.91;Culture.Media.Media*:0.90	2026-11-07
 wikipedia:Tales_of_Dunk_and_Egg	0	Culture.Media.Media*:0.90;Culture.Literature:0.85;Culture.Media.Books:0.69	2026-11-07
 wikipedia:Talulah_Riley	1	Culture.Biography.Biography*:0.92;Culture.Media.Media*:0.75	2026-11-08
+wikipedia:Tame_Impala	0	Culture.Media.Music:0.97;Culture.Media.Media*:0.96;Geography.Regions.Oceania:0.91	2026-11-19
 wikipedia:TamilRockers	0	STEM.STEM*:0.86;Culture.Media.Media*:0.78;Culture.Internet_culture:0.72;STEM.Computing:0.67;Culture.Media.Software:0.59;STEM.Technology:0.55	2026-11-07
 wikipedia:Tamil_Eelam_(1984–2009)	0	Geography.Regions.Asia.South_Asia:0.94;Geography.Regions.Asia.Asia*:0.93	2026-11-07
 wikipedia:Tamil_Nadu_Legislative_Assembly	0	Geography.Regions.Asia.South_Asia:0.99;Geography.Regions.Asia.Asia*:0.98;History_and_Society.Politics_and_government:0.62	2026-11-07
 wikipedia:Tamilaga_Vettri_Kazhagam	0	Geography.Regions.Asia.South_Asia:0.97;Geography.Regions.Asia.Asia*:0.97;History_and_Society.Politics_and_government:0.62	2026-11-07
+wikipedia:Tammy_Duckworth	1	Culture.Biography.Biography*:0.99;History_and_Society.Politics_and_government:0.97;Geography.Regions.Americas.North_America:0.95	2026-11-19
 wikipedia:Tammy_Faye_Messner	1	Culture.Biography.Biography*:0.86;Culture.Media.Media*:0.84;Geography.Regions.Americas.North_America:0.55	2026-11-07
 wikipedia:Tampa_Bay_Rays	0	Culture.Sports:0.99;Geography.Regions.Americas.North_America:0.56	2026-11-07
 wikipedia:Tamsin_Egerton	1	Culture.Biography.Biography*:0.94;Culture.Biography.Women:0.67;Culture.Media.Films:0.55	2026-11-07
@@ -7476,6 +7544,7 @@ wikipedia:Ted_Turner	1	Culture.Media.Media*:0.68;Culture.Media.Television:0.58;C
 wikipedia:Teddy_Riner	1	Culture.Sports:0.99;Geography.Regions.Europe.Europe*:0.58	2026-11-10
 wikipedia:Teddy_Swims	1	Culture.Media.Media*:0.93;Culture.Media.Music:0.91;Culture.Biography.Biography*:0.84	2026-11-08
 wikipedia:Teenage_Sex_and_Death_at_Camp_Miasma	0	Culture.Media.Films:1.00;Culture.Media.Media*:0.99	2026-11-07
+wikipedia:Teji_Bachchan	0	Geography.Regions.Asia.South_Asia:1.00;Geography.Regions.Asia.Asia*:1.00;Culture.Biography.Biography*:0.97;Culture.Media.Films:0.86;Culture.Media.Media*:0.78	2026-11-19
 wikipedia:Telemachus	0	History_and_Society.History:0.59;Culture.Literature:0.52;Geography.Regions.Europe.Europe*:0.52	2026-11-07
 wikipedia:Television_(band)	0	Culture.Media.Music:1.00;Culture.Media.Media*:1.00;Culture.Biography.Biography*:0.52	2026-11-09
 wikipedia:Tell_Me_Lies_(TV_series)	0	Culture.Media.Media*:0.96;Culture.Media.Television:0.89;Geography.Regions.Americas.North_America:0.52	2026-11-07
@@ -7521,6 +7590,7 @@ wikipedia:Thalaivar_Thambi_Thalaimaiyil	0	Culture.Media.Films:1.00;Culture.Media
 wikipedia:Thamma	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.00;Geography.Regions.Asia.Asia*:0.79;Geography.Regions.Asia.South_Asia:0.75	2026-11-07
 wikipedia:Thanksgiving	0	Geography.Regions.Americas.North_America:0.56	2026-11-07
 wikipedia:Thanksgiving_(Canada)	0	Geography.Regions.Americas.North_America:0.84	2026-11-07
+wikipedia:Tharun_Bhascker	1	Culture.Media.Media*:0.97;Geography.Regions.Asia.South_Asia:0.95;Geography.Regions.Asia.Asia*:0.93;Culture.Media.Films:0.91;Culture.Biography.Biography*:0.86	2026-11-19
 wikipedia:The_Abandons	0	Culture.Media.Media*:0.94;Culture.Media.Television:0.93	2026-11-07
 wikipedia:The_Accountant_(2016_film)	0	Culture.Media.Media*:0.67	2026-11-08
 wikipedia:The_Accountant_2	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.00;Geography.Regions.Americas.North_America:0.79	2026-11-08
@@ -7617,6 +7687,7 @@ wikipedia:The_Four_Seasons_(TV_series)	0	Culture.Media.Media*:0.93;Culture.Media
 wikipedia:The_Four_Seasons_(miniseries)	0	Culture.Media.Media*:0.93;Culture.Media.Television:0.56	2026-11-08
 wikipedia:The_Furious	0	Culture.Media.Films:1.00;Culture.Media.Media*:1.00	2026-11-07
 wikipedia:The_Further_Mis-Adventures_of_Cliff_Booth	0	Culture.Media.Media*:0.98;Culture.Media.Films:0.96	2026-11-07
+wikipedia:The_Game_Award_for_Game_of_the_Year	0	Culture.Media.Video_games:1.00;Culture.Internet_culture:1.00;Culture.Media.Media*:1.00	2026-11-19
 wikipedia:The_Game_Awards	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:1.00	2026-11-18
 wikipedia:The_Game_Awards_2025	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:0.99	2026-11-07
 wikipedia:The_Game_Awards_2026	0	Culture.Internet_culture:1.00;Culture.Media.Video_games:1.00;Culture.Media.Media*:1.00	2026-11-18
@@ -7642,6 +7713,7 @@ wikipedia:The_Human_Centipede_(First_Sequence)	0	Culture.Media.Media*:0.99;Cultu
 wikipedia:The_Hunger_(1983_film)	0	Culture.Media.Media*:1.00;Culture.Media.Films:0.99	2026-11-07
 wikipedia:The_Hunger_(collection)	0	Culture.Biography.Biography*:0.83;Culture.Visual_arts.Visual_arts*:0.81;Culture.Visual_arts.Fashion:0.75	2026-11-07
 wikipedia:The_Hunger_Games	0	Culture.Literature:0.96;Culture.Media.Media*:0.95;Culture.Media.Books:0.93	2026-11-15
+wikipedia:The_Hunger_Games:_Catching_Fire	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.98	2026-11-19
 wikipedia:The_Hunger_Games:_Sunrise_on_the_Reaping	0	Culture.Media.Media*:0.97;Culture.Media.Films:0.90	2026-11-07
 wikipedia:The_Hunger_Games:_The_Ballad_of_Songbirds_&_Snakes	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.91	2026-11-09
 wikipedia:The_Hunger_Games_(film)	0	Culture.Media.Media*:0.98;Culture.Media.Films:0.94	2026-11-15
@@ -7965,6 +8037,7 @@ wikipedia:Travis_Kelce	1	Culture.Sports:0.87;Culture.Biography.Biography*:0.67;G
 wikipedia:Travis_Knight	1	Culture.Media.Media*:0.50	2026-11-07
 wikipedia:Travis_Scott	1	Culture.Media.Media*:0.92;Culture.Media.Music:0.73	2026-11-07
 wikipedia:Trent_Williams	1	Culture.Sports:0.99;Culture.Biography.Biography*:0.96;Geography.Regions.Americas.North_America:0.60	2026-11-07
+wikipedia:Trev_Alberts	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.88;Geography.Regions.Americas.North_America:0.59	2026-11-19
 wikipedia:Trevon_Brazile	1	Culture.Biography.Biography*:1.00;Culture.Sports:0.99	2026-11-07
 wikipedia:Trevon_Diggs	1	Culture.Sports:0.98;Culture.Biography.Biography*:0.97	2026-11-07
 wikipedia:Trevor_Lawrence	1	Culture.Sports:0.97;Culture.Biography.Biography*:0.90;Geography.Regions.Americas.North_America:0.54	2026-11-07
@@ -8163,6 +8236,7 @@ wikipedia:Vallabhbhai_Patel	1	Geography.Regions.Asia.South_Asia:0.99;Geography.R
 wikipedia:Vallow-Daybell_murders	0	Geography.Regions.Americas.North_America:0.60	2026-11-07
 wikipedia:Valmiki	0	Geography.Regions.Asia.Asia*:0.94;Geography.Regions.Asia.South_Asia:0.92;Culture.Philosophy_and_religion:0.64	2026-11-07
 wikipedia:ValuJet_Flight_592	0	History_and_Society.Transportation:0.96;STEM.Engineering:0.95;STEM.STEM*:0.94;History_and_Society.Politics_and_government:0.72	2026-11-07
+wikipedia:Van_Halen_test	0		2026-11-19
 wikipedia:Vande_Mataram	0	Geography.Regions.Asia.South_Asia:1.00;Geography.Regions.Asia.Asia*:0.99	2026-11-07
 wikipedia:Vanessa_Kirby	1	Culture.Media.Films:0.94;Culture.Media.Media*:0.93;Culture.Biography.Biography*:0.86;Culture.Biography.Women:0.82	2026-11-07
 wikipedia:Vanessa_Lachey	1	Culture.Biography.Biography*:0.75;Culture.Visual_arts.Visual_arts*:0.61;Culture.Visual_arts.Fashion:0.58;Culture.Biography.Women:0.55	2026-11-10
@@ -8174,6 +8248,7 @@ wikipedia:Varsha_Bhosle	1	Geography.Regions.Asia.South_Asia:1.00;Geography.Regio
 wikipedia:Varun_Gandhi	1	Culture.Biography.Biography*:0.89;Geography.Regions.Asia.South_Asia:0.86;Geography.Regions.Asia.Asia*:0.83	2026-11-12
 wikipedia:Vasanth_Ravi	1	Culture.Media.Films:0.84;Culture.Media.Media*:0.82;Geography.Regions.Asia.Asia*:0.75;Geography.Regions.Asia.South_Asia:0.70;Culture.Biography.Biography*:0.64	2026-11-07
 wikipedia:Vash_(Star_Trek)	0	Culture.Media.Television:0.99;Culture.Media.Media*:0.97	2026-11-07
+wikipedia:Vaughn_Rasberry	1	Culture.Biography.Biography*:1.00;Culture.Literature:0.81;History_and_Society.Society:0.77;Geography.Regions.Americas.North_America:0.72	2026-11-19
 wikipedia:Vecna_(Stranger_Things)	0	Culture.Media.Media*:0.95;Culture.Literature:0.85;Culture.Media.Television:0.84	2026-11-07
 wikipedia:Vedika_Pinto	1	Culture.Media.Media*:0.99;Geography.Regions.Asia.Asia*:0.79;Geography.Regions.Asia.South_Asia:0.74;Culture.Media.Films:0.70	2026-11-07
 wikipedia:Veera_Dheera_Sooran	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.98;Geography.Regions.Asia.South_Asia:0.69;Geography.Regions.Asia.Asia*:0.68	2026-11-08
@@ -8267,6 +8342,7 @@ wikipedia:Voyager_1	0	STEM.STEM*:0.99;STEM.Space:0.99;History_and_Society.Transp
 wikipedia:Vozinha	1	Culture.Sports:1.00;Culture.Biography.Biography*:0.95	2026-11-07
 wikipedia:Vulcan_Centaur	0	History_and_Society.Transportation:0.99;STEM.Technology:0.99;STEM.STEM*:0.99;STEM.Space:0.98	2026-11-17
 wikipedia:Víctor_Muñoz_(footballer,_born_2003)	1	Culture.Sports:1.00;Culture.Biography.Biography*:1.00;Geography.Regions.Europe.Southern_Europe:0.89;Geography.Regions.Europe.Europe*:0.75	2026-11-07
+wikipedia:W._S._Gilbert	1	Culture.Media.Media*:0.82;Culture.Media.Music:0.80;Culture.Biography.Biography*:0.62	2026-11-19
 wikipedia:WD_J1330+6435	0	STEM.STEM*:1.00;STEM.Space:0.99	2026-11-07
 wikipedia:WNBA_Finals	0	Culture.Biography.Women:0.99;Culture.Sports:0.99;Culture.Biography.Biography*:0.98	2026-11-07
 wikipedia:WWE_Crown_Jewel	0	Culture.Media.Entertainment:1.00;Culture.Media.Television:1.00;Culture.Media.Media*:1.00	2026-11-09
@@ -8306,6 +8382,7 @@ wikipedia:Wayward_(miniseries)	0	Culture.Media.Media*:0.88;Culture.Media.Televis
 wikipedia:We_Be_Clubbin'_(South_Park)	0	Culture.Media.Media*:1.00;Culture.Media.Entertainment:1.00;Culture.Media.Television:1.00;Geography.Regions.Americas.North_America:0.99	2026-11-13
 wikipedia:We_Live_in_Time	0	Culture.Media.Media*:0.99;Culture.Media.Films:0.99	2026-11-08
 wikipedia:We_Were_Liars	0	Culture.Literature:1.00;Culture.Media.Books:0.91;Culture.Media.Media*:0.82	2026-11-08
+wikipedia:We_will_bury_you	0	History_and_Society.Military_and_warfare:0.87;Geography.Regions.Asia.Asia*:0.60;Geography.Regions.Europe.Europe*:0.56;Geography.Regions.Europe.Eastern_Europe:0.52;History_and_Society.Politics_and_government:0.52	2026-11-19
 wikipedia:Wealth_of_Elon_Musk	0	History_and_Society.Business_and_economics:0.87	2026-11-07
 wikipedia:Weapons_(2025_film)	0	Culture.Media.Films:0.99;Culture.Media.Media*:0.99;Geography.Regions.Americas.North_America:0.67	2026-11-07
 wikipedia:Weather	0	STEM.STEM*:0.98;STEM.Earth_and_environment:0.77	2026-11-07
