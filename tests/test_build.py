@@ -82,6 +82,25 @@ class TrendingTest(unittest.TestCase):
         _, _, lists, _ = build.build_source('imdb', days)
         self.assertAlmostEqual(lists[build.TRENDING][0]['score'], 1.0, places=2)
 
+    def test_trending_ranks_by_the_stored_log_difference(self):
+        # Three items with different rhythms; the stored (log) scores at both half-lives.
+        week, month = {}, {}
+        for n in range(60):
+            for key, value in (('a', 5.0), ('b', 1.0 + n), ('c', 50.0 if n % 10 == 0 else 1.0)):
+                week[key] = build.add_event(week.get(key, build.EMPTY), value, n, 7)
+                month[key] = build.add_event(month.get(key, build.EMPTY), value, n, 30.44)
+        result = build.trending(week, month, 59)
+        usual = build.steady(7, 60) / build.steady(30.44, 60)
+        ratios = {key: build.score_at(week[key], 59, 7) / build.score_at(month[key], 59, 30.44) / usual
+                  for key in week}
+        # The same order and values as dividing the scores themselves...
+        self.assertEqual([key for key, _ in result], sorted(ratios, key=lambda k: -ratios[k]))
+        for key, ratio in result:
+            self.assertAlmostEqual(ratio, ratios[key], places=9)
+        # ...and the order is the order of L_week - L_month, which stays put as time passes.
+        self.assertEqual([key for key, _ in result], sorted(week, key=lambda k: month[k] - week[k]))
+        self.assertEqual([key for key, _ in build.trending(week, month, 500)], [key for key, _ in result])
+
     def test_a_surge_trends_above_steady_activity(self):
         days = []
         for n in range(120):

@@ -7,6 +7,15 @@ change that breaks how the site or its data files work raises the first.
 Data the daily workflow commits isn't versioned. The current version is in
 [VERSION](VERSION), shown in the site's footer and tagged in git (`v1.6.1`).
 
+## [1.14.1] - 2026-11-22
+### Changed
+- The trending list is ranked by the difference of each item's stored (log)
+  Week and Month scores, and converted to the ratio it shows (2.0× is twice
+  the usual pace) only at the end. The difference changes only when an item
+  has new activity, not as time passes, and the conversion shifts every item
+  by the same amount, so the ranking is the same as before. Items whose
+  ratios are exactly equal are now ordered by id rather than by rounding.
+
 ## [1.14.0] - 2026-11-14
 ### Added
 - Three years of Polymarket history, from Nov 1, 2023: the top 300 events of
