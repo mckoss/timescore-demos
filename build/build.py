@@ -33,6 +33,7 @@ import datetime
 import glob
 import heapq
 import json
+import math
 import os
 import sys
 
@@ -40,23 +41,25 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'collect'))
 sys.path.insert(0, os.path.dirname(__file__))
 
-from timescore import EMPTY, add_event, score_at  # noqa: E402
+from timescore import EMPTY, LN2, add_event, score_at  # noqa: E402
 import posters  # noqa: E402
 import wikipages  # noqa: E402
 import wikitopics  # noqa: E402
 import polymarket  # noqa: E402
 
 HALF_LIVES = [('Day', 1), ('Week', 7), ('Month', 30.44), ('Year', 365.25)]
+HALF_LIFE = dict(HALF_LIVES)
 LIST_SIZE = 23     # each list: the 20 the page shows, and 3 fading out below
 RACE_SIZE = 10
 TOPIC_MIN = 5      # a topic needs this many articles in every half-life's list to be shown
 SHOWN = LIST_SIZE  # how many of each list the page shows
 
-# Weekly trending: a movie's Week score divided by its Month score, divided
-# again by what that ratio would be for a movie with the same activity every
-# day, so 1.0 is a movie's usual pace and 2.0 twice its usual pace. Only the
-# TRENDING_POOL movies with the highest Week scores qualify, so a movie with
-# one recent like can't top the list.
+# Weekly trending: an item's Week score divided by its Month score, divided
+# again by what that ratio would be for an item with the same activity every
+# day, so 1.0 is an item's usual pace and 2.0 twice its usual pace. Only the
+# TRENDING_POOL items with the highest Week scores qualify, so an item with
+# one recent like can't top the list. The list is ranked by the difference of
+# the stored (log) scores, which doesn't change as time passes (trending()).
 TRENDING = 'Weekly trending'
 TRENDING_POOL = 100
 TRENDING_MIN_DAYS = 14   # a source needs this much data for weeks and months to differ
@@ -191,13 +194,26 @@ def build_source(source, days, pools=None):
 
 
 def trending(week, month, day):
-    """The pool of top movies by Week score, ordered by Week score divided by
-    Month score (1.0 being a steady pace): [(key, ratio)], highest first."""
+    """The pool of top items by Week score, highest trend first, with each
+    one's ratio (Week score / Month score, 1.0 being a steady pace):
+    [(key, ratio)].
+
+    Each stored score is a log, L = ln(sum of value * 2^(t / h)), so
+
+        ratio = exp(L_week - L_month - shift)
+
+    where shift = day * ln 2 * (1/7 - 1/30.44) + ln(steady pace's ratio). The
+    shift is the same for every item on a given day, so ranking by
+    L_week - L_month ranks by the ratio itself. And L_week - L_month changes
+    only when an item has new activity, not as time passes, so in a database
+    it can be stored and indexed once, like the scores; the shift is applied
+    only to the rows shown."""
+    week_days, month_days = HALF_LIFE['Week'], HALF_LIFE['Month']
     pool = top(week, TRENDING_POOL)
-    usual = steady(7, day + 1) / steady(30.44, day + 1)
-    ratios = [(key, score_at(week[key], day, 7) / score_at(month[key], day, 30.44) / usual)
-              for key in pool]
-    return sorted(ratios, key=lambda item: -item[1])
+    ranked = sorted(pool, key=lambda key: (month[key] - week[key], key))   # highest L_week - L_month first
+    shift = (day * LN2 * (1 / week_days - 1 / month_days)
+             + math.log(steady(week_days, day + 1) / steady(month_days, day + 1)))
+    return [(key, math.exp(week[key] - month[key] - shift)) for key in ranked]
 
 
 def article(key, title, row):
