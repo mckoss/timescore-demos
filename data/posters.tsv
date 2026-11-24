@@ -1,5 +1,6 @@
 key	tmdb_id	title	year	poster_path	checked
 imdb:tt0372784	272	Batman Begins	2005	/sPX89Td70IDDjVr85jdSBb4rWGr.jpg	2026-11-07
+imdb:tt0381061	36557	Casino Royale	2006	/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg	2026-11-24
 imdb:tt0434409	752	V for Vendetta	2006	/1avD1JeaRiJX5M4ahPdZPypGoGN.jpg	2026-11-07
 imdb:tt0482571	1124	The Prestige	2006	/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg	2026-11-20
 imdb:tt0816692	157336	Interstellar	2014	/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg	2026-11-06
@@ -35,6 +36,7 @@ imdb:tt27988879	656908	Ramayana: Rise of a Legend	2026	/hz2Hv8tPToHvQ7HaxzqeLvah
 imdb:tt31170389	1212763	Evil Dead Burn	2026	/uRxrNXQWkHoENm3nwVOZDYSCx2F.jpg	2026-11-07
 imdb:tt32261958	1283515	Verity	2026	/rmaNMA1seHqpjtnYKzyynFAr1g8.jpg	2026-11-06
 imdb:tt32358390	1290418	The Cycle	2026	/n5gSNf55KWfDc9hqP4H1KCCSutE.jpg	2026-11-07
+imdb:tt32393988	1291595	Insidious: Out of the Further	2026	/4tTrW9dXCByS5wt2pXVWb58zNjz.jpg	2026-11-24
 imdb:tt32558705	1300968	The Hunger Games: Sunrise on the Reaping	2026	/jNcZH8yplxttRlf0wwqfGGMKHxX.jpg	2026-11-20
 imdb:tt32634611	1215889	Daayra	2026	/eAsR8oCZGCOqaxDVt0c0WrRFjrn.jpg	2026-11-23
 imdb:tt32909364	1327835	Mookuthi Amman 2	2026	/dNNzsstJeQxnESyH0hZcLGblLMz.jpg	2026-11-11
@@ -44,6 +46,7 @@ imdb:tt33318732	1234139	Jailer 2	2026	/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg	2026-11-1
 imdb:tt33764258	1368337	The Odyssey	2026	/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg	2026-11-06
 imdb:tt34206385	1375441	Primetime	2026	/lmrulvLbmaejTix1YaMxo1oGhH1.jpg	2026-11-06
 imdb:tt34384661	1381071	Godzilla Minus Zero	2026	/hSmIJluOJmTWvJs4d7kHRxjc8s8.jpg	2026-11-06
+imdb:tt34515768	1384528	O.M: Operation Mole	2026	/vFnFLqXjf7RQfkNxrrys43BZKxJ.jpg	2026-11-24
 imdb:tt34890576	1400940	Clayface	2026	/9l1NuFjel2j89hiuiJbsxfblqjy.jpg	2026-11-06
 imdb:tt35511966	1422041	LA BOLA NEGRA	2026	/jT5SR5qc9KvVg7HUEmjMWEUYMce.jpg	2026-11-07
 imdb:tt35538033	1423191	Resident Evil	2026	/gAgWJhUSQWCgtKR8170nMkYlBda.jpg	2026-11-06
@@ -169,7 +172,9 @@ tmdb:494656	494656	The Legend of the Black Charro	2018	/fDLJ5vIeRL68cIHlob11w2pB
 tmdb:634649	634649	Spider-Man: No Way Home	2021	/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg	2026-11-04
 tmdb:656908	656908	Ramayana: Rise of a Legend	2026	/dPrtk4iNf6T5w8fWfg4uxDDbJSW.jpg	2026-11-08
 tmdb:687163	687163	Project Hail Mary	2026	/iOb2fjXLbpJgyQXe46n1WtGCnaa.jpg	2026-11-04
+tmdb:695721	695721	The Hunger Games: The Ballad of Songbirds & Snakes	2023	/mBaXZ95R2OxueZhvQbcEWy2DqyO.jpg	2026-11-24
 tmdb:791523	791523	Wildwood	2026	/8g7q6o54WfKWRmUQ0Ye8OskevUY.jpg	2026-11-04
+tmdb:801688	801688	Kalki 2898-AD	2024	/rstcAnBeCkxNQjNp3YXrF6IP1tW.jpg	2026-11-24
 tmdb:860508	860508	The Whisper Man	2026	/ndRs5lADYm0PeVjuOxaMcInY0o2.jpg	2026-11-04
 tmdb:891621	891621	Wild Horse Nine	2026	/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg	2026-11-14
 tmdb:940721	940721	Godzilla Minus One	2023	/2E2WTX0TJEflAged6kzErwqX1kt.jpg	2026-11-13
